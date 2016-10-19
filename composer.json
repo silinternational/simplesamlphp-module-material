@@ -1,0 +1,18 @@
+{
+  "name": "silinternational/ssp-theme-material",
+  "description": "Material Design theme module for IdP Hub based on SimpleSAMLphp",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Billy Clark",
+      "email": "billy_clark@sil.org"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=5.4",
+    "roave/security-advisories": "dev-master",
+    "silinternational/ssp-utilities": "dev-develop"
+  }
+}
