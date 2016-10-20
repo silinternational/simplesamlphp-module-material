@@ -11,7 +11,7 @@ composer.phar require silinternational/simplesamlphp-module-theme-material:dev-m
 Update `/simplesamlphp/config/config.php`:
 
 ```
-'theme.use' => 'themematerial:material'
+'theme.use' => 'theme-material:material'
 ```
 
 ## Testing theme
