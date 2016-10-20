@@ -14,8 +14,8 @@ $this->data['sources'] = $reducedSources;
     <meta name="robots" content="noindex, nofollow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="/module.php/themematerial/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="/module.php/themematerial/selectsource.css">
+    <link rel="stylesheet" href="/module.php/theme-material/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="/module.php/theme-material/selectsource.css">
 </head>
 
 <body>
@@ -47,7 +47,7 @@ $this->data['sources'] = $reducedSources;
                         
                         <img src="<?= isset($source['logoURL']) ? 
                                       $source['logoURL']        : 
-                                      '/module.php/themematerial/default-logo.png'; ?>">
+                                      '/module.php/theme-material/default-logo.png'; ?>">
                     </button>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
