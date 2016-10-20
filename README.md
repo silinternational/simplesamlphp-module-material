@@ -1,5 +1,10 @@
-# ssp-theme-material
 Material Design theme for use with SimpleSAMLphp 
+
+## Installation
+
+```
+composer.phar require silinternational/simplesamlphp-module-theme-material:dev-master
+```
 
 ## Configuration
 
