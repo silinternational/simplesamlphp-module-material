@@ -13,7 +13,7 @@
   "require": {
     "php": ">=5.4",
     "roave/security-advisories": "dev-master",
-    "simplesamlphp/composer-module-installer": "~1.1",
+    "simplesamlphp/composer-module-installer": "~1.0",
     "silinternational/ssp-utilities": "dev-develop"
   }
 }
