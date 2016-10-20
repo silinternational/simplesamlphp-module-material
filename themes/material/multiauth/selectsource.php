@@ -1,5 +1,7 @@
 <?php
-$reducedSources = sspmod_globalHub_Utils::getSources($_GET['AuthState'], $this->data['sources']);
+use Sil\SspUtils\AuthSourcesUtils;
+
+$reducedSources = AuthSourcesUtils::getSources($this->data['sources'], $_GET['AuthState']);
 $this->data['sources'] = $reducedSources;
 ?>
 
