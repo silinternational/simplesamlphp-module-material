@@ -1,7 +1,7 @@
 <?php
 use Sil\SspUtils\AuthSourcesUtils;
 
-$reducedSources = AuthSourcesUtils::getSources($this->data['sources'], $_GET['AuthState']);
+$reducedSources = AuthSourcesUtils::getSourcesWithLogoUrls($this->data['sources'], $_GET['AuthState']);
 $this->data['sources'] = $reducedSources;
 ?>
 
