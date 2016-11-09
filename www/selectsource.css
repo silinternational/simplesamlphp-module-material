@@ -21,6 +21,10 @@
   justify-content: space-between;
 }
 
+[child-spacing=center] {
+  justify-content: center;
+}
+
 .margin {
   margin: 1em;
 }
@@ -40,6 +44,10 @@
 
 .no-padding {
   padding: 0px;
+}
+
+.mdl-card.disabled {
+  cursor: not-allowed;
 }
 
 /*
