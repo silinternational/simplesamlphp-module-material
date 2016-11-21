@@ -10,12 +10,7 @@ $this->data['sources'] = $reducedSources;
 <head>
     <title>Login account</title>
 
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="/module.php/theme-material/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="/module.php/theme-material/selectsource.css">
+    <?php include __DIR__ . '/../common-head-elements.php' ?>
 </head>
 
 <body>
@@ -32,7 +27,7 @@ $this->data['sources'] = $reducedSources;
         <form action="<?= htmlentities($_SERVER['PHP_SELF']) ?>"
               layout-children="row" child-spacing="space-around">
             <input type="hidden" name="AuthState" 
-                   value="<?= htmlspecialchars($this->data['authstate']) ?>"/>
+                   value="<?= htmlspecialchars($this->data['authstate']) ?>" />
 
             <?php
             foreach ($this->data['sources'] as $source) {
@@ -87,9 +82,7 @@ $this->data['sources'] = $reducedSources;
         </form>
     </main>
 
-    <footer class="mdl-mini-footer">
-        Unauthorized use of this site is prohibited and may be subjected to civil and criminal prosecution.
-    </footer>
+    <?php include __DIR__ . '/../common-footer.php' ?>
 </div>
 </body>
 </html>
