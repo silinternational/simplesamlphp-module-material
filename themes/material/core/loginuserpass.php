@@ -16,8 +16,7 @@
     </header>
 
     <main class="mdl-layout__content">
-        <form action="<?= htmlentities($_SERVER['PHP_SELF']) ?>" 
-              layout-children="column" class="margin">
+        <form action="<?= htmlentities($_SERVER['PHP_SELF']) ?>" layout-children="column">
             <input type="hidden" name="AuthState" 
                    value="<?= htmlspecialchars($this->data['stateparams']['AuthState']) ?>" />
 
@@ -33,10 +32,25 @@
                 <label for="username" class="mdl-textfield__label">
                     Password
                 </label>
-                <input type="password" name="password" tabindex="2"  
+                <input type="password" name="password" tabindex="2" 
                        class="mdl-textfield__input" />
             </div>
             
+            <?php
+            if ($this->data['errorcode'] == 'WRONGUSERPASS') {
+            ?>
+            <p class="mdl-color-text--red" layout-children="row" child-spacing="space-between">
+                <i class="material-icons">error</i>
+
+                <span class="mdl-typography--caption margin">
+                    Something is wrong with that username or password, 
+                    please verify and try again.
+                </span>
+            </p>
+            <?php
+            }
+            ?>
+
             <button class="mdl-button mdl-button--colored mdl-button--raised">
                 Login
             </button>
