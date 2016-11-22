@@ -16,7 +16,7 @@
     </header>
 
     <main class="mdl-layout__content">
-        <p class="margin">You have now been logged out.<p>
+        <p>You have now been logged out.<p>
     </main>
 
     <?php include __DIR__ . '/../common-footer.php' ?>
