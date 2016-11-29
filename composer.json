@@ -1,5 +1,5 @@
 {
-  "name": "silinternational/simplesamlphp-module-theme-material",
+  "name": "silinternational/simplesamlphp-module-material",
   "description": "Material Design theme for IdP Hub based on SimpleSAMLphp",
   "type": "simplesamlphp-module",
   "license": "MIT",

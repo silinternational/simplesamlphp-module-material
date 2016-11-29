@@ -42,7 +42,7 @@ $this->data['sources'] = $reducedSources;
                         
                         <img src="<?= isset($source['logoURL']) ? 
                                       $source['logoURL']        : 
-                                      '/module.php/theme-material/default-logo.png' ?>">
+                                      '/module.php/material/default-logo.png' ?>">
                     </button>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">

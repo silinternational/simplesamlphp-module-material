@@ -3,7 +3,7 @@ Material Design theme for use with SimpleSAMLphp
 ## Installation
 
 ```
-composer.phar require silinternational/simplesamlphp-module-theme-material:dev-master
+composer.phar require silinternational/simplesamlphp-module-material:dev-master
 ```
 
 ## Configuration
@@ -11,7 +11,7 @@ composer.phar require silinternational/simplesamlphp-module-theme-material:dev-m
 Update `/simplesamlphp/config/config.php`:
 
 ```
-'theme.use' => 'theme-material:material'
+'theme.use' => 'material:material'
 ```
 
 ## Testing theme
