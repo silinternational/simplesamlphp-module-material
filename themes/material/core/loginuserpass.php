@@ -3,7 +3,7 @@
 <head>
     <title>Login account</title>
 
-    <?php include __DIR__ . '/../common-head-elements.php' ?>
+    <?php include SimpleSAML_Module::getModuleDir('material/common/head-elements.php'); ?>
 </head>
 <body>
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
@@ -25,11 +25,12 @@
                     Username
                 </label>
                 <input type="text" name="username" tabindex="1" 
-                       class="mdl-textfield__input" autofocus />
+                       class="mdl-textfield__input" autofocus 
+                       value="<?= $this->data['username'] ?>"/>
             </div>
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <label for="username" class="mdl-textfield__label">
+                <label for="password" class="mdl-textfield__label">
                     Password
                 </label>
                 <input type="password" name="password" tabindex="2" 
@@ -57,7 +58,7 @@
         </form>
     </main>
 
-    <?php include __DIR__ . '/../common-footer.php' ?>
+    <?php include SimpleSAML_Module::getModuleDir('material/common/footer.php'); ?>
 </div>
 </body>
 </html>
