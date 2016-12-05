@@ -3,7 +3,7 @@
 <head>
     <title>Login account</title>
 
-    <?php include SimpleSAML_Module::getModuleDir('material/common/head-elements.php'); ?>
+    <?php include __DIR__ . '/../common-head-elements.php' ?>
 </head>
 <body>
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
@@ -58,7 +58,7 @@
         </form>
     </main>
 
-    <?php include SimpleSAML_Module::getModuleDir('material/common/footer.php'); ?>
+    <?php include __DIR__ . '/../common-footer.php' ?>
 </div>
 </body>
 </html>

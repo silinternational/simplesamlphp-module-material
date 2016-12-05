@@ -1,16 +1,21 @@
-<?php
-use Sil\SspUtils\AuthSourcesUtils;
-
-$reducedSources = AuthSourcesUtils::getSourcesWithLogoUrls($this->data['sources'], $_GET['AuthState']);
-$this->data['sources'] = $reducedSources;
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Login account</title>
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
+
+    <script>
+        function setSelectedIdp(id) {
+            var idpInput = document.createElement('input');
+
+            idpInput.type = 'hidden';
+            idpInput.name = '<?= htmlspecialchars($this->data['returnIDParam']) ?>';
+            idpInput.value = id;
+
+            document.querySelector('form').appendChild(idpInput);
+        }
+    </script>
 </head>
 
 <body>
@@ -26,29 +31,31 @@ $this->data['sources'] = $reducedSources;
     <main class="mdl-layout__content">
         <form action="<?= htmlentities($_SERVER['PHP_SELF']) ?>"
               layout-children="row" child-spacing="space-around">
-            <input type="hidden" name="AuthState" 
-                   value="<?= htmlspecialchars($this->data['authstate']) ?>" />
+            <input type="hidden" name="entityID" 
+                   value="<?= htmlspecialchars($this->data['entityID']) ?>" />
+            <input type="hidden" name="return" 
+                   value="<?= htmlspecialchars($this->data['return']) ?>" />
+            <input type="hidden" name="returnIDParam" 
+                   value="<?= htmlspecialchars($this->data['returnIDParam']) ?>" />
 
             <?php
-            foreach ($this->data['sources'] as $source) {
-                $name = $source['source'];
-                $encodedName = 'src-' . base64_encode($name);
+            foreach ($this->data['idplist'] as $idp) {
+                $name = htmlspecialchars($idp['name']);
+                $idpId = htmlspecialchars($idp['entityid']);
             ?>
             <div class="mdl-card mdl-shadow--8dp margin">
                 <div class="mdl-card__media white-bg fixed-height">
-                    <button class="mdl-button fill-parent no-padding" 
-                            name="<?= $encodedName ?>"
-                            value="<?= $name ?>" >
-                        
-                        <img src="<?= isset($source['logoURL']) ? 
-                                      $source['logoURL']        : 
+                    <button class="mdl-button fill-parent no-padding" value="<?= $name ?>"
+                            onclick="setSelectedIdp('<?= $idpId ?>')">                        
+                        <img src="<?= isset($idp['logoURL']) ? 
+                                      $idp['logoURL']        : 
                                       '/module.php/material/default-logo.png' ?>">
                     </button>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                     <button class="mdl-button mdl-button--colored fill-parent"
-                            name="<?= $encodedName ?>"
-                            value="<?= $name ?>">
+                            value="<?= $name ?>"
+                            onclick="setSelectedIdp('<?= $idpId ?>')">
                         <!-- div added because of https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers 
                              TODO: move properties to button and remove div if 
                                    these bugs are resolved. -->
