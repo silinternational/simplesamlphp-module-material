@@ -1,0 +1,47 @@
+version: '2'
+services: 
+  hub:
+    image: silintl/ssp-base:develop
+    volumes: 
+      - ./development/hub/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
+      - ./development/hub/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
+      - ./development/hub/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
+      - ./development/hub/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
+      - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
+    ports: 
+      - '80:80'
+    environment: 
+      ADMIN_PASS: "abc123"
+      SECURE_COOKIE: "false"
+      SHOW_SAML_ERRORS: "true"
+      THEME_USE: "material:material"
+  idp1:
+    image: silintl/ssp-base:develop
+    volumes: 
+      - ./development/idp1/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
+      - ./development/idp1/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
+      - ./development/idp1/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
+      - ./development/idp1/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
+    ports: 
+      - '8085:80'
+    environment: 
+      ADMIN_PASS: "a"
+      SECURE_COOKIE: "false"
+      SHOW_SAML_ERRORS: "true"
+      ADMIN_PROTECT_INDEX_PAGE: "false"
+  idp2:
+    image: silintl/ssp-base:develop
+    volumes: 
+      - ./development/idp2/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
+      - ./development/idp2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
+      - ./development/idp2/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
+      - ./development/idp2/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
+      - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
+    ports: 
+      - '8086:80'
+    environment: 
+      ADMIN_PASS: "b"
+      SECURE_COOKIE: "false"
+      SHOW_SAML_ERRORS: "true"
+      ADMIN_PROTECT_INDEX_PAGE: "false"
+      THEME_USE: "material:material"

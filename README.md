@@ -16,7 +16,36 @@ Update `/simplesamlphp/config/config.php`:
 
 ## Testing theme
 
-1. Login to simplesaml's admin page, `//yourhost/module.php/core/loginuserpass.php`
-2. Click **Authentication** tab
-3. Click **Test configured authentication sources**
-4. Click **auth-choices** (this list is built up from `config/authsources.php`)
+### Setup 
+
+1. Setup `localhost` aliases for `ssp-hub.local`, `ssp-hub-idp1.local`, and `ssp-hub-idp2.local`.  This is typically done in `/etc/hosts`.
+2. Start test environment, e.g., `make` from the command line.
+3. Goto [http://ssp-hub.local](http://ssp-hub.local).
+4. Login as hub administrator, e.g., username=admin & password=abc123
+
+### Hub
+1. Click **Authentication** tab
+2. Click **Test configured authentication sources**
+3. Click **hub-discovery**
+
+### Error
+1. Click **Configuration** tab
+
+### Logout
+1. Click **Authentication** tab
+2. Click **Test configured authentication sources**
+3. Click **admin**
+4. Click **Logout**
+
+### Login
+1. Click **Authentication** tab
+2. Click **Test configured authentication sources**
+3. Click **hub-discovery**
+4. Click **Login with idp1** (NOTE: login page should NOT be the material theme)
+5. Login as idp1 administrator, e.g., username=admin & password=a
+6. Click **Logout**
+7. Click **Authentication** tab
+8. Click **Test configured authentication sources**
+9. Click **hub-discovery**
+10. Click **Login with idp2** (NOTE: login page should be the material theme)
+11. Login as idp2 administrator, e.g., username=admin & password=b
