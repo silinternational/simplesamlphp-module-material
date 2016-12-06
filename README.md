@@ -15,6 +15,7 @@ Update `/simplesamlphp/config/config.php`:
 ```
 
 ## Testing theme
+[Make](https://www.gnu.org/software/make/), [Docker](https://www.docker.com/products/overview) and [Docker Compose](https://docs.docker.com/compose/install/) are required.
 
 ### Setup 
 
@@ -41,11 +42,11 @@ Update `/simplesamlphp/config/config.php`:
 1. Click **Authentication** tab
 2. Click **Test configured authentication sources**
 3. Click **hub-discovery**
-4. Click **Login with idp1** (NOTE: login page should NOT be the material theme)
+4. Click **Login with idp1** (NOTE: login page should NOT have material design)
 5. Login as idp1 administrator, e.g., username=admin & password=a
 6. Click **Logout**
 7. Click **Authentication** tab
 8. Click **Test configured authentication sources**
 9. Click **hub-discovery**
-10. Click **Login with idp2** (NOTE: login page should be the material theme)
+10. Click **Login with idp2** (NOTE: login page should have material design)
 11. Login as idp2 administrator, e.g., username=admin & password=b
