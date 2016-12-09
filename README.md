@@ -14,8 +14,13 @@ Update `/simplesamlphp/config/config.php`:
 'theme.use' => 'material:material'
 ```
 
+### Google reCAPTCHA
+if `RECAPTCHA_REQUIRED` is found in `$this->data['errorcode']` **and** a site key has been provided in the 
+environment, e.g., `RECAPTCHA_SITE_KEY`, the username/password page will require the user prove his/her humanity.
+
 ## Testing theme
-[Make](https://www.gnu.org/software/make/), [Docker](https://www.docker.com/products/overview) and [Docker Compose](https://docs.docker.com/compose/install/) are required.
+[Make](https://www.gnu.org/software/make/), [Docker](https://www.docker.com/products/overview) and 
+[Docker Compose](https://docs.docker.com/compose/install/) are required.
 
 ### Setup 
 

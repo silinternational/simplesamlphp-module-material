@@ -15,6 +15,7 @@ services:
       SECURE_COOKIE: "false"
       SHOW_SAML_ERRORS: "true"
       THEME_USE: "material:material"
+      RECAPTCHA_SITE_KEY: "6LfL1yQTAAAAACUf1ZtjB4OE_SpWZlaA4AFXz4pZ"
   idp1:
     image: silintl/ssp-base:develop
     volumes: 

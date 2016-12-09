@@ -4,6 +4,8 @@
     <title>Login account</title>
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
@@ -16,7 +18,8 @@
     </header>
 
     <main class="mdl-layout__content">
-        <form action="<?= htmlentities($_SERVER['PHP_SELF']) ?>" layout-children="column">
+        <form method="POST" action="<?= htmlentities($_SERVER['PHP_SELF']) ?>" 
+              layout-children="column">
             <input type="hidden" name="AuthState" 
                    value="<?= htmlspecialchars($this->data['stateparams']['AuthState']) ?>" />
 
@@ -40,7 +43,8 @@
             <?php
             if ($this->data['errorcode'] == 'WRONGUSERPASS') {
             ?>
-            <p class="mdl-color-text--red" layout-children="row" child-spacing="space-between">
+            <p class="mdl-color-text--red" layout-children="row" 
+               child-spacing="space-between">
                 <i class="material-icons">error</i>
 
                 <span class="mdl-typography--caption margin">
@@ -48,6 +52,15 @@
                     please verify and try again.
                 </span>
             </p>
+            <?php
+            }
+            ?>
+
+            <?php
+            $key = getenv("RECAPTCHA_SITE_KEY");
+            if ($this->data['errorcode'] == 'RECAPTCHA_REQUIRED' && isset($key)) {
+            ?>
+            <p class="g-recaptcha" data-sitekey="<?= $key ?>"></p>
             <?php
             }
             ?>
