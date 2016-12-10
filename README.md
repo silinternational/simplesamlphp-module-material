@@ -55,3 +55,6 @@ environment, e.g., `RECAPTCHA_SITE_KEY`, the username/password page will require
 9. Click **hub-discovery**
 10. Click **Login with idp2** (NOTE: login page should have material design)
 11. Login as idp2 administrator, e.g., username=admin & password=b
+
+## i18n support
+Translations are categorized by page in definition files located in the `dictonaries` directory.
