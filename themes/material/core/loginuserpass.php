@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login account</title>
+    <title><?= $this->t('{material:login:title}') ?></title>
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
@@ -12,7 +12,7 @@
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">
-                Please enter your username and password
+                <?= $this->t('{material:login:header}') ?>
             </span>
         </div>
     </header>
@@ -25,7 +25,7 @@
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <label for="username" class="mdl-textfield__label">
-                    Username
+                    <?= $this->t('{material:login:label_username}') ?>
                 </label>
                 <input type="text" name="username" tabindex="1" 
                        class="mdl-textfield__input" autofocus 
@@ -34,7 +34,7 @@
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <label for="password" class="mdl-textfield__label">
-                    Password
+                    <?= $this->t('{material:login:label_password}') ?>
                 </label>
                 <input type="password" name="password" tabindex="2" 
                        class="mdl-textfield__input" />
@@ -48,8 +48,7 @@
                 <i class="material-icons">error</i>
 
                 <span class="mdl-typography--caption margin">
-                    Something is wrong with that username or password, 
-                    please verify and try again.
+                    <?= $this->t('{material:login:error_wronguserpass}') ?>
                 </span>
             </p>
             <?php
@@ -66,7 +65,7 @@
             ?>
 
             <button class="mdl-button mdl-button--colored mdl-button--raised">
-                Login
+                <?= $this->t('{material:login:button_login}') ?>
             </button>
         </form>
     </main>

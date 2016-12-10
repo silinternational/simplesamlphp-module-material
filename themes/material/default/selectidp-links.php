@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login account</title>
+    <title><?= $this->t('{material:selectidp:title}') ?></title>
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
@@ -23,7 +23,7 @@
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">
-                Choose an account
+                <?= $this->t('{material:selectidp:header}') ?>
             </span>
         </div>
     </header>
@@ -60,7 +60,9 @@
                              TODO: move properties to button and remove div if 
                                    these bugs are resolved. -->
                         <div layout-children="row" child-spacing="space-between">
-                            <span>Login with <?= $name ?></span>
+                            <span>
+                                <?= $this->t('{material:selectidp:button_login}', ['$idpName' => $name]) ?>
+                            </span>
 
                             <i class="material-icons">exit_to_app</i>
                         </div>
@@ -80,7 +82,7 @@
                     <img src="//static.gtis.guru/idp-logo/<?= $futureIdp ?>-logo-disabled.png">
                 </div>
                 <div class="mdl-card__supporting-text" layout-children="row" child-spacing="center">
-                    Coming soon...
+                    <?= $this->t('{material:selectidp:button_login_disabled}') ?>
                 </div>
             </div>
             <?php

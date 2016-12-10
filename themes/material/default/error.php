@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Error</title>
+    <title><?= $this->t('{material:error:title}') ?></title>
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 </head>
@@ -10,13 +10,13 @@
     <header class="mdl-layout__header mdl-color--red">
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">
-                Error
+                <?= $this->t('{material:error:header}') ?>
             </span>
         </div>
     </header>
 
     <main class="mdl-layout__content">
-        <p>An error occurred, please contact your help desk for further assistance.<p>
+        <p><?= $this->t('{material:error:message}') ?><p>
 
         <?php
         if ($this->data['showerrors']) {

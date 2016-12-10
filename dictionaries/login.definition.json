@@ -1,0 +1,20 @@
+{
+	"title": {
+		"en": "Login account"
+	},
+	"header": {
+		"en": "Please enter your username and password"
+	},
+	"label_username": {
+		"en": "Username"
+	},
+	"label_password": {
+		"en": "Password"
+	},
+	"error_wronguserpass": {
+		"en": "Something is wrong with that username or password, please verify and try again."
+	},
+	"button_login": {
+		"en": "Login"
+	}
+}

@@ -1,0 +1,15 @@
+
+{
+	"title": {
+		"en": "Login account"
+	},
+	"header": {
+		"en": "Choose an account"
+	},
+	"button_login": {
+		"en": "Login with $idpName"
+	},
+	"button_login_disabled": {
+		"en": "Coming soon..."
+	}
+}
