@@ -4,7 +4,10 @@
 
 <link rel="shortcut icon" href="/module.php/material/favicon.ico" />
 
-<link rel="stylesheet" href="/module.php/material/material.indigo-pink.1.2.1.min.css">
+<?php
+$colors = $this->configuration->getValue('theme.color-scheme', 'indigo-purple');
+?>
+<link rel="stylesheet" href="/module.php/material/material.<?= $colors ?>.1.2.1.min.css">
 <link rel="stylesheet" href="/module.php/material/styles.css">
 
 <script async src="/module.php/material/material.1.2.1.min.js"></script>
