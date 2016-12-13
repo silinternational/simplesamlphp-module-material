@@ -56,7 +56,7 @@
             ?>
 
             <?php
-            $key = getenv("RECAPTCHA_SITE_KEY");
+            $key = $this->data['recaptcha.siteKey'];
             if ($this->data['errorcode'] == 'RECAPTCHA_REQUIRED' && isset($key)) {
             ?>
             <p class="g-recaptcha" data-sitekey="<?= $key ?>"></p>
