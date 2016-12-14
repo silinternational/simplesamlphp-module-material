@@ -26,6 +26,13 @@ Update `/simplesamlphp/config/config.php`:
 'theme.color-scheme' => ['indigo-purple'|'blue_grey-teal'|'red-teal'|'orange-light_blue']
 ```
 
+### Analytics
+Update `/simplesamlphp/config/config.php`:
+
+```
+'analytics.trackingId' => 'UA-some-unique-id-for-your-site'
+```
+
 ## Testing theme
 [Make](https://www.gnu.org/software/make/), [Docker](https://www.docker.com/products/overview) and 
 [Docker Compose](https://docs.docker.com/compose/install/) are required.
