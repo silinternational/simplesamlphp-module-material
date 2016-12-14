@@ -5,7 +5,30 @@
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <?php
+    $key = $this->data['recaptcha.siteKey'];
+    if ($this->data['errorcode'] == 'RECAPTCHA_REQUIRED' && isset($key)) {
+    ?>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit' async defer></script>
+
+    <script>
+        function onSubmit() {
+            document.querySelector('form').submit();
+        }
+
+        function onRecaptchaLoad() {
+            var loginButton = document.querySelector('button');
+
+            grecaptcha.render(loginButton, {
+                sitekey: $key,
+                callback: onSubmit
+            });
+        }    
+    </script>
+    <?php
+    }
+    ?>
+
 </head>
 <body>
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
@@ -51,15 +74,6 @@
                     <?= $this->t('{material:login:error_wronguserpass}') ?>
                 </span>
             </p>
-            <?php
-            }
-            ?>
-
-            <?php
-            $key = $this->data['recaptcha.siteKey'];
-            if ($this->data['errorcode'] == 'RECAPTCHA_REQUIRED' && isset($key)) {
-            ?>
-            <p class="g-recaptcha" data-sitekey="<?= $key ?>"></p>
             <?php
             }
             ?>
