@@ -23,7 +23,7 @@
                 sitekey: $key,
                 callback: onSubmit
             });
-        }    
+        }
     </script>
     <?php
     }
@@ -50,17 +50,17 @@
                 <label for="username" class="mdl-textfield__label">
                     <?= $this->t('{material:login:label_username}') ?>
                 </label>
-                <input type="text" name="username" tabindex="1" 
-                       class="mdl-textfield__input" autofocus 
-                       value="<?= $this->data['username'] ?>"/>
+                <input type="text" name="username" class="mdl-textfield__input" 
+                       value="<?= $this->data['username'] ?>" 
+                       <?= empty($this->data['username']) ? 'autofocus' : '' ?> />
             </div>
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <label for="password" class="mdl-textfield__label">
                     <?= $this->t('{material:login:label_password}') ?>
                 </label>
-                <input type="password" name="password" tabindex="2" 
-                       class="mdl-textfield__input" />
+                <input type="password" name="password" class="mdl-textfield__input" 
+                       <?= ! empty($this->data['username']) ? 'autofocus' : '' ?> />
             </div>
             
             <?php
