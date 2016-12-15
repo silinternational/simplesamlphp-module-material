@@ -60,6 +60,18 @@
   cursor: not-allowed;
 }
 
+.alert {
+  max-width: 80%;
+  min-width: 30%;
+  background-color: tomato;
+  border-radius: 0.33em;
+  padding: 1em;
+}
+
+.alert a {
+  color: blue;
+}
+
 /* Material icons */
 @font-face {
   font-family: 'Material Icons';

@@ -43,6 +43,8 @@
     <main class="mdl-layout__content">
         <form method="POST" action="<?= htmlentities($_SERVER['PHP_SELF']) ?>" 
               layout-children="column">
+            <?php include __DIR__ . '/../common-announcement.php' ?>
+
             <input type="hidden" name="AuthState" 
                    value="<?= htmlspecialchars($this->data['stateparams']['AuthState']) ?>" />
 
@@ -51,7 +53,7 @@
                     <?= $this->t('{material:login:label_username}') ?>
                 </label>
                 <input type="text" name="username" class="mdl-textfield__input" 
-                       value="<?= $this->data['username'] ?>" 
+                       value="<?= htmlspecialchars($this->data['username']) ?>" 
                        <?= empty($this->data['username']) ? 'autofocus' : '' ?> />
             </div>
 

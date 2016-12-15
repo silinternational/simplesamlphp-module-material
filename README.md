@@ -33,7 +33,12 @@ Update `/simplesamlphp/config/config.php`:
 'analytics.trackingId' => 'UA-some-unique-id-for-your-site'
 ```
 
+### Announcements
+if something is found in `$this->data['announcement']` an alert will be shown to the user filled with the 
+content of that announcement.  HTML is supported.
+
 ## Testing theme
+
 [Make](https://www.gnu.org/software/make/), [Docker](https://www.docker.com/products/overview) and 
 [Docker Compose](https://docs.docker.com/compose/install/) are required.
 

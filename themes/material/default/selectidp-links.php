@@ -28,7 +28,9 @@
         </div>
     </header>
 
-    <main class="mdl-layout__content">
+    <main class="mdl-layout__content" layout-children="column">
+        <?php include __DIR__ . '/../common-announcement.php' ?>
+
         <form action="<?= htmlentities($_SERVER['PHP_SELF']) ?>"
               layout-children="row" child-spacing="space-around">
             <input type="hidden" name="entityID" 
