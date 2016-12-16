@@ -7,7 +7,7 @@
 
     <?php
     $key = $this->data['recaptcha.siteKey'];
-    if ($this->data['errorcode'] == 'RECAPTCHA_REQUIRED' && isset($key)) {
+    if ($this->data['errorcode'] == 'RECAPTCHA_REQUIRED' && ! empty($key)) {
     ?>
     <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit' async defer></script>
 

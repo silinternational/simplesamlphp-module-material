@@ -49,9 +49,9 @@
                 <div class="mdl-card__media white-bg fixed-height">
                     <button class="mdl-button fill-parent no-padding" value="<?= $name ?>"
                             onclick="setSelectedIdp('<?= $idpId ?>')">                        
-                        <img src="<?= isset($idp['logoURL']) ? 
-                                      $idp['logoURL']        : 
-                                      '/module.php/material/default-logo.png' ?>">
+                        <img src="<?= empty($idp['logoURL']) ? 
+                                      '/module.php/material/default-logo.png' :
+                                      $idp['logoURL'] ?>">
                     </button>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
