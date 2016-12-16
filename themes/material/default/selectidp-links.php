@@ -41,6 +41,10 @@
                    value="<?= htmlspecialchars($this->data['returnIDParam']) ?>" />
 
             <?php
+            // in order to bypass some built-in behavior, an extra idp
+            // might've been added.  It's not necessary anymore.
+            unset($this->data['idplist']['dummy']);
+
             foreach ($this->data['idplist'] as $idp) {
                 $name = htmlspecialchars($idp['name']);
                 $idpId = htmlspecialchars($idp['entityid']);
