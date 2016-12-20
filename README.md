@@ -78,3 +78,7 @@ content of that announcement.  HTML is supported.
 
 ## i18n support
 Translations are categorized by page in definition files located in the `dictonaries` directory.
+
+Localization is affected by the configuration setting `language.available`.  Only language codes found in this property will be utilized.  
+For example, if a translation is provided in Afrikaans for this module, the configuration must be adjusted to make 'af' an available
+language.  If that's not done, the translation function will not utilize the translations even if provided.

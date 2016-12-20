@@ -46,7 +46,7 @@
             unset($this->data['idplist']['dummy']);
 
             foreach ($this->data['idplist'] as $idp) {
-                $name = htmlspecialchars($idp['name']);
+                $name = htmlspecialchars($this->t($idp['name']));
                 $idpId = htmlspecialchars($idp['entityid']);
             ?>
             <div class="mdl-card mdl-shadow--8dp margin">
