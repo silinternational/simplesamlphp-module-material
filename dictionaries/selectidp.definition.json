@@ -1,15 +1,27 @@
 
 {
 	"title": {
-		"en": "Login account"
+		"en": "Login account",
+		"es": "Cuenta de inicio de sesión",
+		"fr": "Compte de connexion",
+		"ko": "로그인 계정"
 	},
 	"header": {
-		"en": "Choose an account"
+		"en": "Choose an account",
+		"es": "elige una cuenta",
+		"fr": "Choisissez un compte",
+		"ko": "계정 선택"
 	},
 	"button_login": {
-		"en": "Login with $idpName"
+		"en": "Login with $idpName",
+		"es": "Inicia con",
+		"fr": "Connectez-vous avec",
+		"ko": "로 로그인"
 	},
 	"button_login_disabled": {
-		"en": "Coming soon..."
+		"en": "Coming soon...",
+		"es": "Próximamente...",
+		"fr": "Arrive bientôt...",
+		"ko": "곧 출시 될 예정입니다."
 	}
 }

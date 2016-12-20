@@ -1,20 +1,38 @@
 {
 	"title": {
-		"en": "Login account"
+		"en": "Login account",
+		"es": "Cuenta de inicio de sesión",
+		"fr": "Compte de connexion",
+		"ko": "로그인 계정"
 	},
 	"header": {
-		"en": "Please enter your username and password"
+		"en": "Please enter your username and password",
+		"es": "porfavor introduzca su nombre de usuario y contraseña",
+		"fr": "Veuillez s'il vous plaît entrer votre nom d'utilisateur et votre mot de passe",
+		"ko": "사용자 이름과 암호를 입력하십시오."
 	},
 	"label_username": {
-		"en": "Username"
+		"en": "Username",
+		"es": "Nombre de usuario",
+		"fr": "Nom d'utilisateur",
+		"ko": "사용자 이름"
 	},
 	"label_password": {
-		"en": "Password"
+		"en": "Password",
+		"es": "Contraseña",
+		"fr": "Mot de passe",
+		"ko": "암호"
 	},
 	"error_wronguserpass": {
-		"en": "Something is wrong with that username or password, please verify and try again."
+		"en": "Something is wrong with that username or password, please verify and try again.",
+		"es": "Algo está mal con ese nombre de usuario o contraseña, compruebe e inténtelo de nuevo.",
+		"fr": "Quelque chose ne va pas avec ce nom d'utilisateur ou ce mot de passe, vérifiez et essayez à nouveau.",
+		"ko": "해당 사용자 이름 또는 비밀번호가 잘못되었습니다. 다시 확인하고 다시 시도하십시오."
 	},
 	"button_login": {
-		"en": "Login"
+		"en": "Login",
+		"es": "Iniciar sesión",
+		"fr": "S'identifier",
+		"ko": "로그인"
 	}
 }
