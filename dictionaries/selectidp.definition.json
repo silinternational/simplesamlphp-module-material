@@ -14,9 +14,9 @@
 	},
 	"button_login": {
 		"en": "Login with $idpName",
-		"es": "Inicia con",
-		"fr": "Connectez-vous avec",
-		"ko": "로 로그인"
+		"es": "Inicia con $idpName",
+		"fr": "Connectez-vous avec $idpName",
+		"ko": "로 로그인 $idpName"
 	},
 	"button_login_disabled": {
 		"en": "Coming soon...",
