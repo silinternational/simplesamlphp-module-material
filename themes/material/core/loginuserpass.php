@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+    $siteKey = $this->data['recaptcha.siteKey'] ?? null;
+    $errorCode = $this->data['errorcode'] ?? null;
+    $username = $this->data['username'] ?? null;
+?>
 <html>
 <head>
     <title><?= $this->t('{material:login:title}') ?></title>
@@ -6,8 +11,7 @@
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
     <?php
-    $key = $this->data['recaptcha.siteKey'];
-    if ($this->data['errorcode'] == 'RECAPTCHA_REQUIRED' && ! empty($key)) {
+    if ($errorCode == 'RECAPTCHA_REQUIRED' && ! empty($siteKey)) {
     ?>
     <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit' async defer></script>
 
@@ -20,7 +24,7 @@
             var loginButton = document.querySelector('button');
 
             grecaptcha.render(loginButton, {
-                sitekey: $key,
+                sitekey: $siteKey,
                 callback: onSubmit
             });
         }
@@ -53,8 +57,8 @@
                     <?= $this->t('{material:login:label_username}') ?>
                 </label>
                 <input type="text" name="username" class="mdl-textfield__input" 
-                       value="<?= htmlspecialchars($this->data['username']) ?>" 
-                       <?= empty($this->data['username']) ? 'autofocus' : '' ?> />
+                       value="<?= htmlspecialchars($username) ?>" 
+                       <?= empty($username) ? 'autofocus' : '' ?> />
             </div>
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -62,11 +66,11 @@
                     <?= $this->t('{material:login:label_password}') ?>
                 </label>
                 <input type="password" name="password" class="mdl-textfield__input" 
-                       <?= ! empty($this->data['username']) ? 'autofocus' : '' ?> />
+                       <?= ! empty($username) ? 'autofocus' : '' ?> />
             </div>
             
             <?php
-            if ($this->data['errorcode'] == 'WRONGUSERPASS') {
+            if ($errorCode == 'WRONGUSERPASS') {
             ?>
             <p class="mdl-color-text--red" layout-children="row" 
                child-spacing="space-between">

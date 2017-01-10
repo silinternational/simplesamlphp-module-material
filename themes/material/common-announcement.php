@@ -1,5 +1,5 @@
 <?php
-$announcement = $this->data['announcement'];
+$announcement = $this->data['announcement'] ?? null;
 
 if (! empty($announcement)) {
 ?>
