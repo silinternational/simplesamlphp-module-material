@@ -29,6 +29,7 @@ services:
       SECURE_COOKIE: "false"
       SHOW_SAML_ERRORS: "true"
       ADMIN_PROTECT_INDEX_PAGE: "false"
+      THEME_USE: "default:default"
   idp2:
     image: silintl/ssp-base:develop
     volumes: 
