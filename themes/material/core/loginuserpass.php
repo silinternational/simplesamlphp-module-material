@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <?php
     $siteKey = $this->data['recaptcha.siteKey'] ?? null;
-    $errorCode = $this->data['errorcode'] ?? null;
     $username = $this->data['username'] ?? null;
+    
+    $errorCode = $this->data['errorcode'] ?? null;
+    $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
+    $errorMessageTokens = $this->data['errorparams'][2] ?? [];
 ?>
 <html>
 <head>
@@ -77,7 +80,7 @@
                 <i class="material-icons">error</i>
 
                 <span class="mdl-typography--caption margin">
-                    <?= $this->t('{material:login:error_wronguserpass}') ?>
+                    <?= $this->t($errorMessageKey, $errorMessageTokens) ?>
                 </span>
             </p>
             <?php
