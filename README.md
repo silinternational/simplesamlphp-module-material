@@ -34,7 +34,7 @@ Update `/simplesamlphp/config/config.php`:
 ```
 
 ### Announcements
-if something is found in `$this->data['announcement']` an alert will be shown to the user filled with the 
+If something is found in `$this->data['announcement']` an alert will be shown to the user filled with the 
 content of that announcement.  HTML is supported.
 
 ## Testing theme
@@ -77,7 +77,7 @@ content of that announcement.  HTML is supported.
 11. Login as idp2 administrator, e.g., username=admin & password=b
 
 ## i18n support
-Translations are categorized by page in definition files located in the `dictonaries` directory.
+Translations are categorized by page in definition files located in the `dictionaries` directory.
 
 Localization is affected by the configuration setting `language.available`.  Only language codes found in this property will be utilized.  
 For example, if a translation is provided in Afrikaans for this module, the configuration must be adjusted to make 'af' an available
