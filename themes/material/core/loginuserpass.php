@@ -79,7 +79,7 @@
                child-spacing="space-between">
                 <i class="material-icons">error</i>
 
-                <span class="mdl-typography--caption margin">
+                <span class="mdl-textfield mdl-typography--caption margin">
                     <?= $this->t($errorMessageKey, $errorMessageTokens) ?>
                 </span>
             </p>

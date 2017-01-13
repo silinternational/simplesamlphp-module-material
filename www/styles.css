@@ -72,6 +72,15 @@
   color: blue;
 }
 
+/* The font-size in the mdl-textfield was overriding the one in 
+   caption since it was defined later in the CSS but the font-size from
+   caption is what was needed here so more specificity required to override
+   it back 
+*/
+.mdl-textfield.mdl-typography--caption {
+  font-size: 12px
+}
+
 /* Material icons */
 @font-face {
   font-family: 'Material Icons';
