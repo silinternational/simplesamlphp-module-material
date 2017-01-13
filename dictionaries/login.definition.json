@@ -26,13 +26,13 @@
 	"error_wronguserpass": {
 		"en": "Something is wrong with that username or password, please verify and try again.",
 		"es": "Algo está mal con ese nombre de usuario o contraseña, compruebe e inténtelo de nuevo.",
-		"fr": "Quelque chose ne va pas avec ce nom d'utilisateur ou ce mot de passe, vérifiez et essayez à nouveau.",
+		"fr": "Quelque chose ne va pas avec ce nom d'utilisateur ou ce mot de passe, veuillez vérifier et essayer à nouveau.",
 		"ko": "해당 사용자 이름 또는 비밀번호가 잘못되었습니다. 다시 확인하고 다시 시도하십시오."
 	},
 	"button_login": {
 		"en": "Login",
 		"es": "Iniciar sesión",
-		"fr": "Connecter",
+		"fr": "Connexion",
 		"ko": "로그인"
 	}
 }
