@@ -15,9 +15,8 @@ Update `/simplesamlphp/config/config.php`:
 ```
 
 ### Google reCAPTCHA
-if `RECAPTCHA_REQUIRED` is found in `$this->data['errorcode']` **and** a site key has been 
-provided in `$this->data['recaptcha.siteKey']`, the username/password page will require the user 
-prove his/her humanity.
+if a site key has been provided in `$this->data['recaptcha.siteKey']`, the 
+username/password page will require the user prove his/her humanity.
 
 ### Branding
 Update `/simplesamlphp/config/config.php`:

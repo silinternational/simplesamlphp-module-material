@@ -14,7 +14,7 @@
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
     <?php
-    if ($errorCode == 'RECAPTCHA_REQUIRED' && ! empty($siteKey)) {
+    if (! empty($siteKey)) {
     ?>
     <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit' async defer></script>
 
