@@ -27,7 +27,7 @@
             var loginButton = document.querySelector('button');
 
             grecaptcha.render(loginButton, {
-                sitekey: $siteKey,
+                sitekey: '<?= htmlentities($siteKey) ?>',
                 callback: onSubmit
             });
         }
