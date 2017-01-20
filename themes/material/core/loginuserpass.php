@@ -2,6 +2,7 @@
 <?php
     $siteKey = $this->data['recaptcha.siteKey'] ?? null;
     $username = $this->data['username'] ?? null;
+    $forgotPasswordUrl = $this->data['forgotPasswordUrl'] ?? null;
     
     $errorCode = $this->data['errorcode'] ?? null;
     $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
@@ -90,6 +91,9 @@
             <button class="mdl-button mdl-button--colored mdl-button--raised">
                 <?= $this->t('{material:login:button_login}') ?>
             </button>
+            <?php if ( ! empty($forgotPasswordUrl)): ?>
+                <a href="<?= htmlentities($forgotPasswordUrl); ?>">Forgot password?</a>
+            <?php endif; ?>
         </form>
     </main>
 
