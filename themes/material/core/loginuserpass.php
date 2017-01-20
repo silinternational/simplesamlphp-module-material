@@ -92,7 +92,7 @@
                 <?= $this->t('{material:login:button_login}') ?>
             </button>
             <?php if ( ! empty($forgotPasswordUrl)): ?>
-                <a href="<?= htmlentities($forgotPasswordUrl); ?>">Forgot password?</a>
+                <a href="<?= htmlentities($forgotPasswordUrl); ?>" target="_blank">Forgot password?</a>
             <?php endif; ?>
         </form>
     </main>
