@@ -34,5 +34,11 @@
 		"es": "Iniciar sesión",
 		"fr": "Connexion",
 		"ko": "로그인"
+	},
+	"forgot": {
+		"en": "Forgot your password? Reset it now",
+		"es": "¿Olvidaste tu contraseña? Restablecer ahora",
+		"fr": "Mot de passe oublié? Réinitialisez-le maintenant",
+		"ko": "비밀번호를 잊어 버렸습니까? 지금 다시 설정하십시오"
 	}
 }

@@ -2,8 +2,9 @@
 <?php
     $siteKey = $this->data['recaptcha.siteKey'] ?? null;
     $username = $this->data['username'] ?? null;
+    $forgotPasswordUrl = $this->data['forgotPasswordUrl'] ?? null;
     $csrfToken = $this->data['csrfToken'] ?? null;
-    
+
     $errorCode = $this->data['errorcode'] ?? null;
     $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
     $errorMessageTokens = $this->data['errorparams'][2] ?? [];
@@ -73,7 +74,7 @@
                 <input type="password" name="password" class="mdl-textfield__input" 
                        <?= ! empty($username) ? 'autofocus' : '' ?> />
             </div>
-            
+        
             <?php
             if ($errorCode == 'WRONGUSERPASS') {
             ?>
@@ -92,6 +93,19 @@
             <button class="mdl-button mdl-button--colored mdl-button--raised">
                 <?= $this->t('{material:login:button_login}') ?>
             </button>
+
+            <?php 
+            if (! empty($forgotPasswordUrl)) { 
+            ?>
+            <p class="mdl-typography--caption margin">
+                <a href="<?= htmlentities($forgotPasswordUrl) ?>" 
+                   target="_blank">
+                    <?= $this->t('{material:login:forgot}') ?>
+                </a>
+            <p>
+            <?php 
+            } 
+            ?>
         </form>
     </main>
 
