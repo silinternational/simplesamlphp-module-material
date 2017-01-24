@@ -2,6 +2,7 @@
 <?php
     $siteKey = $this->data['recaptcha.siteKey'] ?? null;
     $username = $this->data['username'] ?? null;
+    $csrfToken = $this->data['csrfToken'] ?? null;
     
     $errorCode = $this->data['errorcode'] ?? null;
     $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
@@ -54,6 +55,7 @@
 
             <input type="hidden" name="AuthState" 
                    value="<?= htmlspecialchars($this->data['stateparams']['AuthState']) ?>" />
+            <input type="hidden" name="csrf-token" value="<?= htmlentities($csrfToken); ?>" />
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <label for="username" class="mdl-textfield__label">
