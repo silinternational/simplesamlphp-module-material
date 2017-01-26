@@ -67,7 +67,7 @@
                                    these bugs are resolved. -->
                         <div layout-children="row" child-spacing="space-between">
                             <span>
-                                <?= $this->t('{material:selectidp:button_login}', ['$idpName' => $name]) ?>
+                                <?= $this->t('{material:selectidp:button_login}', ['{idpName}' => $name]) ?>
                             </span>
 
                             <i class="material-icons">exit_to_app</i>
