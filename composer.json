@@ -1,5 +1,5 @@
 {
-  "name": "silinternational/simplesamlphp-module-theme-material",
+  "name": "silinternational/simplesamlphp-module-material",
   "description": "Material Design theme for IdP Hub based on SimpleSAMLphp",
   "type": "simplesamlphp-module",
   "license": "MIT",
@@ -13,7 +13,7 @@
   "require": {
     "php": ">=5.4",
     "roave/security-advisories": "dev-master",
-    "simplesamlphp/composer-module-installer": "~1.1",
-    "silinternational/ssp-utilities": "dev-develop"
+    "simplesamlphp/composer-module-installer": "^1.1.5",
+    "simplesamlphp/simplesamlphp": "^1.14.10"
   }
 }

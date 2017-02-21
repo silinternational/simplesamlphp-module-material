@@ -1,0 +1,21 @@
+
+{
+	"title": {
+		"en": "Logged out",
+		"es": "Desconectado",
+		"fr": "Déconnecté",
+		"ko": "로그 아웃 됨"
+	},
+	"header": {
+		"en": "Logged out",
+		"es": "Desconectado",
+		"fr": "Déconnecté",
+		"ko": "로그 아웃 됨"
+	},
+	"message": {
+		"en": "You have now been logged out.",
+		"es": "Se ha desconectado.",
+		"fr": "Vous êtes maintenant déconnecté.",
+		"ko": "이제 로그 아웃되었습니다."
+	}
+}

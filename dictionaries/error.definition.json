@@ -1,0 +1,21 @@
+
+{
+	"title": {
+		"en": "Error",
+		"es": "Error",
+		"fr": "Erreur",
+		"ko": "오류"
+	},
+	"header": {
+		"en": "Error",
+		"es": "Error",
+		"fr": "Erreur",
+		"ko": "오류"
+	},
+	"message": {
+		"en": "An error occurred, please contact your help desk for further assistance.",
+		"es": "Se ha producido un error, póngase en contacto con su asistencia técnica para obtener más ayuda.",
+		"fr": "Une erreur s'est produite, s'il vous plaît contacter votre service d'assistance pour plus d'assistance.",
+		"ko": "오류가 발생했습니다. 도움을 받으려면 헬프 데스크에 문의하십시오."
+	}
+}
