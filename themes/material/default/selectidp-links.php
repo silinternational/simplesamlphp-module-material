@@ -28,7 +28,7 @@
         </div>
     </header>
 
-    <main class="mdl-layout__content" layout-children="column">
+    <main class="mdl-layout__content">
         <?php include __DIR__ . '/../common-announcement.php' ?>
 
         <form action="<?= htmlentities($_SERVER['PHP_SELF']) ?>"

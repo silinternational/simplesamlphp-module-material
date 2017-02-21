@@ -66,6 +66,13 @@
   background-color: tomato;
   border-radius: 0.33em;
   padding: 1em;
+  
+  /* 
+     had to center manually instead of using flex due to ie11 bug that
+     was causing idp cards not to wrap when parent container was centered
+   */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .alert a {
