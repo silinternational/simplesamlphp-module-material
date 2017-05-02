@@ -12,7 +12,7 @@
   flex-direction: row;
   align-items: center;
 
-  /* make sure the children break nicely for different browser widths, e.g., 
+  /* make sure the children break nicely for different browser widths, e.g.,
      tablet, phone, etc. */
   flex-wrap: wrap;
 }
@@ -60,14 +60,18 @@
   cursor: not-allowed;
 }
 
+.mdl-card.disabled img {
+  opacity: 0.3;
+}
+
 .alert {
   max-width: 80%;
   min-width: 30%;
   background-color: tomato;
   border-radius: 0.33em;
   padding: 1em;
-  
-  /* 
+
+  /*
      had to center manually instead of using flex due to ie11 bug that
      was causing idp cards not to wrap when parent container was centered
    */
@@ -79,10 +83,10 @@
   color: blue;
 }
 
-/* The font-size in the mdl-textfield was overriding the one in 
+/* The font-size in the mdl-textfield was overriding the one in
    caption since it was defined later in the CSS but the font-size from
    caption is what was needed here so more specificity required to override
-   it back 
+   it back
 */
 .mdl-textfield.mdl-typography--caption {
   font-size: 12px
@@ -93,8 +97,8 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), 
-       local('MaterialIcons-Regular'), 
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
        url(/module.php/material/material-icons.woff2) format('woff2'),
        url(/module.php/material/material-icons.woff) format('woff');
 }

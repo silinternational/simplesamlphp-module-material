@@ -8,6 +8,6 @@
 $colors = $this->configuration->getValue('theme.color-scheme', 'indigo-purple');
 ?>
 <link rel="stylesheet" href="/module.php/material/material.<?= $colors ?>.1.2.1.min.css">
-<link rel="stylesheet" href="/module.php/material/styles.1.0.1.css">
+<link rel="stylesheet" href="/module.php/material/styles.2.0.0.css">
 
 <script async src="/module.php/material/material.1.2.1.min.js"></script>
