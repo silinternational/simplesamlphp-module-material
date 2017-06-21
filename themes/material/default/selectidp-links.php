@@ -43,7 +43,7 @@
             <?php
             // in order to bypass some built-in simplesaml behavior, an extra idp
             // might've been added.  It's not meant to be displayed.
-            unset($this->data['idplist']['dummy']);
+            unset($this->data['idplist']['dummy']);  //TODO: is this still needed?
 
             $enabledIdps = [];
             $disabledIdps = [];
