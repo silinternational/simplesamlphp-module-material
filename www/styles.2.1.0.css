@@ -5,6 +5,9 @@
 
 .mdl-layout__content {
   padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 [layout-children=row] {
@@ -92,6 +95,19 @@
   font-size: 12px
 }
 
+.mdl-card.unfix-width {
+  width: initial;
+}
+
+[flex] {
+  flex: 1;
+}
+
+.gradient-bg {
+  background: linear-gradient(rgba(200,200,200,1) 0%,
+                              rgba(250,250,250,1) 50%,
+                              rgba(200,200,200,1) 100%);
+}
 /* Material icons */
 @font-face {
   font-family: 'Material Icons';

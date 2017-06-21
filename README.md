@@ -25,6 +25,9 @@ Update `/simplesamlphp/config/config.php`:
 'theme.color-scheme' => ['indigo-purple'|'blue_grey-teal'|'red-teal'|'orange-light_blue']
 ```
 
+The login page will get its images from `/simplesamlphp/www/favicon.ico` and 
+`/simplesamlphp/www/logo.png` which are **NOT** provided by default.
+
 ### Analytics
 Update `/simplesamlphp/config/config.php`:
 
