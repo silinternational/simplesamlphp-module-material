@@ -21,6 +21,42 @@ $metadata['http://ssp-hub-idp2.local:8086'] = [
     'SingleLogoutService'  => 'http://ssp-hub-idp2.local:8086/saml2/idp/SingleLogoutService.php',
     'certData' => 'MIIDzzCCAregAwIBAgIJALBaUrvz1X5DMA0GCSqGSIb3DQEBCwUAMH4xCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJOQzEPMA0GA1UEBwwGV2F4aGF3MQwwCgYDVQQKDANTSUwxDTALBgNVBAsMBEdUSVMxDjAMBgNVBAMMBVN0ZXZlMSQwIgYJKoZIhvcNAQkBFhVzdGV2ZV9iYWd3ZWxsQHNpbC5vcmcwHhcNMTYxMDE4MTQwMDUxWhcNMjYxMDE4MTQwMDUxWjB+MQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxDzANBgNVBAcMBldheGhhdzEMMAoGA1UECgwDU0lMMQ0wCwYDVQQLDARHVElTMQ4wDAYDVQQDDAVTdGV2ZTEkMCIGCSqGSIb3DQEJARYVc3RldmVfYmFnd2VsbEBzaWwub3JnMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx5mZNwjEnakJho+5etuFyx+2g9rs96iLX/LDC24aBAsdNxTNuIc1jJ7pxBxGrepEND4LkietLNBlOr1q50nq2+ddTrCfmoJB+9BqBOxcm9qWeqWbp8/arUjaxPzK3DfZrxJxIVFjzqFF7gI91y9yvEW/fqLRMhvnH1ns+N1ne59zr1y6h9mmHfBffGr1YXAfyEAuV1ich4AfTfjqhdwFwxhFLLCVnxA0bDbNw/0eGCSiA13N7a013xTurLeJu0AQaZYssMqvc/17UphH4gWDMEZAwy0EfRSBOsDOYCxeNxVajnWX1834VDpBDfpnZj996Gh8tzRQxQgT9/plHKhGiwIDAQABo1AwTjAdBgNVHQ4EFgQUApxlUQg26GrG3eH8lEG3SkqbH/swHwYDVR0jBBgwFoAUApxlUQg26GrG3eH8lEG3SkqbH/swDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEANhbm8WgIqBDlF7DIRVUbq04TEA9nOJG8wdjJYdoKrPX9f/E9slkFuD2StcK99RTcowa8Z2OmW7tksa+onyH611Lq21QXh4aHzQUAm2HbsmPQRZnkByeYoCJ/1tuEho+x+VGanaUICSBVWYiebAQVKHR6miFypRElibNBizm2nqp6Q9B87V8COzyDVngR1DlWDduxYaNOBgvht3Rk9Y2pVHqym42dIfN+pprcsB1PGBkY/BngIuS/aqTENbmoC737vcb06e8uzBsbCpHtqUBjPpL2psQZVJ2Y84JmHafC3B7nFQrjdZBbc9eMHfPo240Rh+pDLwxdxPqRAZdeLaUkCQ==',
 ];
+$metadata['jaars-idp'] = [
+    'enabled' => true,
+    'metadata-set' => 'saml20-idp-remote',
+    'entityid' => 'jaars-idp',
+    'name' => [
+        'en' => 'jaars'
+    ],
+    'logoURL' => 'https://static.gtis.guru/idp-logo/jaars-logo.png'
+];
+$metadata['sil-idp'] = [
+    'enabled' => true,
+    'metadata-set' => 'saml20-idp-remote',
+    'entityid' => 'sil-idp',
+    'name' => [
+        'en' => 'sil'
+    ],
+    'logoURL' => 'https://static.gtis.guru/idp-logo/sil-logo.png'
+];
+$metadata['usa-idp'] = [
+    'enabled' => true,
+    'metadata-set' => 'saml20-idp-remote',
+    'entityid' => 'usa-idp',
+    'name' => [
+        'en' => 'usa'
+    ],
+    'logoURL' => 'https://static.gtis.guru/idp-logo/usa-logo.png'
+];
+$metadata['wga-idp'] = [
+    'enabled' => true,
+    'metadata-set' => 'saml20-idp-remote',
+    'entityid' => 'wga-idp',
+    'name' => [
+        'en' => 'wga'
+    ],
+    'logoURL' => 'https://static.gtis.guru/idp-logo/wga-logo.png'
+];
 $metadata['mock-jaars-idp'] = [
     'enabled' => false,
     'metadata-set' => 'saml20-idp-remote',

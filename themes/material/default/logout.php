@@ -15,7 +15,7 @@
         </div>
     </header>
 
-    <main class="mdl-layout__content">
+    <main class="mdl-layout__content margin" layout-children="column">
         <p><?= $this->t('{material:logout:message}') ?><p>
     </main>
 

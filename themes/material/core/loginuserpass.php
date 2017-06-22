@@ -4,7 +4,7 @@
     $username = $this->data['username'] ?? null;
     $forgotPasswordUrl = $this->data['forgotPasswordUrl'] ?? null;
     $csrfToken = $this->data['csrfToken'] ?? null;
-    $idpName = $this->data['idp_name'] ?? '—';
+    $idpName = $this->configuration->getValue('idp_name', '—');
 
     $errorCode = $this->data['errorcode'] ?? null;
     $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
@@ -19,7 +19,8 @@
     <?php
     if (! empty($siteKey)) {
     ?>
-    <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit' async defer></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit'
+            async defer></script>
 
     <script>
         function submitForm() {
@@ -38,16 +39,17 @@
     <?php
     }
     ?>
-
 </head>
 <body class="gradient-bg">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
-    <?php include __DIR__ . '/../common-announcement.php' ?>
+    <main class="mdl-layout__content" layout-children="column" child-spacing="center">
+        <?php include __DIR__ . '/../common-announcement.php' ?>
 
-    <main class="mdl-layout__content">
-        <div class="mdl-card mdl-shadow--8dp unfix-width">
+        <div class="mdl-card mdl-shadow--8dp">
             <div class="mdl-card__media white-bg margin">
-                <img src="/logo.png" alt="<?= $this->t('{material:login:logo}', ['{idpName}' => $idpName]) ?>">
+
+                <img src="https://static.gtis.guru/idp-logo/sil-logo.png"
+                     alt="<?= $this->t('{material:login:logo}', ['{idpName}' => $idpName]) ?>">
             </div>
 
 
@@ -84,13 +86,13 @@
                 <?php
                 if ($errorCode == 'WRONGUSERPASS') {
                 ?>
-                <p class="mdl-color-text--red" layout-children="row" child-spacing="space-between">
-                    <i class="material-icons">error</i>
+                    <p class="mdl-card__supporting-text mdl-color-text--red error">
+                        <i class="material-icons margin">error</i>
 
-                    <span class="mdl-textfield mdl-typography--caption margin">
-                        <?= $this->t($errorMessageKey, $errorMessageTokens) ?>
-                    </span>
-                </p>
+                        <span class="mdl-textfield mdl-typography--caption">
+                            <?= $this->t($errorMessageKey, $errorMessageTokens) ?>
+                        </span>
+                    </p>
                 <?php
                 }
                 ?>
@@ -116,7 +118,6 @@
             </div>
         </div>
     </main>
-
 </div>
 </body>
 </html>

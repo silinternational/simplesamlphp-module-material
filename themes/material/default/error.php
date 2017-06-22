@@ -15,8 +15,10 @@
         </div>
     </header>
 
-    <main class="mdl-layout__content" layout-children="column">
-        <p><?= $this->t('{material:error:message}') ?><p>
+    <main class="mdl-layout__content margin" layout-children="column">
+        <p>
+            <?= $this->t('{material:error:message}') ?>
+        </p>
 
         <?php
         if ($this->data['showerrors']) {

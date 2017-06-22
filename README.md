@@ -57,7 +57,8 @@ content of that announcement.  HTML is supported.
 3. Click **hub-discovery**
 
 ### Error
-1. Click **Configuration** tab
+1. Click **Federation** tab
+2. Click either **Show metadata** link
 
 ### Logout
 1. Click **Authentication** tab

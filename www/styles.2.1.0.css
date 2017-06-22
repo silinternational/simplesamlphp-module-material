@@ -3,13 +3,6 @@
   height: 100vh;
 }
 
-.mdl-layout__content {
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 [layout-children=row] {
   display: flex;
   flex-direction: row;
@@ -38,6 +31,12 @@
   justify-content: center;
 }
 
+form p.error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .margin {
   margin: 1em;
 }
@@ -55,8 +54,43 @@
   height: 100%;
 }
 
-.no-padding {
-  padding: 0px;
+.scale-to-parent {
+  max-width: 90%;
+}
+
+/* out-of-box styles for the cards don't work well when there are many cards */
+.mdl-card {
+  width: initial;
+  margin: 1em;
+}
+
+/* phones (2 cards / row) */
+@media only screen and (min-width : 320px) {
+  .mdl-card.row-aware {
+    min-width: calc(50% - 2em);
+    max-width: calc(50% - 2em);
+  }
+}
+/* phones, small tablets, landscape (3 cards / row) */
+@media only screen and (min-width : 600px) {
+  .mdl-card.row-aware {
+    min-width: calc(33% - 2em);
+    max-width: calc(33% - 2em);
+  }
+}
+/* tablets, small desktops (4 cards / row) */
+@media only screen and (min-width : 850px) {
+  .mdl-card.row-aware {
+    min-width: calc(25% - 2em);
+    max-width: calc(25% - 2em);
+  }
+}
+/* desktops (5 cards / row) */
+@media only screen and (min-width : 1024px) {
+  .mdl-card.row-aware {
+    min-width: calc(20% - 2em);
+    max-width: calc(20% - 2em);
+  }
 }
 
 .mdl-card.disabled {
@@ -93,10 +127,6 @@
 */
 .mdl-textfield.mdl-typography--caption {
   font-size: 12px
-}
-
-.mdl-card.unfix-width {
-  width: initial;
 }
 
 [flex] {
