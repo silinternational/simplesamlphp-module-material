@@ -15,15 +15,21 @@
         </div>
     </header>
 
-    <main class="mdl-layout__content">
-        <p><?= $this->t('{material:error:message}') ?><p>
+    <main class="mdl-layout__content margin" layout-children="column">
+        <p>
+            <?= $this->t('{material:error:message}') ?>
+        </p>
 
         <?php
         if ($this->data['showerrors']) {
         ?>
-        <p class="mdl-typography--body-2"><?= htmlspecialchars($this->data['error']['exceptionMsg']) ?></p>
-        
-        <pre class="mdl-typography--caption"><?= htmlspecialchars($this->data['error']['exceptionTrace']) ?></pre>
+        <p class="mdl-typography--body-2">
+            <?= htmlspecialchars($this->data['error']['exceptionMsg']) ?>
+        </p>
+
+        <pre class="mdl-typography--caption">
+            <?= htmlspecialchars($this->data['error']['exceptionTrace']) ?>
+        </pre>
         <?php
         }
         ?>

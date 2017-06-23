@@ -25,6 +25,9 @@ Update `/simplesamlphp/config/config.php`:
 'theme.color-scheme' => ['indigo-purple'|'blue_grey-teal'|'red-teal'|'orange-light_blue']
 ```
 
+The login page will get its images from `/simplesamlphp/www/favicon.ico` and 
+`/simplesamlphp/www/logo.png` which are **NOT** provided by default.
+
 ### Analytics
 Update `/simplesamlphp/config/config.php`:
 
@@ -54,7 +57,8 @@ content of that announcement.  HTML is supported.
 3. Click **hub-discovery**
 
 ### Error
-1. Click **Configuration** tab
+1. Click **Federation** tab
+2. Click either **Show metadata** link
 
 ### Logout
 1. Click **Authentication** tab

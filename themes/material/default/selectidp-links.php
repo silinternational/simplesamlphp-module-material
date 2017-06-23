@@ -45,33 +45,25 @@
             // might've been added.  It's not meant to be displayed.
             unset($this->data['idplist']['dummy']);
 
+            $enabledIdps = [];
+            $disabledIdps = [];
             foreach ($this->data['idplist'] as $idp) {
+                $idp['enabled'] === true ? array_push($enabledIdps, $idp)
+                                         : array_push($disabledIdps, $idp);
+            }
+
+            foreach ($enabledIdps as $idp) {
                 $name = htmlspecialchars($this->t($idp['name']));
                 $idpId = htmlspecialchars($idp['entityid']);
             ?>
-            <div class="mdl-card mdl-shadow--8dp margin">
+            <div class="mdl-card mdl-shadow--8dp row-aware"
+                 title="<?= $this->t('{material:selectidp:logo}', ['{idpName}' => $name]) ?>">
                 <div class="mdl-card__media white-bg fixed-height">
-                    <button class="mdl-button fill-parent no-padding" value="<?= $name ?>"
+                    <button class="mdl-button fill-parent" value="<?= $name ?>"
                             onclick="setSelectedIdp('<?= $idpId ?>')">
-                        <img src="<?= empty($idp['logoURL']) ?
-                                      '/module.php/material/default-logo.png' :
-                                      $idp['logoURL'] ?>">
-                    </button>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <button class="mdl-button mdl-button--colored fill-parent"
-                            value="<?= $name ?>"
-                            onclick="setSelectedIdp('<?= $idpId ?>')">
-                        <!-- div added because of https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers
-                             TODO: move properties to button and remove div if
-                                   these bugs are resolved. -->
-                        <div layout-children="row" child-spacing="space-between">
-                            <span>
-                                <?= $this->t('{material:selectidp:button_login}', ['{idpName}' => $name]) ?>
-                            </span>
-
-                            <i class="material-icons">exit_to_app</i>
-                        </div>
+                        <img class="scale-to-parent"
+                             src="<?= empty($idp['logoURL']) ? '/module.php/material/default-logo.png'
+                                                             : $idp['logoURL'] ?>">
                     </button>
                 </div>
             </div>
@@ -80,15 +72,15 @@
             ?>
 
             <?php
-            $futureIdps = ['jaars', 'sil', 'usa', 'wga'];
-            foreach ($futureIdps as $futureIdp) {
+            foreach ($disabledIdps as $idp) {
             ?>
-            <div class="mdl-card mdl-shadow--2dp margin disabled" title="Planned for a future release.">
-                <div class="mdl-card__media white-bg fixed-height" layout-children="row" child-spacing="center">
-                    <img src="//static.gtis.guru/idp-logo/<?= $futureIdp ?>-logo-disabled.png">
-                </div>
-                <div class="mdl-card__supporting-text" layout-children="row" child-spacing="center">
-                    <?= $this->t('{material:selectidp:button_login_disabled}') ?>
+            <div class="mdl-card mdl-shadow--2dp disabled row-aware"
+                 title="<?= $this->t('{material:selectidp:future}') ?>">
+                <div class="mdl-card__media white-bg fixed-height" layout-children="row"
+                     child-spacing="center">
+                    <img class="scale-to-parent"
+                         src="<?= empty($idp['logoURL']) ? '/module.php/material/default-logo.png'
+                                                         : $idp['logoURL'] ?>">
                 </div>
             </div>
             <?php
