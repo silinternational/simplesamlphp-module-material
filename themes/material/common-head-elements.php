@@ -1,13 +1,12 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow"/>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="shortcut icon" href="/module.php/material/favicon.ico" />
 
 <?php
 $colors = $this->configuration->getValue('theme.color-scheme', 'indigo-purple');
 ?>
 <link rel="stylesheet" href="/module.php/material/material.<?= $colors ?>.1.2.1.min.css">
-<link rel="stylesheet" href="/module.php/material/styles.2.0.0.css">
+<link rel="stylesheet" href="/module.php/material/styles.2.1.0.css">
 
 <script async src="/module.php/material/material.1.2.1.min.js"></script>

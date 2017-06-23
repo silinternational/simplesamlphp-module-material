@@ -1,0 +1,169 @@
+.fill-viewport {
+  width: 100vw;
+  height: 100vh;
+}
+
+[layout-children=row] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* make sure the children break nicely for different browser widths, e.g.,
+     tablet, phone, etc. */
+  flex-wrap: wrap;
+}
+
+[layout-children=column] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+[child-spacing=space-around] {
+  justify-content: space-around;
+}
+
+[child-spacing=space-between] {
+  justify-content: space-between;
+}
+
+[child-spacing=center] {
+  justify-content: center;
+}
+
+form p.error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+form p.error > i {
+  margin: 0 1em;
+}
+
+.margin {
+  margin: 1em;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.fixed-height {
+  height: 185px;
+}
+
+.fill-parent {
+  width: 100%;
+  height: 100%;
+}
+
+.scale-to-parent {
+  max-width: 90%;
+}
+
+/* out-of-box styles for the cards don't work well when there are many cards */
+.mdl-card {
+  width: initial;
+  margin: 1em;
+}
+
+/* phones (2 cards / row) */
+@media only screen and (min-width : 320px) {
+  .mdl-card.row-aware {
+    min-width: calc(50% - 2em);
+    max-width: calc(50% - 2em);
+  }
+}
+/* phones, small tablets, landscape (3 cards / row) */
+@media only screen and (min-width : 600px) {
+  .mdl-card.row-aware {
+    min-width: calc(33% - 2em);
+    max-width: calc(33% - 2em);
+  }
+}
+/* tablets, small desktops (4 cards / row) */
+@media only screen and (min-width : 850px) {
+  .mdl-card.row-aware {
+    min-width: calc(25% - 2em);
+    max-width: calc(25% - 2em);
+  }
+}
+/* desktops (5 cards / row) */
+@media only screen and (min-width : 1024px) {
+  .mdl-card.row-aware {
+    min-width: calc(20% - 2em);
+    max-width: calc(20% - 2em);
+  }
+}
+
+.mdl-card.disabled {
+  cursor: not-allowed;
+}
+
+.mdl-card.disabled img {
+  opacity: 0.3;
+}
+
+.alert {
+  max-width: 80%;
+  min-width: 30%;
+  background-color: tomato;
+  border-radius: 0.33em;
+  padding: 1em;
+
+  /* had to center manually instead of using flex due to ie11 bug that
+     was causing idp cards not to wrap when parent container was centered
+   */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alert a {
+  color: blue;
+}
+
+/* The font-size in the mdl-textfield was overriding the one in
+   caption since it was defined later in the CSS but the font-size from
+   caption is what was needed here so more specificity required to override
+   it back */
+.mdl-textfield.mdl-typography--caption {
+  font-size: 12px
+}
+
+/* special case where we want a button for all it's built-in characteristics, e.g., primary color,
+   but also want to set the text apart a bit. */
+.mdl-button.mdl-typography--caption {
+  text-transform: none;
+  font-size: 12px
+}
+
+/* didn't feel like the padding was enough out of the box */
+.mdl-card__actions {
+  padding: 1em;
+}
+
+/* needed ability to center text in these card titles at times */
+.mdl-card__title.center {
+  justify-content: center;
+}
+
+[flex] {
+  flex: 1;
+}
+
+.gradient-bg {
+  background: linear-gradient(rgba(200,200,200,1) 0%,
+                              rgba(250,250,250,1) 50%,
+                              rgba(200,200,200,1) 100%);
+}
+/* Material icons */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(/module.php/material/material-icons.woff2) format('woff2'),
+       url(/module.php/material/material-icons.woff) format('woff');
+}
