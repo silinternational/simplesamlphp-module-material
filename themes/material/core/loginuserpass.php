@@ -46,14 +46,14 @@
         <?php include __DIR__ . '/../common-announcement.php' ?>
 
         <div class="mdl-card mdl-shadow--8dp">
-            <div class="mdl-card__media white-bg margin">
-
+            <div class="mdl-card__media white-bg margin" layout-children="column">
+<!--                TODO: update to /logo.png-->
                 <img src="https://static.gtis.guru/idp-logo/sil-logo.png"
                      alt="<?= $this->t('{material:login:logo}', ['{idpName}' => $idpName]) ?>">
             </div>
 
 
-            <div class="mdl-card__title">
+            <div class="mdl-card__title center">
                 <h1 class="mdl-card__title-text">
                     <?= $this->t('{material:login:header}', ['{idpName}' => $idpName]) ?>
                 </h1>
@@ -100,19 +100,21 @@
 
             <div class="mdl-card__actions" layout-children="row">
                 <?php
+                $forgotPasswordUrl = "asfsgf";
                 if (! empty($forgotPasswordUrl)) {
-                    ?>
-                    <a href="<?= htmlentities($forgotPasswordUrl) ?>" target="_blank"
-                       class="mdl-typography--caption margin">
-                        <?= $this->t('{material:login:forgot}') ?>
-                    </a>
-                    <?php
+                ?>
+                <a href="<?= htmlentities($forgotPasswordUrl) ?>" target="_blank"
+                   class="mdl-button mdl-button--colored mdl-typography--caption">
+                    <?= $this->t('{material:login:forgot}') ?>
+                </a>
+                <?php
                 }
                 ?>
-
+<!--TODO: look at filling viewport on phones.-->
                 <span flex></span>
 
-                <button class="mdl-button mdl-button--colored" form="loginform">
+                <button type="submit" form="loginform"
+                        class="mdl-button mdl-button--colored mdl-button--raised">
                     <?= $this->t('{material:login:button_login}') ?>
                 </button>
             </div>

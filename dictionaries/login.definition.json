@@ -36,10 +36,10 @@
 		"ko": "로그인"
 	},
 	"forgot": {
-		"en": "Forgot your password? Reset it now",
-		"es": "¿Olvidaste tu contraseña? Restablecer ahora",
-		"fr": "Mot de passe oublié? Réinitialisez-le maintenant",
-		"ko": "비밀번호를 잊어 버렸습니까? 지금 다시 설정하십시오"
+		"en": "Forgot password?",
+		"es": "¿Se te olvidó tu contraseña?",
+		"fr": "Mot de passe oublié?",
+		"ko": "비밀번호를 잊으 셨나요?"
 	},
 	"logo": {
 		"en": "{idpName} logo",

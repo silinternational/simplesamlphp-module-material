@@ -108,8 +108,7 @@ form p.error {
   border-radius: 0.33em;
   padding: 1em;
 
-  /*
-     had to center manually instead of using flex due to ie11 bug that
+  /* had to center manually instead of using flex due to ie11 bug that
      was causing idp cards not to wrap when parent container was centered
    */
   margin-left: auto;
@@ -123,10 +122,26 @@ form p.error {
 /* The font-size in the mdl-textfield was overriding the one in
    caption since it was defined later in the CSS but the font-size from
    caption is what was needed here so more specificity required to override
-   it back
-*/
+   it back */
 .mdl-textfield.mdl-typography--caption {
   font-size: 12px
+}
+
+/* special case where we want a button for all it's built-in characteristics, e.g., primary color,
+   but also want to set the text apart a bit. */
+.mdl-button.mdl-typography--caption {
+  text-transform: none;
+  font-size: 12px
+}
+
+/* didn't feel like the padding was enough out of the box */
+.mdl-card__actions {
+  padding: 1em;
+}
+
+/* needed ability to center text in these card titles at times */
+.mdl-card__title.center {
+  justify-content: center;
 }
 
 [flex] {
