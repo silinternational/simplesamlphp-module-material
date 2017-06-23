@@ -51,10 +51,8 @@
             <input type="hidden" name="csrf-token" value="<?= htmlentities($csrfToken); ?>" />
 
             <div class="mdl-card mdl-shadow--8dp">
-<!--TODO: look at filling viewport on phones.-->
                 <div class="mdl-card__media white-bg margin" layout-children="column">
-<!--TODO: update to /logo.png when done testing-->
-                    <img src="https://static.gtis.guru/idp-logo/sil-logo.png"
+                    <img src="/logo.png"
                          alt="<?= $this->t('{material:login:logo}', ['{idpName}' => $idpName]) ?>">
                 </div>
 
@@ -99,7 +97,6 @@
 
                 <div class="mdl-card__actions" layout-children="row">
                     <?php
-                    $forgotPasswordUrl = "asfsgf"; //TODO: remove when done testing.
                     if (! empty($forgotPasswordUrl)) {
                     ?>
                     <a href="<?= htmlentities($forgotPasswordUrl) ?>" target="_blank"
