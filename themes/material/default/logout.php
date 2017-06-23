@@ -16,7 +16,9 @@
     </header>
 
     <main class="mdl-layout__content margin" layout-children="column">
-        <p><?= $this->t('{material:logout:message}') ?><p>
+        <p>
+            <?= $this->t('{material:logout:message}') ?>
+        </p>
     </main>
 
     <?php include __DIR__ . '/../common-footer.php' ?>
