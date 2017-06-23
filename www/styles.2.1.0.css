@@ -37,6 +37,10 @@ form p.error {
   align-items: center;
 }
 
+form p.error > i {
+  margin: 0 1em;
+}
+
 .margin {
   margin: 1em;
 }
