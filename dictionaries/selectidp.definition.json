@@ -12,16 +12,16 @@
 		"fr": "Choisissez un compte",
 		"ko": "계정 선택"
 	},
-	"future": {
-		"en": "Planned for a future release.",
-		"es": "Planeado para una versión futura.",
-		"fr": "Prévu pour une version future.",
-		"ko": "향후 릴리스 예정입니다."
+	"enabled": {
+		"en": "Login with your {idpName} account",
+		"es": "Inicie sesión con su cuenta de {idpName}",
+		"fr": "Connectez-vous avec votre compte {idpName}",
+		"ko": "{idpName} 계정으로 로그인하십시오."
 	},
-	"logo": {
-		"en": "{idpName} logo",
-		"es": "Logotipo de {idpName}",
-		"fr": "Logo {idpName}",
-		"ko": "{idpName} 로고"
+	"disabled": {
+		"en": "{idpName} coming soon",
+		"es": "{IdpName} próximamente",
+		"fr": "{IdpName} à venir",
+		"ko": "{idpName} 곧 제공됨"
 	}
 }
