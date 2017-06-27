@@ -55,9 +55,9 @@
             foreach ($enabledIdps as $idp) {
                 $name = htmlspecialchars($this->t($idp['name']));
                 $idpId = htmlspecialchars($idp['entityid']);
+                $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
             ?>
-            <div class="mdl-card mdl-shadow--8dp row-aware"
-                 title="<?= $this->t('{material:selectidp:logo}', ['{idpName}' => $name]) ?>">
+            <div class="mdl-card mdl-shadow--8dp row-aware" title="<?= $hoverText ?>">
                 <div class="mdl-card__media white-bg fixed-height">
                     <button class="mdl-button fill-parent" value="<?= $name ?>"
                             onclick="setSelectedIdp('<?= $idpId ?>')">
@@ -73,9 +73,11 @@
 
             <?php
             foreach ($disabledIdps as $idp) {
+                $name = htmlspecialchars($this->t($idp['name']));
+                $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
             ?>
             <div class="mdl-card mdl-shadow--2dp disabled row-aware"
-                 title="<?= $this->t('{material:selectidp:future}') ?>">
+                 title="<?= $hoverText ?>">
                 <div class="mdl-card__media white-bg fixed-height" layout-children="row"
                      child-spacing="center">
                     <img class="scale-to-parent"
