@@ -14,6 +14,8 @@
             idpInput.value = id;
 
             document.querySelector('form').appendChild(idpInput);
+
+            ga('send', 'event', 'hub', 'choice', 'IdP', id);
         }
     </script>
 </head>
@@ -76,8 +78,7 @@
                 $name = htmlspecialchars($this->t($idp['name']));
                 $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
             ?>
-            <div class="mdl-card mdl-shadow--2dp disabled row-aware"
-                 title="<?= $hoverText ?>">
+            <div class="mdl-card mdl-shadow--2dp disabled row-aware" title="<?= $hoverText ?>">
                 <div class="mdl-card__media white-bg fixed-height" layout-children="row"
                      child-spacing="center">
                     <img class="scale-to-parent"
@@ -91,6 +92,10 @@
         </form>
     </main>
 
+    <script>
+        ga('send', 'event', 'hub', 'choices', 'enabled', <?= count($enabledIdps) ?>);
+        ga('send', 'event', 'hub', 'choices', 'disabled', <?= count($disabledIdps) ?>);
+    </script>
     <?php include __DIR__ . '/../common-footer.php' ?>
 </div>
 </body>

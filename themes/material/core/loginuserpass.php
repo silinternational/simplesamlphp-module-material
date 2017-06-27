@@ -35,6 +35,8 @@
                 callback: submitForm
             });
         }
+
+        ga('send', 'event', 'reCAPTCHA', 'required');
     </script>
     <?php
     }
@@ -84,13 +86,17 @@
                 <?php
                 if ($errorCode == 'WRONGUSERPASS') {
                 ?>
-                    <p class="mdl-color-text--red error">
-                        <i class="material-icons">error</i>
+                <p class="mdl-color-text--red error">
+                    <i class="material-icons">error</i>
 
-                        <span class="mdl-textfield mdl-typography--caption">
-                                <?= $this->t($errorMessageKey, $errorMessageTokens) ?>
-                        </span>
-                    </p>
+                    <span class="mdl-textfield mdl-typography--caption">
+                        <?= $this->t($errorMessageKey, $errorMessageTokens) ?>
+                    </span>
+                </p>
+
+                <script>
+                    ga('send','event','error','<?= $errorMessageKey ?>','<?= $errorMessageTokens ?>');
+                </script>
                 <?php
                 }
                 ?>
