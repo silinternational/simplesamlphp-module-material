@@ -85,18 +85,18 @@
 
                 <?php
                 if ($errorCode == 'WRONGUSERPASS') {
+                    $message = $this->t($errorMessageKey, $errorMessageTokens);
                 ?>
                 <p class="mdl-color-text--red error">
                     <i class="material-icons">error</i>
 
                     <span class="mdl-textfield mdl-typography--caption">
-                        <?= $this->t($errorMessageKey, $errorMessageTokens) ?>
+                        <?= $message ?>
                     </span>
                 </p>
 
                 <script>
-                    ga('send','event','error','<?= $errorMessageKey ?>','<?= $errorMessageTokens ?>');
-                    //TODO: add $username
+                    ga('send','event','error','<?= $errorCode ?>','<?= $username ?>','<?= $message ?>');
                 </script>
                 <?php
                 }

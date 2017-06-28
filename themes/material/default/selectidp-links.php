@@ -17,6 +17,10 @@
 
             ga('send', 'event', 'hub', 'choice', 'IdP', id);
         }
+
+        function clickedAnyway(idpName) {
+            ga('send', 'event', 'hub', 'choice-disabled', 'IdP', idpName);
+        }
     </script>
 </head>
 
@@ -78,13 +82,13 @@
                 $idpId = htmlspecialchars($idp['entityid']);
                 $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
             ?>
-            <div class="mdl-card mdl-shadow--2dp disabled row-aware" title="<?= $hoverText ?>">
+            <div class="mdl-card mdl-shadow--2dp disabled row-aware" title="<?= $hoverText ?>"
+                 onclick="clickedAnyway('<?= $name ?>')">
                 <div class="mdl-card__media white-bg fixed-height" layout-children="row"
                      child-spacing="center">
                     <img class="scale-to-parent" id="<?= $idpId ?>"
                          src="<?= empty($idp['logoURL']) ? '/module.php/material/default-logo.png'
                                                          : $idp['logoURL'] ?>">
-<!--                    TODO: ga for clicked event here. -->
                 </div>
             </div>
             <?php
