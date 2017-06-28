@@ -14,7 +14,14 @@ if (! empty($trackingId)) {
         ga('send', 'pageview');
     </script>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
-</script>
+<?php
+} else {
+?>
+    <script>
+        window.ga = function () {
+            // Null object pattern to avoid `if (window.ga)` wherever ga is used.
+        }
+    </script>
 <?php
 }
 ?>
