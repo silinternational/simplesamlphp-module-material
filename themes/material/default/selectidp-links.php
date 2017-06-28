@@ -61,9 +61,8 @@
             ?>
             <div class="mdl-card mdl-shadow--8dp row-aware" title="<?= $hoverText ?>">
                 <div class="mdl-card__media white-bg fixed-height">
-                    <button class="mdl-button fill-parent" value="<?= $name ?>"
-                            onclick="setSelectedIdp('<?= $idpId ?>')">
-                        <img class="scale-to-parent"
+                    <button class="mdl-button fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')">
+                        <img class="scale-to-parent" id="<?= $idpId ?>"
                              src="<?= empty($idp['logoURL']) ? '/module.php/material/default-logo.png'
                                                              : $idp['logoURL'] ?>">
                     </button>
@@ -76,14 +75,16 @@
             <?php
             foreach ($disabledIdps as $idp) {
                 $name = htmlspecialchars($this->t($idp['name']));
+                $idpId = htmlspecialchars($idp['entityid']);
                 $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
             ?>
             <div class="mdl-card mdl-shadow--2dp disabled row-aware" title="<?= $hoverText ?>">
                 <div class="mdl-card__media white-bg fixed-height" layout-children="row"
                      child-spacing="center">
-                    <img class="scale-to-parent"
+                    <img class="scale-to-parent" id="<?= $idpId ?>"
                          src="<?= empty($idp['logoURL']) ? '/module.php/material/default-logo.png'
                                                          : $idp['logoURL'] ?>">
+<!--                    TODO: ga for clicked event here. -->
                 </div>
             </div>
             <?php

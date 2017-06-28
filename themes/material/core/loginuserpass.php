@@ -96,6 +96,7 @@
 
                 <script>
                     ga('send','event','error','<?= $errorMessageKey ?>','<?= $errorMessageTokens ?>');
+                    //TODO: add $username
                 </script>
                 <?php
                 }
