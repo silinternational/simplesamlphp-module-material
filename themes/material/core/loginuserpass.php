@@ -52,7 +52,7 @@
                    value="<?= htmlspecialchars($this->data['stateparams']['AuthState']) ?>" />
             <input type="hidden" name="csrf-token" value="<?= htmlentities($csrfToken); ?>" />
 
-            <div class="mdl-card mdl-shadow--8dp">
+            <div class="mdl-card mdl-shadow--8dp fill-phone-viewport">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
                     <img src="/logo.png"
                          alt="<?= $this->t('{material:login:logo}', ['{idpName}' => $idpName]) ?>">

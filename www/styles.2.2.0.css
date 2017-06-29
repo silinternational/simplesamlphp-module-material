@@ -74,26 +74,49 @@ form p.error > i {
     min-width: calc(50% - 2em);
     max-width: calc(50% - 2em);
   }
+
+  .mdl-card.fill-phone-viewport {
+    height: 100vh;
+    width: 100vw;
+  }
 }
-/* phones, small tablets, landscape (3 cards / row) */
+/* phones, small tablets, landscape */
 @media only screen and (min-width : 600px) {
+  /*  (3 cards / row) */
   .mdl-card.row-aware {
     min-width: calc(33% - 2em);
     max-width: calc(33% - 2em);
   }
+
+  .mdl-card.fill-phone-viewport {
+    height: auto;
+    width: auto;
+  }
 }
-/* tablets, small desktops (4 cards / row) */
+/* tablets, small desktops */
 @media only screen and (min-width : 850px) {
+  /*  (4 cards / row) */
   .mdl-card.row-aware {
     min-width: calc(25% - 2em);
     max-width: calc(25% - 2em);
   }
+
+  .mdl-card.fill-phone-viewport {
+    height: auto;
+    width: auto;
+  }
 }
-/* desktops (5 cards / row) */
+/* desktops */
 @media only screen and (min-width : 1024px) {
+  /*  (5 cards / row) */
   .mdl-card.row-aware {
     min-width: calc(20% - 2em);
     max-width: calc(20% - 2em);
+  }
+
+  .mdl-card.fill-phone-viewport {
+    height: auto;
+    width: auto;
   }
 }
 
