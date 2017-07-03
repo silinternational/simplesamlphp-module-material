@@ -14,6 +14,12 @@
             idpInput.value = id;
 
             document.querySelector('form').appendChild(idpInput);
+
+            ga('send', 'event', 'hub', 'choice', 'IdP', id);
+        }
+
+        function clickedAnyway(idpName) {
+            ga('send', 'event', 'hub', 'choice-disabled', 'IdP', idpName);
         }
     </script>
 </head>
@@ -34,11 +40,11 @@
         <form action="<?= htmlentities($_SERVER['PHP_SELF']) ?>"
               layout-children="row" child-spacing="space-around">
             <input type="hidden" name="entityID"
-                   value="<?= htmlspecialchars($this->data['entityID']) ?>" />
+                   value="<?= htmlentities($this->data['entityID'] ?? null) ?>" />
             <input type="hidden" name="return"
-                   value="<?= htmlspecialchars($this->data['return']) ?>" />
+                   value="<?= htmlentities($this->data['return'] ?? null) ?>" />
             <input type="hidden" name="returnIDParam"
-                   value="<?= htmlspecialchars($this->data['returnIDParam']) ?>" />
+                   value="<?= htmlentities($this->data['returnIDParam'] ?? null) ?>" />
 
             <?php
             // in order to bypass some built-in simplesaml behavior, an extra idp
@@ -53,15 +59,14 @@
             }
 
             foreach ($enabledIdps as $idp) {
-                $name = htmlspecialchars($this->t($idp['name']));
-                $idpId = htmlspecialchars($idp['entityid']);
+                $name = htmlentities($this->t($idp['name'] ?? null));
+                $idpId = htmlentities($idp['entityid'] ?? null);
                 $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
             ?>
             <div class="mdl-card mdl-shadow--8dp row-aware" title="<?= $hoverText ?>">
                 <div class="mdl-card__media white-bg fixed-height">
-                    <button class="mdl-button fill-parent" value="<?= $name ?>"
-                            onclick="setSelectedIdp('<?= $idpId ?>')">
-                        <img class="scale-to-parent"
+                    <button class="mdl-button fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')">
+                        <img class="scale-to-parent" id="<?= $idpId ?>"
                              src="<?= empty($idp['logoURL']) ? '/module.php/material/default-logo.png'
                                                              : $idp['logoURL'] ?>">
                     </button>
@@ -73,14 +78,15 @@
 
             <?php
             foreach ($disabledIdps as $idp) {
-                $name = htmlspecialchars($this->t($idp['name']));
+                $name = htmlentities($this->t($idp['name'] ?? null));
+                $idpId = htmlentities($idp['entityid'] ?? null);
                 $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
             ?>
-            <div class="mdl-card mdl-shadow--2dp disabled row-aware"
-                 title="<?= $hoverText ?>">
+            <div class="mdl-card mdl-shadow--2dp disabled row-aware" title="<?= $hoverText ?>"
+                 onclick="clickedAnyway('<?= $name ?>')">
                 <div class="mdl-card__media white-bg fixed-height" layout-children="row"
                      child-spacing="center">
-                    <img class="scale-to-parent"
+                    <img class="scale-to-parent" id="<?= $idpId ?>"
                          src="<?= empty($idp['logoURL']) ? '/module.php/material/default-logo.png'
                                                          : $idp['logoURL'] ?>">
                 </div>
@@ -91,6 +97,10 @@
         </form>
     </main>
 
+    <script>
+        ga('send', 'event', 'hub', 'choices', 'enabled', <?= count($enabledIdps) ?>);
+        ga('send', 'event', 'hub', 'choices', 'disabled', <?= count($disabledIdps) ?>);
+    </script>
     <?php include __DIR__ . '/../common-footer.php' ?>
 </div>
 </body>

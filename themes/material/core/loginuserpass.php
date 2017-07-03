@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<?php
-    $siteKey = $this->data['recaptcha.siteKey'] ?? null;
-    $username = $this->data['username'] ?? null;
-    $forgotPasswordUrl = $this->data['forgotPasswordUrl'] ?? null;
-    $csrfToken = $this->data['csrfToken'] ?? null;
-    $idpName = $this->configuration->getValue('idp_name', '—');
-
-    $errorCode = $this->data['errorcode'] ?? null;
-    $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
-    $errorMessageTokens = $this->data['errorparams'][2] ?? [];
-?>
 <html>
 <head>
     <title><?= $this->t('{material:login:title}') ?></title>
@@ -17,6 +6,7 @@
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
     <?php
+    $siteKey = htmlentities($this->data['recaptcha.siteKey'] ?? null);
     if (! empty($siteKey)) {
     ?>
     <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit'
@@ -31,10 +21,12 @@
             var loginButton = document.querySelector('button');
 
             grecaptcha.render(loginButton, {
-                sitekey: '<?= htmlentities($siteKey) ?>',
+                sitekey: '<?= $siteKey ?>',
                 callback: submitForm
             });
         }
+
+        ga('send', 'event', 'reCAPTCHA', 'required');
     </script>
     <?php
     }
@@ -45,12 +37,19 @@
     <main class="mdl-layout__content" layout-children="column" child-spacing="center">
         <?php include __DIR__ . '/../common-announcement.php' ?>
 
+
         <form method="POST" action="<?= htmlentities($_SERVER['PHP_SELF']) ?>">
             <input type="hidden" name="AuthState"
-                   value="<?= htmlspecialchars($this->data['stateparams']['AuthState']) ?>" />
-            <input type="hidden" name="csrf-token" value="<?= htmlentities($csrfToken); ?>" />
+                   value="<?= htmlentities($this->data['stateparams']['AuthState']  ?? null) ?>" />
+            <?php
+            $csrfToken = htmlentities($this->data['csrfToken'] ?? null);
+            ?>
+            <input type="hidden" name="csrf-token" value="<?= $csrfToken ?>" />
 
             <div class="mdl-card mdl-shadow--8dp">
+                <?php
+                $idpName = htmlentities($this->configuration->getValue('idp_name', '—'));
+                ?>
                 <div class="mdl-card__media white-bg margin" layout-children="column">
                     <img src="/logo.png"
                          alt="<?= $this->t('{material:login:logo}', ['{idpName}' => $idpName]) ?>">
@@ -67,8 +66,11 @@
                         <label for="username" class="mdl-textfield__label">
                             <?= $this->t('{material:login:label_username}') ?>
                         </label>
+                        <?php
+                        $username = htmlentities($this->data['username'] ?? null);
+                        ?>
                         <input type="text" name="username" class="mdl-textfield__input"
-                               value="<?= htmlspecialchars($username) ?>"
+                               value="<?= $username ?>"
                                <?= empty($username) ? 'autofocus' : '' ?> id="username"/>
                     </div>
 
@@ -82,24 +84,34 @@
                 </div>
 
                 <?php
+                $errorCode = htmlentities($this->data['errorcode']);
                 if ($errorCode == 'WRONGUSERPASS') {
-                ?>
-                    <p class="mdl-color-text--red error">
-                        <i class="material-icons">error</i>
+                    $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
+                    $errorMessageTokens = $this->data['errorparams'][2] ?? null;
 
-                        <span class="mdl-textfield mdl-typography--caption">
-                                <?= $this->t($errorMessageKey, $errorMessageTokens) ?>
-                        </span>
-                    </p>
+                    $message = htmlentities($this->t($errorMessageKey, $errorMessageTokens));
+                ?>
+                <p class="mdl-color-text--red error">
+                    <i class="material-icons">error</i>
+
+                    <span class="mdl-textfield mdl-typography--caption">
+                        <?= $message ?>
+                    </span>
+                </p>
+
+                <script>
+                    ga('send','event','error','<?= $errorCode ?>','<?= $username ?>','<?= $message ?>');
+                </script>
                 <?php
                 }
                 ?>
 
                 <div class="mdl-card__actions" layout-children="row">
                     <?php
+                    $forgotPasswordUrl = htmlentities($this->data['forgotPasswordUrl'] ?? null);
                     if (! empty($forgotPasswordUrl)) {
                     ?>
-                    <a href="<?= htmlentities($forgotPasswordUrl) ?>" target="_blank"
+                    <a href="<?= $forgotPasswordUrl ?>" target="_blank"
                        class="mdl-button mdl-button--colored mdl-typography--caption">
                         <?= $this->t('{material:login:forgot}') ?>
                     </a>

@@ -19,6 +19,7 @@ services:
       ADMIN_EMAIL: "admin@example.org"
       SECRET_SALT: "FcJwl0zCDc4nuzOuQL9/7WPIj3hdfusGm2ny0dcRQm0="
       IDP_NAME: "The Hub"
+      ANALYTICS_ID: "UA-XXXX-Y"
   idp1:
     image: silintl/ssp-base:develop
     volumes:
@@ -56,3 +57,4 @@ services:
       ADMIN_EMAIL: "admin1@example.org"
       SECRET_SALT: "edI4GGkYfkzD6/OXFvHBHb9Meu9hdKXQpNFg4q/GGfY="
       IDP_NAME: "Idp 2"
+      ANALYTICS_ID: "UA-XXXX-Y"

@@ -4,7 +4,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <?php
-$colors = $this->configuration->getValue('theme.color-scheme', 'indigo-purple');
+$trackingId = htmlentities($this->configuration->getValue('analytics.trackingId'));
+if (! empty($trackingId)) {
+?>
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', '<?= $trackingId ?>', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+<?php
+} else {
+?>
+    <script>
+        window.ga = function () {
+            // Null object pattern to avoid `if (window.ga)` wherever ga is used.
+        }
+    </script>
+<?php
+}
+?>
+
+
+<?php
+$colors = htmlentities($this->configuration->getValue('theme.color-scheme', 'indigo-purple'));
 ?>
 <link rel="stylesheet" href="/module.php/material/material.<?= $colors ?>.1.2.1.min.css">
 <link rel="stylesheet" href="/module.php/material/styles.2.1.0.css">
