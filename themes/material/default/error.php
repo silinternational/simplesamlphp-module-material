@@ -21,14 +21,14 @@
         </p>
 
         <?php
-        if ($this->data['showerrors']) {
+        if ($this->data['showerrors'] ?? false) {
         ?>
         <p class="mdl-typography--body-2">
-            <?= htmlentities($this->data['error']['exceptionMsg']) ?>
+            <?= htmlentities($this->data['error']['exceptionMsg'] ?? null) ?>
         </p>
 
         <pre class="mdl-typography--caption">
-            <?= htmlentities($this->data['error']['exceptionTrace']) ?>
+            <?= htmlentities($this->data['error']['exceptionTrace'] ?? null) ?>
         </pre>
         <?php
         }
