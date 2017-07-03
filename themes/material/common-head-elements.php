@@ -4,8 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <?php
-$trackingId = $this->configuration->getValue('analytics.trackingId');
-
+$trackingId = htmlentities($this->configuration->getValue('analytics.trackingId'));
 if (! empty($trackingId)) {
 ?>
     <script>
@@ -28,7 +27,7 @@ if (! empty($trackingId)) {
 
 
 <?php
-$colors = $this->configuration->getValue('theme.color-scheme', 'indigo-purple');
+$colors = htmlentities($this->configuration->getValue('theme.color-scheme', 'indigo-purple'));
 ?>
 <link rel="stylesheet" href="/module.php/material/material.<?= $colors ?>.1.2.1.min.css">
 <link rel="stylesheet" href="/module.php/material/styles.2.1.0.css">

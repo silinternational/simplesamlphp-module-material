@@ -40,11 +40,11 @@
         <form action="<?= htmlentities($_SERVER['PHP_SELF']) ?>"
               layout-children="row" child-spacing="space-around">
             <input type="hidden" name="entityID"
-                   value="<?= htmlspecialchars($this->data['entityID']) ?>" />
+                   value="<?= htmlentities($this->data['entityID']) ?>" />
             <input type="hidden" name="return"
-                   value="<?= htmlspecialchars($this->data['return']) ?>" />
+                   value="<?= htmlentities($this->data['return']) ?>" />
             <input type="hidden" name="returnIDParam"
-                   value="<?= htmlspecialchars($this->data['returnIDParam']) ?>" />
+                   value="<?= htmlentities($this->data['returnIDParam']) ?>" />
 
             <?php
             // in order to bypass some built-in simplesaml behavior, an extra idp
@@ -59,8 +59,8 @@
             }
 
             foreach ($enabledIdps as $idp) {
-                $name = htmlspecialchars($this->t($idp['name']));
-                $idpId = htmlspecialchars($idp['entityid']);
+                $name = htmlentities($this->t($idp['name']));
+                $idpId = htmlentities($idp['entityid']);
                 $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
             ?>
             <div class="mdl-card mdl-shadow--8dp row-aware" title="<?= $hoverText ?>">
@@ -78,8 +78,8 @@
 
             <?php
             foreach ($disabledIdps as $idp) {
-                $name = htmlspecialchars($this->t($idp['name']));
-                $idpId = htmlspecialchars($idp['entityid']);
+                $name = htmlentities($this->t($idp['name']));
+                $idpId = htmlentities($idp['entityid']);
                 $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
             ?>
             <div class="mdl-card mdl-shadow--2dp disabled row-aware" title="<?= $hoverText ?>"
