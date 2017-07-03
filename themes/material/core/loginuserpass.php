@@ -46,7 +46,7 @@
             ?>
             <input type="hidden" name="csrf-token" value="<?= $csrfToken ?>" />
 
-            <div class="mdl-card mdl-shadow--8dp">
+            <div class="mdl-card mdl-shadow--8dp fill-phone-viewport">
                 <?php
                 $idpName = htmlentities($this->configuration->getValue('idp_name', '—'));
                 ?>
