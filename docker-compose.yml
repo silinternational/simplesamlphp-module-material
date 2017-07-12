@@ -39,9 +39,10 @@ services:
       SECRET_SALT: "8yC5mb4wqANaU+Rxrl4DHkfKzikeieXkltfFd+YDzx8="
       IDP_NAME: "Idp 1"
   idp2:
-    image: silintl/ssp-base:develop
+    image: silintl/ssp-base:feature_add-expirychecker-0-1-0
     volumes:
       - ./development/idp2/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
+      - ./development/idp2/enable:/data/vendor/simplesamlphp/simplesamlphp/modules/exampleauth/enable
       - ./development/idp2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/idp2/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
       - ./development/idp2/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
@@ -58,3 +59,4 @@ services:
       SECRET_SALT: "edI4GGkYfkzD6/OXFvHBHb9Meu9hdKXQpNFg4q/GGfY="
       IDP_NAME: "Idp 2"
       ANALYTICS_ID: "UA-XXXX-Y"
+      CHANGE_PWD_URL: "http://example.org"
