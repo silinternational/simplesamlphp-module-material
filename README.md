@@ -77,7 +77,10 @@ content of that announcement.  HTML is supported.
 8. Click **Test configured authentication sources**
 9. Click **hub-discovery**
 10. Click **Login with idp2** (NOTE: login page should have material design)
-11. Login as idp2 administrator, e.g., username=admin & password=b
+11. Login as an idp2 user, e.g., username=distant_future & password=b
+
+### Expiry
+TODO: create steps.
 
 ## i18n support
 Translations are categorized by page in definition files located in the `dictionaries` directory.
