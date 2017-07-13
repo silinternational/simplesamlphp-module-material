@@ -36,7 +36,6 @@
 
     <main class="mdl-layout__content">
         <?php include __DIR__ . '/../common-announcement.php' ?>
-<!--TODO: is this stuff in formdata by chance?-->
         <form layout-children="row" child-spacing="space-around">
             <input type="hidden" name="entityID"
                    value="<?= htmlentities($this->data['entityID']) ?>" />
