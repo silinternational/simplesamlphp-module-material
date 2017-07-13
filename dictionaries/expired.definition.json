@@ -2,15 +2,15 @@
 {
 	"title": {
 		"en": "Expired password",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Contraseña caducada",
+		"fr": "Mot de passe expiré",
+		"ko": "만료 된 암호"
 	},
 	"header": {
 		"en": "Password expired",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "La contraseña expiró",
+		"fr": "Mot de passe expiré",
+		"ko": "암호가 만료되었습니다."
 	},
 	"expired": {
 		"en": "Your password has expired and must be changed before continuing.",
