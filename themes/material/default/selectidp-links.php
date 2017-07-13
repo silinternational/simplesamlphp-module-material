@@ -36,14 +36,14 @@
 
     <main class="mdl-layout__content">
         <?php include __DIR__ . '/../common-announcement.php' ?>
-
+<!--TODO: is this stuff in formdata by chance?-->
         <form layout-children="row" child-spacing="space-around">
             <input type="hidden" name="entityID"
-                   value="<?= htmlentities($this->data['entityID'] ?? null) ?>" />
+                   value="<?= htmlentities($this->data['entityID']) ?>" />
             <input type="hidden" name="return"
-                   value="<?= htmlentities($this->data['return'] ?? null) ?>" />
+                   value="<?= htmlentities($this->data['return']) ?>" />
             <input type="hidden" name="returnIDParam"
-                   value="<?= htmlentities($this->data['returnIDParam'] ?? null) ?>" />
+                   value="<?= htmlentities($this->data['returnIDParam']) ?>" />
 
             <?php
             // in order to bypass some built-in simplesaml behavior, an extra idp
@@ -58,8 +58,8 @@
             }
 
             foreach ($enabledIdps as $idp) {
-                $name = htmlentities($this->t($idp['name'] ?? null));
-                $idpId = htmlentities($idp['entityid'] ?? null);
+                $name = htmlentities($this->t($idp['name']));
+                $idpId = htmlentities($idp['entityid']);
                 $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
             ?>
             <div class="mdl-card mdl-shadow--8dp row-aware" title="<?= $hoverText ?>">
@@ -77,8 +77,8 @@
 
             <?php
             foreach ($disabledIdps as $idp) {
-                $name = htmlentities($this->t($idp['name'] ?? null));
-                $idpId = htmlentities($idp['entityid'] ?? null);
+                $name = htmlentities($this->t($idp['name']));
+                $idpId = htmlentities($idp['entityid']);
                 $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
             ?>
             <div class="mdl-card mdl-shadow--2dp disabled row-aware" title="<?= $hoverText ?>"

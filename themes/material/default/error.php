@@ -24,11 +24,11 @@
         if ($this->data['showerrors'] ?? false) {
         ?>
         <p class="mdl-typography--body-2">
-            <?= htmlentities($this->data['error']['exceptionMsg'] ?? null) ?>
+            <?= htmlentities($this->data['error']['exceptionMsg']) ?>
         </p>
 
         <pre class="mdl-typography--caption">
-            <?= htmlentities($this->data['error']['exceptionTrace'] ?? null) ?>
+            <?= htmlentities($this->data['error']['exceptionTrace']) ?>
         </pre>
         <?php
         }

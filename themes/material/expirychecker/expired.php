@@ -14,7 +14,6 @@
             </span>
         </div>
     </header>
-<!--TODO: do we need ?? null on these data[] retrievals as done in other pages? Test what happens when the key is altered to a nonexistent name -->
     <main class="mdl-layout__content" layout-children="column">
         <form layout-children="column">
             <?php

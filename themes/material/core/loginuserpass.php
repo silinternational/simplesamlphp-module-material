@@ -6,7 +6,7 @@
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
     <?php
-    $siteKey = htmlentities($this->data['recaptcha.siteKey'] ?? null);
+    $siteKey = htmlentities($this->data['recaptcha.siteKey']);
     if (! empty($siteKey)) {
     ?>
     <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit'
@@ -40,9 +40,9 @@
 
         <form method="POST">
             <input type="hidden" name="AuthState"
-                   value="<?= htmlentities($this->data['stateparams']['AuthState']  ?? null) ?>" />
+                   value="<?= htmlentities($this->data['stateparams']['AuthState']) ?>" />
             <?php
-            $csrfToken = htmlentities($this->data['csrfToken'] ?? null);
+            $csrfToken = htmlentities($this->data['csrfToken']);
             ?>
             <input type="hidden" name="csrf-token" value="<?= $csrfToken ?>" />
 
@@ -67,7 +67,7 @@
                             <?= $this->t('{material:login:label_username}') ?>
                         </label>
                         <?php
-                        $username = htmlentities($this->data['username'] ?? null);
+                        $username = htmlentities($this->data['username']);
                         ?>
                         <input type="text" name="username" class="mdl-textfield__input"
                                value="<?= $username ?>"
@@ -87,7 +87,7 @@
                 $errorCode = htmlentities($this->data['errorcode']);
                 if ($errorCode == 'WRONGUSERPASS') {
                     $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
-                    $errorMessageTokens = $this->data['errorparams'][2] ?? null;
+                    $errorMessageTokens = $this->data['errorparams'][2];
 
                     $message = htmlentities($this->t($errorMessageKey, $errorMessageTokens));
                 ?>
@@ -108,7 +108,7 @@
 
                 <div class="mdl-card__actions" layout-children="row">
                     <?php
-                    $forgotPasswordUrl = htmlentities($this->data['forgotPasswordUrl'] ?? null);
+                    $forgotPasswordUrl = htmlentities($this->data['forgotPasswordUrl']);
                     if (! empty($forgotPasswordUrl)) {
                     ?>
                     <a href="<?= $forgotPasswordUrl ?>" target="_blank"
