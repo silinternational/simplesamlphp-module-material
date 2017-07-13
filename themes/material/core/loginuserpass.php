@@ -38,7 +38,7 @@
         <?php include __DIR__ . '/../common-announcement.php' ?>
 
 
-        <form method="POST" action="<?= htmlentities($_SERVER['PHP_SELF']) ?>">
+        <form method="POST">
             <input type="hidden" name="AuthState"
                    value="<?= htmlentities($this->data['stateparams']['AuthState']  ?? null) ?>" />
             <?php

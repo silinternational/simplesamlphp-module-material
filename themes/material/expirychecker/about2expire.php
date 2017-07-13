@@ -16,8 +16,7 @@
     </header>
 <!--TODO: do we need ?? null on these data[] retrievals as done in other pages? Test what happens when the key is altered to a nonexistent name -->
     <main class="mdl-layout__content" layout-children="column">
-<!--        TODO: since this is just a GET back to itself, I don't think action is needed at all...need to test in other browsers to make sure though. -->
-        <form action="<?= htmlentities($this->data['formTarget']); ?>" layout-children="column">
+        <form layout-children="column">
             <?php
             foreach ($this->data['formData'] as $name => $value) {
             ?>
