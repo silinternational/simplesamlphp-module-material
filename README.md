@@ -73,11 +73,34 @@ content of that announcement.  HTML is supported.
 4. Click **Login with idp1** (NOTE: login page should NOT have material design)
 5. Login as idp1 administrator, e.g., username=admin & password=a
 6. Click **Logout**
-7. Click **Authentication** tab
-8. Click **Test configured authentication sources**
-9. Click **hub-discovery**
-10. Click **Login with idp2** (NOTE: login page should have material design)
-11. Login as idp2 administrator, e.g., username=admin & password=b
+7. Goto [http://ssp-hub.local](http://ssp-hub.local)
+8. Click **Authentication** tab
+9. Click **Test configured authentication sources**
+10. Click **hub-discovery**
+11. Click **Login with idp2** (NOTE: login page should have material design)
+12. Login as an idp2 user, e.g., username=distant_future & password=a
+13. Click **Logout**
+
+### Expiry
+
+#### About to expire
+1. Goto [http://ssp-hub.local](http://ssp-hub.local)
+2. Click **Authentication** tab
+3. Click **Test configured authentication sources**
+4. Click **hub-discovery**
+5. Click **Login with idp2**
+6. Login as an an "about to expire" user, e.g., username=near_future & password=b
+7. Click **Maybe later**
+8. Click **Logout**
+
+#### Expired
+1. Goto [http://ssp-hub.local](http://ssp-hub.local)
+2. Click **Authentication** tab
+3. Click **Test configured authentication sources**
+4. Click **hub-discovery**
+5. Click **Login with idp2**
+6. Login as an an "expired" user, e.g., username=already_past & password=c
+
 
 ## i18n support
 Translations are categorized by page in definition files located in the `dictionaries` directory.

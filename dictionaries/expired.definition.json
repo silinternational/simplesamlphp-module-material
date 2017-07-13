@@ -1,0 +1,27 @@
+
+{
+	"title": {
+		"en": "Expired password",
+		"es": "Contraseña caducada",
+		"fr": "Mot de passe expiré",
+		"ko": "만료 된 암호"
+	},
+	"header": {
+		"en": "Password expired",
+		"es": "La contraseña expiró",
+		"fr": "Mot de passe expiré",
+		"ko": "암호가 만료되었습니다."
+	},
+	"expired": {
+		"en": "Your password has expired and must be changed before continuing.",
+		"es": "Su contraseña ha caducado y debe cambiarse antes de continuar.",
+		"fr": "Votre mot de passe a expiré et doit être modifié avant de continuer.",
+		"ko": "비밀번호가 만료되었으므로 계속하기 전에 비밀번호를 변경해야합니다."
+	},
+	"button_change": {
+		"en": "Change",
+		"es": "Cambiar",
+		"fr": "Changer",
+		"ko": "바꾸다"
+	}
+}
