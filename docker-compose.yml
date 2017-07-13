@@ -39,7 +39,7 @@ services:
       SECRET_SALT: "8yC5mb4wqANaU+Rxrl4DHkfKzikeieXkltfFd+YDzx8="
       IDP_NAME: "Idp 1"
   idp2:
-    image: silintl/ssp-base:feature_add-expirychecker-0-1-0
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/idp2/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp2/enable:/data/vendor/simplesamlphp/simplesamlphp/modules/exampleauth/enable
@@ -47,6 +47,7 @@ services:
       - ./development/idp2/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
       - ./development/idp2/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
+#TODO: get an appsdev logo in here for testing purposes so the logo's not missing. (put one in /development and volume it into the correct location.
     ports:
       - '8086:80'
     environment:

@@ -1,0 +1,27 @@
+
+{
+	"title": {
+		"en": "Expired password",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"header": {
+		"en": "Password expired",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"expired": {
+		"en": "Your password has expired and must be changed before continuing.",
+		"es": "Su contraseña ha caducado y debe cambiarse antes de continuar.",
+		"fr": "Votre mot de passe a expiré et doit être modifié avant de continuer.",
+		"ko": "비밀번호가 만료되었으므로 계속하기 전에 비밀번호를 변경해야합니다."
+	},
+	"button_change": {
+		"en": "Change",
+		"es": "Cambiar",
+		"fr": "Changer",
+		"ko": "바꾸다"
+	}
+}

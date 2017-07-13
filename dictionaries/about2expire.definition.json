@@ -1,0 +1,45 @@
+
+{
+	"title": {
+		"en": "Expiring password",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"header": {
+		"en": "Password expiring soon",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"expiring_in_a_day": {
+		"en": "Your password will expire in one day.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"expiring_soon": {
+		"en": "Your password will expire in {daysLeft} days.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"change_now": {
+		"en": "Would you like to go ahead and change it now?",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_change": {
+		"en": "Yes",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_continue": {
+		"en": "Maybe later",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	}
+}
