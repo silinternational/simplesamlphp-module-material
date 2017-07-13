@@ -7,6 +7,7 @@ services:
       - ./development/hub/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/hub/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
       - ./development/hub/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
+      - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
     ports:
       - '80:80'
@@ -46,8 +47,8 @@ services:
       - ./development/idp2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/idp2/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
       - ./development/idp2/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
+      - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
-#TODO: get an appsdev logo in here for testing purposes so the logo's not missing. (put one in /development and volume it into the correct location.
     ports:
       - '8086:80'
     environment:
