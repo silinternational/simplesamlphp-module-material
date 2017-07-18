@@ -1,5 +1,5 @@
 <?php
-$announcement = htmlentities($this->data['announcement']);
+$announcement = htmlentities($this->data['announcement'] ?? null);
 
 if (! empty($announcement)) {
 ?>

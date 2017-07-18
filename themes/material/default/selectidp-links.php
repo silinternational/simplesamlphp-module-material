@@ -10,7 +10,7 @@
             var idpInput = document.createElement('input');
 
             idpInput.type = 'hidden';
-            idpInput.name = '<?= htmlspecialchars($this->data['returnIDParam']) ?>';
+            idpInput.name = '<?= htmlentities($this->data['returnIDParam']) ?>';
             idpInput.value = id;
 
             document.querySelector('form').appendChild(idpInput);
@@ -36,6 +36,7 @@
 
     <main class="mdl-layout__content">
         <?php include __DIR__ . '/../common-announcement.php' ?>
+
         <form layout-children="row" child-spacing="space-around">
             <input type="hidden" name="entityID"
                    value="<?= htmlentities($this->data['entityID']) ?>" />

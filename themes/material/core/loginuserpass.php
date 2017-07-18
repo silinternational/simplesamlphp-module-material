@@ -6,7 +6,7 @@
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
     <?php
-    $siteKey = htmlentities($this->data['recaptcha.siteKey']);
+    $siteKey = htmlentities($this->data['recaptcha.siteKey'] ?? null);
     if (! empty($siteKey)) {
     ?>
     <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit'
@@ -67,7 +67,7 @@
                             <?= $this->t('{material:login:label_username}') ?>
                         </label>
                         <?php
-                        $username = htmlentities($this->data['username']);
+                        $username = htmlentities($this->data['username'] ?? null);
                         ?>
                         <input type="text" name="username" class="mdl-textfield__input"
                                value="<?= $username ?>"
@@ -84,10 +84,10 @@
                 </div>
 
                 <?php
-                $errorCode = htmlentities($this->data['errorcode']);
+                $errorCode = htmlentities($this->data['errorcode'] ?? null);
                 if ($errorCode == 'WRONGUSERPASS') {
                     $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
-                    $errorMessageTokens = $this->data['errorparams'][2];
+                    $errorMessageTokens = $this->data['errorparams'][2] ?? null;
 
                     $message = htmlentities($this->t($errorMessageKey, $errorMessageTokens));
                 ?>
@@ -108,7 +108,7 @@
 
                 <div class="mdl-card__actions" layout-children="row">
                     <?php
-                    $forgotPasswordUrl = htmlentities($this->data['forgotPasswordUrl']);
+                    $forgotPasswordUrl = htmlentities($this->data['forgotPasswordUrl'] ?? null);
                     if (! empty($forgotPasswordUrl)) {
                     ?>
                     <a href="<?= $forgotPasswordUrl ?>" target="_blank"
