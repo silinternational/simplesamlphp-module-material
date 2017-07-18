@@ -10,7 +10,7 @@
             var idpInput = document.createElement('input');
 
             idpInput.type = 'hidden';
-            idpInput.name = '<?= htmlentities($this->data['returnIDParam']) ?>';
+            idpInput.name = <?= json_encode($this->data['returnIDParam'], JSON_HEX_TAG) ?>;
             idpInput.value = id;
 
             document.querySelector('form').appendChild(idpInput);
