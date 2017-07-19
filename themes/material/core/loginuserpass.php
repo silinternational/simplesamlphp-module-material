@@ -7,6 +7,7 @@
 
     <?php
     $siteKey = htmlentities($this->data['recaptcha.siteKey'] ?? null);
+
     if (! empty($siteKey)) {
     ?>
     <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit'
@@ -108,7 +109,7 @@
 
                 <div class="mdl-card__actions" layout-children="row">
                     <?php
-                    $forgotPasswordUrl = htmlentities($this->data['forgotPasswordUrl'] ?? null);
+                    $forgotPasswordUrl = htmlentities($this->configuration->getValue('passwordForgotUrl'));
                     if (! empty($forgotPasswordUrl)) {
                     ?>
                     <a href="<?= $forgotPasswordUrl ?>" target="_blank"

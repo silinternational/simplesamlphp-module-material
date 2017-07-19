@@ -1,10 +1,10 @@
 <?php
-$announcement = htmlentities($this->data['announcement'] ?? null);
+$announcementHtml = $this->configuration->getValue('announcement');
 
-if (! empty($announcement)) {
+if (! empty($announcementHtml)) {
 ?>
   <p class="mdl-typography--subhead mdl-typography--text-center alert margin">
-      <?= $announcement ?>
+      <?= $announcementHtml ?>
   </p>
 <?php
 }
