@@ -109,7 +109,7 @@
 
                 <div class="mdl-card__actions" layout-children="row">
                     <?php
-                    $forgotPasswordUrl = htmlentities($this->configuration->getValue('forgotPasswordUrl'));
+                    $forgotPasswordUrl = htmlentities($this->configuration->getValue('passwordForgotUrl'));
                     if (! empty($forgotPasswordUrl)) {
                     ?>
                     <a href="<?= $forgotPasswordUrl ?>" target="_blank"
