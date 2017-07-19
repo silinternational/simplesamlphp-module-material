@@ -25,10 +25,10 @@
 		"ko": "비밀번호는 {daysLeft} 일 후에 만료됩니다."
 	},
 	"change_now": {
-		"en": "Would you like to go ahead and change it now?",
-		"es": "¿Te gustaría seguir adelante y cambiarlo ahora?",
-		"fr": "Voulez-vous aller de l'avant et le changer maintenant?",
-		"ko": "지금 가서 바꾸시겠습니까?"
+		"en": "Would you like to change it now?",
+		"es": "¿Quieres cambiarlo ahora?",
+		"fr": "Voulez-vous changer maintenant?",
+		"ko": "지금 변경 하시겠습니까?"
 	},
 	"button_change": {
 		"en": "Yes",
@@ -37,9 +37,9 @@
 		"ko": "예"
 	},
 	"button_continue": {
-		"en": "Maybe later",
-		"es": "Quizas despues",
-		"fr": "Peut-être plus tard",
-		"ko": "나중에"
+		"en": "Later",
+		"es": "Después",
+		"fr": "Plus tard",
+		"ko": "후에"
 	}
 }
