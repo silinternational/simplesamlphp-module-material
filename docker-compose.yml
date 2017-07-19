@@ -60,7 +60,9 @@ services:
       SECRET_SALT: "edI4GGkYfkzD6/OXFvHBHb9Meu9hdKXQpNFg4q/GGfY="
       IDP_NAME: "Idp 2"
       ANALYTICS_ID: "UA-XXXX-Y"
-      CHANGE_PWD_URL: "http://example.org"
+      PASSWORD_CHANGE_URL:  "http://example.org"
+      PASSWORD_FORGOT_URL:  "http://example.org"
+
   hub2:
     image: silintl/ssp-base:develop
     volumes:
