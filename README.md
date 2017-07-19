@@ -45,7 +45,7 @@ Update `/simplesamlphp/config/config.php`:
 'announcement' => 'Some <strong>important</strong> announcement'
 ```
 
-_[ssp-base](https://github.com/silinternational/ssp-base) provides a convenience by loading this config with whatever is in `/simplesamlphp/announcement/announcement.php`._
+_[ssp-base](https://github.com/silinternational/ssp-base) provides a convenience by loading this config with whatever is returned by `/simplesamlphp/announcement/announcement.php`._
 
 If configured, an alert will be shown to the user filled with the content of that announcement.  HTML is supported.
 
