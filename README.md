@@ -81,6 +81,17 @@ content of that announcement.  HTML is supported.
 12. Login as an idp2 user, e.g., username=distant_future & password=a
 13. Click **Logout**
 
+### Announcements
+1. Goto [http://ssp-hub2.local:8081](http://ssp-hub2.local:8081)
+2. The announcement should be displayed
+3. Login as hub2 administrator, e.g., username=admin & password=abc123
+4. Click **Authentication** tab
+5. Click **Test configured authentication sources**
+6. Click **hub-discovery**
+7. The announcement should be displayed
+8. Click **Login with idp3**
+9. The announcement should be displayed
+
 ### Expiry
 
 #### About to expire

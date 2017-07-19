@@ -7,6 +7,7 @@
 
     <?php
     $siteKey = htmlentities($this->data['recaptcha.siteKey'] ?? null);
+
     if (! empty($siteKey)) {
     ?>
     <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit'
