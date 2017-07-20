@@ -19,9 +19,9 @@
         }
 
         function onRecaptchaLoad() {
-            var loginButton = document.querySelector('button');
+            var logInButton = document.querySelector('button');
 
-            grecaptcha.render(loginButton, {
+            grecaptcha.render(logInButtonn, {
                 sitekey: '<?= $siteKey ?>',
                 callback: submitForm
             });
@@ -123,7 +123,7 @@
                     <span flex></span>
 
                     <button class="mdl-button mdl-button--colored mdl-button--raised">
-                        <?= $this->t('{material:login:button_login}') ?>
+                        <?= $this->t('{material:login:button_log_in}') ?>
                     </button>
                 </div>
             </div>
