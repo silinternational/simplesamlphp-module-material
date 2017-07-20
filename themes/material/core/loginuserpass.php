@@ -21,7 +21,7 @@
         function onRecaptchaLoad() {
             var logInButton = document.querySelector('button');
 
-            grecaptcha.render(logInButtonn, {
+            grecaptcha.render(logInButton, {
                 sitekey: '<?= $siteKey ?>',
                 callback: submitForm
             });
