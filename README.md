@@ -61,20 +61,20 @@ If configured, an alert will be shown to the user filled with the content of tha
 
 ### Hub page
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
-2. Login as hub administrator, e.g., username=admin & password=abc123
+2. Log in as hub administrator, e.g., username=admin & password=abc123
 3. Click **Authentication** tab
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 
 ### Error page
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
-2. Login as hub administrator, e.g., username=admin & password=abc123
+2. Log in as hub administrator, e.g., username=admin & password=abc123
 3. Click **Federation** tab
 4. Click either **Show metadata** link
 
 ### Logout page
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
-2. Login as hub administrator, e.g., username=admin & password=abc123
+2. Log in as hub administrator, e.g., username=admin & password=abc123
 3. Click **Authentication** tab
 4. Click **Test configured authentication sources**
 5. Click **admin**
@@ -82,60 +82,60 @@ If configured, an alert will be shown to the user filled with the content of tha
 
 ### Login page
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
-2. Login as hub administrator, e.g., username=admin & password=abc123
+2. Log in as hub administrator, e.g., username=admin & password=abc123
 3. Click **Authentication** tab
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
-6. Click **Login with idp1** (NOTE: login page should NOT have material design)
-7. Login as idp1 administrator, e.g., username=admin & password=a
+6. Click IdP 1 (NOTE: login page should NOT have material design)
+7. Log in as idp1 administrator, e.g., username=admin & password=a
 8. Click **Logout**
 9. Goto [http://ssp-hub.local](http://ssp-hub.local)
 10. Click **Authentication** tab
 11. Click **Test configured authentication sources**
 12. Click **hub-discovery**
-13. Click **Login with idp2** (NOTE: login page should have material design)
-14. Login as an idp2 user, e.g., username=distant_future & password=a
+13. Click IdP 2 (NOTE: login page should have material design)
+14. Log in as an idp2 user, e.g., username=distant_future & password=a
 15. Click **Logout**
 
 ### Forgot password functionality
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
-2. Login as hub administrator, e.g., username=admin & password=abc123
+2. Log in as hub administrator, e.g., username=admin & password=abc123
 3. Click **Authentication** tab
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
-6. Click **Login with idp2**
+6. Click IdP 2
 7. Forgot password link should be visible
 
 ### Expiry functionality
 #### About to expire page
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
-2. Login as hub administrator, e.g., username=admin & password=abc123
+2. Log in as hub administrator, e.g., username=admin & password=abc123
 3. Click **Authentication** tab
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
-6. Click **Login with idp2**
-7. Login as an an "about to expire" user, e.g., username=near_future & password=b
+6. Click IdP 2
+7. Log in as an an "about to expire" user, e.g., username=near_future & password=b
 8. Click **Later**
 9. Click **Logout**
 
 #### Expired page
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
-2. Login as hub administrator, e.g., username=admin & password=abc123
+2. Log in as hub administrator, e.g., username=admin & password=abc123
 3. Click **Authentication** tab
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
-6. Click **Login with idp2**
-7. Login as an an "expired" user, e.g., username=already_past & password=c
+6. Click IdP 2
+7. Log in as an an "expired" user, e.g., username=already_past & password=c
 
 ### Announcements functionality
 1. Goto [http://ssp-hub2.local:8081](http://ssp-hub2.local:8081)
 2. The announcement should be displayed
-3. Login as hub2 administrator, e.g., username=admin & password=abc123
+3. Log in as hub2 administrator, e.g., username=admin & password=abc123
 4. Click **Authentication** tab
 5. Click **Test configured authentication sources**
 6. Click **hub-discovery**
 7. The announcement should be displayed
-8. Click **Login with idp3**
+8. Click IdP 3
 9. The announcement should be displayed
 
 ## i18n support

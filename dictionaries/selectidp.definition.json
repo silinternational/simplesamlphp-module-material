@@ -13,7 +13,7 @@
 		"ko": "계정 선택"
 	},
 	"enabled": {
-		"en": "Login with your {idpName} account",
+		"en": "Log in with your {idpName} account",
 		"es": "Inicie sesión con su cuenta de {idpName}",
 		"fr": "Connectez-vous avec votre compte {idpName}",
 		"ko": "{idpName} 계정으로 로그인하십시오."
