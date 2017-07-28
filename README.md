@@ -56,7 +56,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 
 ### Setup 
 
-1. Setup `localhost` aliases for `ssp-hub.local`, `ssp-hub2.local`, `ssp-hub-idp1.local`, and `ssp-hub-idp2.local`.  This is typically done in `/etc/hosts`.
+1. Setup `localhost` (or `192.168.62.54`, if using Vagrant) aliases for `ssp-hub.local`, `ssp-hub2.local`, `ssp-hub-idp1.local`, and `ssp-hub-idp2.local`.  This is typically done in `/etc/hosts`.
 2. Start test environment, e.g., `make` from the command line.
 
 ### Hub page
