@@ -34,4 +34,4 @@ $colors = htmlentities($this->configuration->getValue('theme.color-scheme', 'ind
 
 <script async src="/module.php/material/material.1.2.1.min.js"></script>
 
-<link rel="shortcut icon" href="/logo.png" />
+<link rel="icon" href="/favicon.png">
