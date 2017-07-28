@@ -49,7 +49,10 @@
 
             <div class="mdl-card mdl-shadow--8dp fill-phone-viewport">
                 <?php
-                $idpName = htmlentities($this->configuration->getValue('idp_name', '—'));
+                $idpName = htmlentities($this->configuration->getValue(
+                    'idp_display_name',
+                    $this->configuration->getValue('idp_name', '—')
+                ));
                 ?>
                 <div class="mdl-card__media white-bg margin" layout-children="column">
                     <img src="/logo.png"
