@@ -18,7 +18,8 @@ services:
       HUB_MODE: "true"
       ADMIN_EMAIL: "admin@example.org"
       SECRET_SALT: "FcJwl0zCDc4nuzOuQL9/7WPIj3hdfusGm2ny0dcRQm0="
-      IDP_NAME: "The Hub"
+      IDP_NAME: hub
+      IDP_DISPLAY_NAME: "The Hub"
       ANALYTICS_ID: "UA-XXXX-Y"
   idp1:
     image: silintl/ssp-base:develop
@@ -37,7 +38,8 @@ services:
       THEME_USE: "default:default"
       ADMIN_EMAIL: "admin1@example.org"
       SECRET_SALT: "8yC5mb4wqANaU+Rxrl4DHkfKzikeieXkltfFd+YDzx8="
-      IDP_NAME: "Idp 1"
+      IDP_NAME: "idp-1"
+      IDP_DISPLAY_NAME: "Idp 1"
   idp2:
     image: silintl/ssp-base:develop
     volumes:
@@ -58,7 +60,8 @@ services:
       THEME_USE: "material:material"
       ADMIN_EMAIL: "admin1@example.org"
       SECRET_SALT: "edI4GGkYfkzD6/OXFvHBHb9Meu9hdKXQpNFg4q/GGfY="
-      IDP_NAME: "Idp 2"
+      IDP_NAME: "idp-2"
+      IDP_DISPLAY_NAME: "Idp 2"
       ANALYTICS_ID: "UA-XXXX-Y"
       PASSWORD_CHANGE_URL:  "http://example.org"
       PASSWORD_FORGOT_URL:  "http://example.org"
@@ -82,7 +85,8 @@ services:
       HUB_MODE: "true"
       ADMIN_EMAIL: "admin@example.org"
       SECRET_SALT: "QthhmKnsmC7X/+2bv3CgzBWaFR68J3fP6QgmZhM1L7M="
-      IDP_NAME: "The Hub2"
+      IDP_NAME: "hub-2"
+      IDP_DISPLAY_NAME: "The Hub2"
   idp3:
     image: silintl/ssp-base:develop
     volumes:
@@ -103,4 +107,5 @@ services:
       THEME_USE: "material:material"
       ADMIN_EMAIL: "admin1@example.org"
       SECRET_SALT: "xbcCMIHHzsgE8yYC6OIBjsp+ruZYghHn1k5Bv/IGbrg="
-      IDP_NAME: "Idp 3"
+      IDP_NAME: "idp-3"
+      IDP_DISPLAY_NAME: "Idp 3"
