@@ -6,6 +6,7 @@ services:
       - ./development/hub/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/hub/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
       - ./development/hub/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
+      - ./www/default-favicon.ico:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.ico
       - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
     ports:
