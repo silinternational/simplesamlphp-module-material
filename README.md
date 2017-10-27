@@ -56,7 +56,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 
 ### Setup 
 
-1. Setup `localhost` (or `192.168.62.54`, if using Vagrant) aliases for `ssp-hub.local`, `ssp-hub2.local`, `ssp-hub-idp1.local`, `ssp-hub-idp2.local` and `ssp-hub-idp3.local`.  This is typically done in `/etc/hosts`.
+1. Setup `localhost` (or `192.168.62.54`, if using Vagrant) aliases for `ssp-hub.local`, `ssp-hub2.local`, `ssp-idp1.local`, `ssp-idp2.local`, `ssp-idp3.local` and `ssp-idp4.local`.  This is typically done in `/etc/hosts`.
 2. Start test environment, i.e., `make` from the command line.
 
 ### Hub page
@@ -128,6 +128,61 @@ If configured, an alert will be shown to the user filled with the content of tha
 5. Click **hub-discovery**
 6. Click **idp2**
 7. Login as an an "expired" user: `username=`**already_past** `password=`**c**
+
+### Multi-factor authentication (MFA) functionality
+#### Nag about missing MFA setup
+1. Goto [http://ssp-hub.local](http://ssp-hub.local)
+2. Login as hub administrator: `username=`**admin** `password=`**abc123**
+3. Click **Authentication** tab
+4. Click **Test configured authentication sources**
+5. Click **hub-discovery**
+6. Click **idp4**
+7. TODO: add username and remaining steps
+
+#### Force MFA setup
+1. Goto [http://ssp-hub.local](http://ssp-hub.local)
+2. Login as hub administrator: `username=`**admin** `password=`**abc123**
+3. Click **Authentication** tab
+4. Click **Test configured authentication sources**
+5. Click **hub-discovery**
+6. Click **idp4**
+7. TODO: add username and remaining steps
+
+#### Backup code
+1. Goto [http://ssp-hub.local](http://ssp-hub.local)
+2. Login as hub administrator: `username=`**admin** `password=`**abc123**
+3. Click **Authentication** tab
+4. Click **Test configured authentication sources**
+5. Click **hub-discovery**
+6. Click **idp4**
+7. TODO: add username and remaining steps
+
+#### TOTP code
+1. Goto [http://ssp-hub.local](http://ssp-hub.local)
+2. Login as hub administrator: `username=`**admin** `password=`**abc123**
+3. Click **Authentication** tab
+4. Click **Test configured authentication sources**
+5. Click **hub-discovery**
+6. Click **idp4**
+7. TODO: add username and remaining steps
+
+#### Key (U2F)
+1. Goto [http://ssp-hub.local](http://ssp-hub.local)
+2. Login as hub administrator: `username=`**admin** `password=`**abc123**
+3. Click **Authentication** tab
+4. Click **Test configured authentication sources**
+5. Click **hub-discovery**
+6. Click **idp4**
+7. TODO: add username and remaining steps
+
+#### Multiple options
+1. Goto [http://ssp-hub.local](http://ssp-hub.local)
+2. Login as hub administrator: `username=`**admin** `password=`**abc123**
+3. Click **Authentication** tab
+4. Click **Test configured authentication sources**
+5. Click **hub-discovery**
+6. Click **idp4**
+7. TODO: add username and remaining steps
 
 ### Announcements functionality
 1. Goto [http://ssp-hub2.local:8081](http://ssp-hub2.local:8081)

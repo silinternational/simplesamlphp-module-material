@@ -1,6 +1,5 @@
 version: '2.0'
-#TODO: update README with new idp and local mfa testing (also need a reference in /etc/hosts to idp4)
-#TODO: change names to idp's to exclude hub, e.g., ssp-hub-idp4.local is misleading...ssp-idp4.local would be better
+#TODO: update README with local mfa testing steps
 
 services:
   hub:

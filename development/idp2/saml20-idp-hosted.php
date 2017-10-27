@@ -2,9 +2,9 @@
 use Sil\PhpEnv\Env;
 use Sil\Psr3Adapters\Psr3SamlLogger;
 
-$metadata['http://ssp-hub-idp2.local:8086'] = [
+$metadata['http://ssp-idp2.local:8086'] = [
 	'host' => '__DEFAULT__',
-	'privatekey' => 'ssp-hub-idp2.pem',
+	'privatekey' => 'ssp-idp2.pem',
 	'auth' => 'example-userpass',
     'authproc' => [
         10 => [
