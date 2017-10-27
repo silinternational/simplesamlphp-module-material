@@ -1,4 +1,7 @@
-version: '2'
+version: '2.0'
+#TODO: update README with new idp and local mfa testing (also need a reference in /etc/hosts to idp4)
+#TODO: change names to idp's to exclude hub, e.g., ssp-hub-idp4.local is misleading...ssp-idp4.local would be better
+
 services:
   hub:
     image: silintl/ssp-base:develop
@@ -11,7 +14,13 @@ services:
       - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
     ports:
-      - '80:80'
+      - "80:80"
+    depends_on:
+      - idp1
+      - idp2
+      - idp4
+    env_file:
+      - ./local.env
     environment:
       ADMIN_PASS: "abc123"
       SECURE_COOKIE: "false"
@@ -20,9 +29,10 @@ services:
       HUB_MODE: "true"
       ADMIN_EMAIL: "admin@example.org"
       SECRET_SALT: "FcJwl0zCDc4nuzOuQL9/7WPIj3hdfusGm2ny0dcRQm0="
-      IDP_NAME: hub
+      IDP_NAME: "hub"
       IDP_DISPLAY_NAME: "The Hub"
       ANALYTICS_ID: "UA-XXXX-Y"
+
   idp1:
     image: silintl/ssp-base:develop
     volumes:
@@ -31,7 +41,9 @@ services:
       - ./development/idp1/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
       - ./development/idp1/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
     ports:
-      - '8085:80'
+      - "8085:80"
+    env_file:
+      - ./local.env
     environment:
       ADMIN_PASS: "a"
       SECURE_COOKIE: "false"
@@ -53,7 +65,9 @@ services:
       - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
     ports:
-      - '8086:80'
+      - "8086:80"
+    env_file:
+      - ./local.env
     environment:
       ADMIN_PASS: "b"
       SECURE_COOKIE: "false"
@@ -68,6 +82,86 @@ services:
       PASSWORD_CHANGE_URL:  "http://example.org"
       PASSWORD_FORGOT_URL:  "http://example.org"
 
+  idp4:
+    image: silintl/ssp-base:feature_mfa #TODO: move this to :develop when PR'd
+    volumes:
+      - ./development/idp4/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
+      - ./development/idp4/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
+      - ./development/idp4/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
+      - ./development/idp4/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
+      - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
+      - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
+    ports:
+      - "8088:80"
+    depends_on:
+      - silAuthDb
+      - broker
+    env_file:
+      - ./local.env
+    environment:
+      ADMIN_PASS: "b"
+      SECURE_COOKIE: "false"
+      SHOW_SAML_ERRORS: "true"
+      ADMIN_PROTECT_INDEX_PAGE: "false"
+      THEME_USE: "material:material"
+      ADMIN_EMAIL: "admin1@example.org"
+      SECRET_SALT: "NlFalr5Faa73coPUFPP78BCi2ZUYhL+qVCOuJ466Bh4="
+      IDP_NAME: "idp-4"
+      IDP_DISPLAY_NAME: "Idp 4"
+      IDP_DOMAIN_NAME: "idp-4.local"
+      MFA_SETUP_URL: "https://example.org/mfa-setup"
+      MYSQL_HOST: "silAuthDb"
+      MYSQL_DATABASE: "silauth"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "pass"
+      ID_BROKER_ACCESS_TOKEN: "arc-cli-abc123"
+      ID_BROKER_ASSERT_VALID_IP: "false"
+      ID_BROKER_BASE_URI: "http://broker"
+      REMEMBER_ME_SECRET: "dummy"
+    command: ["bash", "-c", "whenavail silAuthDb 3306 60 ./run-idp.sh"]
+
+  silAuthDb:
+      image: silintl/mariadb:latest
+      ports:
+        - "3306"
+      environment:
+        MYSQL_ROOT_PASSWORD: "r00tp@ss!"
+        MYSQL_DATABASE: "silauth"
+        MYSQL_USER: "user"
+        MYSQL_PASSWORD: "pass"
+
+  broker:
+    image: silintl/idp-id-broker:feature2sv #TODO: move this to :develop when PR'd
+    ports:
+      - "8090:80"
+    depends_on:
+      - brokerDb
+    env_file:
+      - ./local.env
+    environment:
+      IDP_NAME: "idp-4"
+      MYSQL_HOST: "brokerDb"
+      MYSQL_DATABASE: "broker"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "pass"
+      EMAIL_SERVICE_accessToken: "dummy"
+      EMAIL_SERVICE_assertValidIp: "false"
+      EMAIL_SERVICE_baseUrl: "localhost"
+      API_ACCESS_KEYS: "arc-cli-abc123"
+      APP_ENV: "dev"
+      MIGRATE_PW_FROM_LDAP: "false"
+    command: ["bash", "-c", "whenavail brokerDb 3306 60 ./yii migrate --interactive=0 && ./run.sh"]
+
+  brokerDb:
+      image: silintl/mariadb:latest
+      ports:
+        - "3306"
+      environment:
+        MYSQL_ROOT_PASSWORD: "r00tp@ss!"
+        MYSQL_DATABASE: "broker"
+        MYSQL_USER: "user"
+        MYSQL_PASSWORD: "pass"
+
   hub2:
     image: silintl/ssp-base:develop
     volumes:
@@ -78,7 +172,11 @@ services:
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
       - ./development/idp3/announcement.php:/data/vendor/simplesamlphp/simplesamlphp/announcement/announcement.php
     ports:
-      - '8081:80'
+      - "8081:80"
+    depends_on:
+      - idp3
+    env_file:
+      - ./local.env
     environment:
       ADMIN_PASS: "abc123"
       SECURE_COOKIE: "false"
@@ -89,6 +187,7 @@ services:
       SECRET_SALT: "QthhmKnsmC7X/+2bv3CgzBWaFR68J3fP6QgmZhM1L7M="
       IDP_NAME: "hub-2"
       IDP_DISPLAY_NAME: "The Hub2"
+
   idp3:
     image: silintl/ssp-base:develop
     volumes:
@@ -100,7 +199,9 @@ services:
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
       - ./development/idp3/announcement.php:/data/vendor/simplesamlphp/simplesamlphp/announcement/announcement.php
     ports:
-      - '8087:80'
+      - "8087:80"
+    env_file:
+      - ./local.env
     environment:
       ADMIN_PASS: "a"
       SECURE_COOKIE: "false"
