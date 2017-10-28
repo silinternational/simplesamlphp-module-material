@@ -131,6 +131,8 @@ services:
 
   broker:
     image: silintl/idp-id-broker:feature2sv #TODO: move this to :develop when PR'd
+    volumes:
+      - ./development/idp4/m991231_235959_insert_mfa_test_users.php:/data/console/migrations/m991231_235959_insert_mfa_test_users.php
     ports:
       - "8090:80"
     depends_on:

@@ -116,7 +116,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp2**
-7. Login as an an "about to expire" user: `username=`**near_future** `password=`**b**
+7. Login as an "about to expire" user: `username=`**near_future** `password=`**b**
 8. Click **Later**
 9. Click **Logout**
 
@@ -127,7 +127,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp2**
-7. Login as an an "expired" user: `username=`**already_past** `password=`**c**
+7. Login as an "expired" user: `username=`**already_past** `password=`**c**
 
 ### Multi-factor authentication (MFA) functionality
 #### Nag about missing MFA setup
@@ -137,7 +137,8 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp4**
-7. TODO: add username and remaining steps
+7. Login as an "unprotected" user: `username=`**no_mfa_needed** `password=`**a**
+7. TODO: add remaining steps
 
 #### Force MFA setup
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
@@ -146,7 +147,8 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp4**
-7. TODO: add username and remaining steps
+7. Login as an "unsafe" user: `username=`**must_set_up_mfa** `password=`**a**
+7. TODO: add remaining steps
 
 #### Backup code
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
@@ -155,7 +157,8 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp4**
-7. TODO: add username and remaining steps
+7. Login as a "backup code" user: `username=`**has_backupcode** `password=`**a**
+7. TODO: add remaining steps
 
 #### TOTP code
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
@@ -164,7 +167,8 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp4**
-7. TODO: add username and remaining steps
+7. Login as a "totp" user: `username=`**has_totp** `password=`**a**
+7. TODO: add remaining steps
 
 #### Key (U2F)
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
@@ -173,7 +177,8 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp4**
-7. TODO: add username and remaining steps
+7. Login as a "u2f" user: `username=`**has_u2f** `password=`**a**
+7. TODO: add remaining steps
 
 #### Multiple options
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
@@ -182,7 +187,8 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp4**
-7. TODO: add username and remaining steps
+7. Login as a "multiple option" user: `username=`**has_all** `password=`**a**
+7. TODO: add remaining steps
 
 ### Announcements functionality
 1. Goto [http://ssp-hub2.local:8081](http://ssp-hub2.local:8081)
