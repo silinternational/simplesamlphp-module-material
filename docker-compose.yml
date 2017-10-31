@@ -163,6 +163,17 @@ services:
         MYSQL_USER: "user"
         MYSQL_PASSWORD: "pass"
 
+  brokerPhpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      ports:
+          - "8091:80"
+      depends_on:
+          - brokerDb
+      environment:
+          PMA_HOST: "brokerDb"
+          PMA_USER: "user"
+          PMA_PASSWORD: "pass"
+
   hub2:
     image: silintl/ssp-base:develop
     volumes:

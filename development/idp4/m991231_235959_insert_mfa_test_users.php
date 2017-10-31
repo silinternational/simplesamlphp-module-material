@@ -5,6 +5,7 @@ use yii\db\Migration;
 
 class m991231_235959_insert_mfa_test_users extends Migration
 {
+
     public function safeUp()
     {
         $this->batchInsert('{{user}}',
@@ -18,13 +19,13 @@ class m991231_235959_insert_mfa_test_users extends Migration
         ]);
 
         $this->batchInsert('{{password}}',
-            ['id','user_id','hash'                                                        ,'created_utc'        ,'expires_on','grace_period_ends_on'],[
-            [ 1  , 1       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(),'9999-12-31','9999-12-31'          ],
-            [ 2  , 2       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(),'9999-12-31','9999-12-31'          ],
-            [ 3  , 3       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(),'9999-12-31','9999-12-31'          ],
-            [ 4  , 4       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(),'9999-12-31','9999-12-31'          ],
-            [ 5  , 5       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(),'9999-12-31','9999-12-31'          ],
-            [ 6  , 6       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(),'9999-12-31','9999-12-31'          ],
+            ['id','user_id','hash'                                                        ,'created_utc'        ,'expires_on'                       ,'grace_period_ends_on'             ],[
+            [ 1  , 1       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(), MySqlDateTime::relative('+1 year'), MySqlDateTime::relative('+1 year')],
+            [ 2  , 2       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(), MySqlDateTime::relative('+1 year'), MySqlDateTime::relative('+1 year')],
+            [ 3  , 3       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(), MySqlDateTime::relative('+1 year'), MySqlDateTime::relative('+1 year')],
+            [ 4  , 4       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(), MySqlDateTime::relative('+1 year'), MySqlDateTime::relative('+1 year')],
+            [ 5  , 5       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(), MySqlDateTime::relative('+1 year'), MySqlDateTime::relative('+1 year')],
+            [ 6  , 6       ,'$2y$10$rKbAp0M8gewGpQKhD.U6qOSGDlMqKFkxK9tQZ15SZoieqYHYNsD/y', MySqlDateTime::now(), MySqlDateTime::relative('+1 year'), MySqlDateTime::relative('+1 year')],
         ]);
 
         $this->update('{{user}}', ['current_password_id' => 1], 'id=1');
@@ -34,14 +35,15 @@ class m991231_235959_insert_mfa_test_users extends Migration
         $this->update('{{user}}', ['current_password_id' => 5], 'id=5');
         $this->update('{{user}}', ['current_password_id' => 6], 'id=6');
 
+        //TODO: at this time unfortunately, a real uuid that's been verified is required for testing u2f authentication...will discuss decoupling 2-factor config with authentication.
         $this->batchInsert('{{mfa}}',
-            ['id','user_id','type'      ,'verified','created_utc'        ],[
-            [ 1  , 3       ,'backupcode', 1        , MySqlDateTime::now()],
-            [ 2  , 4       ,'totp'      , 1        , MySqlDateTime::now()],
-            [ 3  , 5       ,'u2f'       , 1        , MySqlDateTime::now()],
-            [ 4  , 6       ,'backupcode', 1        , MySqlDateTime::now()],
-            [ 5  , 6       ,'totp'      , 1        , MySqlDateTime::now()],
-            [ 6  , 6       ,'u2f'       , 1        , MySqlDateTime::now()],
+            ['id','user_id','type'      ,'external_uuid'                       ,'verified','created_utc'        ],[
+            [ 1  , 3       ,'backupcode',NULL                                  , 1        , MySqlDateTime::now()],
+            [ 2  , 4       ,'totp'      ,''                                    , 1        , MySqlDateTime::now()],
+            [ 3  , 5       ,'u2f'       ,'11931c0f-8438-4989-a37f-d35ad2b92219', 1        , MySqlDateTime::now()],
+            [ 4  , 6       ,'backupcode',NULL                                  , 1        , MySqlDateTime::now()],
+            [ 5  , 6       ,'totp'      ,''                                    , 1        , MySqlDateTime::now()],
+            [ 6  , 6       ,'u2f'       ,'c67279de-0d03-4504-8e07-58b4158ebccf', 1        , MySqlDateTime::now()],
         ]);
 
         $this->batchInsert('{{mfa_backupcode}}',
