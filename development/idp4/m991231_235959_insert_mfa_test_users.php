@@ -35,7 +35,7 @@ class m991231_235959_insert_mfa_test_users extends Migration
         $this->update('{{user}}', ['current_password_id' => 5], 'id=5');
         $this->update('{{user}}', ['current_password_id' => 6], 'id=6');
 
-        //TODO: at this time unfortunately, a real uuid that's been verified is required for testing u2f authentication...will discuss decoupling 2-factor config with authentication.
+        //TODO: at this time unfortunately, a real uuid that's been verified is required for testing...will discuss decoupling 2-factor config with authentication.
         $this->batchInsert('{{mfa}}',
             ['id','user_id','type'      ,'external_uuid'                       ,'verified','created_utc'        ],[
             [ 1  , 3       ,'backupcode',NULL                                  , 1        , MySqlDateTime::now()],
