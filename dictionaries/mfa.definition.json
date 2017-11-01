@@ -1,0 +1,51 @@
+
+{
+	"title": {
+		"en": "2-step verification",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"header": {
+		"en": "2-step verification",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"backup_code_header": {
+		"en": "Backup code",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"backup_code_icon": {
+		"en": "Backup code icon",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"backup_code_reminder": {
+		"en": "Each code can only be used once, so the code you enter this time will be used up and will not be available again.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"backup_code_input": {
+		"en": "Enter code",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_verify": {
+		"en": "Verify",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"remember_this": {
+		"en": "Remember this computer for 30 days",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	}
+}

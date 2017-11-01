@@ -12,6 +12,3 @@ errors:
 clean:
 	docker-compose kill
 	docker system prune -f
-
-
-# TODO: create local migrations for broker to load users and mfas to make testing easier.
