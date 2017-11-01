@@ -39,10 +39,10 @@ class m991231_235959_insert_mfa_test_users extends Migration
         $this->batchInsert('{{mfa}}',
             ['id','user_id','type'      ,'external_uuid'                       ,'verified','created_utc'        ],[
             [ 1  , 3       ,'backupcode',NULL                                  , 1        , MySqlDateTime::now()],
-            [ 2  , 4       ,'totp'      ,''                                    , 1        , MySqlDateTime::now()],
+            [ 2  , 4       ,'totp'      ,'2f062961-00af-4abf-a7ad-5986778789c1', 1        , MySqlDateTime::now()], // GFDHSMZ6EVBFGRB4
             [ 3  , 5       ,'u2f'       ,'c4f7d437-ad38-4393-a226-22f35cb1bcce', 1        , MySqlDateTime::now()],
             [ 4  , 6       ,'backupcode',NULL                                  , 1        , MySqlDateTime::now()],
-            [ 5  , 6       ,'totp'      ,''                                    , 1        , MySqlDateTime::now()],
+            [ 5  , 6       ,'totp'      ,'2f062961-00af-4abf-a7ad-5986778789c1', 1        , MySqlDateTime::now()], // GFDHSMZ6EVBFGRB4
             [ 6  , 6       ,'u2f'       ,'c4f7d437-ad38-4393-a226-22f35cb1bcce', 1        , MySqlDateTime::now()],
         ]);
 

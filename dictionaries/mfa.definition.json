@@ -36,6 +36,30 @@
 		"fr": "TODO",
 		"ko": "TODO"
 	},
+	"totp_header": {
+		"en": "Verification app",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"totp_icon": {
+		"en": "Verification app icon",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"totp_instructions": {
+		"en": "You will need to check your verification app for the current code.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"totp_input": {
+		"en": "Enter 6-digit code",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
 	"button_verify": {
 		"en": "Verify",
 		"es": "TODO",
