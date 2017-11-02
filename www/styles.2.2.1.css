@@ -17,6 +17,11 @@ p {
   flex-wrap: wrap;
 }
 
+/* can't think of a time at this point where we want the buttons to wrap inside a card. */
+.mdl-card__actions[layout-children] {
+  flex-wrap: nowrap;
+}
+
 [layout-children=column] {
   display: flex;
   flex-direction: column;

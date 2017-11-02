@@ -60,8 +60,44 @@
 		"fr": "TODO",
 		"ko": "TODO"
 	},
+	"shield_icon": {
+		"en": "Shield icon",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"nag_header": {
+		"en": "Protect yourself",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"nag_info": {
+		"en": "Did you know you could easily increase the security of your account by enabling 2-step verification?",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
 	"button_verify": {
 		"en": "Verify",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_later": {
+		"en": "Remind me later",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_learn_more": {
+		"en": "Learn more",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_enable": {
+		"en": "Enable now",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"

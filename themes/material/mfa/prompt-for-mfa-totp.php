@@ -18,7 +18,7 @@
         <form layout-children="column" method="POST">
             <?php
             foreach ($this->data['formData'] as $name => $value) {
-             ?>
+            ?>
             <input type="hidden" name="<?= htmlentities($name); ?>"
                    value="<?= htmlentities($value); ?>"/>
             <?php
