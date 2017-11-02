@@ -137,7 +137,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp4**
-7. Login as an "unprotected" user: `username=`**no_mfa_needed** `password=`**a**
+7. Login as an "unprotected" user: `username=`**nag_for_mfa** `password=`**a**
 7. TODO: add remaining steps
 
 #### Force MFA setup

@@ -10,7 +10,7 @@ class m991231_235959_insert_mfa_test_users extends Migration
     {
         $this->batchInsert('{{user}}',
             ['id','uuid'                                ,'employee_id','first_name','last_name','username'       ,'email'                      ,'active','locked','last_changed_utc'   ,'last_synced_utc'    ,'require_mfa','nag_for_mfa_after'    ],[
-            [ 1  ,'2b2d424e-8cb0-49c7-8c0b-7f660340f5fa','11111'      ,'Not'       ,'Needed'   ,'no_mfa_needed'  ,'no_mfa_needed@example.org'  ,'yes'   ,'no'    , MySqlDateTime::now(), MySqlDateTime::now(),'no'         , MySqlDateTime::today()],
+            [ 1  ,'2b2d424e-8cb0-49c7-8c0b-7f660340f5fa','11111'      ,'Not'       ,'Needed'   ,'nag_for_mfa'    ,'nag_for_mfa@example.org'    ,'yes'   ,'no'    , MySqlDateTime::now(), MySqlDateTime::now(),'no'         , MySqlDateTime::today()],
             [ 2  ,'ef960c92-09fc-44f4-aadf-2d3aea6e0dbd','22222'      ,'Must'      ,'Have'     ,'must_set_up_mfa','must_set_up_mfa@example.org','yes'   ,'no'    , MySqlDateTime::now(), MySqlDateTime::now(),'yes'        , MySqlDateTime::today()],
             [ 3  ,'a42317a0-9a43-4da0-9921-50f004e011c0','33333'      ,'Has'       ,'Backup'   ,'has_backupcode' ,'has_backupcode@example.org' ,'yes'   ,'no'    , MySqlDateTime::now(), MySqlDateTime::now(),'no'         , MySqlDateTime::today()],
             [ 4  ,'7bab90d3-9f54-4187-804d-7f6400021789','44444'      ,'Has'       ,'Totp'     ,'has_totp'       ,'has_totp@example.org'       ,'yes'   ,'no'    , MySqlDateTime::now(), MySqlDateTime::now(),'no'         , MySqlDateTime::today()],
