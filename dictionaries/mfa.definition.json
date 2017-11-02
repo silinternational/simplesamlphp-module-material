@@ -78,6 +78,18 @@
 		"fr": "TODO",
 		"ko": "TODO"
 	},
+	"required_header": {
+		"en": "Protect this account",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"required_info": {
+		"en": "Your account requires additional security, you must set up 2-step verification at this time.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
 	"button_verify": {
 		"en": "Verify",
 		"es": "TODO",
@@ -98,6 +110,12 @@
 	},
 	"button_enable": {
 		"en": "Enable now",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_set_up": {
+		"en": "Set up now",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
