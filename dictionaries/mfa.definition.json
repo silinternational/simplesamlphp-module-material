@@ -60,6 +60,24 @@
 		"fr": "TODO",
 		"ko": "TODO"
 	},
+	"u2f_header": {
+		"en": "Security key",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_icon": {
+		"en": "USB key icon",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_instructions": {
+		"en": "You may now insert your security key and press its button.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
 	"shield_icon": {
 		"en": "Shield icon",
 		"es": "TODO",
@@ -116,6 +134,12 @@
 	},
 	"button_set_up": {
 		"en": "Set up now",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_try_again": {
+		"en": "Try again",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"

@@ -68,7 +68,7 @@
                 </div>
 
                 <script>
-                    ga('send','event','error','totp', <?= $message ?>');
+                    ga('send','event','error','totp', '<?= $message ?>');
                 </script>
                 <?php
                 }

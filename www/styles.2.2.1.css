@@ -71,6 +71,14 @@ form p.error > i {
   max-width: 90%;
 }
 
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
 /* out-of-box styles for the cards don't work well when there are many cards */
 .mdl-card {
   width: initial;
