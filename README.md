@@ -179,6 +179,8 @@ If configured, an alert will be shown to the user filled with the content of tha
 5. Click **hub-discovery**
 6. Click **idp4**
 7. Login as a "u2f" user: `username=`**has_u2f** `password=`**a**
+8. Insert key and press
+9. Click **Logout**
 
 #### Multiple options
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
