@@ -61,6 +61,8 @@ services:
       - ./development/idp2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/idp2/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
       - ./development/idp2/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
+      - ./www/default-favicon.ico:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.ico
+      - ./www/default-favicon.png:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.png
       - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
     ports:
@@ -88,6 +90,8 @@ services:
       - ./development/idp4/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/idp4/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
       - ./development/idp4/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
+      - ./www/default-favicon.ico:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.ico
+      - ./www/default-favicon.png:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.png
       - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
     ports:
@@ -180,6 +184,8 @@ services:
       - ./development/hub2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/hub2/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
       - ./development/hub2/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
+      - ./www/default-favicon.ico:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.ico
+      - ./www/default-favicon.png:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.png
       - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
       - ./development/idp3/announcement.php:/data/vendor/simplesamlphp/simplesamlphp/announcement/announcement.php
@@ -207,6 +213,8 @@ services:
       - ./development/idp3/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/idp3/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
       - ./development/idp3/saml20-sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-sp-remote.php
+      - ./www/default-favicon.ico:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.ico
+      - ./www/default-favicon.png:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.png
       - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
       - ./:/data/vendor/simplesamlphp/simplesamlphp/modules/material
       - ./development/idp3/announcement.php:/data/vendor/simplesamlphp/simplesamlphp/announcement/announcement.php
