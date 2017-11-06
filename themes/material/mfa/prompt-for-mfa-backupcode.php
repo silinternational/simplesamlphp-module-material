@@ -76,7 +76,7 @@
 
                 <div class="mdl-card__actions" layout-children="row">
                     <span flex></span>
-                    <button type="submit" name="submitMfa"
+                    <button name="submitMfa"
                             class="mdl-button mdl-button--raised mdl-button--primary">
                         <?= $this->t('{material:mfa:button_verify}') ?>
                     </button>

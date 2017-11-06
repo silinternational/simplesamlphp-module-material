@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="mdl-card__actions" layout-children="row" child-spacing="space-around">
-                    <button type="submit" name="continue" class="mdl-button">
+                    <button name="continue" class="mdl-button">
                         <?= $this->t('{material:mfa:button_later}') ?>
                     </button>
 
@@ -62,7 +62,7 @@ $url = "//example.org"; //TODO: remove when available
                     }
                     ?>
 
-                    <button type="submit" name="setUpMfa"
+                    <button name="setUpMfa"
                             class="mdl-button mdl-button--raised mdl-button--primary">
                         <?= $this->t('{material:mfa:button_enable}') ?>
                     </button>

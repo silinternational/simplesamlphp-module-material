@@ -58,7 +58,7 @@ $url = "//example.org"; //TODO: remove when available
                     }
                     ?>
 
-                    <button type="submit" name="setUpMfa"
+                    <button name="setUpMfa"
                             class="mdl-button mdl-button--raised mdl-button--primary">
                         <?= $this->t('{material:mfa:button_set_up}') ?>
                     </button>

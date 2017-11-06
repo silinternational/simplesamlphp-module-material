@@ -29,8 +29,7 @@
                 <?= $this->t('{material:expired:expired}')  ?>
             </p>
 
-            <button type="submit" name="changepwd"
-                    class="mdl-button mdl-button--raised mdl-button--primary">
+            <button name="changepwd" class="mdl-button mdl-button--raised mdl-button--primary">
                 <?= $this->t('{material:expired:button_change}') ?>
             </button>
         </form>

@@ -41,12 +41,11 @@
             </p>
 
             <div class="fill-parent" layout-children="row" child-spacing="space-around">
-                <button type="submit" name="continue" class="mdl-button mdl-button--raised">
+                <button name="continue" class="mdl-button mdl-button--raised">
                     <?= $this->t('{material:about2expire:button_continue}') ?>
                 </button>
 
-                <button type="submit" name="changepwd"
-                        class="mdl-button mdl-button--raised mdl-button--primary">
+                <button name="changepwd" class="mdl-button mdl-button--raised mdl-button--primary">
                     <?= $this->t('{material:about2expire:button_change}') ?>
                 </button>
             </div>
