@@ -29,7 +29,7 @@
 
             var errorNode = document.querySelector('p.error');
 
-            errorNode.classList.add('show');
+            errorNode.classList.remove('hide');
             errorNode.querySelector('span').textContent = message;
 
             offerRetry();
@@ -38,7 +38,7 @@
         function offerRetry() {
             var retryButton = document.querySelector('.mdl-button.mdl-color-text--red');
 
-            retryButton.classList.add('show');
+            retryButton.classList.remove('hide');
         }
 
         function submitForm(u2fResponse) {
@@ -73,6 +73,7 @@
             </span>
         </div>
     </header>
+
     <main class="mdl-layout__content" layout-children="column">
         <form layout-children="column" method="POST">
             <?php
@@ -103,18 +104,17 @@
 
                 <?php
                 $message = $this->data['errorMessage'];
-
                 if (! empty($message)) {
                 ?>
                 <script>
-                    ga('send','event','error','u2f', '<?= $message ?>');
+                    ga('send','event','error','u2f','<?= $message ?>');
                 </script>
                 <?php
                 }
                 ?>
                 <div class="mdl-card__supporting-text"
                      layout-children="column">
-                    <p class="mdl-color-text--red error  <?= empty($message) ? 'hide' : 'show' ?>">
+                    <p class="mdl-color-text--red error <?= ! empty($message) ? 'show' : 'hide' ?>">
                         <i class="material-icons">error</i>
 
                         <span class="mdl-typography--caption">
@@ -125,11 +125,16 @@
 
                 <div class="mdl-card__actions" layout-children="row">
                     <span flex></span>
-                    <!-- used input instead of button to avoid form submission on click -->
-                    <input type="button" onclick="verifyU2f()"
-                           class="mdl-button mdl-color-text--red hide"
-                           value="<?= $this->t('{material:mfa:button_try_again}') ?>">
+                    <!-- used type=button to avoid form submission on click -->
+                    <button type="button" onclick="verifyU2f()"
+                           class="mdl-button mdl-color-text--red <?= ! empty($message) ? 'show' : 'hide' ?>">
+                        <?= $this->t('{material:mfa:button_try_again}') ?>
+                    </button>
 
+                </div>
+
+                <div layout-children="column" child-spacing="center">
+                    <?php include __DIR__ . '/other_mfas.php' ?>
                 </div>
             </div>
 
@@ -138,8 +143,7 @@
                     <span class="mdl-checkbox__label">
                         <?= $this->t('{material:mfa:remember_this}') ?>
                     </span>
-                    <input type="checkbox" name="rememberMe" value="true" checked
-                           class="mdl-checkbox__input"/>
+                    <input type="checkbox" name="rememberMe" checked class="mdl-checkbox__input"/>
                 </label>
             </div>
         </form>

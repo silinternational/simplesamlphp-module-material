@@ -108,6 +108,30 @@
 		"fr": "TODO",
 		"ko": "TODO"
 	},
+	"use_others": {
+		"en": "More options",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"use_u2f": {
+		"en": "Use my security key instead",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"use_totp": {
+		"en": "Use my verification app instead",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"use_backupcode": {
+		"en": "Use a backup code instead",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
 	"button_verify": {
 		"en": "Verify",
 		"es": "TODO",

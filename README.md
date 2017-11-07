@@ -190,7 +190,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 5. Click **hub-discovery**
 6. Click **idp4**
 7. Login as a "multiple option" user: `username=`**has_all** `password=`**a**
-7. TODO: add remaining steps
+8. Click **MORE OPTIONS**
 
 ### Announcements functionality
 1. Goto [http://ssp-hub2.local:8081](http://ssp-hub2.local:8081)

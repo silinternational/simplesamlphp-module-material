@@ -68,7 +68,7 @@
                 </div>
 
                 <script>
-                    ga('send','event','error','backupcode', '<?= $message ?>');
+                    ga('send','event','error','backupcode','<?= $message ?>');
                 </script>
                 <?php
                 }
@@ -81,6 +81,10 @@
                         <?= $this->t('{material:mfa:button_verify}') ?>
                     </button>
                 </div>
+
+                <div layout-children="column" child-spacing="center">
+                    <?php include __DIR__ . '/other_mfas.php' ?>
+                </div>
             </div>
 
             <div>
@@ -88,8 +92,7 @@
                     <span class="mdl-checkbox__label">
                         <?= $this->t('{material:mfa:remember_this}') ?>
                     </span>
-                    <input type="checkbox" name="rememberMe" value="true" checked
-                           class="mdl-checkbox__input"/>
+                    <input type="checkbox" name="rememberMe" checked class="mdl-checkbox__input"/>
                 </label>
             </div>
         </form>

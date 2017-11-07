@@ -1,5 +1,4 @@
 version: '2.0'
-#TODO: update README with local mfa testing steps
 
 services:
   hub:
