@@ -5,7 +5,7 @@
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
-    <script src="/module.php/material/mfa-u2f-api.js"></script>
+    <script src="mfa-u2f-api.js"></script>
     <script>
         function verifyU2f() {
             // TODO: need feature sniff and error handling
@@ -86,8 +86,7 @@
             ?>
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
-                    <img src="/module.php/material/mfa-u2f.png"
-                         alt="<?= $this->t('{material:mfa:u2f_icon}') ?>">
+                    <img src="mfa-u2f.png" alt="<?= $this->t('{material:mfa:u2f_icon}') ?>">
                 </div>
 
                 <div class="mdl-card__title center">

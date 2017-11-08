@@ -17,8 +17,7 @@
 
     foreach (excludeSelf($mfaOptions, $currentMfaId) as $otherOption) {
     ?>
-    <li class="mdl-menu__item"
-        onclick="location.href += '&mfaId=<?= $otherOption['id'] ?>'">
+    <li class="mdl-menu__item" onclick="location.href += '&mfaId=<?= $otherOption['id'] ?>'">
         <span class="mdl-typography--caption">
             <?= $this->t('{material:mfa:use_'.$otherOption['type'].'}') ?>
         </span>

@@ -3,6 +3,8 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<base href="<?= SimpleSAML_Module::getModuleURL('material/') ?>">
+
 <?php
 $trackingId = htmlentities($this->configuration->getValue('analytics.trackingId'));
 if (! empty($trackingId)) {
@@ -29,9 +31,9 @@ if (! empty($trackingId)) {
 <?php
 $colors = htmlentities($this->configuration->getValue('theme.color-scheme', 'indigo-purple'));
 ?>
-<link rel="stylesheet" href="/module.php/material/material.<?= $colors ?>.1.2.1.min.css">
-<link rel="stylesheet" href="/module.php/material/styles.2.2.1.css">
+<link rel="stylesheet" href="material.<?= $colors ?>.1.2.1.min.css">
+<link rel="stylesheet" href="styles.2.2.1.css">
 
-<script async src="/module.php/material/material.1.2.1.min.js"></script>
+<script async src="material.1.2.1.min.js"></script>
 
 <link rel="icon" href="/favicon.png">

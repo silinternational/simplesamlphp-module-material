@@ -26,7 +26,7 @@
             ?>
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
-                    <img src="/module.php/material/mfa-backup-codes.svg"
+                    <img src="mfa-backup-codes.svg"
                          alt="<?= $this->t('{material:mfa:backup_code_icon}') ?>">
                 </div>
 
