@@ -1,13 +1,13 @@
 
 {
 	"title": {
-		"en": "2-step verification",
+		"en": "2-Step Verification",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
 	},
 	"header": {
-		"en": "2-step verification",
+		"en": "2-Step Verification",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
@@ -91,7 +91,7 @@
 		"ko": "TODO"
 	},
 	"nag_info": {
-		"en": "Did you know you could easily increase the security of your account by enabling 2-step verification?",
+		"en": "Did you know you could easily increase the security of your account by enabling 2-Step Verification?",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
@@ -103,7 +103,7 @@
 		"ko": "TODO"
 	},
 	"required_info": {
-		"en": "Your account requires additional security, you must set up 2-step verification at this time.",
+		"en": "Your account requires additional security, you must set up 2-Step Verification at this time.",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
