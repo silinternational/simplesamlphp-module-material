@@ -37,19 +37,19 @@
 		"ko": "TODO"
 	},
 	"totp_header": {
-		"en": "Verification app",
+		"en": "Smartphone app",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
 	},
 	"totp_icon": {
-		"en": "Verification app icon",
+		"en": "Smartphone app icon",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
 	},
 	"totp_instructions": {
-		"en": "You will need to check your verification app for the current code.",
+		"en": "You will need to check your smartphone app for the current code.",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
@@ -121,7 +121,7 @@
 		"ko": "TODO"
 	},
 	"use_totp": {
-		"en": "Use my verification app instead",
+		"en": "Use my smartphone app instead",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
