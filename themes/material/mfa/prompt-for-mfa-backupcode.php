@@ -26,26 +26,26 @@
             ?>
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
-                    <img src="mfa-backup-codes.svg"
-                         alt="<?= $this->t('{material:mfa:backup_code_icon}') ?>">
+                    <img src="mfa-backupcode.svg"
+                         alt="<?= $this->t('{material:mfa:backupcode_icon}') ?>">
                 </div>
 
                 <div class="mdl-card__title center">
                     <h1 class="mdl-card__title-text">
-                        <?= $this->t('{material:mfa:backup_code_header}') ?>
+                        <?= $this->t('{material:mfa:backupcode_header}') ?>
                     </h1>
                 </div>
 
                 <div class="mdl-card__title center" >
                     <p class="mdl-card__subtitle-text">
-                        <?= $this->t('{material:mfa:backup_code_reminder}') ?>
+                        <?= $this->t('{material:mfa:backupcode_reminder}') ?>
                     </p>
                 </div>
 
                 <div class="mdl-card__supporting-text" layout-children="column">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <label for="mfaSubmission" class="mdl-textfield__label">
-                            <?= $this->t('{material:mfa:backup_code_input}') ?>
+                            <?= $this->t('{material:mfa:backupcode_input}') ?>
                         </label>
                         <input name="mfaSubmission" class="mdl-textfield__input" autofocus
                                id="mfaSubmission"/>

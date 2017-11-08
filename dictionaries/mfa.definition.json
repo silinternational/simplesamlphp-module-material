@@ -12,25 +12,25 @@
 		"fr": "TODO",
 		"ko": "TODO"
 	},
-	"backup_code_header": {
+	"backupcode_header": {
 		"en": "Backup code",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
 	},
-	"backup_code_icon": {
+	"backupcode_icon": {
 		"en": "Backup code icon",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
 	},
-	"backup_code_reminder": {
+	"backupcode_reminder": {
 		"en": "Each code can only be used once, so the code you enter this time will be used up and will not be available again.",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
 	},
-	"backup_code_input": {
+	"backupcode_input": {
 		"en": "Enter code",
 		"es": "TODO",
 		"fr": "TODO",

@@ -16,10 +16,17 @@
     }
 
     foreach (excludeSelf($mfaOptions, $currentMfaId) as $otherOption) {
+        $type = $otherOption['type'];
+
+        //TODO: is there an svg of the u2f icon?
+        $image = 'mfa-'.$type.($type === 'u2f' ? '.png' : '.svg');
     ?>
     <li class="mdl-menu__item" onclick="location.href += '&mfaId=<?= $otherOption['id'] ?>'">
-        <span class="mdl-typography--caption">
-            <?= $this->t('{material:mfa:use_'.$otherOption['type'].'}') ?>
+        <span class="mdl-list__item-primary-content">
+            <img class="mdl-list__item-icon" src="<?= $image ?>"
+                 alt="<?= $this->t('{material:mfa:'.$type.'_icon}') ?>">
+
+            <?= $this->t('{material:mfa:use_'.$type.'}') ?>
         </span>
     </li>
     <?php
