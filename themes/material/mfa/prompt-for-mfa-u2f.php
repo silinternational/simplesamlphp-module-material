@@ -24,6 +24,7 @@
         }
 
         function handleError(u2fResponse) {
+            //TODO: need to consider natural language for these errors (as well as translations)
             var message = u2fResponse.errorMessage ||
                           Object.keys(u2f.ErrorCodes)[u2fResponse.errorCode];
 
