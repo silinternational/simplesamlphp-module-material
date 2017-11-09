@@ -68,7 +68,7 @@
                 </div>
 
                 <script>
-                    ga('send','event','error','backupcode','<?= $message ?>');
+                    ga('send','event','error','backupcode',<?= json_encode($message) ?>);
                 </script>
                 <?php
                 }

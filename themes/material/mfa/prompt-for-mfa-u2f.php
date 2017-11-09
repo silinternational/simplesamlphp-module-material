@@ -107,7 +107,7 @@
                 if (! empty($message)) {
                 ?>
                 <script>
-                    ga('send','event','error','u2f','<?= $message ?>');
+                    ga('send','event','error','u2f',<?= json_encode($message) ?>);
                 </script>
                 <?php
                 }
