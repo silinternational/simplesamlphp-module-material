@@ -138,6 +138,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 5. Click **hub-discovery**
 6. Click **idp4**
 7. Login as an "unprotected" user: `username=`**nag_for_mfa** `password=`**a**
+8. The "learn more" link should be visible if configured via env var `MFA_LEARN_MORE_URL`.
 
 #### Force MFA setup
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
@@ -147,6 +148,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 5. Click **hub-discovery**
 6. Click **idp4**
 7. Login as an "unsafe" user: `username=`**must_set_up_mfa** `password=`**a**
+8. The "learn more" link should be visible if configured via env var `MFA_LEARN_MORE_URL`.
 
 #### Backup code
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)

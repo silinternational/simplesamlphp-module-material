@@ -112,6 +112,7 @@ services:
       IDP_DISPLAY_NAME: "Idp 4"
       IDP_DOMAIN_NAME: "idp-4.local"
       MFA_SETUP_URL: "https://example.org/mfa-setup"
+      MFA_LEARN_MORE_URL: "//example.org/learn-more"
       MYSQL_HOST: "silAuthDb"
       MYSQL_DATABASE: "silauth"
       MYSQL_USER: "user"

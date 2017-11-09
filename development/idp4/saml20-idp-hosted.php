@@ -15,6 +15,7 @@ $metadata['http://ssp-idp4.local:8088'] = [
             'idBrokerBaseUri' => Env::get('ID_BROKER_BASE_URI'),
             'idBrokerTrustedIpRanges' => Env::get('ID_BROKER_TRUSTED_IP_RANGES'),
             'mfaSetupUrl' => Env::get('MFA_SETUP_URL'),
+            'mfaLearnMoreUrl' => Env::get('MFA_LEARN_MORE_URL'),
             'loggerClass' => Psr3SamlLogger::class,
         ],
     ]

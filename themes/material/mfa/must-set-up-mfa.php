@@ -46,7 +46,6 @@
 
                     <?php
                     $url = $this->data['learnMoreUrl'] ?? null;
-$url = "//example.org"; //TODO: remove when available
                     if (! empty($url)) {
                         ?>
                         <a href="<?= htmlentities($url) ?>" target="_blank"
