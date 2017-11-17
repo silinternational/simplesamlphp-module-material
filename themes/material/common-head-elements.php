@@ -29,7 +29,7 @@ if (! empty($trackingId)) {
 
 
 <?php
-$colors = htmlentities($this->configuration->getValue('theme.color-scheme', 'indigo-purple'));
+$colors = htmlentities($this->configuration->getValue('theme.color-scheme') ?: 'indigo-purple');
 ?>
 <link rel="stylesheet" href="material.<?= $colors ?>.1.2.1.min.css">
 <link rel="stylesheet" href="styles.2.2.1.css">
