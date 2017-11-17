@@ -38,8 +38,7 @@
     <main class="mdl-layout__content" layout-children="column" child-spacing="center">
         <?php include __DIR__ . '/../common-announcement.php' ?>
 
-
-        <form method="POST">
+        <form method="post">
             <input type="hidden" name="AuthState"
                    value="<?= htmlentities($this->data['stateparams']['AuthState']) ?>" />
             <?php
@@ -95,7 +94,7 @@
 
                     $message = $this->t($errorMessageKey, $errorMessageTokens);
                 ?>
-                <p class="mdl-color-text--red error">
+                <p class="mdl-card__supporting-text mdl-color-text--red error">
                     <i class="material-icons">error</i>
 
                     <span class="mdl-textfield mdl-typography--caption">
