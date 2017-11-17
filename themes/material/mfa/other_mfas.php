@@ -7,7 +7,7 @@
 <ul class="mdl-menu mdl-js-menu mdl-menu--top-left" data-mdl-for="others">
     <?php
     $mfaOptions = $this->data['mfaOptions'];
-    $currentMfaId = $this->data['formData']['mfaId'];
+    $currentMfaId = filter_input(INPUT_GET, 'mfaId');
 
     function excludeSelf($others, $selfId) {
         return array_filter($others, function($option) use ($selfId) {

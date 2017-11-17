@@ -15,15 +15,7 @@
         </div>
     </header>
     <main class="mdl-layout__content" layout-children="column">
-        <form layout-children="column"> <!-- TODO: change method to POST once implemented -->
-            <?php
-            foreach ($this->data['formData'] as $name => $value) {
-            ?>
-            <input type="hidden" name="<?= htmlentities($name); ?>"
-                   value="<?= htmlentities($value); ?>"/>
-            <?php
-            }
-            ?>
+        <form layout-children="column" method="post">
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
                     <img src="mfa-shield.svg" alt="<?= $this->t('{material:mfa:shield_icon}') ?>">

@@ -76,15 +76,7 @@
     </header>
 
     <main class="mdl-layout__content" layout-children="column">
-        <form layout-children="column" method="POST">
-            <?php
-            foreach ($this->data['formData'] as $name => $value) {
-            ?>
-            <input type="hidden" name="<?= htmlentities($name); ?>"
-                   value="<?= htmlentities($value); ?>"/>
-            <?php
-            }
-            ?>
+        <form layout-children="column" method="post">
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
                     <img src="mfa-u2f.png" alt="<?= $this->t('{material:mfa:u2f_icon}') ?>">
