@@ -39,7 +39,7 @@
                             <?= $this->t('{material:mfa:totp_input}') ?>
                         </label>
                         <input name="mfaSubmission" class="mdl-textfield__input" autofocus
-                               id="mfaSubmission"/>
+                               id="mfaSubmission" autocomplete="off" />
                     </div>
                 </div>
 

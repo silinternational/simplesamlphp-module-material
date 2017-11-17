@@ -40,8 +40,7 @@
                             <?= $this->t('{material:mfa:backupcode_input}') ?>
                         </label>
                         <input name="mfaSubmission" class="mdl-textfield__input" autofocus
-                               id="mfaSubmission"/>
-<!--                        TODO: don't remember codes here since they are one-time use anyway-->
+                               id="mfaSubmission" autocomplete="off" />
                     </div>
                 </div>
 
