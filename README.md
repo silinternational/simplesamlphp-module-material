@@ -24,7 +24,7 @@ username/password page may require the user prove his/her humanity.
 Update `/simplesamlphp/config/config.php`:
 
 ```
-'theme.color-scheme' => ['indigo-purple'|'blue_grey-teal'|'red-teal'|'orange-light_blue']
+'theme.color-scheme' => ['indigo-purple'|'blue_grey-teal'|'red-teal'|'orange-light_blue'|'brown-orange']
 ```
 
 The login page looks for `/simplesamlphp/www/logo.png` which is **NOT** provided by default.
