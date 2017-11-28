@@ -1,3 +1,7 @@
+p {
+  max-width: 60ch;
+}
+
 .fill-viewport {
   width: 100vw;
   height: 100vh;
@@ -11,6 +15,11 @@
   /* make sure the children break nicely for different browser widths, e.g.,
      tablet, phone, etc. */
   flex-wrap: wrap;
+}
+
+/* can't think of a time at this point where we want the buttons to wrap inside a card. */
+.mdl-card__actions[layout-children] {
+  flex-wrap: nowrap;
 }
 
 [layout-children=column] {
@@ -62,10 +71,23 @@ form p.error > i {
   max-width: 90%;
 }
 
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
 /* out-of-box styles for the cards don't work well when there are many cards */
 .mdl-card {
   width: initial;
   margin: 1em;
+}
+
+/* don't want images to be too small on cards */
+.mdl-card__media > img {
+  min-width: 20%;
 }
 
 /* phones (2 cards / row) */
@@ -187,6 +209,6 @@ form p.error > i {
   font-weight: 400;
   src: local('Material Icons'),
        local('MaterialIcons-Regular'),
-       url(/module.php/material/material-icons.woff2) format('woff2'),
-       url(/module.php/material/material-icons.woff) format('woff');
+       url(material-icons.woff2) format('woff2'),
+       url(material-icons.woff) format('woff');
 }

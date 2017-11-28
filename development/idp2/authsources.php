@@ -14,7 +14,7 @@ $config = [
                 gmdate('YmdHis\Z', strtotime('+6 months')), // Distant future
             ],
         ],
-        'near_future:b' => [
+        'near_future:a' => [
             'eduPersonPrincipalName' => ['NEAR_FUTURE@ssp-hub-idp2.local'],
             'eduPersonTargetID' => ['22222222-2222-2222-2222-222222222222'],
             'sn' => ['Future'],
@@ -26,7 +26,7 @@ $config = [
                 gmdate('YmdHis\Z', strtotime('+1 day')), // Very soon
             ],
         ],
-        'already_past:c' => [
+        'already_past:a' => [
             'eduPersonPrincipalName' => ['ALREADY_PAST@ssp-hub-idp2.local'],
             'eduPersonTargetID' => ['33333333-3333-3333-3333-333333333333'],
             'sn' => ['Past'],

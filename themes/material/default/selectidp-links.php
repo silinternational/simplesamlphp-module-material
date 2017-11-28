@@ -66,7 +66,7 @@
                 <div class="mdl-card__media white-bg fixed-height">
                     <button class="mdl-button fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')">
                         <img class="scale-to-parent" id="<?= $idpId ?>"
-                             src="<?= empty($idp['logoURL']) ? '/module.php/material/default-logo.png'
+                             src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                              : $idp['logoURL'] ?>">
                     </button>
                 </div>
@@ -86,7 +86,7 @@
                 <div class="mdl-card__media white-bg fixed-height" layout-children="row"
                      child-spacing="center">
                     <img class="scale-to-parent" id="<?= $idpId ?>"
-                         src="<?= empty($idp['logoURL']) ? '/module.php/material/default-logo.png'
+                         src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                          : $idp['logoURL'] ?>">
                 </div>
             </div>
