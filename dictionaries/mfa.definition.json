@@ -1,0 +1,201 @@
+
+{
+	"title": {
+		"en": "2-Step Verification",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"header": {
+		"en": "2-Step Verification",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"backupcode_header": {
+		"en": "Printable backup code",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"backupcode_icon": {
+		"en": "Printable backup code icon",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"backupcode_reminder": {
+		"en": "Each code can only be used once, so the code you enter this time will be used up and will not be available again.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"backupcode_input": {
+		"en": "Enter code",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"totp_header": {
+		"en": "Smartphone app",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"totp_icon": {
+		"en": "Smartphone app icon",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"totp_instructions": {
+		"en": "You will need to check your smartphone app for the current code.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"totp_input": {
+		"en": "Enter 6-digit code",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_header": {
+		"en": "Security key",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_icon": {
+		"en": "USB key icon",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_instructions": {
+		"en": "You may now insert your security key and press its button.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_unsupported": {
+		"en": "Unsupported in your current browser.  Please consider a more secure browser like <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_error_unknown": {
+		"en": "Something went wrong with that request, unable to verify at this time.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_error_wrong_key": {
+		"en": "This may not be the correct key for this site.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_error_timeout": {
+		"en": "That took a little too long, check to make sure your key is inserted right-side up.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"shield_icon": {
+		"en": "Shield icon",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"nag_header": {
+		"en": "Protect yourself",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"nag_info": {
+		"en": "Did you know you could easily increase the security of your account by enabling 2-Step Verification?",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"required_header": {
+		"en": "Protect this account",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"required_info": {
+		"en": "Your account requires additional security, you must set up 2-Step Verification at this time.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"use_others": {
+		"en": "More options",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"use_u2f": {
+		"en": "Use my security key instead",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"use_totp": {
+		"en": "Use my smartphone app instead",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"use_backupcode": {
+		"en": "Use a printable backup code instead",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_verify": {
+		"en": "Verify",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_later": {
+		"en": "Remind me later",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_learn_more": {
+		"en": "Learn more",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_enable": {
+		"en": "Enable now",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_set_up": {
+		"en": "Set up now",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"button_try_again": {
+		"en": "Try again",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"remember_this": {
+		"en": "Remember this computer for 30 days",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	}
+}

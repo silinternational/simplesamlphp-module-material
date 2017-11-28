@@ -38,8 +38,7 @@
     <main class="mdl-layout__content" layout-children="column" child-spacing="center">
         <?php include __DIR__ . '/../common-announcement.php' ?>
 
-
-        <form method="POST">
+        <form method="post">
             <input type="hidden" name="AuthState"
                    value="<?= htmlentities($this->data['stateparams']['AuthState']) ?>" />
             <?php
@@ -88,23 +87,23 @@
                 </div>
 
                 <?php
-                $errorCode = htmlentities($this->data['errorcode'] ?? null);
+                $errorCode = $this->data['errorcode'] ?? null;
                 if ($errorCode == 'WRONGUSERPASS') {
                     $errorMessageKey = $this->data['errorparams'][1] ?? '{material:login:error_wronguserpass}';
                     $errorMessageTokens = $this->data['errorparams'][2] ?? null;
 
-                    $message = htmlentities($this->t($errorMessageKey, $errorMessageTokens));
+                    $message = $this->t($errorMessageKey, $errorMessageTokens);
                 ?>
-                <p class="mdl-color-text--red error">
+                <p class="mdl-card__supporting-text mdl-color-text--red error">
                     <i class="material-icons">error</i>
 
                     <span class="mdl-textfield mdl-typography--caption">
-                        <?= $message ?>
+                        <?= htmlentities($message) ?>
                     </span>
                 </p>
 
                 <script>
-                    ga('send','event','error','<?= $errorCode ?>','<?= $username ?>','<?= $message ?>');
+                    ga('send','event','error',<?= json_encode($errorCode) ?>,'message',<?= json_encode($message) ?>);
                 </script>
                 <?php
                 }
