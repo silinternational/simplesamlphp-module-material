@@ -116,7 +116,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp2**
-7. Login as an "about to expire" user: `username=`**near_future** `password=`**b**
+7. Login as an "about to expire" user: `username=`**near_future** `password=`**a**
 8. Click **Later**
 9. Click **Logout**
 
@@ -127,7 +127,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 4. Click **Test configured authentication sources**
 5. Click **hub-discovery**
 6. Click **idp2**
-7. Login as an "expired" user: `username=`**already_past** `password=`**c**
+7. Login as an "expired" user: `username=`**already_past** `password=`**a**
 
 ### Multi-factor authentication (MFA) functionality
 #### Nag about missing MFA setup
