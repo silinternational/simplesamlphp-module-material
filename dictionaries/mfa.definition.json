@@ -13,13 +13,13 @@
 		"ko": "TODO"
 	},
 	"backupcode_header": {
-		"en": "Printable backup code",
+		"en": "Printable code",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
 	},
 	"backupcode_icon": {
-		"en": "Printable backup code icon",
+		"en": "Printable code icon",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
@@ -151,7 +151,7 @@
 		"ko": "TODO"
 	},
 	"use_backupcode": {
-		"en": "Use a printable backup code instead",
+		"en": "Use a printable code instead",
 		"es": "TODO",
 		"fr": "TODO",
 		"ko": "TODO"
