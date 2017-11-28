@@ -6,9 +6,23 @@
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
     <script src="mfa-u2f-api.js"></script>
+    <script src="bowser.1.8.0.min.js"></script>
+
     <script>
+        function isU2fSupported() {
+            var isSupported = (bowser.chrome  && bowser.version >= 41) ||
+                              (bowser.firefox && bowser.version >= 58) ||
+                              (bowser.opera   && bowser.version >= 39);
+
+            var nodeToShow = isSupported ? document.querySelector('#supported') :
+                                           document.querySelector('#unsupported');
+
+            nodeToShow.classList.remove('hide');
+
+            return isSupported;
+        }
+
         function verifyU2f() {
-            // TODO: need feature sniff and error handling
             var u2fSignRequest = <?= json_encode($this->data['mfaOption']['data']) ?> || {};
 
             u2f.sign(u2fSignRequest.appId, u2fSignRequest.challenge, [u2fSignRequest],
@@ -65,7 +79,7 @@
         }
     </script>
 </head>
-<body class="gradient-bg" onload="verifyU2f()">
+<body class="gradient-bg" onload="if (isU2fSupported()) verifyU2f()">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -88,9 +102,15 @@
                     </h1>
                 </div>
 
-                <div class="mdl-card__title center" >
-                    <p class="mdl-card__subtitle-text">
+                <div class="mdl-card__title center hide" id="supported">
+                    <p class="mdl-card__subtitle-text center">
                         <?= $this->t('{material:mfa:u2f_instructions}') ?>
+                    </p>
+                </div>
+
+                <div class="mdl-card__title hide" id="unsupported">
+                    <p class="mdl-typography--text-center mdl-color-text--red">
+                        <?= $this->t('{material:mfa:u2f_unsupported}') ?>
                     </p>
                 </div>
 
@@ -104,8 +124,7 @@
                 <?php
                 }
                 ?>
-                <div class="mdl-card__supporting-text"
-                     layout-children="column">
+                <div class="mdl-card__supporting-text" layout-children="column">
                     <p class="mdl-color-text--red error <?= ! empty($message) ? 'show' : 'hide' ?>">
                         <i class="material-icons">error</i>
 
