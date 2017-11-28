@@ -84,6 +84,24 @@
 		"fr": "TODO",
 		"ko": "TODO"
 	},
+	"u2f_error_unknown": {
+		"en": "Something went wrong with that request, unable to verify at this time.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_error_wrong_key": {
+		"en": "This may not be the correct key for this site.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
+	"u2f_error_timeout": {
+		"en": "That took a little too long, check to make sure your key is inserted right-side up.",
+		"es": "TODO",
+		"fr": "TODO",
+		"ko": "TODO"
+	},
 	"shield_icon": {
 		"en": "Shield icon",
 		"es": "TODO",

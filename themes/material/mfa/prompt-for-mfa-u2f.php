@@ -30,17 +30,25 @@
         }
 
         function handleU2fResponse(u2fResponse) {
-            if (u2fResponse.errorCode && u2fResponse.errorCode != 0) {
+            if (isU2fError(u2fResponse)) {
                 return handleError(u2fResponse);
             }
 
             submitForm(u2fResponse);
         }
 
-        function handleError(u2fResponse) {
-            //TODO: need to consider natural language for these errors (as well as translations)
-            var message = u2fResponse.errorMessage ||
-                          Object.keys(u2f.ErrorCodes)[u2fResponse.errorCode];
+        /**
+         * @param {u2f.Error|u2f.SignResponse=} response
+         */
+        function isU2fError (response) {
+            return !!response.errorCode;
+        }
+
+        /**
+         * @param {u2f.Error=} error
+         */
+        function handleError(error) {
+            var message = error.errorMessage || createMessage(error.errorCode);
 
             var errorNode = document.querySelector('p.error');
 
@@ -48,6 +56,20 @@
             errorNode.querySelector('span').textContent = message;
 
             offerRetry();
+        }
+
+        /**
+         * https://developers.yubico.com/U2F/Libraries/Client_error_codes.html
+         * @param {u2f.ErrorCodes=} code
+         */
+        function createMessage (code) {
+            switch (code) {
+                case 1:
+                case 2:
+                case 3: return '<?= $this->t('{material:mfa:u2f_error_unknown}') ?>';
+                case 4: return '<?= $this->t('{material:mfa:u2f_error_wrong_key}') ?>';
+                case 5: return '<?= $this->t('{material:mfa:u2f_error_timeout}') ?>';
+            }
         }
 
         function offerRetry() {
