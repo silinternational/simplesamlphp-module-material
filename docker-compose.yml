@@ -83,7 +83,7 @@ services:
       PASSWORD_FORGOT_URL:  "http://example.org"
 
   idp4:
-    image: silintl/ssp-base:feature_mfa #TODO: move this to :develop when PR'd
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/idp4/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp4/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -134,7 +134,7 @@ services:
         MYSQL_PASSWORD: "pass"
 
   broker:
-    image: silintl/idp-id-broker:feature2sv #TODO: move this to :develop when PR'd
+    image: silintl/idp-id-broker:develop
     volumes:
       - ./development/idp4/m991231_235959_insert_mfa_test_users.php:/data/console/migrations/m991231_235959_insert_mfa_test_users.php
     ports:
