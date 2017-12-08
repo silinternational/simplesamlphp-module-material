@@ -23,8 +23,7 @@ if (count($otherOptions) > 0) {
         foreach ($otherOptions as $option) {
             $type = $option['type'];
 
-            //TODO: is there an svg of the u2f icon?
-            $image = 'mfa-' . $type . ($type === 'u2f' ? '.png' : '.svg');
+            $image = 'mfa-' . $type . '.svg';
             $altText = $this->t('{material:mfa:' . $type . '_icon}');
         ?>
         <li class="mdl-menu__item" onclick="location.href += '&mfaId=<?= $option['id'] ?>'">

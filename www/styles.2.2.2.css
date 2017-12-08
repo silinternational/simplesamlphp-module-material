@@ -202,6 +202,11 @@ form p.error > i {
                               rgba(250,250,250,1) 50%,
                               rgba(200,200,200,1) 100%);
 }
+
+.mdl-card > .mdl-card__media > img {
+  max-width: 24px;
+}
+
 /* Material icons */
 @font-face {
   font-family: 'Material Icons';
