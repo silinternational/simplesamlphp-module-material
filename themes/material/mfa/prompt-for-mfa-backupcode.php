@@ -74,9 +74,7 @@
                     </button>
                 </div>
 
-                <div layout-children="column" child-spacing="center">
-                    <?php include __DIR__ . '/other_mfas.php' ?>
-                </div>
+                <?php include __DIR__ . '/other_mfas.php' ?>
             </div>
 
             <div>
