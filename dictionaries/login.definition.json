@@ -1,9 +1,9 @@
 {
 	"title": {
-		"en": "Login account",
-		"es": "Cuenta de inicio de sesión",
-		"fr": "Compte de connexion",
-		"ko": "로그인 계정"
+		"en": "Login with your {idpName} account",
+		"es": "Inicie sesión con su cuenta {idpName}",
+		"fr": "Connectez-vous avec votre compte {idpName}",
+		"ko": "{idpName} 계정으로 로그인하십시오."
 	},
 	"header": {
 		"en": "Login with your {idpName} account",

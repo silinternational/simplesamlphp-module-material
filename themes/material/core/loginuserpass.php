@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $this->t('{material:login:title}') ?></title>
+    <?php
+    $idpName = htmlentities($this->configuration->getValue(
+        'idp_display_name',
+        $this->configuration->getValue('idp_name', '—')
+    ));
+    ?>
+
+    <title><?= $this->t('{material:login:title}', ['{idpName}' => $idpName]) ?></title>
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
@@ -10,8 +17,7 @@
 
     if (! empty($siteKey)) {
     ?>
-    <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit'
-            async defer></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit' async defer></script>
 
     <script>
         function submitForm() {
@@ -47,12 +53,6 @@
             <input type="hidden" name="csrf-token" value="<?= $csrfToken ?>" />
 
             <div class="mdl-card mdl-shadow--8dp fill-phone-viewport">
-                <?php
-                $idpName = htmlentities($this->configuration->getValue(
-                    'idp_display_name',
-                    $this->configuration->getValue('idp_name', '—')
-                ));
-                ?>
                 <div class="mdl-card__media white-bg margin" layout-children="column">
                     <img src="/logo.png"
                          alt="<?= $this->t('{material:login:logo}', ['{idpName}' => $idpName]) ?>">
