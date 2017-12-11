@@ -15,7 +15,7 @@
         </div>
     </header>
     <main class="mdl-layout__content" layout-children="column">
-        <form layout-children="column" method="post">
+        <form layout-children="column" method="post" autocomplete="off">
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
                     <img src="mfa-totp.svg" alt="<?= $this->t('{material:mfa:totp_icon}') ?>">
@@ -39,7 +39,7 @@
                             <?= $this->t('{material:mfa:totp_input}') ?>
                         </label>
                         <input name="mfaSubmission" class="mdl-textfield__input" autofocus
-                               id="mfaSubmission" autocomplete="off" />
+                               id="mfaSubmission" />
                     </div>
                 </div>
 
