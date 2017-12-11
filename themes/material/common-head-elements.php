@@ -32,7 +32,7 @@ if (! empty($trackingId)) {
 $colors = htmlentities($this->configuration->getValue('theme.color-scheme') ?: 'indigo-purple');
 ?>
 <link rel="stylesheet" href="material.<?= $colors ?>.1.2.1.min.css">
-<link rel="stylesheet" href="styles.2.2.2.css">
+<link rel="stylesheet" href="styles.2.2.3.css">
 
 <script async src="material.1.2.1.min.js"></script>
 

@@ -44,7 +44,7 @@
     <main class="mdl-layout__content" layout-children="column" child-spacing="center">
         <?php include __DIR__ . '/../common-announcement.php' ?>
 
-        <form method="post">
+        <form method="post" autocomplete="off">
             <input type="hidden" name="AuthState"
                    value="<?= htmlentities($this->data['stateparams']['AuthState']) ?>" />
             <?php
@@ -73,8 +73,8 @@
                         $username = htmlentities($this->data['username'] ?? null);
                         ?>
                         <input type="text" name="username" class="mdl-textfield__input"
-                               value="<?= $username ?>"
-                               <?= empty($username) ? 'autofocus' : '' ?> id="username"/>
+                               value="<?= $username ?>" <?= empty($username) ? 'autofocus' : '' ?>
+                               id="username"/>
                     </div>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

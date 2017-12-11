@@ -203,7 +203,7 @@ form p.error > i {
                               rgba(200,200,200,1) 100%);
 }
 
-.mdl-card > .mdl-card__media > img {
+.mdl-card > .mdl-card__media > img.icon {
   max-width: 24px;
 }
 
