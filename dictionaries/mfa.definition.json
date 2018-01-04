@@ -2,200 +2,200 @@
 {
 	"title": {
 		"en": "2-Step Verification",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Verificación en 2 pasos",
+		"fr": "Vérification en deux étapes",
+		"ko": "2 단계 인증"
 	},
 	"header": {
 		"en": "2-Step Verification",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Verificación en 2 pasos",
+		"fr": "Vérification en deux étapes",
+		"ko": "2 단계 인증"
 	},
 	"backupcode_header": {
 		"en": "Printable code",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "código imprimible",
+		"fr": "code imprimable",
+		"ko": "인쇄 가능한 코드"
 	},
 	"backupcode_icon": {
 		"en": "Printable code icon",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "icono de código imprimible",
+		"fr": "icône de code imprimable",
+		"ko": "인쇄 가능한 코드 아이콘"
 	},
 	"backupcode_reminder": {
 		"en": "Each code can only be used once, so the code you enter this time will be used up and will not be available again.",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Cada código solo se puede usar una vez, por lo que el código que ingrese esta vez se agotará y no estará disponible nuevamente.",
+		"fr": "Chaque code ne peut être utilisé qu'une seule fois, de sorte que le code que vous entrez cette fois sera épuisé et ne sera plus disponible.",
+		"ko": "각 코드는 한 번만 사용할 수 있으므로이 시간에 입력 한 코드는 모두 소모되어 다시 사용할 수 없습니다."
 	},
 	"backupcode_input": {
 		"en": "Enter code",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Introduzca el código",
+		"fr": "Entrer le code",
+		"ko": "코드 입력"
 	},
 	"totp_header": {
 		"en": "Smartphone app",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Aplicación de teléfono inteligente",
+		"fr": "Application pour smartphone",
+		"ko": "스마트 폰 앱"
 	},
 	"totp_icon": {
 		"en": "Smartphone app icon",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Icono de aplicación de teléfono inteligente",
+		"fr": "Icône de l'application Smartphone",
+		"ko": "스마트 폰 응용 프로그램 아이콘"
 	},
 	"totp_instructions": {
 		"en": "You will need to check your smartphone app for the current code.",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Deberá verificar la aplicación de su teléfono inteligente para ver el código actual.",
+		"fr": "Vous devriez vérifier l'application sur votre smartphone pour voir le code actuel.",
+		"ko": "스마트 폰 앱에서 현재 코드를 확인해야합니다."
 	},
 	"totp_input": {
 		"en": "Enter 6-digit code",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Ingrese el código de 6 dígitos",
+		"fr": "Entrer le code à 6 chiffres",
+		"ko": "6 자리 코드 입력"
 	},
 	"u2f_header": {
 		"en": "Security key",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Clave de seguridad",
+		"fr": "Clé de sécurité",
+		"ko": "보안 키"
 	},
 	"u2f_icon": {
 		"en": "USB key icon",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Icono de la llave USB",
+		"fr": "Icône de clé USB",
+		"ko": "USB 키 아이콘"
 	},
 	"u2f_instructions": {
 		"en": "You may now insert your security key and press its button.",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Ahora puede insertar su clave de seguridad y presionar su botón.",
+		"fr": "Vous pouvez maintenant insérer votre clé de sécurité et appuyer sur le bouton.",
+		"ko": "이제 보안 키를 삽입하고 단추를 누를 수 있습니다."
 	},
 	"u2f_unsupported": {
 		"en": "Unsupported in your current browser.  Please consider a more secure browser like <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "No compatible en su navegador actual. Considere un navegador más seguro como <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
+		"fr": "Non compatible avec votre navigateur actuel. Veuillez considérer un navigateur plus sûr comme <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
+		"ko": "현재 브라우저에서 지원되지 않습니다. <a href='https://www.google.com/chrome/browser' target='_blank'>Chrome과</a> 같은보다 안전한 브라우저를 고려하십시오."
 	},
 	"u2f_error_unknown": {
 		"en": "Something went wrong with that request, unable to verify at this time.",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Algo salió mal con esa solicitud, no se pudo verificar en este momento.",
+		"fr": "Quelque chose s'est mal passé avec cette demande, impossible de vérifier pour le moment.",
+		"ko": "요청에 문제가 발생하여 지금은 확인할 수 없습니다."
 	},
 	"u2f_error_wrong_key": {
 		"en": "This may not be the correct key for this site.",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Esta puede no ser la clave correcta para este sitio.",
+		"fr": "Ce n'est peut-être pas la bonne clé pour ce site.",
+		"ko": "이 사이트의 올바른 키가 아닐 수도 있습니다."
 	},
 	"u2f_error_timeout": {
 		"en": "That took a little too long, check to make sure your key is inserted right-side up.",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Eso llevó demasiado tiempo, verifique que su clave esté insertada boca arriba.",
+		"fr": "Cela a pris un peu trop de temps, vérifiez que votre clé est insérée dans le bons sens.",
+		"ko": "너무 오랜 시간이 걸리므로 키가 오른쪽 위로 삽입되었는지 확인하십시오."
 	},
 	"shield_icon": {
 		"en": "Shield icon",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Icono de escudo",
+		"fr": "Icône de bouclier",
+		"ko": "방패 아이콘"
 	},
 	"nag_header": {
 		"en": "Protect yourself",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Protéjase",
+		"fr": "Protégez-vous",
+		"ko": "자신을 보호하다"
 	},
 	"nag_info": {
 		"en": "Did you know you could easily increase the security of your account by enabling 2-Step Verification?",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "¿Sabía que podría aumentar fácilmente la seguridad de su cuenta al habilitar la verificación en dos pasos?",
+		"fr": "Savez-vous que vous pouvez facilement augmenter la sécurité de votre compte en activant la vérification en deux étapes?",
+		"ko": "2 단계 인증을 사용하여 계정 보안을 쉽게 높일 수 있다는 사실을 알고 계셨습니까?"
 	},
 	"required_header": {
 		"en": "Protect this account",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Protege esta cuenta",
+		"fr": "Protéger ce compte",
+		"ko": "이 계정 보호"
 	},
 	"required_info": {
 		"en": "Your account requires additional security, you must set up 2-Step Verification at this time.",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Su cuenta requiere seguridad adicional, debe configurar la verificación en dos pasos en este momento",
+		"fr": "Votre compte nécessite une sécurité supplémentaire, vous devez configurer la vérification en deux étapes en ce moment",
+		"ko": "계정에 보안이 추가로 필요하므로 현재 2 단계 인증을 설정해야합니다."
 	},
 	"use_others": {
 		"en": "More options",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Mas opciones",
+		"fr": "Davantage d'options",
+		"ko": "추가 옵션"
 	},
 	"use_u2f": {
 		"en": "Use my security key instead",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Use mi clave de seguridad en su lugar",
+		"fr": "Utiliser plutôt ma clé de sécurité",
+		"ko": "대신 내 보안 키 사용"
 	},
 	"use_totp": {
 		"en": "Use my smartphone app instead",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Use la aplicación de mi teléfono inteligente en su lugar",
+		"fr": "Utiliser plutôt mon application smartphone",
+		"ko": "대신 내 스마트 폰 앱 사용"
 	},
 	"use_backupcode": {
 		"en": "Use a printable code instead",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Use un código imprimible en su lugar",
+		"fr": "Utiliser plutôt un code imprimable",
+		"ko": "대신 인쇄 가능한 코드 사용"
 	},
 	"button_verify": {
 		"en": "Verify",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Verificar",
+		"fr": "Vérifier",
+		"ko": "검증"
 	},
 	"button_later": {
 		"en": "Remind me later",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Recuérdame más tarde",
+		"fr": "Rappelez-moi plus tard",
+		"ko": "나중에 상기시켜 줘"
 	},
 	"button_learn_more": {
 		"en": "Learn more",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Aprende más",
+		"fr": "Apprendre encore plus",
+		"ko": "더 알아보기"
 	},
 	"button_enable": {
 		"en": "Enable now",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Habilite ahora",
+		"fr": "Activer maintenant",
+		"ko": "지금 사용"
 	},
 	"button_set_up": {
 		"en": "Set up now",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Configurar ahora",
+		"fr": "Configurer maintenant",
+		"ko": "지금 설정"
 	},
 	"button_try_again": {
 		"en": "Try again",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Inténtalo de nuevo",
+		"fr": "Essayer de nouveau",
+		"ko": "다시 시도하십시오."
 	},
 	"remember_this": {
 		"en": "Remember this computer for 30 days",
-		"es": "TODO",
-		"fr": "TODO",
-		"ko": "TODO"
+		"es": "Recuerde esta computadora por 30 días",
+		"fr": "Se rappeler de cet ordinatuer pour 30 jours",
+		"ko": "이 컴퓨터를 30 일간 기억하십시오."
 	}
 }
