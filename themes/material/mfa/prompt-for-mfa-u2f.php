@@ -66,9 +66,9 @@
             switch (code) {
                 case 1:
                 case 2:
-                case 3: return '<?= $this->t('{material:mfa:u2f_error_unknown}') ?>';
-                case 4: return '<?= $this->t('{material:mfa:u2f_error_wrong_key}') ?>';
-                case 5: return '<?= $this->t('{material:mfa:u2f_error_timeout}') ?>';
+                case 3: return <?= json_encode($this->t('{material:mfa:u2f_error_unknown}')) ?>;
+                case 4: return <?= json_encode($this->t('{material:mfa:u2f_error_wrong_key}')) ?>;
+                case 5: return <?= json_encode($this->t('{material:mfa:u2f_error_timeout}')) ?>;
             }
         }
 
