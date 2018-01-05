@@ -68,6 +68,15 @@ $metadata['wga-idp'] = [
     ],
     'logoURL' => 'https://static.gtis.guru/idp-logo/wga-logo.png'
 ];
+$metadata['collaborate-idp'] = [
+    'enabled' => true,
+    'metadata-set' => 'saml20-idp-remote',
+    'entityid' => 'collaborate-idp',
+    'name' => [
+        'en' => 'collaborate'
+    ],
+    'logoURL' => 'https://static.gtis.guru/idp-logo/collaborate-logo.png'
+];
 $metadata['mock-jaars-idp'] = [
     'enabled' => false,
     'metadata-set' => 'saml20-idp-remote',
