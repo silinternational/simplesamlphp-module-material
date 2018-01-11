@@ -158,8 +158,9 @@ If configured, an alert will be shown to the user filled with the content of tha
 5. Click **hub-discovery**
 6. Click **idp4**
 7. Login as a "backup code" user: `username=`**has_backupcode** `password=`**a**
-8. Enter one of the following codes to verify (`94923279, 82743523, 77802769, 01970541, 37771076, 39178450, 01813404, 00416843, 90068701, 35775442, 94923279, 82743523, 77802769, 01970541, 37771076, 39178450, 01813404, 00416843, 90068701, 35775442`)
+8. Enter one of the following codes to verify (`94923279, 82743523, 77802769, 01970541, 37771076`)
 9. Click **Logout**
+
 
 #### TOTP code
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
