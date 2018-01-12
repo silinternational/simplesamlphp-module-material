@@ -161,6 +161,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 1. Enter one of the following codes to verify (`94923279, 82743523, 77802769, 01970541, 37771076`)
 1. Click **Logout**
 1. In order to see the "running low on codes" page, simply log back in and use another code.
+1. In order to see the "out of codes" page, simply log back in and out repeatedly until there are no more codes.
 
 #### TOTP code
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
