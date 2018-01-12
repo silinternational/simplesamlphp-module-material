@@ -132,6 +132,18 @@
 		"fr": "Votre compte nécessite une sécurité supplémentaire, vous devez configurer la vérification en deux étapes en ce moment",
 		"ko": "계정에 보안이 추가로 필요하므로 현재 2 단계 인증을 설정해야합니다."
 	},
+	"running_out_header": {
+		"en": "Almost out of printable codes",
+		"es": "Casi sin códigos imprimibles",
+		"fr": "Presque en dehors des codes imprimables",
+		"ko": "거의 인쇄 할 수없는 코드"
+	},
+	"running_out_info": {
+		"en": "You only have {numBackupCodesRemaining} more left.",
+		"es": "Solo tienes {numBackupCodesRemaining} más a la izquierda.",
+		"fr": "Vous avez seulement {numBackupCodesRemaining} plus à gauche.",
+		"ko": "{numBackupCodesRemaining} 만 남았습니다."
+	},
 	"use_others": {
 		"en": "More options",
 		"es": "Mas opciones",
@@ -191,6 +203,12 @@
 		"es": "Inténtalo de nuevo",
 		"fr": "Essayer de nouveau",
 		"ko": "다시 시도하십시오."
+	},
+	"button_get_more": {
+		"en": "Get more",
+		"es": "Obtener más",
+		"fr": "Avoir plus",
+		"ko": "더 많은 정보 얻기"
 	},
 	"remember_this": {
 		"en": "Remember this computer for 30 days",
