@@ -102,7 +102,7 @@ If configured, an alert will be shown to the user filled with the content of tha
 ### Forgot password functionality
 1. Goto [http://ssp-hub.local](http://ssp-hub.local)
 1. Login as hub administrator: `username=`**admin** `password=`**abc123**
-11. Click **Authentication** tab
+1. Click **Authentication** tab
 1. Click **Test configured authentication sources**
 1. Click **hub-discovery**
 1. Click **idp2**

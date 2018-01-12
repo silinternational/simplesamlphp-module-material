@@ -157,10 +157,10 @@
 		"ko": "고맙게도 다른 2 단계 인증 옵션을 설정했는데 나중에 필요할 경우 더 많은 인쇄용 코드를 만들어야합니다."
 	},
 	"has_no_more_options": {
-		"en": "Since you do not have any other 2-Step Verification options set up at this time, you should create more Printable codes now so you will have some the next time one is required.",
-		"es": "Como no tiene configuradas otras opciones de verificación en dos pasos en este momento, debe crear más códigos imprimibles ahora para tenerlos la próxima vez que los necesite.",
-		"fr": "Comme aucune autre option de vérification en deux étapes n'est configurée pour le moment, vous devriez créer d'autres codes imprimables maintenant, pour que vous en aurez la prochaine fois que vous en aurez besoin.",
-		"ko": "현재 다른 2 단계 인증 옵션을 설정하지 않았으므로 인쇄용 코드를 더 만들어야 만 다음에 필요할 때 사용할 수 있습니다."
+		"en": "Since you do not have any other 2-Step Verification options set up at this time, you will need to get more Printables code before another one is required.",
+		"es": "Como no tiene configuradas otras opciones de verificación en dos pasos en este momento, necesitará obtener más códigos imprimibles antes de que se requiera otro.",
+		"fr": "Comme aucune autre option de vérification en deux étapes n'est configurée pour l'instant, vous devez obtenir davantage de codes imprimables avant d'en avoir besoin d'un autre.",
+		"ko": "현재 다른 2 단계 인증 옵션을 설정하지 않았으므로 다른 코드가 필요하기 전에 더 많은 인쇄 가능한 코드를 가져와야합니다."
 	},
 	"use_others": {
 		"en": "More options",
