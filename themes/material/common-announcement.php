@@ -1,5 +1,8 @@
 <?php
-$announcementHtml = $this->configuration->getValue('announcement');
+
+use Sil\SspUtils\AnnouncementUtils;
+
+$announcementHtml = AnnouncementUtils::getAnnouncement();
 
 if (! empty($announcementHtml)) {
 ?>
