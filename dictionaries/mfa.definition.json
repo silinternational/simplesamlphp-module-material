@@ -28,7 +28,7 @@
 		"en": "Each code can only be used once, so the code you enter this time will be used up and will not be available again.",
 		"es": "Cada código solo se puede usar una vez, por lo que el código que ingrese esta vez se agotará y no estará disponible nuevamente.",
 		"fr": "Chaque code ne peut être utilisé qu'une seule fois, de sorte que le code que vous entrez cette fois sera épuisé et ne sera plus disponible.",
-		"ko": "각 코드는 한 번만 사용할 수 있으므로이 시간에 입력 한 코드는 모두 소모되어 다시 사용할 수 없습니다."
+		"ko": "각 코드는 한번만 사용할 수 있으므로 이번에 입력한 코드는 소멸되어 다시 사용할 수 없습니다."
 	},
 	"backupcode_input": {
 		"en": "Enter code",
@@ -40,19 +40,19 @@
 		"en": "Smartphone app",
 		"es": "Aplicación de teléfono inteligente",
 		"fr": "Application pour smartphone",
-		"ko": "스마트 폰 앱"
+		"ko": "스마트폰 앱"
 	},
 	"totp_icon": {
 		"en": "Smartphone app icon",
 		"es": "Icono de aplicación de teléfono inteligente",
 		"fr": "Icône de l'application Smartphone",
-		"ko": "스마트 폰 응용 프로그램 아이콘"
+		"ko": "스마트폰 응용 프로그램 아이콘"
 	},
 	"totp_instructions": {
 		"en": "You will need to check your smartphone app for the current code.",
 		"es": "Deberá verificar la aplicación de su teléfono inteligente para ver el código actual.",
 		"fr": "Vous devriez vérifier l'application sur votre smartphone pour voir le code actuel.",
-		"ko": "스마트 폰 앱에서 현재 코드를 확인해야합니다."
+		"ko": "스마트폰 앱에서 현재 코드를 확인해야합니다."
 	},
 	"totp_input": {
 		"en": "Enter 6-digit code",
@@ -64,7 +64,7 @@
 		"en": "Security key",
 		"es": "Clave de seguridad",
 		"fr": "Clé de sécurité",
-		"ko": "보안 키"
+		"ko": "보안키"
 	},
 	"u2f_icon": {
 		"en": "USB key icon",
@@ -82,7 +82,7 @@
 		"en": "Unsupported in your current browser.  Please consider a more secure browser like <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
 		"es": "No compatible en su navegador actual. Considere un navegador más seguro como <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
 		"fr": "Non compatible avec votre navigateur actuel. Veuillez considérer un navigateur plus sûr comme <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
-		"ko": "현재 브라우저에서 지원되지 않습니다. <a href='https://www.google.com/chrome/browser' target='_blank'>Chrome과</a> 같은보다 안전한 브라우저를 고려하십시오."
+		"ko": "현재 브라우저에서 지원되지 않습니다. <a href='https://www.google.com/chrome/browser' target='_blank'>Chrome과</a> 같은 보다 안전한 브라우저를 고려하십시오."
 	},
 	"u2f_error_unknown": {
 		"en": "Something went wrong with that request, unable to verify at this time.",
@@ -100,7 +100,7 @@
 		"en": "That took a little too long, check to make sure your key is inserted right-side up.",
 		"es": "Eso llevó demasiado tiempo, verifique que su clave esté insertada boca arriba.",
 		"fr": "Cela a pris un peu trop de temps, vérifiez que votre clé est insérée dans le bons sens.",
-		"ko": "너무 오랜 시간이 걸리므로 키가 오른쪽 위로 삽입되었는지 확인하십시오."
+		"ko": "오랜 시간이 경과 되었으니 키가 오른쪽 위로 삽입되었는지 확인 하십시오."
 	},
 	"shield_icon": {
 		"en": "Shield icon",
@@ -112,13 +112,13 @@
 		"en": "Protect yourself",
 		"es": "Protéjase",
 		"fr": "Protégez-vous",
-		"ko": "자신을 보호하다"
+		"ko": "자기 보호"
 	},
 	"nag_info": {
 		"en": "Did you know you could easily increase the security of your account by enabling 2-Step Verification?",
 		"es": "¿Sabía que podría aumentar fácilmente la seguridad de su cuenta al habilitar la verificación en dos pasos?",
 		"fr": "Savez-vous que vous pouvez facilement augmenter la sécurité de votre compte en activant la vérification en deux étapes?",
-		"ko": "2 단계 인증을 사용하여 계정 보안을 쉽게 높일 수 있다는 사실을 알고 계셨습니까?"
+		"ko": "2 단계 인증을 사용하여 계정의 보안성을 쉽게 높일 수 있다는 사실을 알고 계셨습니까?"
 	},
 	"required_header": {
 		"en": "Protect this account",
@@ -130,7 +130,7 @@
 		"en": "Your account requires additional security, you must set up 2-Step Verification at this time.",
 		"es": "Su cuenta requiere seguridad adicional, debe configurar la verificación en dos pasos en este momento",
 		"fr": "Votre compte nécessite une sécurité supplémentaire, vous devez configurer la vérification en deux étapes en ce moment",
-		"ko": "계정에 보안이 추가로 필요하므로 현재 2 단계 인증을 설정해야합니다."
+		"ko": "계정에 대한 추가 보안이 필요하므로 지금 2 단계 인증을 설정해야합니다."
 	},
 	"use_others": {
 		"en": "More options",
@@ -142,19 +142,19 @@
 		"en": "Use my security key instead",
 		"es": "Use mi clave de seguridad en su lugar",
 		"fr": "Utiliser plutôt ma clé de sécurité",
-		"ko": "대신 내 보안 키 사용"
+		"ko": "내 보안키 사용"
 	},
 	"use_totp": {
 		"en": "Use my smartphone app instead",
 		"es": "Use la aplicación de mi teléfono inteligente en su lugar",
 		"fr": "Utiliser plutôt mon application smartphone",
-		"ko": "대신 내 스마트 폰 앱 사용"
+		"ko": "내 스마트폰 앱 사용"
 	},
 	"use_backupcode": {
 		"en": "Use a printable code instead",
 		"es": "Use un código imprimible en su lugar",
 		"fr": "Utiliser plutôt un code imprimable",
-		"ko": "대신 인쇄 가능한 코드 사용"
+		"ko": "인쇄 가능한 코드 사용"
 	},
 	"button_verify": {
 		"en": "Verify",
@@ -166,7 +166,7 @@
 		"en": "Remind me later",
 		"es": "Recuérdame más tarde",
 		"fr": "Rappelez-moi plus tard",
-		"ko": "나중에 상기시켜 줘"
+		"ko": "추후 알림"
 	},
 	"button_learn_more": {
 		"en": "Learn more",
@@ -190,12 +190,24 @@
 		"en": "Try again",
 		"es": "Inténtalo de nuevo",
 		"fr": "Essayer de nouveau",
-		"ko": "다시 시도하십시오."
+		"ko": "다시 시도"
 	},
 	"remember_this": {
+		"en": "Remember this browser for 30 days",
+		"es": "Recuerde esta navegador por 30 días",
+		"fr": "Se rappeler de ce navigatuer pour 30 jours",
+		"ko": "이 브라우저를 30일간 기억"
+	},
+	"remember_this_computer": {
 		"en": "Remember this computer for 30 days",
 		"es": "Recuerde esta computadora por 30 días",
 		"fr": "Se rappeler de cet ordinatuer pour 30 jours",
-		"ko": "이 컴퓨터를 30 일간 기억하십시오."
+		"ko": "이 컴퓨터를 30일간 기억"
+	},
+	"remember_this_browser": {
+		"en": "Remember this browser for 30 days",
+		"es": "Recuerde esta navegador por 30 días",
+		"fr": "Se rappeler de ce navigatuer pour 30 jours",
+		"ko": "이 브라우저를 30일간 기억"
 	}
 }
