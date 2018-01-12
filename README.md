@@ -39,15 +39,15 @@ Update `/simplesamlphp/config/config.php`:
 _[ssp-base](https://github.com/silinternational/ssp-base) provides a convenience by loading this config with whatever is in the environment variable `ANALYTICS_ID`._
 
 ### Announcements
-Update `/simplesamlphp/config/config.php`:
+Update `/simplesamlphp/announcement/announcement.php`:
 
 ```
-'announcement' => 'Some <strong>important</strong> announcement'
+ return 'Some <strong>important</strong> announcement';
 ```
 
-_[ssp-base](https://github.com/silinternational/ssp-base) provides a convenience by loading this config with whatever is returned by `/simplesamlphp/announcement/announcement.php`._
+_[ssp-utilities](https://github.com/silinternational/ssp-utilities) provides whatever is returned by `/simplesamlphp/announcement/announcement.php`._
 
-If configured, an alert will be shown to the user filled with the content of that announcement.  HTML is supported.
+If provided, an alert will be shown to the user filled with the content of that announcement.  HTML is supported.
 
 ## Testing theme
 
