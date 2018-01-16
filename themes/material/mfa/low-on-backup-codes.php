@@ -18,37 +18,30 @@
         <form layout-children="column" method="post">
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
-                    <img src="mfa-shield.svg" alt="<?= $this->t('{material:mfa:shield_icon}') ?>">
+                    <i class="mdl-color-text--red error material-icons mdl-typography--display-4">warning</i>
                 </div>
 
                 <div class="mdl-card__title center">
                     <h1 class="mdl-card__title-text">
-                        <?= $this->t('{material:mfa:required_header}') ?>
+                        <?= $this->t('{material:mfa:running_out_header}') ?>
                     </h1>
                 </div>
 
                 <div class="mdl-card__title center" >
                     <p class="mdl-card__subtitle-text">
-                        <?= $this->t('{material:mfa:required_info}') ?>
+                        <?= $this->t('{material:mfa:running_out_info}', ['{numBackupCodesRemaining}' => (int)$this->data['numBackupCodesRemaining']]) ?>
                     </p>
                 </div>
 
                 <div class="mdl-card__actions" layout-children="row">
+                    <button name="continue" class="mdl-button">
+                        <?= $this->t('{material:mfa:button_later}') ?>
+                    </button>
+
                     <span flex></span>
 
-                    <?php
-                    $url = $this->data['learnMoreUrl'] ?? null;
-                    if (! empty($url)) {
-                    ?>
-                    <a href="<?= htmlentities($url) ?>" target="_blank" class="mdl-button mdl-button--primary margin">
-                        <?= $this->t('{material:mfa:button_learn_more}') ?>
-                    </a>
-                    <?php
-                    }
-                    ?>
-
                     <button name="setUpMfa" class="mdl-button mdl-button--raised mdl-button--primary">
-                        <?= $this->t('{material:mfa:button_set_up}') ?>
+                        <?= $this->t('{material:mfa:button_get_more}') ?>
                     </button>
                 </div>
             </div>

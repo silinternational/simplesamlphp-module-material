@@ -53,21 +53,11 @@ class m991231_235959_insert_mfa_test_users extends Migration
             [ 3  , 1      ,'$2y$10$rA5MdrbEcmbCiqtAgPXnYeBCEKc.AnylPArnamyu.x4DS/A0/0/4i', MySqlDateTime::now()], // 77802769
             [ 4  , 1      ,'$2y$10$JsiRI/W/FLfZzJLPj8umKeXP.rvsOW4aYQO5mOEOwGkBPpKhKWT2K', MySqlDateTime::now()], // 01970541
             [ 5  , 1      ,'$2y$10$NWw0.DPBSm.bjQoSck8xbeqJgENUhE/WazmHmsEtWoxs/UKaIdkUq', MySqlDateTime::now()], // 37771076
-            [ 6  , 1      ,'$2y$10$KE2849CaFCh4FNy61QfZfO5.3KIakJ0Ri.diDYrTA6DY5FUcUkiTS', MySqlDateTime::now()], // 39178450
-            [ 7  , 1      ,'$2y$10$RqIdEzZ0t9dN6XEbCv9saeR91jmhhnAU0IygG2vbkToJtnjVvPOA.', MySqlDateTime::now()], // 01813404
-            [ 8  , 1      ,'$2y$10$iiokti/0BscHBdId9GMDeeycdJUbhu3CySBptid4WjlT3ByYSITkq', MySqlDateTime::now()], // 00416843
-            [ 9  , 1      ,'$2y$10$cICT0MhQ81/dEWYK/kY/LO2VMYvkoqd1/euP5OG7u5V6FRrSBEY6i', MySqlDateTime::now()], // 90068701
-            [ 10 , 1      ,'$2y$10$OzQeTZlUGLOa0Q6Wm2zViuqV4CLzlkJxu8Sjli/v.JI0oYzj.B7um', MySqlDateTime::now()], // 35775442
-            [ 11 , 4      ,'$2y$10$j/V6zcotFES8MkVmgRaiMe2E6DV1qjmO8UhUoJQD0/.p6LhZddGn2', MySqlDateTime::now()], // 94923279
-            [ 12 , 4      ,'$2y$10$If6srqyKGBag/x.nPDBeau9bjNR1RZgxqRVKhdRhJk2PkbOn5rKNS', MySqlDateTime::now()], // 82743523
-            [ 13 , 4      ,'$2y$10$rA5MdrbEcmbCiqtAgPXnYeBCEKc.AnylPArnamyu.x4DS/A0/0/4i', MySqlDateTime::now()], // 77802769
-            [ 14 , 4      ,'$2y$10$JsiRI/W/FLfZzJLPj8umKeXP.rvsOW4aYQO5mOEOwGkBPpKhKWT2K', MySqlDateTime::now()], // 01970541
-            [ 15 , 4      ,'$2y$10$NWw0.DPBSm.bjQoSck8xbeqJgENUhE/WazmHmsEtWoxs/UKaIdkUq', MySqlDateTime::now()], // 37771076
-            [ 16 , 4      ,'$2y$10$KE2849CaFCh4FNy61QfZfO5.3KIakJ0Ri.diDYrTA6DY5FUcUkiTS', MySqlDateTime::now()], // 39178450
-            [ 17 , 4      ,'$2y$10$RqIdEzZ0t9dN6XEbCv9saeR91jmhhnAU0IygG2vbkToJtnjVvPOA.', MySqlDateTime::now()], // 01813404
-            [ 18 , 4      ,'$2y$10$iiokti/0BscHBdId9GMDeeycdJUbhu3CySBptid4WjlT3ByYSITkq', MySqlDateTime::now()], // 00416843
-            [ 19 , 4      ,'$2y$10$cICT0MhQ81/dEWYK/kY/LO2VMYvkoqd1/euP5OG7u5V6FRrSBEY6i', MySqlDateTime::now()], // 90068701
-            [ 20 , 4      ,'$2y$10$OzQeTZlUGLOa0Q6Wm2zViuqV4CLzlkJxu8Sjli/v.JI0oYzj.B7um', MySqlDateTime::now()], // 35775442
+            [ 6  , 4      ,'$2y$10$j/V6zcotFES8MkVmgRaiMe2E6DV1qjmO8UhUoJQD0/.p6LhZddGn2', MySqlDateTime::now()], // 94923279
+            [ 7  , 4      ,'$2y$10$If6srqyKGBag/x.nPDBeau9bjNR1RZgxqRVKhdRhJk2PkbOn5rKNS', MySqlDateTime::now()], // 82743523
+            [ 8  , 4      ,'$2y$10$rA5MdrbEcmbCiqtAgPXnYeBCEKc.AnylPArnamyu.x4DS/A0/0/4i', MySqlDateTime::now()], // 77802769
+            [ 9  , 4      ,'$2y$10$JsiRI/W/FLfZzJLPj8umKeXP.rvsOW4aYQO5mOEOwGkBPpKhKWT2K', MySqlDateTime::now()], // 01970541
+            [ 10 , 4      ,'$2y$10$NWw0.DPBSm.bjQoSck8xbeqJgENUhE/WazmHmsEtWoxs/UKaIdkUq', MySqlDateTime::now()], // 37771076
         ]);
     }
 
