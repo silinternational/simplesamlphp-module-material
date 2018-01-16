@@ -12,8 +12,7 @@ p {
   flex-direction: row;
   align-items: center;
 
-  /* make sure the children break nicely for different browser widths, e.g.,
-     tablet, phone, etc. */
+  /* make sure the children break nicely for different browser widths, e.g., tablet, phone, etc. */
   flex-wrap: wrap;
 }
 
@@ -50,6 +49,9 @@ form p.error > i {
   margin: 0 1em;
 }
 
+i.material-icons.mdl-typography--display-4 {
+  font-size: 112px; /* needed to override font-size established in material icons. */
+}
 .margin {
   margin: 1em;
 }
@@ -168,16 +170,15 @@ form p.error > i {
   color: blue;
 }
 
-/* The font-size in the mdl-textfield was overriding the one in
-   caption since it was defined later in the CSS but the font-size from
-   caption is what was needed here so more specificity required to override
-   it back */
+/* The font-size in the mdl-textfield was overriding the one in caption since 
+   it was defined later in the CSS but the font-size from caption is what was 
+   needed here so more specificity required to override it back */
 .mdl-textfield.mdl-typography--caption {
   font-size: 12px
 }
 
-/* special case where we want a button for all it's built-in characteristics, e.g., primary color,
-   but also want to set the text apart a bit. */
+/* special case where we want a button for all it's built-in characteristics, 
+   e.g., primary color, but also want to set the text apart a bit. */
 .mdl-button.mdl-typography--caption {
   text-transform: none;
   font-size: 12px

@@ -132,6 +132,36 @@
 		"fr": "Votre compte nécessite une sécurité supplémentaire, vous devez configurer la vérification en deux étapes en ce moment",
 		"ko": "계정에 대한 추가 보안이 필요하므로 지금 2 단계 인증을 설정해야합니다."
 	},
+	"running_out_header": {
+		"en": "Almost out of printable codes",
+		"es": "Casi sin códigos imprimibles",
+		"fr": "Codes imprimables presque épuisés",
+		"ko": "인쇄 ​가능한 ​코드​가 거의 남지 않았습니다"
+	},
+	"running_out_info": {
+		"en": "You only have {numBackupCodesRemaining} more left.",
+		"es": "Solo tiene {numBackupCodesRemaining} más disponible.",
+		"fr": "Vous avez seulement {numBackupCodesRemaining} qui restent.",
+		"ko": "{numBackupCodesRemaining} 만 남았습니다."
+	},
+	"no_more_codes_header": {
+		"en": "Last printable code used",
+		"es": "Último código imprimible utilizado",
+		"fr": "Dernier code imprimable utilisé",
+		"ko": "​​마지막 인쇄 가능 코드가​​ ​사용되었습니다."
+	},
+	"has_options_besides_codes": {
+		"en": "Thankfully you do have other 2-Step Verification options set up but you should create more Printable codes if you plan to need them in the future.",
+		"es": "Afortunadamente, tiene otras opciones de verificación en dos pasos configuradas, pero debe crear más códigos imprimibles si planea necesitarlos en el futuro.",
+		"fr": "Heureusement, vous avez d'autres options de vérification en deux étapes, mais vous devriez créer plus de codes imprimables si vous prévoyez en avoir besoin à l'avenir.",
+		"ko": "다른 2 단계 인증 옵션​은​ 설정​ 되었으나​ ​인쇄 가능 코드가 나중에 ​필요할 ​것으로 ​예상되면​ 코드를 ​더 ​만들어야​ ​합니다."
+	},
+	"has_no_more_options": {
+		"en": "Since you do not have any other 2-Step Verification options set up at this time, you will need to get more Printable codes before another one is required.",
+		"es": "Como no tiene configuradas otras opciones de verificación en dos pasos en este momento, necesitará obtener más códigos imprimibles antes de que se requiera otro.",
+		"fr": "Comme aucune autre option de vérification en deux étapes n'est configurée pour l'instant, vous devez obtenir davantage de codes imprimables avant d'en avoir besoin d'un autre.",
+		"ko": "코드​가 요구되기 전에 인쇄 가능 코드를​ 더 가져와야​ ​합니다."
+	},
 	"use_others": {
 		"en": "More options",
 		"es": "Mas opciones",
@@ -191,6 +221,12 @@
 		"es": "Inténtalo de nuevo",
 		"fr": "Essayer de nouveau",
 		"ko": "다시 시도"
+	},
+	"button_get_more": {
+		"en": "Get more",
+		"es": "Obtenga más",
+		"fr": "Avoir plus",
+		"ko": "더​ ​​가져오기"
 	},
 	"remember_this": {
 		"en": "Remember this browser for 30 days",
