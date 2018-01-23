@@ -40,7 +40,7 @@
 
                     <span flex></span>
 
-                    <button name="setUpMfa" class="mdl-button mdl-button--raised mdl-button--primary">
+                    <button name="getMore" class="mdl-button mdl-button--raised mdl-button--primary">
                         <?= $this->t('{material:mfa:button_get_more}') ?>
                     </button>
                 </div>
