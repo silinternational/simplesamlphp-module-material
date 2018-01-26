@@ -150,6 +150,42 @@
 		"fr": "Dernier code imprimable utilisé",
 		"ko": "​​마지막 인쇄 가능 코드가​​ ​사용되었습니다."
 	},
+	"new_codes_header": {
+		"en": "New printable codes",
+		"es": "Nuevos códigos imprimibles",
+		"fr": "Nouveaux codes imprimables",
+		"ko": "​​새로운 인쇄 가능 코드"
+	},
+	"old_codes_gone": {
+		"en": "You may now discard any of your previous codes, they have been deleted.",
+		"es": "Ahora puede descartar cualquiera de sus códigos anteriores, se han eliminado.",
+		"fr": "Vous pouvez maintenant supprimer tous vos codes précédents, ils ont été supprimés.",
+		"ko": "​​이제 이전 코드를 삭제해도 삭제 될 수 있습니다."
+	},
+	"new_codes_info": {
+		"en": "Printable codes should be treated with the same level of attention as any password.",
+		"es": "Los códigos imprimibles deben tratarse con el mismo nivel de atención que cualquier contraseña.",
+		"fr": "Les codes imprimables doivent être traités avec le même niveau d'attention que n'importe quel mot de passe.",
+		"ko": "​​인쇄 가능한 코드는 모든 비밀번호와 동일한주의 수준으로 처리되어야합니다."
+	},
+	"new_codes_only_once": {
+		"en": "Each code may only be used once.",
+		"es": "Cada código solo puede usarse una vez.",
+		"fr": "Chaque code ne peut être utilisé qu'une seule fois.",
+		"ko": "​​각 코드는 한 번만 사용할 수 있습니다."
+	},
+	"new_codes_failed": {
+		"en": "Something went wrong while creating new printable codes for you.  We are sorry for the inconvenience, please check your configuration at the following address after continuing: ",
+		"es": "Algo salió mal al crear nuevos códigos imprimibles para usted. Disculpe las molestias, compruebe su configuración en la siguiente dirección después de continuar: ",
+		"fr": "Une erreur s'est produite lors de la création de nouveaux codes imprimables pour vous. Nous sommes désolés pour le dérangement, s'il vous plaît vérifier votre configuration à l'adresse suivante après avoir continué: ",
+		"ko": "새로운 인쇄 가능한 코드를 만드는 동안 문제가 발생했습니다. 불편을 끼쳐 드려 죄송합니다. 계속 진행 한 후 다음 주소로 구성을 확인하십시오. "
+	},
+	"account": {
+		"en": "{idpName} account",
+		"es": "Cuenta de {idpName}",
+		"fr": "{idpName} compte",
+		"ko": "{idpName} 계정"
+	},
 	"has_options_besides_codes": {
 		"en": "Thankfully you do have other 2-Step Verification options set up but you should create more Printable codes if you plan to need them in the future.",
 		"es": "Afortunadamente, tiene otras opciones de verificación en dos pasos configuradas, pero debe crear más códigos imprimibles si planea necesitarlos en el futuro.",
@@ -227,6 +263,36 @@
 		"es": "Obtenga más",
 		"fr": "Avoir plus",
 		"ko": "더​ ​​가져오기"
+	},
+	"button_continue": {
+		"en": "Continue",
+		"es": "Continuar",
+		"fr": "Continuer",
+		"ko": "계속하다"
+	},
+	"button_print": {
+		"en": "Print",
+		"es": "Imprimir",
+		"fr": "Imprimer",
+		"ko": "인쇄"
+	},
+	"button_download": {
+		"en": "Download",
+		"es": "Descargar",
+		"fr": "Télécharger",
+		"ko": "다운로드"
+	},
+	"button_copy": {
+		"en": "Copy",
+		"es": "Copiar",
+		"fr": "Copier",
+		"ko": "사본"
+	},
+	"button_copied": {
+		"en": "Copied ✓",
+		"es": "Copiado ✓",
+		"fr": "Copié ✓",
+		"ko": "복사 됨 ✓"
 	},
 	"remember_this": {
 		"en": "Remember this browser for 30 days",
