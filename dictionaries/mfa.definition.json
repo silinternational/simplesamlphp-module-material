@@ -183,7 +183,7 @@
 	"account": {
 		"en": "{idpName} account",
 		"es": "Cuenta de {idpName}",
-		"fr": "{idpName} compte",
+		"fr": "Compte {idpName}",
 		"ko": "{idpName} 계정"
 	},
 	"has_options_besides_codes": {
