@@ -2,6 +2,11 @@ p {
   max-width: 60ch;
 }
 
+pre {
+  white-space: pre-line;
+  max-width: 100%;
+}
+
 .fill-viewport {
   width: 100vw;
   height: 100vh;
@@ -25,6 +30,37 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.code-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 16em; /* allows for 2 columns, i.e., codes are 8-digits */
+  flex-wrap: wrap;
+  padding-bottom: 1em;
+}
+
+.out-of-sight {
+  position: absolute;
+  right: 100%;
+}
+
+@media print {
+  body * {
+      visibility: hidden;
+  }
+
+  .printable-codes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20em; /* based on the fact that a code and its checkbox take about 10 em's and there will be a max of 2 cols */
+  }
+
+  .printable-codes, .printable-codes * {
+      visibility: visible;
+  }
 }
 
 [child-spacing=space-around] {
@@ -52,6 +88,7 @@ form p.error > i {
 i.material-icons.mdl-typography--display-4 {
   font-size: 112px; /* needed to override font-size established in material icons. */
 }
+
 .margin {
   margin: 1em;
 }
