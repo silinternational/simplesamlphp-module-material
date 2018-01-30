@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?= $this->t('{material:mfa:title}') ?></title>
+
+    <?php include __DIR__ . '/../common-head-elements.php' ?>
+</head>
+<body class="gradient-bg">
+<div class="mdl-layout mdl-layout--fixed-header fill-viewport">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">
+                <?= $this->t('{material:mfa:header}') ?>
+            </span>
+        </div>
+    </header>
+    <main class="mdl-layout__content" layout-children="column">
+        <form layout-children="column" method="post">
+            <?php $newCodes = $this->data['newBackupCodes']; ?>
+            <?php if (! empty($newCodes)): ?>
+            <h1 class="mdl-typography--display-1">
+                <?= $this->t('{material:mfa:new_codes_header}') ?>
+            </h1>
+
+            <p class="mdl-typography--body-1">
+                <em><?= $this->t('{material:mfa:old_codes_gone}') ?></em>
+            </p>
+
+            <p class="mdl-typography--body-1">
+                <?= $this->t('{material:mfa:new_codes_info}') ?>
+                <span class="mdl-typography--body-2"><?= $this->t('{material:mfa:new_codes_only_once}') ?></span>
+            </p>
+
+            <div class="mdl-card mdl-shadow--8dp">
+                <div class="mdl-card__supporting-text" layout-children="column" id="code-card">
+                    <?php 
+                    $idpName = htmlentities($this->configuration->getValue('idp_display_name', $this->configuration->getValue('idp_name', '—')));
+                    ?>
+                    <p class="fill-parent" layout-children="row">
+                        <span flex><?= $this->t('{material:mfa:account}', ['{idpName}' => $idpName]) ?></span>
+                        <em class="mdl-typography--caption"><?= date('M j, Y') ?></em>
+                    </p>
+    
+                    <?php 
+                    function calculateMaxHeightStyle($newCodes)
+                    {
+                        $numCodes = count($newCodes);
+                        $numCols = $numCodes <= 5 ? 1 : 2;
+                        $numCodesPerRow = ceil($numCodes / $numCols);
+                        $numCodesPerRow *= 1.3; // the .3 here accounts for px differences in <code> and base em sizes.
+
+                        return "max-height: {$numCodesPerRow}em;";
+                    }
+                    ?>
+                    <div class="code-container" style="<?= calculateMaxHeightStyle($newCodes) ?>">
+                        <?php foreach ($newCodes as $newCode): ?>
+                        <code>☐ <?= htmlentities($newCode) ?></code>
+                        <?php endforeach; ?>
+                    </div>
+                    
+                    <span class="mdl-typography--caption"><?= $this->t('{material:mfa:new_codes_only_once}') ?></span>
+                </div>
+
+                <div class="mdl-card__actions" layout-children="row">
+                    <script>
+                        function printElement(selector) {
+                            var elementToPrint = document.querySelector(selector);
+                            
+                            elementToPrint.classList.add('printable-codes');
+
+                            window.print();
+                        }
+                    </script>
+                    <button class="mdl-button mdl-button--primary" type="button" onclick="printElement('#code-card')">
+                        <?= $this->t('{material:mfa:button_print}') ?>
+                    </button>
+
+                    <a href="data:text/plain,<?= $idpName . urlencode("\r\n" . join("\r\n", $newCodes)) ?>" 
+                       download="<?= $idpName ?>-printable-codes.txt" class="mdl-button mdl-button--primary">
+                        <?= $this->t('{material:mfa:button_download}') ?>
+                    </a>
+
+                    <script>
+                        function copyCodesToClipboard(button) {
+                            document.querySelector('textarea').select();
+
+                            document.execCommand('copy');
+
+                            button.innerHTML = button.innerHTML.replace('<?= $this->t("{material:mfa:button_copy}") ?>', '<?= $this->t("{material:mfa:button_copied}") ?>');
+                        }
+                    </script>
+                    <button class="mdl-button mdl-button--primary" type="button" onclick="copyCodesToClipboard(this)">
+                        <?= $this->t('{material:mfa:button_copy}') ?>
+                        <textarea class="out-of-sight"><?= $idpName."\n".join("\n", $newCodes) ?></textarea>
+                    </button>
+                </div>
+            </div>
+            <?php else: ?>
+            <div class="mdl-card mdl-shadow--8dp">
+                <div class="mdl-card__media white-bg margin" layout-children="column">
+                    <i class="mdl-color-text--red error material-icons mdl-typography--display-4">error</i>
+                </div>
+
+                <div class="mdl-card__title center">
+                    <h1 class="mdl-card__title-text">
+                        <?= $this->t('{material:error:header}') ?>
+                    </h1>
+                </div>
+
+                <div class="mdl-card__supporting-text" >
+                    <p>
+                        <?= $this->t('{material:mfa:new_codes_failed}') ?>
+                        <a href="<?= $this->data['mfaSetupUrl'] ?>" target="_blank"><?= $this->data['mfaSetupUrl'] ?></a>
+                    </p>
+                </div>
+            </div>
+
+            <script>
+                ga('send','event','error','backupcode','generation-failed');
+            </script>
+            <?php endif; ?>
+
+            <div layout-children="row" class="fill-parent">
+                <span flex></span>
+
+                <button name="continue" class="mdl-button mdl-button--raised mdl-button--primary">
+                    <?= $this->t('{material:mfa:button_continue}') ?>
+                </button>
+            </div>
+        </form>
+    </main>
+</div>
+</body>
+</html>
