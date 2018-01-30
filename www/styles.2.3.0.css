@@ -4,6 +4,7 @@ p {
 
 pre {
   white-space: pre-line;
+  max-width: 100%;
 }
 
 .fill-viewport {
