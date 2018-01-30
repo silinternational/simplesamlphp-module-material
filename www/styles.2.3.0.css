@@ -2,6 +2,10 @@ p {
   max-width: 60ch;
 }
 
+pre {
+  white-space: pre-line;
+}
+
 .fill-viewport {
   width: 100vw;
   height: 100vh;
