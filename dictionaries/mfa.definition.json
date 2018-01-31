@@ -299,17 +299,5 @@
 		"es": "Recuerde esta navegador por 30 días",
 		"fr": "Se rappeler de ce navigatuer pour 30 jours",
 		"ko": "이 브라우저를 30일간 기억"
-	},
-	"remember_this_computer": {
-		"en": "Remember this computer for 30 days",
-		"es": "Recuerde esta computadora por 30 días",
-		"fr": "Se rappeler de cet ordinatuer pour 30 jours",
-		"ko": "이 컴퓨터를 30일간 기억"
-	},
-	"remember_this_browser": {
-		"en": "Remember this browser for 30 days",
-		"es": "Recuerde esta navegador por 30 días",
-		"fr": "Se rappeler de ce navigatuer pour 30 jours",
-		"ko": "이 브라우저를 30일간 기억"
 	}
 }
