@@ -299,5 +299,11 @@
 		"es": "Recuerde esta navegador por 30 días",
 		"fr": "Se rappeler de ce navigatuer pour 30 jours",
 		"ko": "이 브라우저를 30일간 기억"
+	},
+	"unsupported": {
+		"en": "Not supported in this browser",
+		"es": "No compatible con este navegador",
+		"fr": "Non pris en charge dans ce navigateur",
+		"ko": "이 브라우저에서는 지원되지 않습니다."
 	}
 }

@@ -4,8 +4,31 @@
     <title><?= $this->t('{material:mfa:title}') ?></title>
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
+
+    <script src="bowser.1.8.0.min.js"></script>
+    <script>
+        function disableUnsupportedFeatures() {
+            if (bowser.msie) {
+                disablePrint();
+                disableDownload();
+            } else if (bowser.msedge) {
+                disableDownload();
+            }
+        }
+
+        function disablePrint() {
+            document.querySelector('button#print').disabled = true;
+            document.querySelector('button#print').title = '<?= $this->t('{material:mfa:unsupported}') ?>'            
+        }
+
+        function disableDownload() {
+            document.querySelector('a[download]').href = '';
+            document.querySelector('a[download]').classList.add('mdl-button--disabled');
+            document.querySelector('a[download]').title = '<?= $this->t('{material:mfa:unsupported}') ?>'            
+        }
+    </script>
 </head>
-<body class="gradient-bg">
+<body class="gradient-bg" onload="disableUnsupportedFeatures()">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -71,7 +94,7 @@
                             window.print();
                         }
                     </script>
-                    <button class="mdl-button mdl-button--primary" type="button" onclick="printElement('#code-card')">
+                    <button class="mdl-button mdl-button--primary" type="button" onclick="printElement('#code-card')" id="print">
                         <?= $this->t('{material:mfa:button_print}') ?>
                     </button>
 
