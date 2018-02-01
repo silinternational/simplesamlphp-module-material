@@ -18,7 +18,8 @@
         <form layout-children="column" method="post" autocomplete="off">
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
-                    <img src="mfa-backupcode.svg" alt="<?= $this->t('{material:mfa:backupcode_icon}') ?>">
+                    <img src="mfa-backupcode.svg" class="icon"
+                         alt="<?= $this->t('{material:mfa:backupcode_icon}') ?>">
                 </div>
 
                 <div class="mdl-card__title center">
