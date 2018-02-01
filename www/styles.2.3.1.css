@@ -186,7 +186,7 @@ i.material-icons.mdl-typography--display-4 {
   }
 }
 
-.mdl-card.disabled, .mdl-button[disabled].not-allowed, a[href=''][download].mdl-button--disabled {
+.mdl-card.disabled, .mdl-button[disabled].not-allowed, a[href=''][download].mdl-button--disabled.not-allowed {
   cursor: not-allowed;
 }
 
