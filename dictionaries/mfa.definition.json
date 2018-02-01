@@ -117,7 +117,7 @@
 	"nag_info": {
 		"en": "Did you know you could easily increase the security of your identity account by enabling 2-Step Verification?",
 		"es": "¿Sabía que podría aumentar fácilmente la seguridad de su cuenta de identidad al habilitar la verificación en dos pasos?",
-		"fr": "Saviez-vous que vous pouvez facilement augmenter la sécurité de votre compte d'identité en activant la validation en deux étapes?",
+		"fr": "Savez-vous que vous pouvez facilement augmenter la sécurité de votre compte d'identité en activant la vérification en deux étapes?",
 		"ko": "2 단계 인증을 사용하여 신원 계정의 보안을 쉽게 높일 수 있다는 사실을 알고 계셨습니까?"
 	},
 	"required_header": {
@@ -129,7 +129,7 @@
 	"required_info": {
 		"en": "Your identity account requires additional security, you must set up 2-Step Verification at this time.",
 		"es": "Su cuenta de identidad requiere seguridad adicional, debe configurar la verificación en dos pasos en este momento.",
-		"fr": "Votre compte d'identité nécessite une sécurité supplémentaire, vous devez configurer la validation en deux étapes pour le moment.",
+		"fr": "Votre compte d'identité nécessite une sécurité supplémentaire, vous devez configurer la vérification en deux étapes en ce moment.",
 		"ko": "신원 계정에 추가 보안이 필요하므로 현재 2 단계 인증을 설정해야합니다."
 	},
 	"running_out_header": {
@@ -183,7 +183,7 @@
 	"account": {
 		"en": "{idpName} identity account",
 		"es": "Cuenta de identidad de {idpName}",
-		"fr": "{idpName} compte d'identité",
+		"fr": "Compte d'identité {idpName}",
 		"ko": "{idpName} 신원 계정"
 	},
 	"has_options_besides_codes": {
