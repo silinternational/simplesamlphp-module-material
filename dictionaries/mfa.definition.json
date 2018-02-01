@@ -115,10 +115,10 @@
 		"ko": "자기 보호"
 	},
 	"nag_info": {
-		"en": "Did you know you could easily increase the security of your account by enabling 2-Step Verification?",
-		"es": "¿Sabía que podría aumentar fácilmente la seguridad de su cuenta al habilitar la verificación en dos pasos?",
-		"fr": "Savez-vous que vous pouvez facilement augmenter la sécurité de votre compte en activant la vérification en deux étapes?",
-		"ko": "2 단계 인증을 사용하여 계정의 보안성을 쉽게 높일 수 있다는 사실을 알고 계셨습니까?"
+		"en": "Did you know you could easily increase the security of your identity account by enabling 2-Step Verification?",
+		"es": "¿Sabía que podría aumentar fácilmente la seguridad de su cuenta de identidad al habilitar la verificación en dos pasos?",
+		"fr": "Savez-vous que vous pouvez facilement augmenter la sécurité de votre compte d'identité en activant la vérification en deux étapes?",
+		"ko": "2 단계 인증을 사용하여 신원 계정의 보안을 쉽게 높일 수 있다는 사실을 알고 계셨습니까?"
 	},
 	"required_header": {
 		"en": "Protect this account",
@@ -127,10 +127,10 @@
 		"ko": "이 계정 보호"
 	},
 	"required_info": {
-		"en": "Your account requires additional security, you must set up 2-Step Verification at this time.",
-		"es": "Su cuenta requiere seguridad adicional, debe configurar la verificación en dos pasos en este momento",
-		"fr": "Votre compte nécessite une sécurité supplémentaire, vous devez configurer la vérification en deux étapes en ce moment",
-		"ko": "계정에 대한 추가 보안이 필요하므로 지금 2 단계 인증을 설정해야합니다."
+		"en": "Your identity account requires additional security, you must set up 2-Step Verification at this time.",
+		"es": "Su cuenta de identidad requiere seguridad adicional, debe configurar la verificación en dos pasos en este momento.",
+		"fr": "Votre compte d'identité nécessite une sécurité supplémentaire, vous devez configurer la vérification en deux étapes en ce moment.",
+		"ko": "신원 계정에 추가 보안이 필요하므로 현재 2 단계 인증을 설정해야합니다."
 	},
 	"running_out_header": {
 		"en": "Almost out of printable codes",
@@ -181,10 +181,10 @@
 		"ko": "새로운 인쇄 가능한 코드를 만드는 동안 문제가 발생했습니다. 불편을 끼쳐 드려 죄송합니다. 계속 진행 한 후 다음 주소로 구성을 확인하십시오. "
 	},
 	"account": {
-		"en": "{idpName} account",
-		"es": "Cuenta de {idpName}",
-		"fr": "Compte {idpName}",
-		"ko": "{idpName} 계정"
+		"en": "{idpName} identity account",
+		"es": "Cuenta de identidad de {idpName}",
+		"fr": "Compte d'identité {idpName}",
+		"ko": "{idpName} 신원 계정"
 	},
 	"has_options_besides_codes": {
 		"en": "Thankfully you do have other 2-Step Verification options set up but you should create more Printable codes if you plan to need them in the future.",
