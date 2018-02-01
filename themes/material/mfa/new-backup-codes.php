@@ -19,13 +19,13 @@
         function disablePrint() {
             document.querySelector('button#print').disabled = true;
             document.querySelector('button#print').classList.add('not-allowed');
-            document.querySelector('button#print').title = '<?= $this->t('{material:mfa:unsupported}') ?>'            
+            document.querySelector('button#print').title = '<?= json_encode($this->t('{material:mfa:unsupported}')) ?>';
         }
 
         function disableDownload() {
             document.querySelector('a[download]').href = '';
             document.querySelector('a[download]').classList.add('mdl-button--disabled', 'not-allowed');
-            document.querySelector('a[download]').title = '<?= $this->t('{material:mfa:unsupported}') ?>'            
+            document.querySelector('a[download]').title = '<?= json_encode($this->t('{material:mfa:unsupported}')) ?>';
         }
     </script>
 </head>
