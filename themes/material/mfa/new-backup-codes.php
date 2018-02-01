@@ -56,7 +56,7 @@
             </p>
 
             <div class="mdl-card mdl-shadow--8dp">
-                <div class="mdl-card__supporting-text" layout-children="column" id="code-card">
+                <div class="mdl-card__supporting-text ff-temp-flexbug-fix" layout-children="column" id="code-card">
                     <?php 
                     $idpName = htmlentities($this->configuration->getValue('idp_display_name', $this->configuration->getValue('idp_name', '—')));
                     ?>
