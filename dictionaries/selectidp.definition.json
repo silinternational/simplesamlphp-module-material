@@ -1,22 +1,22 @@
 
 {
 	"title": {
-		"en": "Login account",
-		"es": "Cuenta de inicio de sesión",
-		"fr": "Compte de connexion",
-		"ko": "로그인 계정"
+		"en": "Choose an identity account",
+		"es": "Elige una cuenta de identidad",
+		"fr": "Choisissez un compte d'identité",
+		"ko": "ID 계정 선택"
 	},
 	"header": {
-		"en": "Choose an account",
-		"es": "elige una cuenta",
-		"fr": "Choisissez un compte",
-		"ko": "계정 선택"
+		"en": "Choose an identity account",
+		"es": "Elige una cuenta de identidad",
+		"fr": "Choisissez un compte d'identité",
+		"ko": "ID 계정 선택"
 	},
 	"enabled": {
-		"en": "Login with your {idpName} account",
-		"es": "Inicie sesión con su cuenta de {idpName}",
-		"fr": "Connectez-vous avec votre compte {idpName}",
-		"ko": "{idpName} 계정으로 로그인하십시오."
+		"en": "Login with your {idpName} identity account",
+		"es": "Inicie sesión con su cuenta de identidad {idpName}",
+		"fr": "Connectez-vous avec votre compte d'identité {idpName}",
+		"ko": "{idpName} 신원 계정으로 로그인하십시오."
 	},
 	"disabled": {
 		"en": "{idpName} coming soon",

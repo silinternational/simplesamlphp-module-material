@@ -32,6 +32,11 @@ pre {
   align-items: center;
 }
 
+/* FF was only displaying 4 codes per column (even though there were 5) as a result of this bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1043520 */
+.ff-temp-flexbug-fix {
+  padding-top: 0.5em;
+}
+
 .code-container {
   display: flex;
   flex-direction: column;
@@ -181,7 +186,7 @@ i.material-icons.mdl-typography--display-4 {
   }
 }
 
-.mdl-card.disabled {
+.mdl-card.disabled, .mdl-button[disabled].not-allowed, a[href=''][download].mdl-button--disabled.not-allowed {
   cursor: not-allowed;
 }
 

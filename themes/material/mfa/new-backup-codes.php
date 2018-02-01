@@ -4,8 +4,32 @@
     <title><?= $this->t('{material:mfa:title}') ?></title>
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
+
+    <script src="bowser.1.8.0.min.js"></script>
+    <script>
+        function disableUnsupportedFeatures() {
+            if (bowser.msie) {
+                disablePrint();
+                disableDownload();
+            } else if (bowser.msedge) {
+                disableDownload();
+            }
+        }
+
+        function disablePrint() {
+            document.querySelector('button#print').disabled = true;
+            document.querySelector('button#print').classList.add('not-allowed');
+            document.querySelector('button#print').title = <?= json_encode($this->t('{material:mfa:unsupported}')) ?>;
+        }
+
+        function disableDownload() {
+            document.querySelector('a[download]').href = '';
+            document.querySelector('a[download]').classList.add('mdl-button--disabled', 'not-allowed');
+            document.querySelector('a[download]').title = <?= json_encode($this->t('{material:mfa:unsupported}')) ?>;
+        }
+    </script>
 </head>
-<body class="gradient-bg">
+<body class="gradient-bg" onload="disableUnsupportedFeatures()">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -32,7 +56,7 @@
             </p>
 
             <div class="mdl-card mdl-shadow--8dp">
-                <div class="mdl-card__supporting-text" layout-children="column" id="code-card">
+                <div class="mdl-card__supporting-text ff-temp-flexbug-fix" layout-children="column" id="code-card">
                     <?php 
                     $idpName = htmlentities($this->configuration->getValue('idp_display_name', $this->configuration->getValue('idp_name', '—')));
                     ?>
@@ -71,7 +95,7 @@
                             window.print();
                         }
                     </script>
-                    <button class="mdl-button mdl-button--primary" type="button" onclick="printElement('#code-card')">
+                    <button class="mdl-button mdl-button--primary" type="button" onclick="printElement('#code-card')" id="print">
                         <?= $this->t('{material:mfa:button_print}') ?>
                     </button>
 

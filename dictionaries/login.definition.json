@@ -1,15 +1,15 @@
 {
 	"title": {
-		"en": "Login with your {idpName} account",
-		"es": "Inicie sesión con su cuenta {idpName}",
-		"fr": "Connectez-vous avec votre compte {idpName}",
-		"ko": "{idpName} 계정으로 로그인하십시오."
+		"en": "Login with your {idpName} identity",
+		"es": "Inicie sesión con su identidad de {idpName}",
+		"fr": "Connectez-vous avec votre identité {idpName}",
+		"ko": "{idpName} 신원 계정으로 로그인하십시오."
 	},
 	"header": {
-		"en": "Login with your {idpName} account",
-		"es": "Inicie sesión con su cuenta {idpName}",
-		"fr": "Connectez-vous avec votre compte {idpName}",
-		"ko": "{idpName} 계정으로 로그인하십시오."
+		"en": "Login with your {idpName} identity",
+		"es": "Inicie sesión con su identidad de {idpName}",
+		"fr": "Connectez-vous avec votre identité {idpName}",
+		"ko": "{idpName} 신원 계정으로 로그인하십시오."
 	},
 	"label_username": {
 		"en": "Username",
