@@ -3,7 +3,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<base href="<?= SimpleSAML_Module::getModuleURL('material/') ?>">
+<base href="<?= SimpleSAML\Module::getModuleURL('material/') ?>">
 
 <?php
 $trackingId = htmlentities($this->configuration->getValue('analytics.trackingId'));
