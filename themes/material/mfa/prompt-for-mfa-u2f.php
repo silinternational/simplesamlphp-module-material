@@ -114,8 +114,7 @@
                 </div>
 
                 <?php if ($isU2fSupported): ?>
-                <div class="mdl-card__title 
-                ">
+                <div class="mdl-card__title">
                     <p class="mdl-card__subtitle-text">
                         <?= $this->t('{material:mfa:u2f_instructions}') ?>
                     </p>
