@@ -31,14 +31,10 @@
             <span class="mdl-layout-title">
             <?php
             $spName = $this->data['spName'] ?? null;
-            if (! empty($spName)) {
-            ?>
-                <?= $this->t('{material:selectidp:header-for-sp}', ['{spName}' => $spName]) ?>
-            <?php
+            if (empty($spName)) {
+                echo $this->t('{material:selectidp:header}');
             } else {
-            ?>
-                <?= $this->t('{material:selectidp:header}') ?>
-            <?php
+                echo htmlentities($this->t('{material:selectidp:header-for-sp}', ['{spName}' => $spName]));
             }
             ?>
             </span>
