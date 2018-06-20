@@ -29,7 +29,14 @@
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">
-                <?= $this->t('{material:selectidp:header}') ?>
+            <?php
+            $spName = $this->data['spName'] ?? null;
+            if (empty($spName)) {
+                echo $this->t('{material:selectidp:header}');
+            } else {
+                echo htmlentities($this->t('{material:selectidp:header-for-sp}', ['{spName}' => $spName]));
+            }
+            ?>
             </span>
         </div>
     </header>

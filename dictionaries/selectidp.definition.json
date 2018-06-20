@@ -1,4 +1,3 @@
-
 {
 	"title": {
 		"en": "Choose an identity account",
@@ -11,6 +10,12 @@
 		"es": "Elige una cuenta de identidad",
 		"fr": "Choisissez un compte d'identité",
 		"ko": "ID 계정 선택"
+	},
+	"header-for-sp": {
+		"en": "Choose an identity account to continue to {spName}",
+		"es": "Elija una cuenta de identidad para continuar en {spName}",
+		"fr": "Choisissez un compte d'identité pour continuer vers {spName}",
+		"ko": "{spName}을 계속 진행하려면 신원 계정을 선택하십시오."
 	},
 	"enabled": {
 		"en": "Login with your {idpName} identity account",
