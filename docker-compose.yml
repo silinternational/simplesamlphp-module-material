@@ -5,8 +5,9 @@ services:
     image: silintl/ssp-base:develop
     volumes:
       - ./development/hub/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
-      - ./development/hub/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
+      - ./development/hub/idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/idp-remote.php
       - ./development/hub/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
+      - ./development/hub/sp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/sp-remote.php
       - ./www/default-favicon.ico:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.ico
       - ./www/default-favicon.png:/data/vendor/simplesamlphp/simplesamlphp/www/favicon.png
       - ./www/default-logo.png:/data/vendor/simplesamlphp/simplesamlphp/www/logo.png
@@ -238,3 +239,23 @@ services:
       SECRET_SALT: "xbcCMIHHzsgE8yYC6OIBjsp+ruZYghHn1k5Bv/IGbrg="
       IDP_NAME: "idp-3"
       IDP_DISPLAY_NAME: "Idp 3"
+
+  sp:
+    image: silintl/ssp-base:develop
+    volumes:
+      - ./development/sp/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
+      - ./development/sp/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
+    ports:
+      - "8082:80"
+    env_file:
+      - local.env
+    environment:
+      ADMIN_PASS: "a"
+      SECURE_COOKIE: "false"
+      SHOW_SAML_ERRORS: "true"
+      ADMIN_PROTECT_INDEX_PAGE: "false"
+      THEME_USE: "material:material"
+      ADMIN_EMAIL: "admin1@example.org"
+      SECRET_SALT: "xbcCMIHHzsgE8yYC6OIBjsp+ruZYghHn1k5Bv/IGbrg="
+      IDP_NAME: "sp"
+      IDP_DISPLAY_NAME: "sp"

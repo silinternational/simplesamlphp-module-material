@@ -29,7 +29,18 @@
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
             <span class="mdl-layout-title">
+            <?php
+            $spName = $this->data['spName'] ?? null;
+            if (! empty($spName)) {
+            ?>
+                <?= $this->t('{material:selectidp:header-for-sp}', ['{spName}' => $spName]) ?>
+            <?php
+            } else {
+            ?>
                 <?= $this->t('{material:selectidp:header}') ?>
+            <?php
+            }
+            ?>
             </span>
         </div>
     </header>
