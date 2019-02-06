@@ -65,56 +65,42 @@ If provided, an alert will be shown to the user filled with the content of that 
 
 ### Hub page
 
-1.  Goto [http://ssp-hub.local](http://ssp-hub.local)
-1.  Login as hub administrator: `username=`**admin** `password=`**abc123**
-1.  Click **Authentication** tab
-1.  Click **Test configured authentication sources**
-1.  Click **hub-discovery**
+1.  Goto [http://ssp-hub.local](http://ssp-hub.local/module.php/core/authenticate.php?as=hub-discovery)
 
 ### Error page
 
 1.  Goto [http://ssp-hub.local](http://ssp-hub.local)
-1.  Login as hub administrator: `username=`**admin** `password=`**abc123**
 1.  Click **Federation** tab
 1.  Click either **Show metadata** link
+1.  Login as hub administrator: `username=`**admin** `password=`**abc123**
 
 ### Logout page
 
 1.  Goto [http://ssp-hub.local](http://ssp-hub.local)
-1.  Login as hub administrator: `username=`**admin** `password=`**abc123**
 1.  Click **Authentication** tab
 1.  Click **Test configured authentication sources**
 1.  Click **admin**
+1.  Login as hub administrator: `username=`**admin** `password=`**abc123**
 1.  Click **Logout**
 
 ### Login page
 
-1.  Goto [http://ssp-hub.local](http://ssp-hub.local)
-1.  Login as hub administrator: `username=`**admin** `password=`**abc123**
-1.  Click **Authentication** tab
-1.  Click **Test configured authentication sources**
-1.  Click **hub-discovery**
-1.  Click **idp1**
-1.  NOTE: login page should NOT have material design
-1.  Login as idp1 administrator: `username=`**admin** `password=`**a**
-1.  Click **Logout**
-1.  Goto [http://ssp-hub.local](http://ssp-hub.local)
-1.  Click **Authentication** tab
-1.  Click **Test configured authentication sources**
-1.  Click **hub-discovery**
-1.  Click **idp2**
-1.  NOTE: login page should have material design
-1.  Login as an idp2 user: `username=`**distant_future** `password=`**a**
-1.  Click **Logout**
+#### Without theme in place
+
+1.  Goto [http://ssp-sp.local](http://ssp-sp.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp1** (first one)
+1.  login page should **NOT** have material design
+
+#### With theme in place
+
+1.  Goto [http://ssp-sp.local](http://ssp-sp.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp2** (second one)
+1.  login page **SHOULD** have material design
 
 ### Forgot password functionality
 
-1.  Goto [http://ssp-hub.local](http://ssp-hub.local)
-1.  Login as hub administrator: `username=`**admin** `password=`**abc123**
-1.  Click **Authentication** tab
-1.  Click **Test configured authentication sources**
-1.  Click **hub-discovery**
-1.  Click **idp2**
+1.  Goto [http://ssp-sp.local](http://ssp-sp.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp2** (second one)
 1.  Forgot password link should be visible
 
 ### Expiry functionality

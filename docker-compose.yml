@@ -22,6 +22,7 @@ services:
       - ./local.env
     environment:
       ADMIN_PASS: "abc123"
+      ADMIN_PROTECT_INDEX_PAGE: "false"
       SECURE_COOKIE: "false"
       SHOW_SAML_ERRORS: "true"
       THEME_USE: "material:material"
@@ -32,7 +33,7 @@ services:
       IDP_DISPLAY_NAME: "The Hub"
       ANALYTICS_ID: "UA-XXXX-Y"
 
-  idp1:
+  idp1:  # used for basic testing
     image: silintl/ssp-base:develop
     volumes:
       - ./development/idp1/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
@@ -53,7 +54,8 @@ services:
       SECRET_SALT: "8yC5mb4wqANaU+Rxrl4DHkfKzikeieXkltfFd+YDzx8="
       IDP_NAME: "idp-1"
       IDP_DISPLAY_NAME: "Idp 1"
-  idp2:
+
+  idp2:  # used for expiry testing
     image: silintl/ssp-base:develop
     volumes:
       - ./development/idp2/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
@@ -83,7 +85,7 @@ services:
       PASSWORD_CHANGE_URL:  "http://example.org"
       PASSWORD_FORGOT_URL:  "http://example.org"
 
-  idp4:
+  idp4:  # used for mfa testing
     image: silintl/ssp-base:develop
     volumes:
       - ./development/idp4/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
@@ -185,7 +187,7 @@ services:
           PMA_USER: "user"
           PMA_PASSWORD: "pass"
 
-  hub2:
+  hub2:  # used for announcement testing
     image: silintl/ssp-base:develop
     volumes:
       - ./development/hub2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -213,7 +215,7 @@ services:
       IDP_NAME: "hub-2"
       IDP_DISPLAY_NAME: "The Hub2"
 
-  idp3:
+  idp3:  # used for announcement testing
     image: silintl/ssp-base:develop
     volumes:
       - ./development/idp3/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
