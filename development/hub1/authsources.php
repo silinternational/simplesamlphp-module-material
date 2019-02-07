@@ -5,7 +5,7 @@ $config = [
     ],
     'hub-discovery' => [
         'saml:SP',
-        'entityID' => 'ssp-sp.local',
-        'idp' => 'ssp-hub.local',
+        'entityID' => 'ssp-hub1.local',
+        'discoURL'  => 'http://ssp-hub1.local/module.php/sildisco/disco.php',
     ],
 ];

@@ -4,7 +4,7 @@ use Sil\Psr3Adapters\Psr3SamlLogger;
 
 $metadata['http://ssp-idp4.local:8088'] = [
     'host' => '__DEFAULT__',
-    'privatekey' => 'ssp-idp4.pem',
+    'privatekey' => 'saml.pem',
     'auth' => 'silauth',
     'authproc' => [
         10 => [
