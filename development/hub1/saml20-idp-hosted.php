@@ -1,6 +1,6 @@
 <?php
-$metadata['ssp-hub2.local'] = [
-	'host' => 'ssp-hub2.local',
+$metadata['ssp-hub1.local'] = [
+	'host' => 'ssp-hub1.local',
 	'auth' => 'hub-discovery',
 	'privatekey' => 'saml.pem',
 ];
