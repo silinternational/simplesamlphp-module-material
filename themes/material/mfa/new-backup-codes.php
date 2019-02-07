@@ -5,7 +5,7 @@
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
-    <script src="bowser.1.8.0.min.js"></script>
+    <script src="bowser.1.9.4.min.js"></script>
     <script>
         function disableUnsupportedFeatures() {
             if (bowser.msie) {
