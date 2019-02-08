@@ -55,7 +55,7 @@
                 <span class="mdl-typography--body-2"><?= $this->t('{material:mfa:new_codes_only_once}') ?></span>
             </p>
 
-            <div class="mdl-card mdl-shadow--8dp">
+            <div class="mdl-card mdl-shadow--8dp" style="min-height: 15em">
                 <div class="mdl-card__supporting-text ff-temp-flexbug-fix" layout-children="column" id="code-card">
                     <?php 
                     $idpName = htmlentities($this->configuration->getValue('idp_display_name', $this->configuration->getValue('idp_name', '—')));
@@ -84,8 +84,8 @@
                     
                     <span class="mdl-typography--caption"><?= $this->t('{material:mfa:new_codes_only_once}') ?></span>
                 </div>
-
-                <div class="mdl-card__actions" layout-children="row">
+                
+                <div class="mdl-card__actions" layout-children="row" child-spacing="space-around">
                     <script>
                         function printElement(selector) {
                             var elementToPrint = document.querySelector(selector);
@@ -144,10 +144,22 @@
             </script>
             <?php endif; ?>
 
-            <div layout-children="row" class="fill-parent">
-                <span flex></span>
+            <script>
+                function toggleContinue() {
+                    contBtn = document.querySelector('button[name="continue"]');
+                    
+                    contBtn.disabled = ! contBtn.disabled;  
+                }
+            </script>
 
-                <button name="continue" class="mdl-button mdl-button--raised mdl-button--primary">
+
+            <div layout-children="row" class="fill-parent">
+                <label class="mdl-checkbox mdl-js-checkbox" flex>
+                    <input type="checkbox" onclick="toggleContinue()" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label">I saved a personal copy of these for later use</span>
+                </label>
+
+                <button name="continue" class="mdl-button mdl-button--raised mdl-button--primary" disabled>
                     <?= $this->t('{material:mfa:button_continue}') ?>
                 </button>
             </div>
