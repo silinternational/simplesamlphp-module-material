@@ -180,6 +180,12 @@
 		"fr": "Une erreur s'est produite lors de la création de nouveaux codes imprimables. Nous sommes désolés pour le dérangement. Veuillez vérifier votre configuration à l'adresse suivante après avoir continué: ",
 		"ko": "새로운 인쇄 가능한 코드를 만드는 동안 문제가 발생했습니다. 불편을 끼쳐 드려 죄송합니다. 계속 진행 한 후 다음 주소로 구성을 확인하십시오. "
 	},
+	"new_codes_saved": {
+		"en": "I saved a personal copy of these for later use",
+		"es": "Guardé una copia personal de estos para uso posterior",
+		"fr": "J'ai sauvegardé une copie personnelle de ceux-ci pour une utilisation ultérieure",
+		"ko": "나는 나중에 사용하기 위해 이들의 개인 사본을 저장했다."
+	},
 	"account": {
 		"en": "{idpName} identity account",
 		"es": "Cuenta de identidad de {idpName}",

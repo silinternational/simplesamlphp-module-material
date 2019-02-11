@@ -156,7 +156,7 @@
             <div layout-children="row" class="fill-parent">
                 <label class="mdl-checkbox mdl-js-checkbox" flex>
                     <input type="checkbox" onclick="toggleContinue()" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label">I saved a personal copy of these for later use</span>
+                    <span class="mdl-checkbox__label"><?= $this->t('{material:mfa:new_codes_saved}') ?></span>
                 </label>
 
                 <button name="continue" class="mdl-button mdl-button--raised mdl-button--primary" disabled>
