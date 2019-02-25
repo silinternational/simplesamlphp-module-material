@@ -64,19 +64,8 @@
                         <span flex><?= $this->t('{material:mfa:account}', ['{idpName}' => $idpName]) ?></span>
                         <em class="mdl-typography--caption"><?= date('M j, Y') ?></em>
                     </p>
-    
-                    <?php 
-                    function calculateMaxHeightStyle($newCodes)
-                    {
-                        $numCodes = count($newCodes);
-                        $numCols = $numCodes <= 5 ? 1 : 2;
-                        $numCodesPerRow = ceil($numCodes / $numCols);
-                        $numCodesPerRow *= 1.3; // the .3 here accounts for px differences in <code> and base em sizes.
 
-                        return "max-height: {$numCodesPerRow}em;";
-                    }
-                    ?>
-                    <div class="code-container" style="<?= calculateMaxHeightStyle($newCodes) ?>">
+                    <div class="code-container">
                         <?php foreach ($newCodes as $newCode): ?>
                         <code>☐ <?= htmlentities($newCode) ?></code>
                         <?php endforeach; ?>

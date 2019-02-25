@@ -41,8 +41,10 @@ pre {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 16em; /* allows for 2 columns, i.e., codes are 8-digits */
+  width: 100%;
+  min-height: calc(18px * 5); /* assume 5 codes per column, mdl-card__supporting-text's line-height is 18px */
   flex-wrap: wrap;
+  padding-top: 1em;
   padding-bottom: 1em;
 }
 
