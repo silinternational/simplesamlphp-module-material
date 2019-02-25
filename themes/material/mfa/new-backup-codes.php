@@ -55,7 +55,7 @@
                 <span class="mdl-typography--body-2"><?= $this->t('{material:mfa:new_codes_only_once}') ?></span>
             </p>
 
-            <div class="mdl-card mdl-shadow--8dp" style="min-height: 15em">
+            <div class="mdl-card mdl-shadow--8dp" style="min-height: 17em">
                 <div class="mdl-card__supporting-text ff-temp-flexbug-fix" layout-children="column" id="code-card">
                     <?php 
                     $idpName = htmlentities($this->configuration->getValue('idp_display_name', $this->configuration->getValue('idp_name', '—')));

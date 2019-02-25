@@ -32,11 +32,6 @@ pre {
   align-items: center;
 }
 
-/* FF was only displaying 4 codes per column (even though there were 5) as a result of this bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1043520 */
-.ff-temp-flexbug-fix {
-  padding-top: 0.5em;
-}
-
 .code-container {
   display: flex;
   flex-direction: column;
@@ -44,7 +39,6 @@ pre {
   width: 100%;
   min-height: calc(18px * 5); /* assume 5 codes per column, mdl-card__supporting-text's line-height is 18px */
   flex-wrap: wrap;
-  padding-top: 1em;
   padding-bottom: 1em;
 }
 
