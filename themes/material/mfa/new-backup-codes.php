@@ -144,18 +144,9 @@
             </script>
             <?php endif; ?>
 
-            <script>
-                function toggleContinue() {
-                    contBtn = document.querySelector('button[name="continue"]');
-                    
-                    contBtn.disabled = ! contBtn.disabled;  
-                }
-            </script>
-
-
             <div layout-children="row" class="fill-parent">
                 <label class="mdl-checkbox mdl-js-checkbox" flex>
-                    <input type="checkbox" onclick="toggleContinue()" class="mdl-checkbox__input">
+                    <input type="checkbox" onclick="toggleContinue(this)" class="mdl-checkbox__input">
                     <span class="mdl-checkbox__label"><?= $this->t('{material:mfa:new_codes_saved}') ?></span>
                 </label>
 
@@ -163,6 +154,14 @@
                     <?= $this->t('{material:mfa:button_continue}') ?>
                 </button>
             </div>
+
+            <script>
+                function toggleContinue(event) {
+                    contBtn = document.querySelector('button[name="continue"]');
+                    
+                    contBtn.disabled = ! event.checked;  
+                }
+            </script>
         </form>
     </main>
 </div>
