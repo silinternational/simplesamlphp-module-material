@@ -55,7 +55,7 @@
                 <span class="mdl-typography--body-2"><?= $this->t('{material:mfa:new_codes_only_once}') ?></span>
             </p>
 
-            <div class="mdl-card mdl-shadow--8dp">
+            <div class="mdl-card mdl-shadow--8dp" style="min-height: 17em">
                 <div class="mdl-card__supporting-text ff-temp-flexbug-fix" layout-children="column" id="code-card">
                     <?php 
                     $idpName = htmlentities($this->configuration->getValue('idp_display_name', $this->configuration->getValue('idp_name', '—')));
@@ -64,19 +64,8 @@
                         <span flex><?= $this->t('{material:mfa:account}', ['{idpName}' => $idpName]) ?></span>
                         <em class="mdl-typography--caption"><?= date('M j, Y') ?></em>
                     </p>
-    
-                    <?php 
-                    function calculateMaxHeightStyle($newCodes)
-                    {
-                        $numCodes = count($newCodes);
-                        $numCols = $numCodes <= 5 ? 1 : 2;
-                        $numCodesPerRow = ceil($numCodes / $numCols);
-                        $numCodesPerRow *= 1.3; // the .3 here accounts for px differences in <code> and base em sizes.
 
-                        return "max-height: {$numCodesPerRow}em;";
-                    }
-                    ?>
-                    <div class="code-container" style="<?= calculateMaxHeightStyle($newCodes) ?>">
+                    <div class="code-container">
                         <?php foreach ($newCodes as $newCode): ?>
                         <code>☐ <?= htmlentities($newCode) ?></code>
                         <?php endforeach; ?>
@@ -84,8 +73,8 @@
                     
                     <span class="mdl-typography--caption"><?= $this->t('{material:mfa:new_codes_only_once}') ?></span>
                 </div>
-
-                <div class="mdl-card__actions" layout-children="row">
+                
+                <div class="mdl-card__actions" layout-children="row" child-spacing="space-around">
                     <script>
                         function printElement(selector) {
                             var elementToPrint = document.querySelector(selector);
@@ -145,12 +134,23 @@
             <?php endif; ?>
 
             <div layout-children="row" class="fill-parent">
-                <span flex></span>
+                <label class="mdl-checkbox mdl-js-checkbox" flex>
+                    <input type="checkbox" onclick="toggleContinue(this)" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label"><?= $this->t('{material:mfa:new_codes_saved}') ?></span>
+                </label>
 
-                <button name="continue" class="mdl-button mdl-button--raised mdl-button--primary">
+                <button name="continue" class="mdl-button mdl-button--raised mdl-button--primary" disabled>
                     <?= $this->t('{material:mfa:button_continue}') ?>
                 </button>
             </div>
+
+            <script>
+                function toggleContinue(event) {
+                    contBtn = document.querySelector('button[name="continue"]');
+                    
+                    contBtn.disabled = ! event.checked;  
+                }
+            </script>
         </form>
     </main>
 </div>
