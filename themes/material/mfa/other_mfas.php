@@ -9,6 +9,14 @@ function excludeSelf($others, $selfId) {
 }
 
 $otherOptions = excludeSelf($mfaOptions, $currentMfaId);
+
+if ($this->data['hasManagerEmail']) {
+    array_push($otherOptions, [
+        'type' => 'manager',
+        'callback' => '/module.php/mfa/send-manager-mfa.php?StateId='.htmlentities($this->data['stateId'])
+    ]);
+}
+
 if (count($otherOptions) > 0) {
 ?>
 <div layout-children="column" child-spacing="center">
@@ -22,15 +30,19 @@ if (count($otherOptions) > 0) {
         <?php
         foreach ($otherOptions as $option) {
             $type = $option['type'];
+            $callback = $option['callback'] ?? '/module.php/mfa/prompt-for-mfa.php?StateId='.htmlentities($this->data['stateId']).'&mfaId='.htmlentities($option['id']);
 
             $image = 'mfa-' . $type . '.svg';
             $altText = $this->t('{material:mfa:' . $type . '_icon}');
         ?>
-        <li class="mdl-menu__item" onclick="location.href += '&mfaId=<?= $option['id'] ?>'">
+        <li class="mdl-menu__item" onclick="location.href = '<?= $callback ?>'">
             <span class="mdl-list__item-primary-content">
                 <img class="mdl-list__item-icon" src="<?= $image ?>" alt="<?= $altText ?>">
 
-                <?= $this->t('{material:mfa:use_' . $type . '}') ?>
+                <?php
+                $label = empty($option['id']) ? 'help' : $type;
+                ?>
+                <?= $this->t('{material:mfa:use_' . $label . '}') ?>
             </span>
         </li>
         <?php
