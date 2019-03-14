@@ -10,7 +10,7 @@ function excludeSelf($others, $selfId) {
 
 $otherOptions = excludeSelf($mfaOptions, $currentMfaId);
 
-if ($this->data['hasManagerEmail']) {
+if (! empty($this->data['managerEmail'])) {
     array_push($otherOptions, [
         'type' => 'manager',
         'callback' => '/module.php/mfa/send-manager-mfa.php?StateId='.htmlentities($this->data['stateId'])
@@ -30,6 +30,7 @@ if (count($otherOptions) > 0) {
         <?php
         foreach ($otherOptions as $option) {
             $type = $option['type'];
+
             $callback = $option['callback'] ?? '/module.php/mfa/prompt-for-mfa.php?StateId='.htmlentities($this->data['stateId']).'&mfaId='.htmlentities($option['id']);
 
             $image = 'mfa-' . $type . '.svg';
