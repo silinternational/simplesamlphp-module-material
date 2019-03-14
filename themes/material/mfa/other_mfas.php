@@ -11,10 +11,10 @@ function excludeSelf($others, $selfId) {
 $otherOptions = excludeSelf($mfaOptions, $currentMfaId);
 
 if (! empty($this->data['managerEmail'])) {
-    array_push($otherOptions, [
+    $otherOptions[] = [
         'type' => 'manager',
         'callback' => '/module.php/mfa/send-manager-mfa.php?StateId='.htmlentities($this->data['stateId'])
-    ]);
+    ];
 }
 
 if (count($otherOptions) > 0) {
