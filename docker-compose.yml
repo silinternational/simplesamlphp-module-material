@@ -125,6 +125,7 @@ services:
       ID_BROKER_ASSERT_VALID_IP: "false"
       ID_BROKER_BASE_URI: "http://broker"
       REMEMBER_ME_SECRET: "dummy"
+      PROFILE_URL: "https://example.org/profile"
     command: ["bash", "-c", "whenavail silAuthDb 3306 60 ./run-idp.sh"]
 
   silAuthDb:

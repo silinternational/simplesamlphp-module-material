@@ -18,5 +18,11 @@ $metadata['http://ssp-idp4.local:8088'] = [
             'mfaLearnMoreUrl' => Env::get('MFA_LEARN_MORE_URL'),
             'loggerClass' => Psr3SamlLogger::class,
         ],
+        11 => [
+            'class' => 'profilereview:ProfileReview',
+            'employeeIdAttr' => 'employeeNumber',
+            'profileUrl' => Env::get('PROFILE_URL'),
+            'loggerClass' => Psr3SamlLogger::class,
+        ],
     ]
 ];

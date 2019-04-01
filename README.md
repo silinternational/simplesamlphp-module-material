@@ -196,6 +196,16 @@ _NOTE: At this time, the correct code is not known and can't be tested locally (
 1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
 1.  The sp name should appear in the banner
 
+### Profile review functionality
+1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp4** (third one)
+1.  Login as a "Review needed" user: `username=`**needs_review** `password=`**a**
+1.  Enter one of the following printable codes to verify (`94923279, 82743523, 77802769, 01970541, 37771076`)
+1.  Click **Update profile**
+1.  Click **Remind me later**
+1.  Click **Logout**
+
+
 ## i18n support
 
 Translations are categorized by page in definition files located in the `dictionaries` directory.
