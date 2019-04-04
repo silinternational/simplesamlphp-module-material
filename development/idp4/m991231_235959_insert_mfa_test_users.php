@@ -40,16 +40,16 @@ class m991231_235959_insert_mfa_test_users extends Migration
 
         //TODO: unfortunately, a real uuid that's been verified is required for testing at this time ...will discuss decoupling 2-factor config with authentication.
         $this->batchInsert('{{mfa}}',
-            ['id','user_id','type'      ,'external_uuid'                       ,'verified','created_utc'        ],[
-            [ 1  , 3       ,'backupcode',NULL                                  , 1        , MySqlDateTime::now()],
-            [ 2  , 4       ,'totp'      ,'38764a89-b904-404e-a195-1ad2bcfabf75', 1        , MySqlDateTime::now()], // JVRXKYTMPBEVKXLS
-            [ 3  , 5       ,'u2f'       ,'6092a08c-b271-4971-996a-6577333a7b6d', 1        , MySqlDateTime::now()],
-            [ 4  , 6       ,'backupcode',NULL                                  , 1        , MySqlDateTime::now()],
-            [ 5  , 6       ,'totp'      ,'38764a89-b904-404e-a195-1ad2bcfabf75', 1        , MySqlDateTime::now()], // JVRXKYTMPBEVKXLS
-            [ 6  , 6       ,'u2f'       ,'6092a08c-b271-4971-996a-6577333a7b6d', 1        , MySqlDateTime::now()],
-            [ 7  , 7       ,'backupcode',NULL                                  , 1        , MySqlDateTime::now()],
-            [ 8  , 7       ,'totp'      ,'38764a89-b904-404e-a195-1ad2bcfabf75', 1        , MySqlDateTime::now()], // JVRXKYTMPBEVKXLS
-            [ 9  , 7       ,'u2f'       ,'6092a08c-b271-4971-996a-6577333a7b6d', 1        , MySqlDateTime::now()],
+            ['id','user_id','type'      ,'external_uuid'                       ,'label','verified','created_utc'        ],[
+            [ 1  , 3       ,'backupcode',NULL                                  ,'Printable Codes' , 1        , MySqlDateTime::now()],
+            [ 2  , 4       ,'totp'      ,'38764a89-b904-404e-a195-1ad2bcfabf75','Smartphone App'  , 1        , MySqlDateTime::now()], // JVRXKYTMPBEVKXLS
+            [ 3  , 5       ,'u2f'       ,'6092a08c-b271-4971-996a-6577333a7b6d','Security Key'    , 1        , MySqlDateTime::now()],
+            [ 4  , 6       ,'backupcode',NULL                                  ,'Printable Codes' , 1        , MySqlDateTime::now()],
+            [ 5  , 6       ,'totp'      ,'38764a89-b904-404e-a195-1ad2bcfabf75','Smartphone App'  , 1        , MySqlDateTime::now()], // JVRXKYTMPBEVKXLS
+            [ 6  , 6       ,'u2f'       ,'6092a08c-b271-4971-996a-6577333a7b6d','Security Key'    , 1        , MySqlDateTime::now()],
+            [ 7  , 7       ,'backupcode',NULL                                  ,'Printable Codes' , 1        , MySqlDateTime::now()],
+            [ 8  , 7       ,'totp'      ,'38764a89-b904-404e-a195-1ad2bcfabf75','Smartphone App'  , 1        , MySqlDateTime::now()], // JVRXKYTMPBEVKXLS
+            [ 9  , 7       ,'u2f'       ,'6092a08c-b271-4971-996a-6577333a7b6d','Security Key'    , 1        , MySqlDateTime::now()],
         ]);
 
         $this->batchInsert('{{mfa_backupcode}}',
@@ -74,9 +74,7 @@ class m991231_235959_insert_mfa_test_users extends Migration
         $this->batchInsert('{{method}}',
             ['id','uid','user_id','value'               ,'verified','created'            ],[
             [ 1  , 1234, 7       ,'personal1.example.org', 1        , MySqlDateTime::now()],
-            [ 2  , 1235, 7       ,'personal2.example.org', 1        , MySqlDateTime::now()],
-            [ 3  , 1236, 7       ,'personal3.example.org', 0        , MySqlDateTime::now()],
-            [ 4  , 1237, 7       ,'personal4.example.org', 1        , MySqlDateTime::now()],
+            [ 2  , 1235, 7       ,'personal2.example.org', 0        , MySqlDateTime::now()],
         ]);
     }
 

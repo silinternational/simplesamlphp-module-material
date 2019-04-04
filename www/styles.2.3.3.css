@@ -21,6 +21,14 @@ pre {
   flex-wrap: wrap;
 }
 
+[layout-children=row-top] {
+  display: flex;
+  flex-direction: row;
+
+  /* make sure the children break nicely for different browser widths, e.g., tablet, phone, etc. */
+  flex-wrap: wrap;
+}
+
 /* can't think of a time at this point where we want the buttons to wrap inside a card. */
 .mdl-card__actions[layout-children] {
   flex-wrap: nowrap;
@@ -74,6 +82,10 @@ pre {
 
 [child-spacing=center] {
   justify-content: center;
+}
+
+[child-spacing=end] {
+  justify-content: flex-end;
 }
 
 form p.error {
