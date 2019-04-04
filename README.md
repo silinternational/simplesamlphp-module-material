@@ -201,8 +201,8 @@ _NOTE: At this time, the correct code is not known and can't be tested locally (
 1.  Click **idp4** (third one)
 1.  Login as a "Review needed" user: `username=`**needs_review** `password=`**a**
 1.  Enter one of the following printable codes to verify (`94923279, 82743523, 77802769, 01970541, 37771076`)
-1.  Click **Update profile**
-1.  Click **Remind me later**
+1.  Click the button to update the profile
+1.  Click the button to continue
 1.  Click **Logout**
 
 
