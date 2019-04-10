@@ -102,6 +102,36 @@
 		"fr": "Cela a pris un peu trop de temps, vérifiez que votre clé est insérée dans le bons sens.",
 		"ko": "오랜 시간이 경과 되었으니 키가 오른쪽 위로 삽입되었는지 확인 하십시오."
 	},
+	"manager_icon": {
+		"en": "Manager icon",
+		"es": "Icono de administrador",
+		"fr": "Icône du gestionnaire",
+		"ko": "관리자 아이콘"
+	},
+	"manager_header": {
+		"en": "Manager help",
+		"es": "Ayuda del gerente",
+		"fr": "Aide gestionnaire",
+		"ko": "관리자 도움말"
+	},
+	"manager_info": {
+		"en": "We can send a code to your manager which can be used as a temporary 2-Step Verification option.  The email address on file (masked for privacy) is {managerEmail}.",
+		"es": "Podemos enviar un código a su administrador, que se puede utilizar como una opción de Verificación de 2 pasos temporal. La dirección de correo electrónico en el archivo (enmascarada para privacidad) es {managerEmail}.",
+		"fr": "Nous pouvons envoyer un code à votre responsable qui peut être utilisé comme option temporaire de vérification en deux étapes. L'adresse électronique au dossier (masquée pour la confidentialité) est {managerEmail}.",
+		"ko": "관리자는 임시 2 단계 인증 옵션으로 사용할 수있는 코드를 보낼 수 있습니다. 파일의 이메일 주소 (개인 정보 보호용으로 숨김)는 {managerEmail}입니다."
+	},
+	"manager_sent": {
+		"en": "A temporary code was sent your manager at {managerEmail}.",
+		"es": "Se envió un código temporal a su administrador en {managerEmail}.",
+		"fr": "Un code temporaire a été envoyé à votre responsable à l'adresse {managerEmail}.",
+		"ko": "{managerEmail}에서 임시 코드가 관리자에게 전송되었습니다."
+	},
+	"manager_input": {
+		"en": "Enter code",
+		"es": "Introduzca el código",
+		"fr": "Entrer le code",
+		"ko": "코드 입력"
+	},
 	"shield_icon": {
 		"en": "Shield icon",
 		"es": "Icono de escudo",
@@ -180,6 +210,12 @@
 		"fr": "Une erreur s'est produite lors de la création de nouveaux codes imprimables. Nous sommes désolés pour le dérangement. Veuillez vérifier votre configuration à l'adresse suivante après avoir continué: ",
 		"ko": "새로운 인쇄 가능한 코드를 만드는 동안 문제가 발생했습니다. 불편을 끼쳐 드려 죄송합니다. 계속 진행 한 후 다음 주소로 구성을 확인하십시오. "
 	},
+	"new_codes_saved": {
+		"en": "I saved a personal copy of these for later use",
+		"es": "Guardé una copia personal de estos para uso posterior",
+		"fr": "J'ai sauvegardé une copie personnelle de ceux-ci pour une utilisation ultérieure",
+		"ko": "나는 나중에 사용하기 위해 이들의 개인 사본을 저장했다."
+	},
 	"account": {
 		"en": "{idpName} identity account",
 		"es": "Cuenta de identidad de {idpName}",
@@ -221,6 +257,18 @@
 		"es": "Use un código imprimible en su lugar",
 		"fr": "Utiliser plutôt un code imprimable",
 		"ko": "인쇄 가능한 코드 사용"
+	},
+	"use_help": {
+		"en": "I need help",
+		"es": "necesito ayuda",
+		"fr": "j'ai besoin d'aide",
+		"ko": "도움이 필요해."
+	},
+	"use_manager": {
+		"en": "Use code from my manager",
+		"es": "Usa el código de mi manager",
+		"fr": "Utiliser le code de mon manager",
+		"ko": "내 관리자의 코드 사용"
 	},
 	"button_verify": {
 		"en": "Verify",
@@ -287,6 +335,18 @@
 		"es": "Copiar",
 		"fr": "Copier",
 		"ko": "사본"
+	},
+	"button_send": {
+		"en": "Send",
+		"es": "Enviar",
+		"fr": "Envoyer",
+		"ko": "보내다"
+	},
+	"button_cancel": {
+		"en": "Cancel",
+		"es": "Cancelar",
+		"fr": "Annuler",
+		"ko": "취소"
 	},
 	"button_copied": {
 		"en": "Copied ✓",

@@ -21,6 +21,14 @@ pre {
   flex-wrap: wrap;
 }
 
+[layout-children=row-top] {
+  display: flex;
+  flex-direction: row;
+
+  /* make sure the children break nicely for different browser widths, e.g., tablet, phone, etc. */
+  flex-wrap: wrap;
+}
+
 /* can't think of a time at this point where we want the buttons to wrap inside a card. */
 .mdl-card__actions[layout-children] {
   flex-wrap: nowrap;
@@ -32,16 +40,12 @@ pre {
   align-items: center;
 }
 
-/* FF was only displaying 4 codes per column (even though there were 5) as a result of this bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1043520 */
-.ff-temp-flexbug-fix {
-  padding-top: 0.5em;
-}
-
 .code-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 16em; /* allows for 2 columns, i.e., codes are 8-digits */
+  width: 100%;
+  min-height: calc(18px * 5); /* assume 5 codes per column, mdl-card__supporting-text's line-height is 18px */
   flex-wrap: wrap;
   padding-bottom: 1em;
 }
@@ -78,6 +82,10 @@ pre {
 
 [child-spacing=center] {
   justify-content: center;
+}
+
+[child-spacing=end] {
+  justify-content: flex-end;
 }
 
 form p.error {

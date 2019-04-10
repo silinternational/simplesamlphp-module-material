@@ -4,7 +4,7 @@ use Sil\Psr3Adapters\Psr3SamlLogger;
 
 $metadata['http://ssp-idp4.local:8088'] = [
     'host' => '__DEFAULT__',
-    'privatekey' => 'ssp-idp4.pem',
+    'privatekey' => 'saml.pem',
     'auth' => 'silauth',
     'authproc' => [
         10 => [
@@ -16,6 +16,12 @@ $metadata['http://ssp-idp4.local:8088'] = [
             'idBrokerTrustedIpRanges' => Env::get('ID_BROKER_TRUSTED_IP_RANGES'),
             'mfaSetupUrl' => Env::get('MFA_SETUP_URL'),
             'mfaLearnMoreUrl' => Env::get('MFA_LEARN_MORE_URL'),
+            'loggerClass' => Psr3SamlLogger::class,
+        ],
+        11 => [
+            'class' => 'profilereview:ProfileReview',
+            'employeeIdAttr' => 'employeeNumber',
+            'profileUrl' => Env::get('PROFILE_URL'),
             'loggerClass' => Psr3SamlLogger::class,
         ],
     ]

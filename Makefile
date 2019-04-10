@@ -13,4 +13,4 @@ errors:
 
 clean:
 	docker-compose kill
-	docker system prune -f
+	docker-compose rm -f
