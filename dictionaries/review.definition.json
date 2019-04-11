@@ -7,10 +7,10 @@
 		"ko": "프로필 검토"
 	},
 	"header": {
-		"en": "Profile review – Are these still accurate?",
-		"es": "Revisión del perfil - ¿Siguen siendo exactos?",
-		"fr": "Examen du profil - Sont-ils toujours exacts?",
-		"ko": "프로필 검토 - 여전히 정확한가?"
+		"en": "Make sure your settings are still correct",
+		"es": "Asegúrese de que su configuración sigue siendo correcta",
+		"fr": "Assurez-vous que vos paramètres sont toujours corrects",
+		"ko": "설정이 올바른지 확인하십시오."
 	},
 	"mfa_header": {
 		"en": "2-Step Verification",
@@ -61,9 +61,9 @@
 		"ko": "이들 중 일부는 업데이트해야합니다."
 	},
 	"button_continue": {
-		"en": "These are still accurate",
-		"es": "Estos siguen siendo precisos.",
-		"fr": "Ce sont toujours précis",
+		"en": "These are still correct",
+		"es": "Estos siguen siendo correctos",
+		"fr": "Ceux-ci sont toujours corrects",
 		"ko": "이들은 여전히 정확하다."
 	}
 }
