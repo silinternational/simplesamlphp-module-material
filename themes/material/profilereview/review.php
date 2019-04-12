@@ -36,6 +36,12 @@
 
     <main class="mdl-layout__content" layout-children="column">
         <form layout-children="column" method="post">
+            <p>
+                <h2 class="mdl-typography--headline">
+                    <?= $this->t('{material:review:info}') ?>
+                </h2>
+            </p>
+            
             <section layout-children="row-top" >
                 <?php if (count($this->data['mfaOptions']) > 0): ?>
                 <div class="mdl-card mdl-shadow--8dp">

@@ -7,10 +7,16 @@
 		"ko": "프로필 검토"
 	},
 	"header": {
-		"en": "Make sure your settings are still correct",
-		"es": "Asegúrese de que su configuración sigue siendo correcta",
-		"fr": "Assurez-vous que vos paramètres sont toujours corrects",
-		"ko": "설정이 올바른지 확인하십시오."
+		"en": "Profile review",
+		"es": "Revisión del perfil",
+		"fr": "Examen du profil",
+		"ko": "프로필 검토"
+	},
+	"info": {
+		"en": "Are these still correct?",
+		"es": "¿Siguen siendo correctos?",
+		"fr": "Sont-ils toujours corrects?",
+		"ko": "여전히 맞습니까?"
 	},
 	"mfa_header": {
 		"en": "2-Step Verification",
