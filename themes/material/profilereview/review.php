@@ -44,7 +44,7 @@
             
             <section layout-children="row-top" >
                 <?php if (count($this->data['mfaOptions']) > 0): ?>
-                <div class="mdl-card mdl-shadow--8dp">
+                <div class="mdl-card fixed-width mdl-shadow--8dp">
                     <div class="mdl-card__title center">
                         <h1 class="mdl-card__title-text">
                             <?= $this->t('{material:review:mfa_header}') ?>
@@ -80,7 +80,7 @@
                 <?php endif; ?>
 
                 <?php if (count($this->data['methodOptions']) > 0): ?>
-                <div class="mdl-card mdl-shadow--8dp">
+                <div class="mdl-card fixed-width mdl-shadow--8dp">
                     <div class="mdl-card__title center">
                         <h1 class="mdl-card__title-text">
                             <?= $this->t('{material:review:methods_header}') ?>

@@ -137,6 +137,11 @@ i.material-icons.mdl-typography--display-4 {
   margin: 1em;
 }
 
+/* cards on profile review needed to have consistent width */
+.mdl-card.fixed-width {
+  width: 365px; /* takes into acocunt "... (10 remaining)" for appropriate width */
+}
+
 /* don't want images to be too small on cards */
 .mdl-card__media > img {
   min-width: 20%;
