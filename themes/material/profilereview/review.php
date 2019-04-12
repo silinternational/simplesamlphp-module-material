@@ -80,7 +80,8 @@
                 <?php endif; ?>
 
                 <?php if (count($this->data['methodOptions']) > 0): ?>
-                <div class="mdl-card fixed-width mdl-shadow--8dp">
+                <!-- if there are two cards, remove the right margin so the buttons align with the edge of the card. -->
+                <div class="mdl-card fixed-width mdl-shadow--8dp" style="<?= count($this->data['methodOptions']) == 2 ? 'margin-right: 0px' : '' ?>">
                     <div class="mdl-card__title center">
                         <h1 class="mdl-card__title-text">
                             <?= $this->t('{material:review:methods_header}') ?>
