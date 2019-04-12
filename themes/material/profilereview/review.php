@@ -51,7 +51,7 @@
                         </h1>
                     </div>
 
-                    <div class="mdl-card__title center" >
+                    <div class="mdl-card__title" >
                         <ul class="mdl-card__subtitle-text mdl-list">
                             <?php foreach ($this->data['mfaOptions'] as $mfa): ?>
                             <li class="mdl-list__item mdl-list__item--three-line">
@@ -87,7 +87,7 @@
                         </h1>
                     </div>
 
-                    <div class="mdl-card__title center" >
+                    <div class="mdl-card__title" >
                         <ul class="mdl-card__subtitle-text mdl-list">
                             <?php foreach ($this->data['methodOptions'] as $method): ?>
                             <li class="mdl-list__item mdl-list__item--two-line">
