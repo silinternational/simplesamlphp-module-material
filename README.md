@@ -132,6 +132,16 @@ _Note:  This nag only works once since choosing later will simply set the nag da
 1.  Click **Remind me later**
 1.  Click **Logout**
 
+#### Nag about missing password recovery methods
+
+1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp4** (third one)
+1.  Login as a user without any methods: `username=`**nag_for_method** `password=`**a**
+1.  Enter one of the following codes to verify (`94923279, 82743523, 77802769, 01970541, 37771076`)
+1.  The "learn more" link should be visible
+1.  Click **Remind me later**
+1.  Click **Logout**
+
 #### Force MFA setup
 
 1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
