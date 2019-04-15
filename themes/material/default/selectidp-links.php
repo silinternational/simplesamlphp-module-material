@@ -38,6 +38,12 @@
             }
             ?>
             </span>
+
+            <div class="mdl-layout-spacer"></div>
+
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="https://idphelp.sil.org" target="_blank"><?= $this->t('{material:selectidp:help}') ?></a>
+            </nav>
         </div>
     </header>
 

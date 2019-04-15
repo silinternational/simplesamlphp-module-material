@@ -28,5 +28,11 @@
 		"es": "{IdpName} próximamente",
 		"fr": "{IdpName} à venir",
 		"ko": "{idpName} 곧 제공됨"
+	},
+	"help": {
+		"en": "Help",
+		"es": "Ayuda",
+		"fr": "Aidez-moi",
+		"ko": "도움"
 	}
 }
