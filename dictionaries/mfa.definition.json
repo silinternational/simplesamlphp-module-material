@@ -138,18 +138,6 @@
 		"fr": "Icône de bouclier",
 		"ko": "방패 아이콘"
 	},
-	"nag_header": {
-		"en": "Protect yourself",
-		"es": "Protéjase",
-		"fr": "Protégez-vous",
-		"ko": "자기 보호"
-	},
-	"nag_info": {
-		"en": "Did you know you could easily increase the security of your identity account by enabling 2-Step Verification?",
-		"es": "¿Sabía que podría aumentar fácilmente la seguridad de su cuenta de identidad al habilitar la verificación en dos pasos?",
-		"fr": "Savez-vous que vous pouvez facilement augmenter la sécurité de votre compte d'identité en activant la vérification en deux étapes?",
-		"ko": "2 단계 인증을 사용하여 신원 계정의 보안을 쉽게 높일 수 있다는 사실을 알고 계셨습니까?"
-	},
 	"required_header": {
 		"en": "Protect this account",
 		"es": "Protege esta cuenta",

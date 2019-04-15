@@ -18,7 +18,7 @@
         <form layout-children="column" method="post">
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
-                    <img src="mfa-shield.svg" alt="<?= $this->t('{material:mfa:shield_icon}') ?>">
+                    <img src="shield.svg" alt="<?= $this->t('{material:mfa:shield_icon}') ?>">
                 </div>
 
                 <div class="mdl-card__title center">
