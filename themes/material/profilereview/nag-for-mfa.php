@@ -52,7 +52,7 @@
                     }
                     ?>
 
-                    <button name="setUpMfa"
+                    <button name="update"
                             class="mdl-button mdl-button--raised mdl-button--primary">
                         <?= $this->t('{material:mfa:button_enable}') ?>
                     </button>

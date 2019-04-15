@@ -87,7 +87,7 @@ services:
       PASSWORD_FORGOT_URL:  "http://example.org"
 
   idp4:  # used for mfa testing
-    image: silintl/ssp-base:develop
+    image: silintl/ssp-base:local-testing-with-develop-deps
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp4/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
