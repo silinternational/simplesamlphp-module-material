@@ -12,6 +12,18 @@
 		"fr": "Vérification en deux étapes",
 		"ko": "2 단계 인증"
 	},
+	"method_title": {
+		"en": "Password recovery methods",
+		"es": "Métodos de recuperación de contraseña",
+		"fr": "Méthodes de récupération de mot de passe",
+		"ko": "비밀번호 복구 방법"
+	},
+	"method_header": {
+		"en": "Password recovery methods",
+		"es": "Métodos de recuperación de contraseña",
+		"fr": "Méthodes de récupération de mot de passe",
+		"ko": "비밀번호 복구 방법"
+	},
 	"shield_icon": {
 		"en": "Shield icon",
 		"es": "Icono de escudo",
@@ -30,6 +42,12 @@
 		"fr": "Savez-vous que vous pouvez facilement augmenter la sécurité de votre compte d'identité en activant la vérification en deux étapes?",
 		"ko": "2 단계 인증을 사용하여 신원 계정의 보안을 쉽게 높일 수 있다는 사실을 알고 계셨습니까?"
 	},
+	"method_info": {
+		"en": "Do you forget your password sometimes?  Did you know it is very easy to add an alternate email address for password recovery just in case?",
+		"es": "¿Olvidas tu contraseña a veces? ¿Sabía que es muy fácil agregar una dirección de correo electrónico alternativa para recuperar la contraseña por si acaso?",
+		"fr": "Avez-vous oublié votre mot de passe parfois? Saviez-vous qu'il est très facile d'ajouter une adresse électronique de remplacement pour la récupération du mot de passe au cas où?",
+		"ko": "가끔 암호를 잊어 버리십니까? 혹시라도 비밀번호 복구를 위해 보조 이메일 주소를 추가하는 것이 매우 쉽다는 것을 알고 계셨습니까?"
+	},
 	"button_later": {
 		"en": "Remind me later",
 		"es": "Recuérdame más tarde",
@@ -47,5 +65,11 @@
 		"es": "Habilite ahora",
 		"fr": "Activer maintenant",
 		"ko": "지금 사용"
+	},
+	"button_add": {
+		"en": "Add one now",
+		"es": "Agrega uno ahora",
+		"fr": "Ajouter un maintenant",
+		"ko": "지금 하나 추가"
 	}
 }
