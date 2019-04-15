@@ -36,16 +36,22 @@
 
     <main class="mdl-layout__content" layout-children="column">
         <form layout-children="column" method="post">
+            <p>
+                <h2 class="mdl-typography--headline">
+                    <?= $this->t('{material:review:info}') ?>
+                </h2>
+            </p>
+            
             <section layout-children="row-top" >
                 <?php if (count($this->data['mfaOptions']) > 0): ?>
-                <div class="mdl-card mdl-shadow--8dp">
+                <div class="mdl-card fixed-width mdl-shadow--8dp">
                     <div class="mdl-card__title center">
                         <h1 class="mdl-card__title-text">
                             <?= $this->t('{material:review:mfa_header}') ?>
                         </h1>
                     </div>
 
-                    <div class="mdl-card__title center" >
+                    <div class="mdl-card__title" >
                         <ul class="mdl-card__subtitle-text mdl-list">
                             <?php foreach ($this->data['mfaOptions'] as $mfa): ?>
                             <li class="mdl-list__item mdl-list__item--three-line">
@@ -74,14 +80,15 @@
                 <?php endif; ?>
 
                 <?php if (count($this->data['methodOptions']) > 0): ?>
-                <div class="mdl-card mdl-shadow--8dp">
+                <!-- if there are two cards, remove the right margin so the buttons align with the edge of the card. -->
+                <div class="mdl-card fixed-width mdl-shadow--8dp" style="<?= count($this->data['methodOptions']) == 2 ? 'margin-right: 0px' : '' ?>">
                     <div class="mdl-card__title center">
                         <h1 class="mdl-card__title-text">
                             <?= $this->t('{material:review:methods_header}') ?>
                         </h1>
                     </div>
 
-                    <div class="mdl-card__title center" >
+                    <div class="mdl-card__title" >
                         <ul class="mdl-card__subtitle-text mdl-list">
                             <?php foreach ($this->data['methodOptions'] as $method): ?>
                             <li class="mdl-list__item mdl-list__item--two-line">
