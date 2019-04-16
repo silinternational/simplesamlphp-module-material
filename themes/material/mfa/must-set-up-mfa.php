@@ -36,17 +36,6 @@
                 <div class="mdl-card__actions" layout-children="row">
                     <span flex></span>
 
-                    <?php
-                    $url = $this->data['learnMoreUrl'] ?? null;
-                    if (! empty($url)) {
-                    ?>
-                    <a href="<?= htmlentities($url) ?>" target="_blank" class="mdl-button mdl-button--primary margin">
-                        <?= $this->t('{material:mfa:button_learn_more}') ?>
-                    </a>
-                    <?php
-                    }
-                    ?>
-
                     <button name="setUpMfa" class="mdl-button mdl-button--raised mdl-button--primary">
                         <?= $this->t('{material:mfa:button_set_up}') ?>
                     </button>

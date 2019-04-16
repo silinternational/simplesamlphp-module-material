@@ -151,7 +151,6 @@ _Note:  This nag only works once since choosing later will simply set the nag da
 1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
 1.  Click **idp4** (third one)
 1.  Login as an "unsafe" user: `username=`**must_set_up_mfa** `password=`**a**
-1.  The "learn more" link should be visible
 
 #### Backup code
 
