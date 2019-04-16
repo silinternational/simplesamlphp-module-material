@@ -40,17 +40,6 @@
 
                     <span flex></span>
 
-                    <?php
-                    $url = $this->data['learnMoreUrl'] ?? null;
-                    if (! empty($url)) {
-                    ?>
-                    <a href="<?= htmlentities($url) ?>" target="_blank" class="mdl-button mdl-button--primary margin">
-                        <?= $this->t('{material:nag:button_learn_more}') ?>
-                    </a>
-                    <?php
-                    }
-                    ?>
-
                     <button name="update" class="mdl-button mdl-button--raised mdl-button--primary">
                         <?= $this->t('{material:nag:button_add}') ?>
                     </button>

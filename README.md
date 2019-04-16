@@ -140,7 +140,6 @@ _Note:  This nag only works once since choosing later will simply set the nag da
 1.  Click **idp4** (third one)
 1.  Login as a user without any methods: `username=`**nag_for_method** `password=`**a**
 1.  Enter one of the following codes to verify (`94923279, 82743523, 77802769, 01970541, 37771076`)
-1.  The "learn more" link should be visible
 1.  Click **Add**
 1.  Click your browser's back button
 1.  Click **Remind me later**

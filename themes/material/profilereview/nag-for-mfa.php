@@ -41,7 +41,7 @@
                     <span flex></span>
 
                     <?php
-                    $url = $this->data['learnMoreUrl'] ?? null;
+                    $url = $this->data['mfaLearnMoreUrl'] ?? null;
                     if (! empty($url)) {
                     ?>
                     <a href="<?= htmlentities($url) ?>" target="_blank" class="mdl-button mdl-button--primary margin">
