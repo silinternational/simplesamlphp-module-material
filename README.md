@@ -103,6 +103,13 @@ If provided, an alert will be shown to the user filled with the content of that 
 1.  Click **idp2** (second one)
 1.  Forgot password link should be visible
 
+### Helpful links functionality
+
+1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp4** (third one)
+1.  Help link should be visible under login form
+1.  Profile link should be visible under login form
+
 ### Expiry functionality
 
 #### About to expire page
