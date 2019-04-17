@@ -131,14 +131,14 @@
 
             <section layout-children="row" child-spacing="space-around">
                 <?php if (! empty($this->data['helpCenterUrl'])): ?>
-                <a href="<?= $this->data['helpCenterUrl'] ?>" target="_blank">
-                    <?= $this->t('{material:login:help}') ?>
+                <a href="<?= $this->data['helpCenterUrl'] ?>" target="_blank" class="mdl-button mdl-button--colored mdl-typography--body-2">
+                    <?= $this->t('{material:login:help}') ?> <i class="material-icons">launch</i>
                 </a>
                 <?php endif; ?>
 
                 <?php if (! empty($this->data['profileUrl'])): ?>
-                <a href="<?= $this->data['profileUrl'] ?>" target="_blank">
-                    <?= $this->t('{material:login:profile}') ?>
+                <a href="<?= $this->data['profileUrl'] ?>" target="_blank" class="mdl-button mdl-button--colored mdl-typography--body-2">
+                    <?= $this->t('{material:login:profile}') ?> <i class="material-icons">launch</i>
                 </a>
                 <?php endif; ?>
             </section>
