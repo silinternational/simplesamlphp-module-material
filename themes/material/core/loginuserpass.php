@@ -45,8 +45,8 @@
         <?php include __DIR__ . '/../common-announcement.php' ?>
 
         <form method="post" autocomplete="off">
-            <input type="hidden" name="AuthState"
-                   value="<?= htmlentities($this->data['stateparams']['AuthState']) ?>" />
+            <input type="hidden" name="AuthState" value="<?= htmlentities($this->data['stateparams']['AuthState']) ?>" />
+
             <?php
             $csrfToken = htmlentities($this->data['csrfToken']);
             ?>
@@ -54,8 +54,7 @@
 
             <div class="mdl-card mdl-shadow--8dp fill-phone-viewport">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
-                    <img src="/logo.png"
-                         alt="<?= $this->t('{material:login:logo}', ['{idpName}' => $idpName]) ?>">
+                    <img src="/logo.png" alt="<?= $this->t('{material:login:logo}', ['{idpName}' => $idpName]) ?>">
                 </div>
 
                 <div class="mdl-card__title center">
@@ -69,20 +68,21 @@
                         <label for="username" class="mdl-textfield__label">
                             <?= $this->t('{material:login:label_username}') ?>
                         </label>
+
                         <?php
                         $username = htmlentities($this->data['username'] ?? null);
                         ?>
-                        <input type="text" name="username" class="mdl-textfield__input"
-                               value="<?= $username ?>" <?= empty($username) ? 'autofocus' : '' ?>
-                               id="username"/>
+                        <input type="text" name="username" class="mdl-textfield__input" value="<?= $username ?>" 
+                               <?= empty($username) ? 'autofocus' : '' ?> id="username"/>
                     </div>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <label for="password" class="mdl-textfield__label">
                             <?= $this->t('{material:login:label_password}') ?>
                         </label>
-                        <input type="password" name="password" class="mdl-textfield__input"
-                               <?= ! empty($username) ? 'autofocus' : '' ?> id="password"/>
+
+                        <input type="password" name="password" class="mdl-textfield__input" <?= ! empty($username) ? 'autofocus' : '' ?> 
+                               id="password"/>
                     </div>
                 </div>
 
@@ -114,8 +114,7 @@
                     $forgotPasswordUrl = htmlentities($this->configuration->getValue('passwordForgotUrl'));
                     if (! empty($forgotPasswordUrl)) {
                     ?>
-                    <a href="<?= $forgotPasswordUrl ?>" target="_blank"
-                       class="mdl-button mdl-button--colored mdl-typography--caption">
+                    <a href="<?= $forgotPasswordUrl ?>" target="_blank" class="mdl-button mdl-button--colored mdl-typography--caption">
                         <?= $this->t('{material:login:forgot}') ?>
                     </a>
                     <?php
@@ -129,6 +128,20 @@
                     </button>
                 </div>
             </div>
+
+            <section layout-children="row" child-spacing="space-around">
+                <?php if (! empty($this->data['helpCenterUrl'])): ?>
+                <a href="<?= $this->data['helpCenterUrl'] ?>" target="_blank">
+                    <?= $this->t('{material:login:help}') ?>
+                </a>
+                <?php endif; ?>
+
+                <?php if (! empty($this->data['profileUrl'])): ?>
+                <a href="<?= $this->data['profileUrl'] ?>" target="_blank">
+                    <?= $this->t('{material:login:profile}') ?>
+                </a>
+                <?php endif; ?>
+            </section>
         </form>
     </main>
 </div>
