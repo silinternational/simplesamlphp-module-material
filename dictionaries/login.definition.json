@@ -46,5 +46,17 @@
 		"es": "Logotipo de {idpName}",
 		"fr": "Logo {idpName}",
 		"ko": "{idpName} 로고"
+	},
+	"help": {
+		"en": "I need help",
+		"es": "necesito ayuda",
+		"fr": "j'ai besoin d'aide",
+		"ko": "도움이 필요해."
+	},
+	"profile": {
+		"en": "Manage my profile",
+		"es": "Administrar mi perfil",
+		"fr": "Gérer mon profil",
+		"ko": "내 프로필 관리"
 	}
 }

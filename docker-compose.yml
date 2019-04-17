@@ -83,11 +83,11 @@ services:
       IDP_NAME: "idp-2"
       IDP_DISPLAY_NAME: "IdP 2"
       ANALYTICS_ID: "UA-XXXX-Y"
-      PASSWORD_CHANGE_URL:  "http://example.org"
-      PASSWORD_FORGOT_URL:  "http://example.org"
+      PASSWORD_CHANGE_URL:  "https://example.org/change"
+      PASSWORD_FORGOT_URL:  "https://example.org/forgot"
 
-  idp4:  # used for mfa testing
-    image: silintl/ssp-base:develop
+  idp4:  # used for mfa testing (as well as some helpful links)
+    image: silintl/ssp-base:local-testing-with-develop-deps
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp4/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -126,6 +126,7 @@ services:
       ID_BROKER_BASE_URI: "http://broker"
       REMEMBER_ME_SECRET: "dummy"
       PROFILE_URL: "https://example.org/profile"
+      HELP_CENTER_URL: "https://example.org/help"
     command: ["bash", "-c", "whenavail silAuthDb 3306 60 ./run-idp.sh"]
 
   silAuthDb:

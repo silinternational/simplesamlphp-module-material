@@ -103,6 +103,13 @@ If provided, an alert will be shown to the user filled with the content of that 
 1.  Click **idp2** (second one)
 1.  Forgot password link should be visible
 
+### Helpful links functionality
+
+1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp4** (third one)
+1.  Help link should be visible under login form
+1.  Profile link should be visible under login form
+
 ### Expiry functionality
 
 #### About to expire page
@@ -129,6 +136,19 @@ _Note:  This nag only works once since choosing later will simply set the nag da
 1.  Click **idp4** (third one)
 1.  Login as an "unprotected" user: `username=`**nag_for_mfa** `password=`**a**
 1.  The "learn more" link should be visible
+1.  Click **Enable**
+1.  Click your browser's back button
+1.  Click **Remind me later**
+1.  Click **Logout**
+
+#### Nag about missing password recovery methods
+
+1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp4** (third one)
+1.  Login as a user without any methods: `username=`**nag_for_method** `password=`**a**
+1.  Enter one of the following codes to verify (`94923279, 82743523, 77802769, 01970541, 37771076`)
+1.  Click **Add**
+1.  Click your browser's back button
 1.  Click **Remind me later**
 1.  Click **Logout**
 
@@ -137,7 +157,6 @@ _Note:  This nag only works once since choosing later will simply set the nag da
 1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
 1.  Click **idp4** (third one)
 1.  Login as an "unsafe" user: `username=`**must_set_up_mfa** `password=`**a**
-1.  The "learn more" link should be visible
 
 #### Backup code
 
