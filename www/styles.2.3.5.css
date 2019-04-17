@@ -232,11 +232,16 @@ i.material-icons.mdl-typography--display-4 {
   font-size: 12px
 }
 
+
 /* special case where we want a button for all it's built-in characteristics, 
-   e.g., primary color, but also want to set the text apart a bit. */
+e.g., primary color, but also want to set the text apart a bit. */
 .mdl-button.mdl-typography--caption {
   text-transform: none;
   font-size: 12px
+}
+a.mdl-button.mdl-typography--body-2, a.mdl-button.mdl-typography--body-2 > i.material-icons {
+  text-transform: none;
+  font-size: 14px
 }
 
 /* didn't feel like the padding was enough out of the box */
