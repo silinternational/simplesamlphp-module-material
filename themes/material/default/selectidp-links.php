@@ -41,9 +41,13 @@
 
             <div class="mdl-layout-spacer"></div>
 
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="https://idphelp.sil.org" target="_blank"><?= $this->t('{material:selectidp:help}') ?></a>
-            </nav>
+            <?php if (! empty($this->data['helpCenterUrl'])): ?>
+                <nav class="mdl-navigation">
+                    <a href="<?= $this->data['helpCenterUrl'] ?>" target="_blank" class="mdl-navigation__link">
+                        <?= $this->t('{material:selectidp:help}') ?>
+                    </a>
+                </nav>
+            <?php endif; ?>
         </div>
     </header>
 
