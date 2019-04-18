@@ -11,7 +11,7 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": ">=5.4",
+    "php": ">=7.0",
     "roave/security-advisories": "dev-master",
     "simplesamlphp/composer-module-installer": "^1.1.5",
     "simplesamlphp/simplesamlphp": "^1.15.2",
