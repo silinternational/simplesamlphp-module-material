@@ -61,7 +61,7 @@
                                     <?= htmlentities($mfa['label']) ?> 
                                     
                                     <?php if ($mfa['type'] == 'backupcode'): ?>
-                                    <?= $this->t('{material:review:remaining}', ['{count}' => $mfa['data']['count']]) ?>
+                                    <?= $this->t('{material:review:remaining}', ['{count}' => (string) $mfa['data']['count']]) ?>
                                     <?php endif; ?>
                                     
                                     <span class="mdl-list__item-text-body">
