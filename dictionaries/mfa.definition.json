@@ -103,28 +103,28 @@
 		"ko": "오랜 시간이 경과 되었으니 키가 오른쪽 위로 삽입되었는지 확인 하십시오."
 	},
 	"manager_icon": {
-		"en": "Manager icon",
-		"es": "Icono de administrador",
-		"fr": "Icône du gestionnaire",
-		"ko": "관리자 아이콘"
+		"en": "Recovery contact icon",
+		"es": "Icono de contacto de recuperación",
+		"fr": "Icône du contact de récupération",
+		"ko": "복구 연락처 아이콘"
 	},
 	"manager_header": {
-		"en": "Manager help",
-		"es": "Ayuda del gerente",
-		"fr": "Aide gestionnaire",
-		"ko": "관리자 도움말"
+		"en": "Recovery contact help",
+		"es": "Ayuda de contacto de recuperación",
+		"fr": "Aide de contact de récupération",
+		"ko": "복구 연락처"
 	},
 	"manager_info": {
-		"en": "We can send a code to your manager which can be used as a temporary 2-Step Verification option.  The email address on file (masked for privacy) is {managerEmail}.",
-		"es": "Podemos enviar un código a su administrador, que se puede utilizar como una opción de Verificación de 2 pasos temporal. La dirección de correo electrónico en el archivo (enmascarada para privacidad) es {managerEmail}.",
-		"fr": "Nous pouvons envoyer un code à votre responsable qui peut être utilisé comme option temporaire de vérification en deux étapes. L'adresse électronique au dossier (masquée pour la confidentialité) est {managerEmail}.",
-		"ko": "관리자는 임시 2 단계 인증 옵션으로 사용할 수있는 코드를 보낼 수 있습니다. 파일의 이메일 주소 (개인 정보 보호용으로 숨김)는 {managerEmail}입니다."
+		"en": "We can send a code to your recovery contact which can be used as a temporary 2-Step Verification option.  The email address on file (masked for privacy) is {managerEmail}.",
+		"es": "Podemos enviar un código a su contacto de recuperación que puede usarse como una opción de Verificación temporal de 2 pasos. La dirección de correo electrónico en el archivo (enmascarada por privacidad) es {managerEmail}.",
+		"fr": "Nous pouvons envoyer un code à votre contact de récupération, qui peut être utilisé comme option de vérification temporaire en deux étapes. L'adresse électronique au dossier (masquée pour la confidentialité) est {managerEmail}.",
+		"ko": "\n임시 2 단계 인증 옵션으로 사용할 수있는 코드를 복구 담당자에게 보낼 수 있습니다. 파일의 이메일 주소 (개인 정보 보호를 위해 마스크 됨)는 {managerEmail}입니다."
 	},
 	"manager_sent": {
-		"en": "A temporary code was sent your manager at {managerEmail}.",
-		"es": "Se envió un código temporal a su administrador en {managerEmail}.",
-		"fr": "Un code temporaire a été envoyé à votre responsable à l'adresse {managerEmail}.",
-		"ko": "{managerEmail}에서 임시 코드가 관리자에게 전송되었습니다."
+		"en": "A temporary code was sent your recovery contact at {managerEmail}.",
+		"es": "Se envió un código temporal a su contacto de recuperación en {managerEmail}.",
+		"fr": "Un code temporaire a été envoyé à votre contact de récupération à l'adresse {managerEmail}.",
+		"ko": "{managerEmail} (으)로 복구 담당자에게 임시 코드를 보냈습니다."
 	},
 	"manager_input": {
 		"en": "Enter code",
@@ -253,10 +253,10 @@
 		"ko": "도움이 필요해."
 	},
 	"use_manager": {
-		"en": "Use code from my manager",
-		"es": "Usa el código de mi manager",
-		"fr": "Utiliser le code de mon manager",
-		"ko": "내 관리자의 코드 사용"
+		"en": "Use code from my recovery contact",
+		"es": "Usar código de mi contacto de recuperación",
+		"fr": "Utiliser le code de mon contact de récupération",
+		"ko": "복구 담당자의 코드 사용"
 	},
 	"button_verify": {
 		"en": "Verify",
