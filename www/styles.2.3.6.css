@@ -110,8 +110,9 @@ i.material-icons.mdl-typography--display-4 {
   background-color: white;
 }
 
+/* file entire card, so need to match mdl-card's min-height of 200px */
 .fixed-height {
-  height: 185px;
+  height: 200px;
 }
 
 .fill-parent {
@@ -121,6 +122,7 @@ i.material-icons.mdl-typography--display-4 {
 
 .scale-to-parent {
   max-width: 90%;
+  max-height: 90%;
 }
 
 .hide {
