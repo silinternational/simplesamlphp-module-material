@@ -33,6 +33,10 @@
             });
         }
 
+        function preventDefault(event) {
+            event.preventDefault();
+        }
+
         ga('send', 'event', 'reCAPTCHA', 'required');
     </script>
     <?php
@@ -44,7 +48,7 @@
     <main class="mdl-layout__content" layout-children="column" child-spacing="center">
         <?php include __DIR__ . '/../common-announcement.php' ?>
 
-        <form method="post" autocomplete="off" onsubmit="function changeSubmit(event) { event.target.onsubmit =  pd(event); function pd(e) { e.preventDefault() }}">
+        <form method="post" autocomplete="off" onsubmit="event.target.onsubmit = preventDefault">
             <input type="hidden" name="AuthState" value="<?= htmlentities($this->data['stateparams']['AuthState']) ?>" />
 
             <?php
