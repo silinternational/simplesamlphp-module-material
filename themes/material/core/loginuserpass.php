@@ -12,6 +12,12 @@
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
+    <script>
+        function preventDefault(event) {
+            event.preventDefault();
+        }
+    </script>
+
     <?php
     $siteKey = htmlentities($this->data['recaptcha.siteKey'] ?? null);
 
@@ -31,10 +37,6 @@
                 sitekey: '<?= $siteKey ?>',
                 callback: submitForm
             });
-        }
-
-        function preventDefault(event) {
-            event.preventDefault();
         }
 
         ga('send', 'event', 'reCAPTCHA', 'required');
