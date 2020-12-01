@@ -87,9 +87,7 @@
     </script>
 </head>
 
-<?php $isU2fSupported = $this->data['supportsU2f']; ?>
-
-<body class="gradient-bg" onload="<?= $isU2fSupported ? 'verifyU2f()' : '' ?>">
+<body class="gradient-bg" onload="verifyU2f()">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -113,19 +111,11 @@
                     </h1>
                 </div>
 
-                <?php if ($isU2fSupported): ?>
                 <div class="mdl-card__title">
                     <p class="mdl-card__subtitle-text">
                         <?= $this->t('{material:mfa:u2f_instructions}') ?>
                     </p>
                 </div>
-                <?php else: ?>
-                <div class="mdl-card__title">
-                    <p class="mdl-typography--text-center mdl-color-text--red">
-                        <?= $this->t('{material:mfa:u2f_unsupported}') ?>
-                    </p>
-                </div>
-                <?php endif; ?>
 
                 <?php
                 $message = $this->data['errorMessage'];
