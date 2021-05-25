@@ -130,7 +130,7 @@ services:
     command: ["bash", "-c", "whenavail silAuthDb 3306 60 ./run-idp.sh"]
 
   silAuthDb:
-      image: silintl/mariadb:latest
+      image: mariadb:10
       ports:
         - "3306"
       environment:
@@ -170,7 +170,7 @@ services:
     command: ["bash", "-c", "whenavail brokerDb 3306 60 ./yii migrate --interactive=0 && ./run.sh"]
 
   brokerDb:
-      image: silintl/mariadb:latest
+      image: mariadb:10
       ports:
         - "3306"
       environment:
