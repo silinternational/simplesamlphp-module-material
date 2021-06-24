@@ -4,7 +4,6 @@ services:
   hub1:
     image: silintl/ssp-base:develop
     volumes:
-      - ./development/run.sh:/data/run.sh
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/hub1/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/hub1/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/idp-remote.php
@@ -38,7 +37,6 @@ services:
   idp1:  # used for basic testing
     image: silintl/ssp-base:develop
     volumes:
-      - ./development/run.sh:/data/run.sh
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp1/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/idp1/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
@@ -61,7 +59,6 @@ services:
   idp2:  # used for expiry testing
     image: silintl/ssp-base:develop
     volumes:
-      - ./development/run.sh:/data/run.sh
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp2/enable:/data/vendor/simplesamlphp/simplesamlphp/modules/exampleauth/enable
       - ./development/idp2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -92,7 +89,6 @@ services:
   idp4:  # used for mfa testing (as well as some helpful links)
     image: silintl/ssp-base:develop
     volumes:
-      - ./development/run.sh:/data/run.sh
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp4/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/idp4/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
@@ -171,7 +167,6 @@ services:
       API_ACCESS_KEYS: "test-cli-abc123"
       APP_ENV: "dev"
       MIGRATE_PW_FROM_LDAP: "false"
-    command: ["bash", "-c", "whenavail brokerDb 3306 60 ./yii migrate --interactive=0 && ./run.sh"]
 
   brokerDb:
       image: mariadb:10
@@ -197,7 +192,6 @@ services:
   hub2:  # used for announcement testing
     image: silintl/ssp-base:develop
     volumes:
-      - ./development/run.sh:/data/run.sh
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/hub2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/hub2/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
@@ -228,7 +222,6 @@ services:
   idp3:  # used for announcement testing
     image: silintl/ssp-base:develop
     volumes:
-      - ./development/run.sh:/data/run.sh
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp3/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/idp3/saml20-idp-hosted.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-hosted.php
@@ -256,7 +249,6 @@ services:
   sp1:
     image: silintl/ssp-base:develop
     volumes:
-      - ./development/run.sh:/data/run.sh
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/sp1/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/sp1/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
@@ -278,7 +270,6 @@ services:
   sp2:  # used for announcement testing
     image: silintl/ssp-base:develop
     volumes:
-      - ./development/run.sh:/data/run.sh
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/sp2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
       - ./development/sp2/saml20-idp-remote.php:/data/vendor/simplesamlphp/simplesamlphp/metadata/saml20-idp-remote.php
