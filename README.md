@@ -249,10 +249,10 @@ Xdebug can be enabled by doing the following:
 ## Configuring PhpStorm for remote debugging
 
 In PhpStorm go to: Preferences > PHP > Debug > DBGp Proxy and set the following settings:
-- Host: 172.17.0.1
+- Host: (your IP address or hostname)
 - Port: 9000
   Set path mappings in: Preferences > PHP > Servers
-- Add server 'localhost' and map 'application' to '/data' (varies by app)
-  If this step is omitted, PhpStorm should prompt when an unrecognized path is encountered.
+- Add a server and map the project folder to '/data/vendor/simplesamlphp/simplesamlphp/modules/material'
+- Map other directories as needed. PhpStorm should prompt when an unrecognized path is encountered.
 
 Then start listening by clicking the "listen" button on the PhpStorm toolbar.
