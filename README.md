@@ -232,3 +232,27 @@ Translations are categorized by page in definition files located in the `diction
 Localization is affected by the configuration setting `language.available`. Only language codes found in this property will be utilized.  
 For example, if a translation is provided in Afrikaans for this module, the configuration must be adjusted to make 'af' an available
 language. If that's not done, the translation function will not utilize the translations even if provided.
+
+### Debugging
+
+Xdebug can be enabled by doing the following:
+
+1. Define `REMOTE_DEBUG_IP` in `local.env`. This should be the IP address of your development machine, i.e. the one that
+   is running your IDE. If you're using Linux as your Docker host, you can use 172.17.0.1 here.
+2. Map run-debug.sh into the container you wish to debug. For example:
+```yaml
+    volumes:
+      - ./development/run-debug.sh:/data/run.sh
+```
+3. Enable debugging in your IDE. See the next section for PhpStorm setup.
+
+## Configuring PhpStorm for remote debugging
+
+In PhpStorm go to: Preferences > PHP > Debug > DBGp Proxy and set the following settings:
+- Host: 172.17.0.1
+- Port: 9000
+  Set path mappings in: Preferences > PHP > Servers
+- Add server 'localhost' and map 'application' to '/data' (varies by app)
+  If this step is omitted, PhpStorm should prompt when an unrecognized path is encountered.
+
+Then start listening by clicking the "listen" button on the PhpStorm toolbar.
