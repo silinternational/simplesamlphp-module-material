@@ -238,7 +238,8 @@ language. If that's not done, the translation function will not utilize the tran
 Xdebug can be enabled by doing the following:
 
 1. Define `REMOTE_DEBUG_IP` in `local.env`. This should be the IP address of your development machine, i.e. the one that
-   is running your IDE. If you're using Linux as your Docker host, you can use 172.17.0.1 here.
+   is running your IDE. If you're using Linux as your Docker host, you can use 172.17.0.1 here. Note that the IP address
+   shown in your containers' logs may not be your machines actual IP address (it could be for a VM, for example).
 2. Map run-debug.sh into the container you wish to debug. For example:
 ```yaml
     volumes:
@@ -248,12 +249,13 @@ Xdebug can be enabled by doing the following:
 
 ## Configuring PhpStorm for remote debugging
 
-In PhpStorm go to: Preferences > PHP > Debug > DBGp Proxy and set the following settings:
+In PhpStorm go to: Preferences > Languages & Frameworks > PHP > Debug > DBGp Proxy and set the following settings:
 - Host: (your IP address or hostname)
 - Port: 9000
   
-Set path mappings in: Preferences > PHP > Servers
-- Add a server and map the project folder to '/data/vendor/simplesamlphp/simplesamlphp/modules/material'
+Set path mappings in: Preferences > Languages & Frameworks > PHP > Servers
+- Add a server, giving it your IP address and a port of 9000, and map the project folder to
+  '/data/vendor/simplesamlphp/simplesamlphp/modules/material'
 - Map other directories as needed. PhpStorm should prompt when an unrecognized path is encountered.
 
 Then start listening by clicking the "listen" button on the PhpStorm toolbar.
