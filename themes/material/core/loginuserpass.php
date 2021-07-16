@@ -54,9 +54,13 @@
             <input type="hidden" name="AuthState" value="<?= htmlentities($this->data['stateparams']['AuthState']) ?>" />
 
             <?php
-            $csrfToken = htmlentities($this->data['csrfToken']);
+            if (key_exists('csrfToken', $this->data)) {
+                $csrfToken = htmlentities($this->data['csrfToken']);
+                ?>
+                <input type="hidden" name="csrf-token" value="<?= $csrfToken ?>" />
+                <?php
+            }
             ?>
-            <input type="hidden" name="csrf-token" value="<?= $csrfToken ?>" />
 
             <div class="mdl-card mdl-shadow--8dp fill-phone-viewport">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
