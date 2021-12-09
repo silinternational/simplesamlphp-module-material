@@ -5,7 +5,10 @@
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
-    <script src="mfa-u2f-api.js"></script>
+    <?php
+    $webauthnJsFileHash = md5_file(__DIR__ . '/../../../www/simplewebauthn/browser.js');
+    ?>
+    <script src="simplewebauthn/browser.js?v=?v=<?= $webauthnJsFileHash ?>"></script>
 
     <script>
         function verifyU2f() {
@@ -87,9 +90,9 @@
     </script>
 </head>
 
-<?php $isU2fSupported = $this->data['supportsU2f']; ?>
+<?php $isWebAuthnSupported = $this->data['supportsWebAuthn']; ?>
 
-<body class="gradient-bg" onload="<?= $isU2fSupported ? 'verifyU2f()' : '' ?>">
+<body class="gradient-bg" onload="<?= $isWebAuthnSupported ? 'verifyU2f()' : '' ?>">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -103,26 +106,26 @@
         <form layout-children="column" method="post">
             <div class="mdl-card mdl-shadow--8dp">
                 <div class="mdl-card__media white-bg margin" layout-children="column">
-                    <img src="mfa-u2f.svg" alt="<?= $this->t('{material:mfa:u2f_icon}') ?>"
+                    <img src="mfa-webauthn.svg" alt="<?= $this->t('{material:mfa:webauthn_icon}') ?>"
                          class="icon">
                 </div>
 
                 <div class="mdl-card__title center">
                     <h1 class="mdl-card__title-text">
-                        <?= $this->t('{material:mfa:u2f_header}') ?>
+                        <?= $this->t('{material:mfa:webauthn_header}') ?>
                     </h1>
                 </div>
 
-                <?php if ($isU2fSupported): ?>
+                <?php if ($isWebAuthnSupported): ?>
                 <div class="mdl-card__title">
                     <p class="mdl-card__subtitle-text">
-                        <?= $this->t('{material:mfa:u2f_instructions}') ?>
+                        <?= $this->t('{material:mfa:webauthn_instructions}') ?>
                     </p>
                 </div>
                 <?php else: ?>
                 <div class="mdl-card__title">
                     <p class="mdl-typography--text-center mdl-color-text--red">
-                        <?= $this->t('{material:mfa:u2f_unsupported}') ?>
+                        <?= $this->t('{material:mfa:webauthn_unsupported}') ?>
                     </p>
                 </div>
                 <?php endif; ?>
@@ -132,7 +135,7 @@
                 if (! empty($message)) {
                 ?>
                 <script>
-                    ga('send','event','error','u2f',<?= json_encode($message) ?>);
+                    ga('send','event','error','webauthn',<?= json_encode($message) ?>);
                 </script>
                 <?php
                 }
