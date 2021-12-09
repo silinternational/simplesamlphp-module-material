@@ -52,13 +52,13 @@ class m991231_235959_insert_mfa_test_users extends Migration
             ['id','user_id','type'      ,'external_uuid'                       ,'label'             ,'verified','created_utc'        ],[
             [ 1  , 3       ,'backupcode',NULL                                  ,'Printable Codes'   , 1        , MySqlDateTime::now()],
             [ 2  , 4       ,'totp'      ,'38764a89-b904-404e-a195-1ad2bcfabf75','Smartphone App'    , 1        , MySqlDateTime::now()], // JVRXKYTMPBEVKXLS
-            [ 3  , 5       ,'u2f'       ,'6092a08c-b271-4971-996a-6577333a7b6d','Security Key (U2F)', 1        , MySqlDateTime::now()],
+            [ 3  , 5       ,'webauthn'  ,'6092a08c-b271-4971-996a-6577333a7b6d','Security Key (U2F)', 1        , MySqlDateTime::now()],
             [ 4  , 6       ,'backupcode',NULL                                  ,'Printable Codes'   , 1        , MySqlDateTime::now()],
             [ 5  , 6       ,'totp'      ,'38764a89-b904-404e-a195-1ad2bcfabf75','Smartphone App'    , 1        , MySqlDateTime::now()], // JVRXKYTMPBEVKXLS
-            [ 6  , 6       ,'u2f'       ,'6092a08c-b271-4971-996a-6577333a7b6d','Security Key (U2F)', 1        , MySqlDateTime::now()],
+            [ 6  , 6       ,'webauthn'  ,'6092a08c-b271-4971-996a-6577333a7b6d','Security Key (U2F)', 1        , MySqlDateTime::now()],
             [ 7  , 7       ,'backupcode',NULL                                  ,'Printable Codes'   , 1        , MySqlDateTime::now()],
             [ 8  , 7       ,'totp'      ,'38764a89-b904-404e-a195-1ad2bcfabf75','Smartphone App'    , 1        , MySqlDateTime::now()], // JVRXKYTMPBEVKXLS
-            [ 9  , 7       ,'u2f'       ,'6092a08c-b271-4971-996a-6577333a7b6d','Security Key (U2F)', 1        , MySqlDateTime::now()],
+            [ 9  , 7       ,'webauthn'  ,'6092a08c-b271-4971-996a-6577333a7b6d','Security Key (U2F)', 1        , MySqlDateTime::now()],
             [ 10 , 8       ,'backupcode',NULL                                  ,'Printable Codes'   , 1        , MySqlDateTime::now()],
             [ 11 , 9       ,'webauthn'  ,'11111111-1111-4111-1111-111111111111','Security Key'      , 1        , MySqlDateTime::now()],
             [ 12 , 10      ,'backupcode',NULL                                  ,'Printable Codes'   , 1        , MySqlDateTime::now()],
