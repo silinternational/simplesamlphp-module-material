@@ -66,7 +66,19 @@
 		"fr": "Clé de sécurité",
 		"ko": "보안키"
 	},
+	"webauthn_header": {
+		"en": "Security key",
+		"es": "Clave de seguridad",
+		"fr": "Clé de sécurité",
+		"ko": "보안키"
+	},
 	"u2f_icon": {
+		"en": "USB key icon",
+		"es": "Icono de la llave USB",
+		"fr": "Icône de clé USB",
+		"ko": "USB 키 아이콘"
+	},
+	"webauthn_icon": {
 		"en": "USB key icon",
 		"es": "Icono de la llave USB",
 		"fr": "Icône de clé USB",
@@ -78,7 +90,19 @@
 		"fr": "Vous pouvez maintenant insérer votre clé de sécurité et appuyer sur le bouton.",
 		"ko": "이제 보안 키를 삽입하고 단추를 누를 수 있습니다."
 	},
+	"webauthn_instructions": {
+		"en": "You may now insert your security key and press its button.",
+		"es": "Ahora puede insertar su clave de seguridad y presionar su botón.",
+		"fr": "Vous pouvez maintenant insérer votre clé de sécurité et appuyer sur le bouton.",
+		"ko": "이제 보안 키를 삽입하고 단추를 누를 수 있습니다."
+	},
 	"u2f_unsupported": {
+		"en": "Unsupported in your current browser.  Please consider a more secure browser like <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
+		"es": "No compatible en su navegador actual. Considere un navegador más seguro como <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
+		"fr": "Non compatible avec votre navigateur actuel. Veuillez considérer un navigateur plus sûr comme <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
+		"ko": "현재 브라우저에서 지원되지 않습니다. <a href='https://www.google.com/chrome/browser' target='_blank'>Chrome과</a> 같은 보다 안전한 브라우저를 고려하십시오."
+	},
+	"webauthn_unsupported": {
 		"en": "Unsupported in your current browser.  Please consider a more secure browser like <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
 		"es": "No compatible en su navegador actual. Considere un navegador más seguro como <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
 		"fr": "Non compatible avec votre navigateur actuel. Veuillez considérer un navigateur plus sûr comme <a href='https://www.google.com/chrome/browser' target='_blank'>Google Chrome</a>.",
@@ -229,6 +253,12 @@
 		"ko": "추가 옵션"
 	},
 	"use_u2f": {
+		"en": "Use my security key instead",
+		"es": "Use mi clave de seguridad en su lugar",
+		"fr": "Utiliser plutôt ma clé de sécurité",
+		"ko": "내 보안키 사용"
+	},
+	"use_webauthn": {
 		"en": "Use my security key instead",
 		"es": "Use mi clave de seguridad en su lugar",
 		"fr": "Utiliser plutôt ma clé de sécurité",
