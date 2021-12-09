@@ -8,79 +8,46 @@
     <?php
     $webauthnJsFileHash = md5_file(__DIR__ . '/../../../www/simplewebauthn/browser.js');
     ?>
-    <script src="simplewebauthn/browser.js?v=?v=<?= $webauthnJsFileHash ?>"></script>
+    <script src="simplewebauthn/browser.js?v=<?= $webauthnJsFileHash ?>"></script>
 
     <script>
-        function verifyU2f() {
-            var u2fSignRequest = <?= json_encode($this->data['mfaOption']['data']) ?> || {};
-
-            u2f.sign(u2fSignRequest.appId, u2fSignRequest.challenge, [u2fSignRequest], handleU2fResponse);
+        function verifyWebAuthn() {
+            const loginChallenge = <?= \json_encode($this->data['mfaOption']['data']) ?> || {};
+            SimpleWebAuthnBrowser.startAuthentication(loginChallenge.publicKey).then(submitForm).catch(handleError);
         }
 
-        function handleU2fResponse(u2fResponse) {
-            if (isU2fError(u2fResponse)) {
-                return handleError(u2fResponse);
-            }
-
-            submitForm(u2fResponse);
-        }
-
-        /**
-         * @param {u2f.Error|u2f.SignResponse=} response
-         */
-        function isU2fError (response) {
-            return !!response.errorCode;
-        }
-
-        /**
-         * @param {u2f.Error=} error
-         */
-        function handleError(error) {
-            var message = error.errorMessage || createMessage(error.errorCode);
-
-            var errorNode = document.querySelector('p.error');
+        function handleError(errorMessage) {
+            console.error('errorMessage', errorMessage); // TEMP
+            
+            const errorNode = document.querySelector('p.error');
 
             errorNode.classList.remove('hide');
-            errorNode.querySelector('span').textContent = message;
+            errorNode.querySelector('span').textContent = errorMessage;
 
             offerRetry();
         }
 
-        /**
-         * https://developers.yubico.com/U2F/Libraries/Client_error_codes.html
-         * @param {u2f.ErrorCodes=} code
-         */
-        function createMessage (code) {
-            switch (code) {
-                case 1:
-                case 2:
-                case 3: return <?= json_encode($this->t('{material:mfa:u2f_error_unknown}')) ?>;
-                case 4: return <?= json_encode($this->t('{material:mfa:u2f_error_wrong_key}')) ?>;
-                case 5: return <?= json_encode($this->t('{material:mfa:u2f_error_timeout}')) ?>;
-            }
-        }
-
         function offerRetry() {
-            var retryButton = document.querySelector('.mdl-button.mdl-color-text--red');
+            const retryButton = document.querySelector('.mdl-button.mdl-color-text--red');
 
             retryButton.classList.remove('hide');
         }
 
-        function submitForm(u2fResponse) {
-            var form = document.querySelector('form');
-            var submissionInput  = createHiddenInput('submitMfa');
-            var u2fResponseInput = createHiddenInput('mfaSubmission');
+        function submitForm(webAuthnResponse) {
+            const form = document.querySelector('form');
+            const submissionInput  = createHiddenInput('submitMfa');
+            const webAuthnResponseInput = createHiddenInput('mfaSubmission');
 
-            u2fResponseInput.value = JSON.stringify(u2fResponse);
+            webAuthnResponseInput.value = JSON.stringify(webAuthnResponse);
 
             form.appendChild(submissionInput);
-            form.appendChild(u2fResponseInput);
+            form.appendChild(webAuthnResponseInput);
 
             form.submit();
         }
 
         function createHiddenInput(name) {
-            var input = document.createElement('input');
+            const input = document.createElement('input');
 
             input.type = 'hidden';
             input.name = name;
@@ -92,7 +59,7 @@
 
 <?php $isWebAuthnSupported = $this->data['supportsWebAuthn']; ?>
 
-<body class="gradient-bg" onload="<?= $isWebAuthnSupported ? 'verifyU2f()' : '' ?>">
+<body class="gradient-bg" onload="<?= $isWebAuthnSupported ? 'verifyWebAuthn()' : '' ?>">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
@@ -133,11 +100,11 @@
                 <?php
                 $message = $this->data['errorMessage'];
                 if (! empty($message)) {
-                ?>
-                <script>
-                    ga('send','event','error','webauthn',<?= json_encode($message) ?>);
-                </script>
-                <?php
+                    ?>
+                    <script>
+                        ga('send','event','error','webauthn',<?= \json_encode($message) ?>);
+                    </script>
+                    <?php
                 }
                 ?>
                 <div class="mdl-card__supporting-text" layout-children="column">
@@ -153,7 +120,7 @@
                 <div class="mdl-card__actions" layout-children="row">
                     <span flex></span>
                     <!-- used type=button to avoid form submission on click -->
-                    <button type="button" onclick="verifyU2f()"
+                    <button type="button" onclick="verifyWebAuthn()"
                            class="mdl-button mdl-color-text--red <?= ! empty($message) ? 'show' : 'hide' ?>">
                         <?= $this->t('{material:mfa:button_try_again}') ?>
                     </button>
