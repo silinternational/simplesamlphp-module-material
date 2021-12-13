@@ -114,6 +114,12 @@
 		"fr": "Quelque chose s'est mal passé avec cette demande, impossible de vérifier pour le moment.",
 		"ko": "요청에 문제가 발생하여 지금은 확인할 수 없습니다."
 	},
+	"webauthn_error_unknown": {
+		"en": "Something went wrong with that request, unable to verify at this time.",
+		"es": "Algo salió mal con esa solicitud, no se pudo verificar en este momento.",
+		"fr": "Quelque chose s'est mal passé avec cette demande, impossible de vérifier pour le moment.",
+		"ko": "요청에 문제가 발생하여 지금은 확인할 수 없습니다."
+	},
 	"u2f_error_wrong_key": {
 		"en": "This may not be the correct key for this site.",
 		"es": "Esta puede no ser la clave correcta para este sitio.",
@@ -125,6 +131,18 @@
 		"es": "Eso llevó demasiado tiempo, verifique que su clave esté insertada boca arriba.",
 		"fr": "Cela a pris un peu trop de temps, vérifiez que votre clé est insérée dans le bons sens.",
 		"ko": "오랜 시간이 경과 되었으니 키가 오른쪽 위로 삽입되었는지 확인 하십시오."
+	},
+	"webauthn_error_abort": {
+		"en": "It looks like you clicked cancel. Would you like us to try again?",
+		"es": "",
+		"fr": "",
+		"ko": ""
+	},
+	"webauthn_error_not_allowed": {
+		"en": "Something about that didn't work. Please ensure that your security key is plugged in and that you touch it within 60 seconds when it blinks.",
+		"es": "",
+		"fr": "",
+		"ko": ""
 	},
 	"manager_icon": {
 		"en": "Recovery contact icon",

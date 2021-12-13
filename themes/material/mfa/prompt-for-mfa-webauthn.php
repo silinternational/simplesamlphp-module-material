@@ -16,17 +16,28 @@
             SimpleWebAuthnBrowser.startAuthentication(loginChallenge.publicKey).then(submitForm).catch(handleError);
         }
 
-        function handleError(errorMessage) {
-            console.error('errorMessage', errorMessage); // TEMP
+        function handleError(error) {
+            console.error(error)
+            const errorMessage = createMessage(error)
             
             const errorNode = document.querySelector('p.error');
-
             errorNode.classList.remove('hide');
             errorNode.querySelector('span').textContent = errorMessage;
 
             offerRetry();
         }
-
+        
+        function createMessage (error) {
+            switch (error.name) {
+                case 'AbortError':
+                    return <?= json_encode($this->t('{material:mfa:webauthn_error_abort}')) ?>;
+                case 'NotAllowedError':
+                    return <?= json_encode($this->t('{material:mfa:webauthn_error_not_allowed}')) ?>;
+                default:
+                    return <?= json_encode($this->t('{material:mfa:webauthn_error_unknown}')) ?>;
+            }
+        }
+        
         function offerRetry() {
             const retryButton = document.querySelector('.mdl-button.mdl-color-text--red');
 
