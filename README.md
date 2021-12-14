@@ -185,11 +185,26 @@ _Note:  This nag only works once since choosing later will simply set the nag da
 1.  Insert key and press
 1.  Click **Logout**
 
+#### Key (WebAuthn)
+
+1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp4** (third one)
+1.  Login as a "webauthn" user: `username=`**has_webauthn** `password=`**a**
+1.  Insert key and press
+1.  Click **Logout**
+
 #### Multiple options
 
 1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
 1.  Click **idp4** (third one)
 1.  Login as a "multiple option" user: `username=`**has_all** `password=`**a**
+1.  Click **MORE OPTIONS**
+
+#### Multiple options (legacy, with U2F)
+
+1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
+1.  Click **idp4** (third one)
+1.  Login as a "multiple option" user: `username=`**has_all_legacy** `password=`**a**
 1.  Click **MORE OPTIONS**
 
 #### Manager rescue

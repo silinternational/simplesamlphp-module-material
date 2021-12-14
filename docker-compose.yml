@@ -288,3 +288,11 @@ services:
       SECRET_SALT: "xbcCMIHHzsgE8yYC6OIBjsp+ruZYghHn1k5Bv/IGbrg="
       IDP_NAME: "sp-2"
       IDP_DISPLAY_NAME: "SP 2"
+
+  node:
+    image: node:lts-alpine
+    volumes:
+      - ./package.json:/data/package.json
+      - ./package-lock.json:/data/package-lock.json
+      - ./node_modules:/data/node_modules
+    working_dir: /data

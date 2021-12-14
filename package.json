@@ -1,0 +1,6 @@
+{
+  "name": "simplesamlphp-module-material",
+  "dependencies": {
+    "@simplewebauthn/browser": "^4.1.0"
+  }
+}
