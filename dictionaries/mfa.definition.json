@@ -135,13 +135,13 @@
 	"webauthn_error_abort": {
 		"en": "It looks like you clicked cancel. Would you like us to try again?",
 		"es": "",
-		"fr": "",
+		"fr": "Il semble que vous ayez cliqué sur annuler. Souhaitez-vous que nous essayions à nouveau ?",
 		"ko": ""
 	},
 	"webauthn_error_not_allowed": {
 		"en": "Something about that didn't work. Please ensure that your security key is plugged in and that you touch it within 60 seconds when it blinks.",
 		"es": "",
-		"fr": "",
+		"fr": "Quelque chose n'a pas fonctionné avec ça. Veuillez vous assurer que votre clé de sécurité est insérée et que vous la touchez dans les 60 secondes lorsqu'elle clignote.",
 		"ko": ""
 	},
 	"manager_icon": {
