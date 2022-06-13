@@ -1,4 +1,3 @@
-
 {
 	"title": {
 		"en": "2-Step Verification",
@@ -154,13 +153,13 @@
 		"en": "Ask Your Recovery Contact for Help",
 		"es": "Pida ayuda de contacto de recuperación",
 		"fr": "Demandez de l'aide à votre contact de récupération",
-		"ko": "복구 연락처"
+		"ko": "복구 담당자에게 도움을 요청하십시오"
 	},
 	"manager_info": {
 		"en": "You can send a 2-step verification code to your recovery contact (usually your supervisor). The email we have for your recovery contact is:<br><br><code>{managerEmail}</code><br><br>We've hidden most of the letters for your contact's protection.",
 		"es": "Podemos enviar un código a su contacto de recuperación que puede usarse como una opción de Verificación temporal de 2 pasos. La dirección de correo electrónico en el archivo (enmascarada por privacidad) es {managerEmail}.",
 		"fr": "Vous pouvez envoyer un code de vérification en deux étapes à votre contact de récupération (en général votre superviseur). L'adresse électronique que nous avons pour votre contact de récupération est:<br><br><code>{managerEmail}</code><br><br>. Nous avons caché la plupart des lettres pour la protection de votre contact.",
-		"ko": "\n임시 2 단계 인증 옵션으로 사용할 수있는 코드를 복구 담당자에게 보낼 수 있습니다. 파일의 이메일 주소 (개인 정보 보호를 위해 마스크 됨)는 {managerEmail}입니다."
+		"ko": "2단계 인증 코드를 복구 연락처(보통 상사)에게 보낼 수 있습니다. 복구 연락처에 대한 이메일은 다음과 같습니다. <br><br><code>{managerEmail}</code><br><br> 연락처 보호를 위해 대부분의 편지를 숨겼습니다."
 	},
 	"manager_sent": {
 		"en": "A temporary code was sent your recovery contact at {managerEmail}.",
@@ -370,7 +369,7 @@
 		"en": "Send code",
 		"es": "Enviar código",
 		"fr": "Envoyer code",
-		"ko": "보내다"
+		"ko": "코드 보내기"
 	},
 	"button_cancel": {
 		"en": "Cancel",
