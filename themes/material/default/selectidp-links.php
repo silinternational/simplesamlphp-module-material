@@ -62,7 +62,7 @@
             <input type="hidden" name="returnIDParam"
                    value="<?= htmlentities($this->data['returnIDParam']) ?>" />
             
-            <ul class="mdl-list">
+            <ul class="">
             <?php
             // in order to bypass some built-in simplesaml behavior, an extra idp
             // might've been added.  It's not meant to be displayed.
@@ -81,15 +81,12 @@
                 $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
             ?>
             
-            <li onclick="setSelectedIdp('<?= $idpId ?>')" class="mdl-list__item" title="<?= $hoverText ?>">
-                <span class="mdl-list__item-primary-content">
-                    <div class="mdl-card mdl-shadow--2dp">
-
-                        <img id="<?= $idpId ?>" class="mdl-list__item-avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                                : $idp['logoURL'] ?>" />
-                        <?= $idp['name'] ?>
-                    </div>
-                </span>
+            <li onclick="setSelectedIdp('<?= $idpId ?>')" class="list_item" title="<?= $hoverText ?>">
+                <div class="content">
+                    <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                            : $idp['logoURL'] ?>" />
+                    <?= $name ?>
+                </div>
             </li>
 
             <?php
@@ -97,7 +94,7 @@
             ?>
             </ul>
 
-            <ul class="mdl-list">
+            <ul class="">
                 <?php
             foreach ($disabledIdps as $idp) {
                 $name = htmlentities($this->t($idp['name']));
@@ -105,14 +102,12 @@
                 $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
             ?>
 
-            <li onclick="clickedAnyway('<?= $name ?>')" class="mdl-list__item disabled" title="<?= $hoverText ?>">
-                <span class="mdl-list__item-primary-content">
-                    <div class="mdl-card mdl-shadow--2dp">
-                        <img id="<?= $idpId ?>" class="mdl-list__item-avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                                : $idp['logoURL'] ?>" />
-                        <?= $idp['name'] ?>
-                    </div>
-                </span>
+            <li onclick="clickedAnyway('<?= $name ?>')" class="list_item disabled" title="<?= $hoverText ?>">
+                <div class="content">
+                    <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                            : $idp['logoURL'] ?>" />
+                    <?= $name ?>
+                </div>
             </li>
             <?php
             }
@@ -137,7 +132,8 @@
         cursor: not-allowed;
         background-color: #f5f5f5;
     }
-    .mdl-list {
+    ul {
+        list-style: none;
         border: 1px solid #DDDDDD;
         background-color: white;
         border-radius: 8px;
@@ -145,26 +141,23 @@
     }
     li:hover {
         cursor: pointer;
+        background-color: #f5f5f5;
     }
-    .mdl-card {
+    .content {
+        display: flex;
         min-height: 50px;
         flex-direction: row;
         align-items: center;
         width: 240px;
         margin: 0 4px 1px 4px;
     }
-    .mdl-list__item {
-        padding: 0;
+    .list_item {
+        border: 1px solid rgba(42, 48, 50, 20%);
+        margin-top: -1px;
     }
-    .mdl-list__item-avatar {
-        height: unset;
-        width: 40px;
+    .avatar {
+        max-width: 40px;
+        max-height: 40px;
         margin: 8px 16px 8px 8px;
-        box-sizing: border-box;
-        border-radius: 0;
-        background-color: white;
-        font-size: 40px;
-        color: #fff;
-
-}
+    }
 </style>
