@@ -25,31 +25,18 @@
 </head>
 
 <body>
-<div class="mdl-layout mdl-layout--fixed-header fill-viewport">
-    <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">
-            <?php
-            $spName = $this->data['spName'] ?? null;
-            if (empty($spName)) {
-                echo $this->t('{material:selectidp:header}');
-            } else {
-                echo htmlentities($this->t('{material:selectidp:header-for-sp}', ['{spName}' => $spName]));
-            }
-            ?>
-            </span>
+<div class="mdl-layout fill-viewport">
 
-            <div class="mdl-layout-spacer"></div>
+    <div class="mdl-layout-spacer"></div>
 
-            <?php if (! empty($this->data['helpCenterUrl'])): ?>
-                <nav class="mdl-navigation">
-                    <a href="<?= $this->data['helpCenterUrl'] ?>" target="_blank" class="mdl-navigation__link">
-                        <?= $this->t('{material:selectidp:help}') ?>
-                    </a>
-                </nav>
-            <?php endif; ?>
-        </div>
-    </header>
+    <?php if (! empty($this->data['helpCenterUrl'])): ?>
+        <nav class="mdl-navigation">
+            <a href="<?= $this->data['helpCenterUrl'] ?>" target="_blank" class="mdl-navigation__link">
+                <?= $this->t('{material:selectidp:help}') ?>
+            </a>
+        </nav>
+    <?php endif; ?>
+
 
     <main class="mdl-layout__content">
         <?php include __DIR__ . '/../common-announcement.php' ?>
@@ -61,58 +48,79 @@
                    value="<?= htmlentities($this->data['return']) ?>" />
             <input type="hidden" name="returnIDParam"
                    value="<?= htmlentities($this->data['returnIDParam']) ?>" />
-            
-            <ul class="">
-            <?php
-            // in order to bypass some built-in simplesaml behavior, an extra idp
-            // might've been added.  It's not meant to be displayed.
-            unset($this->data['idplist']['dummy']);
+            <div class="container">
+                <!-- TODO add logo from config? -->
+                <img src="" class="logo" />
+                <!-- TODO add and get app name from config? -->
+                <h4 class="app-title">Verily</h4>
 
-            $enabledIdps = [];
-            $disabledIdps = [];
-            foreach ($this->data['idplist'] as $idp) {
-                $idp['enabled'] === true ? array_push($enabledIdps, $idp)
-                                         : array_push($disabledIdps, $idp);
-            }
-
-            foreach ($enabledIdps as $idp) {
-                $name = htmlentities($this->t($idp['name']));
-                $idpId = htmlentities($idp['entityid']);
-                $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
-            ?>
-            
-            <li onclick="setSelectedIdp('<?= $idpId ?>')" class="list_item" title="<?= $hoverText ?>">
-                <div class="content">
-                    <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                            : $idp['logoURL'] ?>" />
-                    <?= $name ?>
+                <div class="list-header">
+                    <?php
+                    $spName = $this->data['spName'] ?? null;
+                    if (empty($spName)) {
+                        echo $this->t('{material:selectidp:header}');
+                    } else {
+                        echo htmlentities($this->t('{material:selectidp:header-for-sp}', ['{spName}' => $spName]));
+                    }
+                    ?>
                 </div>
-            </li>
 
-            <?php
-            }
-            ?>
-            </ul>
-
-            <ul class="">
+                <ul>
                 <?php
-            foreach ($disabledIdps as $idp) {
-                $name = htmlentities($this->t($idp['name']));
-                $idpId = htmlentities($idp['entityid']);
-                $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
-            ?>
+                // in order to bypass some built-in simplesaml behavior, an extra idp
+                // might've been added.  It's not meant to be displayed.
+                unset($this->data['idplist']['dummy']);
 
-            <li onclick="clickedAnyway('<?= $name ?>')" class="list_item disabled" title="<?= $hoverText ?>">
-                <div class="content">
-                    <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                            : $idp['logoURL'] ?>" />
-                    <?= $name ?>
-                </div>
-            </li>
-            <?php
-            }
-            ?>
-            </ul>
+                $enabledIdps = [];
+                $disabledIdps = [];
+                foreach ($this->data['idplist'] as $idp) {
+                    $idp['enabled'] === true ? array_push($enabledIdps, $idp)
+                                            : array_push($disabledIdps, $idp);
+                }
+
+                foreach ($enabledIdps as $idp) {
+                    $name = htmlentities($this->t($idp['name']));
+                    $idpId = htmlentities($idp['entityid']);
+                    $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
+                ?>
+                
+                <li onclick="setSelectedIdp('<?= $idpId ?>')" class="list_item" title="<?= $hoverText ?>">
+                    <div class="content">
+                        <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                                : $idp['logoURL'] ?>" />
+                        <?= $name ?>
+                    </div>
+                </li>
+
+                <?php
+                }
+                ?>
+                </ul>
+            </div>
+
+            <div class="container">
+                <div class="list-header">Coming soon</div>
+                <ul>
+                    
+                <?php
+                foreach ($disabledIdps as $idp) {
+                    $name = htmlentities($this->t($idp['name']));
+                    $idpId = htmlentities($idp['entityid']);
+                    $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
+                ?>
+
+                <li onclick="clickedAnyway('<?= $name ?>')" class="list_item disabled" title="<?= $hoverText ?>">
+                    <div class="content">
+                        <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                                : $idp['logoURL'] ?>" />
+                        <?= $name ?>
+                    </div>
+                </li>
+                <?php
+                }
+                ?>
+                </ul>
+            </div>
         </form>
     </main>
     
@@ -125,23 +133,16 @@
 </body>
 </html>
 <style>
-    .disabled {
-        opacity: 0.7;
+    .avatar {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 8px 16px 8px 8px;
     }
-    .disabled:hover {
-        cursor: not-allowed;
-        background-color: #f5f5f5;
-    }
-    ul {
-        list-style: none;
-        border: 1px solid #DDDDDD;
-        background-color: white;
-        border-radius: 8px;
+    .container {
+        border: 1px solid hsla(196, 8%, 18%, 0.1);
+        border-radius: 12px;
         padding: 14px;
-    }
-    li:hover {
-        cursor: pointer;
-        background-color: #f5f5f5;
+        margin: 14px;
     }
     .content {
         display: flex;
@@ -151,13 +152,36 @@
         width: 240px;
         margin: 0 4px 1px 4px;
     }
+    .disabled {
+        opacity: 0.7;
+    }
+    .disabled:hover {
+        cursor: not-allowed;
+        background-color: #f5f5f5;
+    }
+    ul {
+        list-style: none;
+        background-color: white;
+        padding: initial;
+        border-bottom: 1px solid hsla(196, 8%, 18%, 0.1);
+    }
+    li:hover {
+        cursor: pointer;
+        background-color: #f5f5f5;
+    }
     .list_item {
-        border: 1px solid rgba(42, 48, 50, 20%);
+        border: 1px solid hsla(196, 8%, 18%, 0.1);
         margin-top: -1px;
     }
-    .avatar {
-        max-width: 40px;
-        max-height: 40px;
-        margin: 8px 16px 8px 8px;
+    .list-header {
+        margin: 1rem;
+        text-align: center;
+        color: hsla(213, 8%, 46%, 1);
+        margin: .5rem;
+    }
+    .app-title {
+        text-align: center;
+        color: #2A3032;
+        margin: .3rem;
     }
 </style>
