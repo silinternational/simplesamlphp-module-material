@@ -83,15 +83,15 @@
                     $idpId = htmlentities($idp['entityid']);
                     $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
                 ?>
-                
-                <li onclick="setSelectedIdp('<?= $idpId ?>')" class="list_item" title="<?= $hoverText ?>">
-                    <div class="content">
-                        <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                                : $idp['logoURL'] ?>" />
-                        <?= $name ?>
-                    </div>
+                <li>
+                    <button class="fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')" title="<?= $hoverText ?>">
+                        <div class="content">
+                            <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                                    : $idp['logoURL'] ?>" />
+                            <?= $name ?>
+                        </div>
+                    </button>
                 </li>
-
                 <?php
                 }
                 ?>
@@ -109,12 +109,14 @@
                     $hoverText = $this->t('{material:selectidp:disabled}', ['{idpName}' => $name]);
                 ?>
 
-                <li onclick="clickedAnyway('<?= $name ?>')" class="list_item disabled" title="<?= $hoverText ?>">
-                    <div class="content">
-                        <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                                : $idp['logoURL'] ?>" />
-                        <?= $name ?>
-                    </div>
+                <li>
+                    <button onclick="clickedAnyway('<?= $name ?>')" class="disabled" title="<?= $hoverText ?>">
+                        <div class="content">
+                            <img id="<?= $idpId ?>" class="avatar" src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                                    : $idp['logoURL'] ?>" />
+                            <?= $name ?>
+                        </div>
+                    </button>
                 </li>
                 <?php
                 }
@@ -165,13 +167,14 @@
         padding: initial;
         border-bottom: 1px solid hsla(196, 8%, 18%, 0.1);
     }
-    li:hover {
+    button:hover {
         cursor: pointer;
         background-color: #f5f5f5;
     }
-    .list_item {
+    button {
         border: 1px solid hsla(196, 8%, 18%, 0.1);
         margin-top: -1px;
+        background-color: white;
     }
     .list-header {
         margin: 1rem;
