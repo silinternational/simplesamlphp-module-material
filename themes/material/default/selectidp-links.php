@@ -50,7 +50,9 @@
                    value="<?= htmlentities($this->data['returnIDParam']) ?>" />
             <div class="container">
                 <!-- TODO add logo from config? -->
-                <img src="" class="logo" />
+                <svg width="24" height="49" viewBox="0 0 24 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 48.998V28.1825C12 27.0779 12.8954 26.1825 14 26.1825H22C23.1046 26.1825 24 25.287 24 24.1825V17.8292H7.13684C3.82313 17.8292 1.13684 20.5155 1.13684 23.8292V48.998H12ZM6.94737 13.5903C8.96842 13.5903 10.6316 13.0292 11.9368 11.9071C13.2421 10.7435 13.8947 9.22662 13.8947 7.35649C13.8947 5.48636 13.2421 3.96947 11.9368 2.80584C10.6316 1.60064 8.96842 0.998047 6.94737 0.998047C4.92632 0.998047 3.26316 1.60064 1.9579 2.80584C0.652633 3.96947 0 5.48636 0 7.35649C0 9.22662 0.652633 10.7435 1.9579 11.9071C3.26316 13.0292 4.92632 13.5903 6.94737 13.5903Z" fill="black"/>
+                </svg>
                 <!-- TODO add and get app name from config? -->
                 <h4 class="app-title">Verily</h4>
 
@@ -145,6 +147,9 @@
         border-radius: 12px;
         padding: 14px;
         margin: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .content {
         display: flex;
@@ -185,6 +190,6 @@
     .app-title {
         text-align: center;
         color: #2A3032;
-        margin: .3rem;
+        margin: 8px;
     }
 </style>
