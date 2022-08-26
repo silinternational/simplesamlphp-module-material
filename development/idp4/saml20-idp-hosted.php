@@ -9,6 +9,7 @@ $metadata['http://ssp-idp4.local:8088'] = [
     'authproc' => [
         10 => [
             'class' => 'mfa:Mfa',
+            'idpDomainName' => 'idp4',
             'employeeIdAttr' => 'employeeNumber',
             'idBrokerAccessToken' => Env::get('ID_BROKER_ACCESS_TOKEN'),
             'idBrokerAssertValidIp' => Env::get('ID_BROKER_ASSERT_VALID_IP'),

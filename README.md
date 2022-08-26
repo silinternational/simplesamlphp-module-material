@@ -173,6 +173,7 @@ _Note:  This nag only works once since choosing later will simply set the nag da
 1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
 1.  Click **idp4** (third one)
 1.  Login as a "totp" user: `username=`**has_totp** `password=`**a**
+1.  You should see the form to enter a totp code. 
 1.  Set up an app using this secret, `JVRXKYTMPBEVKXLS`
 1.  Enter code from app to verify
 1.  Click **Logout**
