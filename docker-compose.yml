@@ -167,17 +167,6 @@ services:
       API_ACCESS_KEYS: "test-cli-abc123"
       APP_ENV: "dev"
       MIGRATE_PW_FROM_LDAP: "false"
-      # The first is the actual url, the second is based on the idpDomainName in the saml20-idp-hosted.php file
-      RP_ORIGINS: "https://idp-4.local,https://idp4"
-      MFA_TOTP_apiBaseUrl: "http://totpbackend.org/"
-      MFA_TOTP_apiKey: "abc"
-      MFA_TOTP_apiSecret: "abcd"
-      MFA_WEBAUTHN_apiBaseUrl: "http://webauthnbackend.org/"
-      MFA_WEBAUTHN_apiKey: "abc"
-      MFA_WEBAUTHN_apiSecret: "abcd"
-      MFA_WEBAUTHN_appId: "idp4"
-      MFA_WEBAUTHN_rpDisplayName: "IdP4"
-      MFA_WEBAUTHN_rpId: "idp4"
     command: ["bash", "-c", "whenavail brokerDb 3306 60 ./yii migrate --interactive=0 && ./run.sh"]
 
   brokerDb:
