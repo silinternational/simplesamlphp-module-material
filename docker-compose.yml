@@ -2,7 +2,7 @@ version: '2.0'
 
 services:
   hub1:
-    image: silintl/ssp-base:featurephp8
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/hub1/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -35,7 +35,7 @@ services:
       ANALYTICS_ID: "UA-XXXX-Y"
 
   idp1:  # used for basic testing
-    image: silintl/ssp-base:featurephp8
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp1/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -57,7 +57,7 @@ services:
       IDP_DISPLAY_NAME: "IdP 1"
 
   idp2:  # used for expiry testing
-    image: silintl/ssp-base:featurephp8
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp2/enable:/data/vendor/simplesamlphp/simplesamlphp/modules/exampleauth/enable
@@ -87,7 +87,7 @@ services:
       PASSWORD_FORGOT_URL:  "https://example.org/forgot"
 
   idp4:  # used for mfa testing (as well as some helpful links)
-    image: silintl/ssp-base:featurephp8
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp4/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -191,7 +191,7 @@ services:
           PMA_PASSWORD: "pass"
 
   hub2:  # used for announcement testing
-    image: silintl/ssp-base:featurephp8
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/hub2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -221,7 +221,7 @@ services:
       IDP_DISPLAY_NAME: "Hub 2"
 
   idp3:  # used for announcement testing
-    image: silintl/ssp-base:featurephp8
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/idp3/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -248,7 +248,7 @@ services:
       IDP_DISPLAY_NAME: "IdP 3"
 
   sp1:
-    image: silintl/ssp-base:featurephp8
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/sp1/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
@@ -269,7 +269,7 @@ services:
       IDP_DISPLAY_NAME: "SP 1"
 
   sp2:  # used for announcement testing
-    image: silintl/ssp-base:featurephp8
+    image: silintl/ssp-base:develop
     volumes:
       - ./development/cert:/data/vendor/simplesamlphp/simplesamlphp/cert
       - ./development/sp2/authsources.php:/data/vendor/simplesamlphp/simplesamlphp/config/authsources.php
