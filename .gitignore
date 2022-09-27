@@ -4,4 +4,4 @@ node_modules/
 composer.lock
 nbproject/
 .vagrant/
-local.env
+*local.env
