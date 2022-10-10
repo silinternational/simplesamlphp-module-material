@@ -6,6 +6,47 @@
     <?php include __DIR__ . '/../common-head-elements.php' ?>
 
     <script>
+        function selectPrevious(event) {
+            event.preventDefault();
+            var grandParent = event.target.parentNode.parentNode;
+            var sibling = grandParent.previousElementSibling;
+            var button = sibling.getElementsByClassName("mdl-button")[0];
+            button?.click();
+        }
+        function selecteNext (event) {
+            event.preventDefault();
+            var grandParent = event.target.parentNode.parentNode;
+            var sibling = grandParent.nextElementSibling;
+            var button = sibling.getElementsByClassName("mdl-button")[0];
+            button?.click();
+        }
+        function toggleButtonDisplay(event, id) {
+            event.preventDefault();
+            const button = document.getElementById(`btns-${id}`);
+            if (button.style.display === 'none') {
+                button.style.display = 'flex';
+                const enterButton = document.getElementById("continue-" + id);
+                enterButton.focus();
+                enterButton.addEventListener("keydown", function (event) {
+                    enterButton.removeEventListener("keydown", arguments.callee);
+                    if (event.key === "ArrowLeft") {
+                        selectPrevious(event);
+                    } else if (event.key === "ArrowRight") {
+                        selecteNext(event);
+                    }
+                });
+            } else {
+                button.style.display = 'none';
+            }
+            const buttonContainers = document.getElementsByClassName('button-container');
+            for (let i = 0; i < buttonContainers.length; i++) {
+                if (buttonContainers[i].id !== `btns-${id}`) {
+                    buttonContainers[i].style.display = 'none';
+                }
+            }
+
+        }
+
         function setSelectedIdp(id) {
             var idpInput = document.createElement('input');
 
@@ -79,13 +120,22 @@
                 $idpId = htmlentities($idp['entityid']);
                 $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
             ?>
-            <div class="mdl-card mdl-shadow--8dp row-aware" title="<?= $hoverText ?>">
-                <div class="mdl-card__media white-bg fixed-height">
-                    <button class="mdl-button fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')">
-                        <img class="scale-to-parent" id="<?= $idpId ?>"
-                             src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                             : $idp['logoURL'] ?>">
+            <div class="container">
+                <div class="mdl-card mdl-shadow--8dp" title="<?= $hoverText ?>">
+                    <div class="mdl-card__media white-bg fixed-height">
+                        <button class="mdl-button fill-parent" onclick="toggleButtonDisplay(event, '<?= $idpId ?>')">
+                            <img class="scale-to-parent" id="<?= $idpId ?>"
+                                src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                                : $idp['logoURL'] ?>">
+                        </button>
+                    </div>
+                </div>
+                <div id="btns-<?= $idpId ?>" class="button-container" style="display: none;">
+                    <button onclick="selectPrevious(event)" id="previous-<?= $idpId ?>">←</button>
+                    <button class="continue" id="continue-<?= $idpId ?>" onclick="setSelectedIdp('<?= $idpId ?>')" >
+                        ⏎Enter
                     </button>
+                    <button onclick="selecteNext(event)" id="next-<?= $idpId ?>">→</button>
                 </div>
             </div>
             <?php
@@ -120,4 +170,23 @@
     <?php include __DIR__ . '/../common-footer.php' ?>
 </div>
 </body>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .mdl-card {
+        border-radius: 8px;"
+    }
+    .continue {
+        background-color:hsla(217, 94%, 53%, 1);
+        color: #fff;
+    }
+</style>
 </html>
