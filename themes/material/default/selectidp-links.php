@@ -11,14 +11,20 @@
             const grandParent = event.target.parentNode.parentNode;
             const sibling = grandParent.previousElementSibling;
             const button = sibling.getElementsByClassName("mdl-button")[0];
-            button?.click();
+            if (button) {
+                button.click()
+                return true
+            }
         }
         function selecteNext (event) {
             event.preventDefault();
             const grandParent = event.target.parentNode.parentNode;
             const sibling = grandParent.nextElementSibling;
             const button = sibling.getElementsByClassName("mdl-button")[0];
-            button?.click();
+            if (button) {
+                button.click()
+                return true
+            }
         }
         function toggleButtonDisplay(event, id) {
             event.preventDefault();
@@ -28,11 +34,11 @@
                 const enterButton = document.getElementById("continue-" + id);
                 enterButton.focus();
                 enterButton.addEventListener("keydown", function (event) {
-                    enterButton.removeEventListener("keydown", arguments.callee);
+                    const removeListener = () => enterButton.removeEventListener("keydown", arguments.callee)
                     if (event.key === "ArrowLeft") {
-                        selectPrevious(event);
+                        selectPrevious(event) && removeListener();
                     } else if (event.key === "ArrowRight") {
-                        selecteNext(event);
+                        selecteNext(event) && removeListener();
                     }
                 });
             } else {
