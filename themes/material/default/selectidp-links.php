@@ -12,7 +12,7 @@
             const sibling = grandParent.previousElementSibling;
             const button = sibling.getElementsByClassName("mdl-button")[0];
             if (button) {
-                button.click()
+                button.focus()
                 return true
             }
         }
@@ -22,7 +22,7 @@
             const sibling = grandParent.nextElementSibling;
             const button = sibling.getElementsByClassName("mdl-button")[0];
             if (button) {
-                button.click()
+                button.focus()
                 return true
             }
         }
@@ -129,7 +129,8 @@
             <div class="container">
                 <div class="mdl-card mdl-shadow--8dp" title="<?= $hoverText ?>">
                     <div class="mdl-card__media white-bg fixed-height">
-                        <button class="mdl-button fill-parent" onclick="toggleButtonDisplay(event, '<?= $idpId ?>')">
+                        <button class="mdl-button fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')" 
+                                                    onfocus="toggleButtonDisplay(event, '<?= $idpId ?>')">
                             <img class="scale-to-parent" id="<?= $idpId ?>"
                                 src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                                 : $idp['logoURL'] ?>">
