@@ -8,16 +8,16 @@
     <script>
         function selectPrevious(event) {
             event.preventDefault();
-            var grandParent = event.target.parentNode.parentNode;
-            var sibling = grandParent.previousElementSibling;
-            var button = sibling.getElementsByClassName("mdl-button")[0];
+            const grandParent = event.target.parentNode.parentNode;
+            const sibling = grandParent.previousElementSibling;
+            const button = sibling.getElementsByClassName("mdl-button")[0];
             button?.click();
         }
         function selecteNext (event) {
             event.preventDefault();
-            var grandParent = event.target.parentNode.parentNode;
-            var sibling = grandParent.nextElementSibling;
-            var button = sibling.getElementsByClassName("mdl-button")[0];
+            const grandParent = event.target.parentNode.parentNode;
+            const sibling = grandParent.nextElementSibling;
+            const button = sibling.getElementsByClassName("mdl-button")[0];
             button?.click();
         }
         function toggleButtonDisplay(event, id) {
@@ -48,7 +48,7 @@
         }
 
         function setSelectedIdp(id) {
-            var idpInput = document.createElement('input');
+            const idpInput = document.createElement('input');
 
             idpInput.type = 'hidden';
             idpInput.name = <?= json_encode($this->data['returnIDParam'], JSON_HEX_TAG) ?>;
