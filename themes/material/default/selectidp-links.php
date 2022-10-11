@@ -13,9 +13,12 @@
             const button = sibling.getElementsByClassName("mdl-button")[0];
             if (button) {
                 button.focus()
-                return true
+                const id = event.target.id.split("-")[1];
+                const enterButton = document.getElementById("continue-" + id);
+                enterButton.removeEventListener("keydown", onKeyDown);
             }
         }
+
         function selecteNext (event) {
             event.preventDefault();
             const grandParent = event.target.parentNode.parentNode;
@@ -23,9 +26,20 @@
             const button = sibling.getElementsByClassName("mdl-button")[0];
             if (button) {
                 button.focus()
-                return true
+                const id = event.target.id.split("-")[1];
+                const enterButton = document.getElementById("continue-" + id);
+                enterButton.removeEventListener("keydown", onKeyDown);
             }
         }
+
+        function onKeyDown (event) {
+            if (event.key === "ArrowLeft") {
+                selectPrevious(event)
+            } else if (event.key === "ArrowRight") {
+                selecteNext(event)
+            }
+        }
+        
         function toggleButtonDisplay(event, id) {
             event.preventDefault();
             const button = document.getElementById(`btns-${id}`);
@@ -33,14 +47,7 @@
                 button.style.display = 'flex';
                 const enterButton = document.getElementById("continue-" + id);
                 enterButton.focus();
-                enterButton.addEventListener("keydown", function (event) {
-                    const removeListener = () => enterButton.removeEventListener("keydown", arguments.callee)
-                    if (event.key === "ArrowLeft") {
-                        selectPrevious(event) && removeListener();
-                    } else if (event.key === "ArrowRight") {
-                        selecteNext(event) && removeListener();
-                    }
-                });
+                enterButton.addEventListener("keydown", onKeyDown);
             } else {
                 button.style.display = 'none';
             }
@@ -130,19 +137,19 @@
                 <div class="mdl-card mdl-shadow--8dp" title="<?= $hoverText ?>">
                     <div class="mdl-card__media white-bg fixed-height">
                         <button class="mdl-button fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')" 
-                                                    onfocus="toggleButtonDisplay(event, '<?= $idpId ?>')">
-                            <img class="scale-to-parent" id="<?= $idpId ?>"
+                                                    onfocus="toggleButtonDisplay(event, '<?= $name ?>')">
+                            <img class="scale-to-parent" id="<?= $name ?>"
                                 src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                                 : $idp['logoURL'] ?>">
                         </button>
                     </div>
                 </div>
-                <div id="btns-<?= $idpId ?>" class="button-container" style="display: none;">
-                    <button onclick="selectPrevious(event)" id="previous-<?= $idpId ?>">←</button>
-                    <button class="continue" id="continue-<?= $idpId ?>" onclick="setSelectedIdp('<?= $idpId ?>')" >
+                <div id="btns-<?= $name ?>" class="button-container" style="display: none;">
+                    <button onclick="selectPrevious(event)" id="previous-<?= $name ?>">←</button>
+                    <button class="continue" id="continue-<?= $name ?>" onclick="setSelectedIdp('<?= $idpId ?>')" >
                         ⏎Enter
                     </button>
-                    <button onclick="selecteNext(event)" id="next-<?= $idpId ?>">→</button>
+                    <button onclick="selecteNext(event)" id="next-<?= $name ?>">→</button>
                 </div>
             </div>
             <?php
