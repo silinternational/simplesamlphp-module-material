@@ -46,6 +46,8 @@
             event.preventDefault();
             const button = document.getElementById(`btns-${id}`);
             if (button.style.display === 'none') {
+                const description = event.target.children[1];
+                description.classList.add("blue-text");
                 button.style.display = 'flex';
                 const enterButton = document.getElementById("continue-" + id);
                 enterButton.focus();
@@ -57,6 +59,7 @@
             for (let i = 0; i < buttonContainers.length; i++) {
                 if (buttonContainers[i].id !== `btns-${id}`) {
                     buttonContainers[i].style.display = 'none';
+                    document.getElementById(`desc-${buttonContainers[i].id.split('-')[1]}`).classList.remove("blue-text");
                 }
             }
 
@@ -141,6 +144,7 @@
                             <img class="scale-to-parent" id="<?= $name ?>"
                                 src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                                 : $idp['logoURL'] ?>">
+                        <div id="desc-<?= $name ?>" class="mdl-card__supporting-text"><?=$name?></div>
                         </button>
                     </div>
                 </div>
@@ -223,10 +227,18 @@
     .mdl-card {
         border-radius: 8px;
         width: 100%;
+        height: 220px   
     }
     .continue {
         background-color:hsla(217, 94%, 53%, 1);
         color: #fff;
+    }
+    div.blue-text {
+        color: hsla(217, 94%, 48%, 1)
+    }
+    .mdl-card__supporting-text {
+        font-size: 16px;    
+        color: hsla(0, 0%, 0%, 0.87);
     }
 </style>
 </html>
