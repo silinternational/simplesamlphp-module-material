@@ -8,8 +8,8 @@
     <script>
         function selectPrevious(event) {
             event.preventDefault();
-            const grandParent = event.target.parentNode.parentNode;
-            const sibling = grandParent.previousElementSibling;
+            const ancestor = event.target.parentNode.parentNode.parentNode;
+            const sibling = ancestor.previousElementSibling;
             const button = sibling.getElementsByClassName("mdl-button")[0];
             if (button) {
                 button.focus()
@@ -21,8 +21,8 @@
 
         function selecteNext (event) {
             event.preventDefault();
-            const grandParent = event.target.parentNode.parentNode;
-            const sibling = grandParent.nextElementSibling;
+            const ancestor = event.target.parentNode.parentNode.parentNode;
+            const sibling = ancestor.nextElementSibling;
             const button = sibling.getElementsByClassName("mdl-button")[0];
             if (button) {
                 button.focus()
@@ -36,6 +36,8 @@
             if (event.key === "ArrowLeft") {
                 selectPrevious(event)
             } else if (event.key === "ArrowRight") {
+                selecteNext(event)
+            } else if (event.key === "Tab") {
                 selecteNext(event)
             }
         }
@@ -80,29 +82,27 @@
 
 <body>
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
-    <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">
-            <?php
-            $spName = $this->data['spName'] ?? null;
-            if (empty($spName)) {
-                echo $this->t('{material:selectidp:header}');
-            } else {
-                echo htmlentities($this->t('{material:selectidp:header-for-sp}', ['{spName}' => $spName]));
-            }
-            ?>
-            </span>
+    <header class="header">
+        <span class="title">
+        <?php
+        $spName = $this->data['spName'] ?? null;
+        if (empty($spName)) {
+            echo $this->t('{material:selectidp:header}');
+        } else {
+            echo htmlentities($this->t('{material:selectidp:header-for-sp}', ['{spName}' => $spName]));
+        }
+        ?>
+        </span>
 
-            <div class="mdl-layout-spacer"></div>
+        <div class="mdl-layout-spacer"></div>
 
-            <?php if (! empty($this->data['helpCenterUrl'])): ?>
-                <nav class="mdl-navigation">
-                    <a href="<?= $this->data['helpCenterUrl'] ?>" target="_blank" class="mdl-navigation__link">
-                        <?= $this->t('{material:selectidp:help}') ?>
-                    </a>
-                </nav>
-            <?php endif; ?>
-        </div>
+        <?php if (! empty($this->data['helpCenterUrl'])): ?>
+            <nav class="mdl-navigation">
+                <a href="<?= $this->data['helpCenterUrl'] ?>" target="_blank" class="mdl-navigation__link">
+                    <?= $this->t('{material:selectidp:help}') ?>
+                </a>
+            </nav>
+        <?php endif; ?>
     </header>
 
     <main class="mdl-layout__content">
@@ -133,7 +133,7 @@
                 $idpId = htmlentities($idp['entityid']);
                 $hoverText = $this->t('{material:selectidp:enabled}', ['{idpName}' => $name]);
             ?>
-            <div class="container">
+            <div class="cardContainer">
                 <div class="mdl-card mdl-shadow--8dp" title="<?= $hoverText ?>">
                     <div class="mdl-card__media white-bg fixed-height">
                         <button class="mdl-button fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')" 
@@ -145,11 +145,20 @@
                     </div>
                 </div>
                 <div id="btns-<?= $name ?>" class="button-container" style="display: none;">
+                <label class="container">
                     <button onclick="selectPrevious(event)" id="previous-<?= $name ?>">←</button>
+                    Previous
+                </label>
+                <label class="container">
                     <button class="continue" id="continue-<?= $name ?>" onclick="setSelectedIdp('<?= $idpId ?>')" >
-                        ⏎Enter
+                        ⏎ Enter
                     </button>
+                    to continue
+                </label>
+                <label class="container">
                     <button onclick="selecteNext(event)" id="next-<?= $name ?>">→</button>
+                    Next
+                </label>
                 </div>
             </div>
             <?php
@@ -190,13 +199,30 @@
         flex-direction: column;
         align-items: center;
     }
+    .cardContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 330px;
+        width: -webkit-fill-available;
+    }
     .button-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: -webkit-fill-available;
+        max-width: 80%;
+    }    
+    .header {
+        margin: 1.5rem;
+    }
+    .title {
+        font-size: 23px;
+        line-height: 36px;
     }
     .mdl-card {
-        border-radius: 8px;"
+        border-radius: 8px;
+        width: 100%;
     }
     .continue {
         background-color:hsla(217, 94%, 53%, 1);
