@@ -196,7 +196,7 @@
         justify-content: space-between;
     }
     .mdl-card {
-        border-radius: 8px;"
+        border-radius: 8px;
     }
     .continue {
         background-color:hsla(217, 94%, 53%, 1);
