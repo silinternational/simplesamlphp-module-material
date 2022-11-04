@@ -126,7 +126,7 @@ _Note:  This nag only works once since choosing later will simply set the nag da
 #### About to expire page (expires in three days)
 
 _Note:  This nag only works once since choosing later will simply set the nag date into the future a little.
-If needed, use a new private/incognito browser window to retry._
+        If needed, use a new private/incognito browser window to retry._
 
 1.  Goto [SP 1](http://ssp-sp1.local:8082/module.php/core/authenticate.php?as=hub-discovery)
 1.  Click **idp2** (second one)
