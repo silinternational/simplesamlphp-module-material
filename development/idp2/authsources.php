@@ -28,11 +28,11 @@ $config = [
         ],
         'next_day:a' => [
             'eduPersonPrincipalName' => ['NEXT_DAY@ssp-hub-idp2.local'],
-            'eduPersonTargetID' => ['22222222-2222-2222-2222-222222222222'],
+            'eduPersonTargetID' => ['22888888-2222-2222-2222-222222222222'],
             'sn' => ['Day'],
             'givenName' => ['Next'],
             'mail' => ['next_day@example.com'],
-            'employeeNumber' => ['22222'],
+            'employeeNumber' => ['22888'],
             'cn' => ['NEXT_DAY'],
             'schacExpiryDate' => [
                 gmdate('YmdHis\Z', strtotime('+1 day')), // Very soon
