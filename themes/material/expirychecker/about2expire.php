@@ -31,7 +31,7 @@
             $expiringMessage = $daysLeft < 2 ?
                                $this->t('{material:about2expire:expiring_in_a_day}') :
                                $this->t('{material:about2expire:expiring_soon}',
-                                        ['{daysLeft}' => $daysLeft]);
+                                        ['{daysLeft}' => (string) $daysLeft]);
             ?>
                 <?= $expiringMessage ?>
             </p>
