@@ -85,6 +85,7 @@
                         <img class="scale-to-parent" id="<?= $idpId ?>"
                              src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                              : $idp['logoURL'] ?>">
+                            <br><span class="mdl-color-text--grey-600"><?= empty($idp['logoCaption']) ? '': $idp['logoCaption'] ?> </span>
                     </button>
                 </div>
             </div>
@@ -105,6 +106,7 @@
                     <img class="scale-to-parent" id="<?= $idpId ?>"
                          src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                          : $idp['logoURL'] ?>">
+                    <br><span class="mdl-color-text--grey-600" ><?= empty($idp['logoCaption']) ? '': $idp['logoCaption'] ?> </span>
                 </div>
             </div>
             <?php
