@@ -81,11 +81,11 @@
             ?>
             <div class="mdl-card mdl-shadow--8dp row-aware" title="<?= $hoverText ?>">
                 <div class="mdl-card__media white-bg fixed-height">
-                    <button class="mdl-button fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')">
-                        <img class="scale-to-parent" id="<?= $idpId ?>"
-                             src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                             : $idp['logoURL'] ?>">
-                            <br><span class="mdl-color-text--grey-600 capitalize logo-caption"><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
+                    <button class="mdl-button logo-container fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')">
+                        <img class="logo" id="<?= $idpId ?>"
+                            src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                            : $idp['logoURL'] ?>">
+                        <span class="mdl-color-text--grey-600 capitalize logo-caption"><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
                     </button>
                 </div>
             </div>
@@ -102,13 +102,12 @@
             <div class="mdl-card mdl-shadow--2dp disabled row-aware" title="<?= $hoverText ?>"
                  onclick="clickedAnyway('<?= $name ?>')">
                 <div class="mdl-card__media white-bg fixed-height" layout-children="row" child-spacing="center">
-                    <button disabled class="mdl-button fill-parent">
-
-                        <img class="scale-to-parent" id="<?= $idpId ?>"
-                        src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                         : $idp['logoURL'] ?>">
-                        <br><span class="mdl-color-text--grey-600 capitalize" ><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
-                    </button>
+                    <div class="logo-container fill-parent">
+                        <img class="logo" id="<?= $idpId ?>"
+                            src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                            : $idp['logoURL'] ?>">
+                        <span class="mdl-color-text--grey-600 capitalize" ><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
+                    </div>
                 </div>
             </div>
             <?php
@@ -128,11 +127,22 @@
     .capitalize {
         text-transform: capitalize;
     }
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
     .mdl-button:hover > .logo-caption {
         color: #004F9E !important;
     }
     .mdl-card {
         border-radius: 8px;
+    }
+    .logo {
+        max-height: 130px;
+        max-width: 90%;
+        padding-top: 4px;
     }
 </style>
 </html>
