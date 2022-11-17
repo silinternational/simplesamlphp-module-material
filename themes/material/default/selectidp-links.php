@@ -85,7 +85,7 @@
                         <img class="scale-to-parent" id="<?= $idpId ?>"
                              src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                              : $idp['logoURL'] ?>">
-                            <br><span class="mdl-color-text--grey-600"><?= empty($idp['logoCaption']) ? '': $idp['logoCaption'] ?> </span>
+                            <br><span class="mdl-color-text--grey-600 capitalize logo-caption"><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
                     </button>
                 </div>
             </div>
@@ -101,12 +101,14 @@
             ?>
             <div class="mdl-card mdl-shadow--2dp disabled row-aware" title="<?= $hoverText ?>"
                  onclick="clickedAnyway('<?= $name ?>')">
-                <div class="mdl-card__media white-bg fixed-height" layout-children="row"
-                     child-spacing="center">
-                    <img class="scale-to-parent" id="<?= $idpId ?>"
-                         src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                <div class="mdl-card__media white-bg fixed-height" layout-children="row" child-spacing="center">
+                    <button disabled class="mdl-button fill-parent">
+
+                        <img class="scale-to-parent" id="<?= $idpId ?>"
+                        src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                          : $idp['logoURL'] ?>">
-                    <br><span class="mdl-color-text--grey-600" ><?= empty($idp['logoCaption']) ? '': $idp['logoCaption'] ?> </span>
+                        <br><span class="mdl-color-text--grey-600 capitalize" ><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
+                    </button>
                 </div>
             </div>
             <?php
@@ -122,4 +124,15 @@
     <?php include __DIR__ . '/../common-footer.php' ?>
 </div>
 </body>
+<style>
+    .capitalize {
+        text-transform: capitalize;
+    }
+    .mdl-button:hover > .logo-caption {
+        color: #004F9E !important;
+    }
+    .mdl-card {
+        border-radius: 8px;
+    }
+</style>
 </html>
