@@ -139,7 +139,7 @@
         text-transform: capitalize;
         font-size: 1.5rem;
     }
-    @media only screen and (max-width: 1080px) {
+    @media only screen and (max-width: 1200px) {
         .logo-caption {
             font-size: 1.2rem;
         }
