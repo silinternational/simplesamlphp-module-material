@@ -29,7 +29,18 @@ $metadata['sil-idp'] = [
     'name' => [
         'en' => 'sil'
     ],
+    'logoCaption' => 'SIL staff',
     'logoURL' => 'https://static.gtis.guru/idp-logo/sil-logo.png'
+];
+$metadata['partners-idp'] = [
+    'enabled' => true,
+    'metadata-set' => 'saml20-idp-remote',
+    'entityid' => 'partners-idp',
+    'name' => [
+        'en' => 'SIL Partners'
+    ],
+    'logoCaption' => 'Partners of SIL',
+    'logoURL' => 'https://static.gtis.guru/idp-logo/partners-logo-v3.png'
 ];
 $metadata['usa-idp'] = [
     'enabled' => true,
@@ -38,17 +49,7 @@ $metadata['usa-idp'] = [
     'name' => [
         'en' => 'usa'
     ],
-    'logoCaption' => 'USA staff',
     'logoURL' => 'https://static.gtis.guru/idp-logo/usa-logo.png'
-];
-$metadata['wga-idp'] = [
-    'enabled' => true,
-    'metadata-set' => 'saml20-idp-remote',
-    'entityid' => 'wga-idp',
-    'name' => [
-        'en' => 'wga'
-    ],
-    'logoURL' => 'https://static.gtis.guru/idp-logo/wga-logo.png'
 ];
 $metadata['mock-jaars-idp'] = [
     'enabled' => false,
@@ -76,13 +77,4 @@ $metadata['mock-usa-idp'] = [
         'en' => 'usa'
     ],
     'logoURL' => 'https://static.gtis.guru/idp-logo/usa-logo.png'
-];
-$metadata['mock-wga-idp'] = [
-    'enabled' => false,
-    'metadata-set' => 'saml20-idp-remote',
-    'entityid' => 'mock-wga-idp',
-    'name' => [
-        'en' => 'wga'
-    ],
-    'logoURL' => 'https://static.gtis.guru/idp-logo/wga-logo.png'
 ];
