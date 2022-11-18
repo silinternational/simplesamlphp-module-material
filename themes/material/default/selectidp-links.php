@@ -126,7 +126,12 @@
 <style>
     .logo-caption {
         text-transform: capitalize;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+    }
+    @media only screen and (max-width: 1080px) {
+        .logo-caption {
+            font-size: 1.2rem;
+        }
     }
     .logo-container {
         display: flex;
