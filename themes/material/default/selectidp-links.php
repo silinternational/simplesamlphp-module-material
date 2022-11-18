@@ -82,9 +82,12 @@
             <div class="mdl-card mdl-shadow--8dp row-aware" title="<?= $hoverText ?>">
                 <div class="mdl-card__media white-bg fixed-height">
                     <button class="mdl-button logo-container fill-parent" onclick="setSelectedIdp('<?= $idpId ?>')">
-                        <img class="logo" id="<?= $idpId ?>"
-                            src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                            : $idp['logoURL'] ?>">
+                        <div class="image-wrapper">
+                            <img class="logo" id="<?= $idpId ?>"
+                                src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                                : $idp['logoURL'] ?>">
+                        </div>
+
                         <span class="mdl-color-text--grey-600 logo-caption clickable-caption"><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
                     </button>
                 </div>
@@ -103,9 +106,11 @@
                  onclick="clickedAnyway('<?= $name ?>')">
                 <div class="mdl-card__media white-bg fixed-height" layout-children="row" child-spacing="center">
                     <div class="logo-container fill-parent">
-                        <img class="logo" id="<?= $idpId ?>"
-                            src="<?= empty($idp['logoURL']) ? 'default-logo.png'
-                                                            : $idp['logoURL'] ?>">
+                        <div class="image-wrapper">
+                            <img class="logo" id="<?= $idpId ?>"
+                                src="<?= empty($idp['logoURL']) ? 'default-logo.png'
+                                                                : $idp['logoURL'] ?>">
+                        </div>
                         <span class="mdl-color-text--grey-600 logo-caption" ><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
                     </div>
                 </div>
@@ -124,6 +129,12 @@
 </div>
 </body>
 <style>
+    .image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 130px;
+    }
     .logo-caption {
         text-transform: capitalize;
         font-size: 1.5rem;
