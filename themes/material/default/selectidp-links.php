@@ -85,7 +85,7 @@
                         <img class="logo" id="<?= $idpId ?>"
                             src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                             : $idp['logoURL'] ?>">
-                        <span class="mdl-color-text--grey-600 capitalize logo-caption"><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
+                        <span class="mdl-color-text--grey-600 logo-caption clickable-caption"><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
                     </button>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                         <img class="logo" id="<?= $idpId ?>"
                             src="<?= empty($idp['logoURL']) ? 'default-logo.png'
                                                             : $idp['logoURL'] ?>">
-                        <span class="mdl-color-text--grey-600 capitalize" ><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
+                        <span class="mdl-color-text--grey-600 logo-caption" ><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
                     </div>
                 </div>
             </div>
@@ -124,8 +124,9 @@
 </div>
 </body>
 <style>
-    .capitalize {
+    .logo-caption {
         text-transform: capitalize;
+        font-size: 1.4rem;
     }
     .logo-container {
         display: flex;
@@ -133,7 +134,7 @@
         align-items: center;
         justify-content: space-around;
     }
-    .mdl-button:hover > .logo-caption {
+    .mdl-button:hover > .clickable-caption {
         color: #004F9E !important;
     }
     .mdl-card {
