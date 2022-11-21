@@ -10,7 +10,6 @@ $trackingId = htmlentities($this->configuration->getValue('analytics.trackingId'
 $hasGATracking = false;
 
 if (! empty($trackingId)) {
-    $hasGATracking = true;
 ?>
     <script>
         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -19,16 +18,22 @@ if (! empty($trackingId)) {
     </script>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
 <?php
+} else {
+?>
+    <script>
+        window.ga = function () {
+            // Null object pattern to avoid `if (window.ga)` wherever ga is used.
+        }
+    </script>
+<?php
 }
 ?>
-
 
 <?php
 // This block of code is intended to be temporary until the transition from
 // Google's Universal Analytics to GA4 type projects has been completed
 $trackingIdGA4 = htmlentities($this->configuration->getValue('analytics.trackingIdGA4'));
 if (! empty($trackingIdGA4)) {
-    $hasGATracking = true;
 ?>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=<?= $trackingIdGA4 ?>"></script>
@@ -40,13 +45,11 @@ if (! empty($trackingIdGA4)) {
         gtag('config', '<?= $trackingIdGA4 ?>');
     </script>
 <?php
-}
-
-if (! $hasGATracking) {
+} else {
 ?>
     <script>
-        window.ga = function () {
-            // Null object pattern to avoid `if (window.ga)` wherever ga is used.
+        window.dataLayer = function () {
+            // Null object pattern to avoid `if (window.dataLayer)` wherever dataLayer is used.
         }
     </script>
 <?php
