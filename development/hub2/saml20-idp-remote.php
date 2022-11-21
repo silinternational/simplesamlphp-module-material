@@ -19,7 +19,7 @@ $metadata['jaars-idp'] = [
     'name' => [
         'en' => 'jaars'
     ],
-    'logoCaption' => 'Jaars staff',
+    'logoCaption' => 'JAARS staff',
     'logoURL' => 'https://static.gtis.guru/idp-logo/jaars-logo.png'
 ];
 $metadata['sil-idp'] = [
