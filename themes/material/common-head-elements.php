@@ -7,7 +7,6 @@
 
 <?php
 $trackingId = htmlentities($this->configuration->getValue('analytics.trackingId'));
-$hasGATracking = false;
 
 if (! empty($trackingId)) {
 ?>
@@ -30,8 +29,8 @@ if (! empty($trackingId)) {
 ?>
 
 <?php
-// This block of code is intended to be temporary until the transition from
-// Google's Universal Analytics to GA4 type projects has been completed
+// This block of code is intended to replace the old window.ga code (above) once
+// the transition from Google's Universal Analytics to GA4 type projects has been completed
 $trackingIdGA4 = htmlentities($this->configuration->getValue('analytics.trackingIdGA4'));
 if (! empty($trackingIdGA4)) {
 ?>
