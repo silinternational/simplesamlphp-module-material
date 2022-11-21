@@ -35,8 +35,14 @@ The login page looks for `/simplesamlphp/www/logo.png` which is **NOT** provided
 
 Update `/simplesamlphp/config/config.php`:
 
+Google Analytics Project ID (currently Universal Analytics, but transitioning to GA4)
 ```
 'analytics.trackingId' => 'UA-some-unique-id-for-your-site'
+```
+
+Temporary New Google Analytics 4
+```
+'analytics.trackingIdGA4' => 'G-some-unique-id-for-your-site'
 ```
 
 _[ssp-base](https://github.com/silinternational/ssp-base) provides a convenience by loading this config with whatever is in the environment variable `ANALYTICS_ID`._
