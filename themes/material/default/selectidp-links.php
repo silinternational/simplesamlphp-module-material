@@ -88,7 +88,7 @@
                                                                 : $idp['logoURL'] ?>">
                         </div>
 
-                        <span class="mdl-color-text--grey-600 logo-caption clickable-caption"><?= empty($idp['logoCaption']) ? '<br>': $idp['logoCaption'] ?> </span>
+                        <span class="mdl-color-text--grey-600 logo-caption clickable-caption"><?= empty($idp['logoCaption']) ? '<br>': htmlentities($idp['logoCaption']) ?> </span>
                     </button>
                 </div>
             </div>
