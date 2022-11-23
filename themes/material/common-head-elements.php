@@ -7,54 +7,20 @@
 
 <?php
 $trackingId = htmlentities($this->configuration->getValue('analytics.trackingId'));
-
 if (! empty($trackingId)) {
 ?>
-    <script>
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', '<?= $trackingId ?>', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-<?php
-} else {
-?>
-    <script>
-        window.ga = function () {
-            // Null object pattern to avoid `if (window.ga)` wherever ga is used.
-        }
-    </script>
-<?php
-}
-?>
-
-<?php
-// This block of code is intended to replace the old window.ga code (above) once
-// the transition from Google's Universal Analytics to GA4 type projects has been completed
-$trackingIdGA4 = htmlentities($this->configuration->getValue('analytics.trackingIdGA4'));
-if (! empty($trackingIdGA4)) {
-?>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<?= $trackingIdGA4 ?>"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?= $trackingId ?>"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', '<?= $trackingIdGA4 ?>');
-    </script>
-<?php
-} else {
-?>
-    <script>
-        window.dataLayer = function () {
-            // Null object pattern to avoid `if (window.dataLayer)` wherever dataLayer is used.
-        }
+        gtag('config', '<?= $trackingId ?>');
     </script>
 <?php
 }
 ?>
-
 
 <?php
 $colors = htmlentities($this->configuration->getValue('theme.color-scheme') ?: 'indigo-purple');
