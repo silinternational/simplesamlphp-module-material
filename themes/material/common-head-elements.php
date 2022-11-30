@@ -9,24 +9,18 @@
 $trackingId = htmlentities($this->configuration->getValue('analytics.trackingId'));
 if (! empty($trackingId)) {
 ?>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?= $trackingId ?>"></script>
     <script>
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', '<?= $trackingId ?>', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-<?php
-} else {
-?>
-    <script>
-        window.ga = function () {
-            // Null object pattern to avoid `if (window.ga)` wherever ga is used.
-        }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '<?= $trackingId ?>');
     </script>
 <?php
 }
 ?>
-
 
 <?php
 $colors = htmlentities($this->configuration->getValue('theme.color-scheme') ?: 'indigo-purple');
