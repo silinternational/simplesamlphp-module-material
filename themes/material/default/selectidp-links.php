@@ -149,7 +149,7 @@
         align-items: center;
         justify-content: space-around;
     }
-    .mdl-button {
+    .logo-caption {
         text-transform: none;
     }
     .mdl-button:hover > .clickable-caption {
