@@ -149,6 +149,9 @@
         align-items: center;
         justify-content: space-around;
     }
+    .logo-caption {
+        text-transform: none;
+    }
     .mdl-button:hover > .clickable-caption {
         color: #004F9E !important;
     }
