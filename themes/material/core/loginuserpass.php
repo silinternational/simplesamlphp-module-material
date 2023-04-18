@@ -82,7 +82,7 @@
                         <?php
                         $username = htmlentities($this->data['username'] ?? null);
                         ?>
-                        <input type="text" name="username" class="mdl-textfield__input" value="<?= $username ?>" 
+                        <input type="text" required name="username" class="mdl-textfield__input" value="<?= $username ?>"
                                <?= empty($username) ? 'autofocus' : '' ?> id="username"/>
                     </div>
 
@@ -91,7 +91,7 @@
                             <?= $this->t('{material:login:label_password}') ?>
                         </label>
 
-                        <input type="password" name="password" class="mdl-textfield__input" <?= ! empty($username) ? 'autofocus' : '' ?> 
+                        <input type="password" required name="password" class="mdl-textfield__input" <?= ! empty($username) ? 'autofocus' : '' ?>
                                id="password"/>
                     </div>
                 </div>
