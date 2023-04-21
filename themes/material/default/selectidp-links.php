@@ -28,7 +28,7 @@
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">
+            <span class="mdl-layout-title scale-to-parent">
             <?php
             $spName = $this->data['spName'] ?? null;
             if (empty($spName)) {
