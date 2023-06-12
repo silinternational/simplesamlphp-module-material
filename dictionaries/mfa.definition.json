@@ -37,10 +37,10 @@
 		"ko": "코드 입력"
 	},
 	"totp_header": {
-		"en": "Smartphone app",
-		"es": "Aplicación de teléfono inteligente",
-		"fr": "Application pour smartphone",
-		"ko": "스마트폰 앱"
+		"en": "Get a code from your smartphone app",
+		"es": "Obtenga un código de la aplicación de su teléfono inteligente",
+		"fr": "Obtenez un code depuis l'application sur votre smartphone",
+		"ko": "스마트폰 앱에서 코드 받기"
 	},
 	"totp_icon": {
 		"en": "Smartphone app icon",
