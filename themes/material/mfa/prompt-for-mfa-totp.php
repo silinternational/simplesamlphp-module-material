@@ -32,13 +32,7 @@
                     <?php
                     $idpName = htmlentities($this->configuration->getValue('idp_display_name', $this->configuration->getValue('idp_name', '—')));
                     ?>
-                    (<?= $this->t('{material:mfa:account}', ['{idpName}' => $idpName]) ?>)
-                </div>
-
-                <div class="mdl-card__title center" >
-                    <p class="mdl-card__subtitle-text">
-                        <?= $this->t('{material:mfa:totp_instructions}') ?>
-                    </p>
+                    <?= $this->t('{material:mfa:account}', ['{idpName}' => $idpName]) ?>
                 </div>
 
                 <div class="mdl-card__supporting-text" layout-children="column">
