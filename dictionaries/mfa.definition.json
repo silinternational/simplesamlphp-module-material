@@ -135,13 +135,13 @@
 		"en": "It looks like you clicked cancel. Would you like us to try again?",
 		"es": "Parece que has hecho clic en cancelar. ¿Quieres que lo intentemos de nuevo?",
 		"fr": "Il semble que vous ayez cliqué sur annuler. Souhaitez-vous que nous essayions à nouveau ?",
-		"ko": "It looks like you clicked cancel. Would you like us to try again?"
+		"ko": "취소를 클릭하신 것 같습니다. 다시 시도해 보시겠어요?"
 	},
 	"webauthn_error_not_allowed": {
 		"en": "Something about that didn't work. Please ensure that your security key is plugged in and that you touch it within 60 seconds when it blinks.",
 		"es": "Algo de eso no funcionó. Por favor, asegúrese de que su clave de seguridad está conectada y de que la toca en un plazo de 60 segundos cuando parpadea.",
 		"fr": "Quelque chose n'a pas fonctionné avec ça. Veuillez vous assurer que votre clé de sécurité est insérée et que vous la touchez dans les 60 secondes lorsqu'elle clignote.",
-		"ko": "Something about that didn't work. Please ensure that your security key is plugged in and that you touch it within 60 seconds when it blinks."
+		"ko": "문제가 해결되지 않았습니다. 보안 키가 연결되어 있고 깜박일 때 60초 이내에 터치했는지 확인하세요."
 	},
 	"manager_icon": {
 		"en": "Recovery contact icon",
