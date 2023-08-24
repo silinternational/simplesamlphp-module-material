@@ -1,4 +1,3 @@
-
 {
 	"title": {
 		"en": "2-Step Verification",
@@ -134,15 +133,15 @@
 	},
 	"webauthn_error_abort": {
 		"en": "It looks like you clicked cancel. Would you like us to try again?",
-		"es": "It looks like you clicked cancel. Would you like us to try again?",
+		"es": "Parece que has hecho clic en cancelar. ¿Quieres que lo intentemos de nuevo?",
 		"fr": "Il semble que vous ayez cliqué sur annuler. Souhaitez-vous que nous essayions à nouveau ?",
-		"ko": "It looks like you clicked cancel. Would you like us to try again?"
+		"ko": "취소를 클릭하신 것 같습니다. 다시 시도해 보시겠어요?"
 	},
 	"webauthn_error_not_allowed": {
 		"en": "Something about that didn't work. Please ensure that your security key is plugged in and that you touch it within 60 seconds when it blinks.",
-		"es": "Something about that didn't work. Please ensure that your security key is plugged in and that you touch it within 60 seconds when it blinks.",
+		"es": "Algo de eso no funcionó. Por favor, asegúrese de que su clave de seguridad está conectada y de que la toca en un plazo de 60 segundos cuando parpadea.",
 		"fr": "Quelque chose n'a pas fonctionné avec ça. Veuillez vous assurer que votre clé de sécurité est insérée et que vous la touchez dans les 60 secondes lorsqu'elle clignote.",
-		"ko": "Something about that didn't work. Please ensure that your security key is plugged in and that you touch it within 60 seconds when it blinks."
+		"ko": "문제가 해결되지 않았습니다. 보안 키가 연결되어 있고 깜박일 때 60초 이내에 터치했는지 확인하세요."
 	},
 	"manager_icon": {
 		"en": "Recovery contact icon",
@@ -151,16 +150,16 @@
 		"ko": "복구 연락처 아이콘"
 	},
 	"manager_header": {
-		"en": "Recovery contact help",
-		"es": "Ayuda de contacto de recuperación",
-		"fr": "Aide de contact de récupération",
-		"ko": "복구 연락처"
+		"en": "Ask Your Recovery Contact for Help",
+		"es": "Pida ayuda de contacto de recuperación",
+		"fr": "Demandez de l'aide à votre contact de récupération",
+		"ko": "복구 담당자에게 도움을 요청하십시오"
 	},
 	"manager_info": {
-		"en": "We can send a code to your recovery contact which can be used as a temporary 2-Step Verification option.  The email address on file (masked for privacy) is {managerEmail}.",
-		"es": "Podemos enviar un código a su contacto de recuperación que puede usarse como una opción de Verificación temporal de 2 pasos. La dirección de correo electrónico en el archivo (enmascarada por privacidad) es {managerEmail}.",
-		"fr": "Nous pouvons envoyer un code à votre contact de récupération, qui peut être utilisé comme option de vérification temporaire en deux étapes. L'adresse électronique au dossier (masquée pour la confidentialité) est {managerEmail}.",
-		"ko": "\n임시 2 단계 인증 옵션으로 사용할 수있는 코드를 복구 담당자에게 보낼 수 있습니다. 파일의 이메일 주소 (개인 정보 보호를 위해 마스크 됨)는 {managerEmail}입니다."
+		"en": "You can send a 2-step verification code to your recovery contact (usually your supervisor). The email we have for your recovery contact is:<br><br><code>{managerEmail}</code><br><br>We've hidden most of the letters for your contact's protection.",
+		"es": "Puede enviar un código de verificación de dos pasos a su contacto de recuperación (normalmente su supervisor). La dirección de correo electrónico que tenemos para su contacto de recuperación es:<br><br><code>{managerEmail}</code><br><br>Ocultamos la mayoría de las letras para proteger a su contacto.",
+		"fr": "Vous pouvez envoyer un code de vérification en deux étapes à votre contact de récupération (en général votre superviseur). L'adresse électronique que nous avons pour votre contact de récupération est:<br><br><code>{managerEmail}</code><br><br>. Nous avons caché la plupart des lettres pour la protection de votre contact.",
+		"ko": "2단계 인증 코드를 복구 연락처(보통 상사)에게 보낼 수 있습니다. 복구 연락처에 대한 이메일은 다음과 같습니다. <br><br><code>{managerEmail}</code><br><br> 연락처 보호를 위해 대부분의 편지를 숨겼습니다."
 	},
 	"manager_sent": {
 		"en": "A temporary code was sent your recovery contact at {managerEmail}.",
@@ -367,10 +366,10 @@
 		"ko": "사본"
 	},
 	"button_send": {
-		"en": "Send",
-		"es": "Enviar",
-		"fr": "Envoyer",
-		"ko": "보내다"
+		"en": "Send code",
+		"es": "Enviar código",
+		"fr": "Envoyer code",
+		"ko": "코드 보내기"
 	},
 	"button_cancel": {
 		"en": "Cancel",
