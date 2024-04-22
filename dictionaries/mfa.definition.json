@@ -36,22 +36,22 @@
 		"ko": "코드 입력"
 	},
 	"totp_header": {
-		"en": "Get a code from your smartphone app",
-		"es": "Obtenga un código de la aplicación de su teléfono inteligente",
-		"fr": "Obtenez un code depuis l'application sur votre smartphone",
-		"ko": "스마트폰 앱에서 코드 받기"
+		"en": "Get a code from your authenticator app",
+		"es": "Obtenga un código de su aplicación de autenticación",
+		"fr": "Obtenez un code depuis votre application d'authentification",
+		"ko": "인증 앱에서 코드 받기"
 	},
 	"totp_icon": {
-		"en": "Smartphone app icon",
+		"en": "Authenticator app icon",
 		"es": "Icono de aplicación de teléfono inteligente",
 		"fr": "Icône de l'application Smartphone",
-		"ko": "스마트폰 응용 프로그램 아이콘"
+		"ko": "인증 응용 프로그램 아이콘"
 	},
 	"totp_instructions": {
-		"en": "You will need to check your smartphone app for the current code.",
-		"es": "Deberá verificar la aplicación de su teléfono inteligente para ver el código actual.",
-		"fr": "Vous devriez vérifier l'application sur votre smartphone pour voir le code actuel.",
-		"ko": "스마트폰 앱에서 현재 코드를 확인해야합니다."
+		"en": "You will need to check your authenticator app for the current code.",
+		"es": "Deberá verificar la aplicación de autenticación para ver el código actual.",
+		"fr": "Vous devriez vérifier l'application d'authentification pour voir le code actuel.",
+		"ko": "인증 앱에서 현재 코드를 확인해야합니다."
 	},
 	"totp_input": {
 		"en": "Enter 6-digit code",
@@ -282,10 +282,10 @@
 		"ko": "내 보안키 사용"
 	},
 	"use_totp": {
-		"en": "Use my smartphone app instead",
-		"es": "Use la aplicación de mi teléfono inteligente en su lugar",
-		"fr": "Utiliser plutôt mon application smartphone",
-		"ko": "내 스마트폰 앱 사용"
+		"en": "Use my authenticator app instead",
+		"es": "Use la aplicación autenticación en su lugar",
+		"fr": "Utiliser plutôt mon application d'authentification",
+		"ko": "내 인증 앱 사용"
 	},
 	"use_backupcode": {
 		"en": "Use a printable code instead",
