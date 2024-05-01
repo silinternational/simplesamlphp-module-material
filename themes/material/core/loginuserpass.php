@@ -44,6 +44,11 @@
     <?php
     }
     ?>
+    <style>
+      input.mdl-textfield__input {
+        color: rgb(0, 0, 0);
+      }
+    </style>
 </head>
 <body class="gradient-bg">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
