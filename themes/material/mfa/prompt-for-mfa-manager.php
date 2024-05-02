@@ -4,11 +4,6 @@
     <title><?= $this->t('{material:mfa:title}') ?></title>
 
     <?php include __DIR__ . '/../common-head-elements.php' ?>
-    <style>
-      input.mdl-textfield__input {
-        color: rgb(0, 0, 0);
-      }
-    </style>
 </head>
 <body class="gradient-bg">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
@@ -43,7 +38,7 @@
                         <label for="mfaSubmission" class="mdl-textfield__label">
                             <?= $this->t('{material:mfa:manager_input}') ?>
                         </label>
-                        <input name="mfaSubmission" class="mdl-textfield__input" autofocus id="mfaSubmission" />
+                        <input name="mfaSubmission" class="mdl-textfield__input mdl-color-text--black" autofocus id="mfaSubmission" />
                     </div>
                 </div>
 

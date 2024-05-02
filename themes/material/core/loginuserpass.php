@@ -44,11 +44,6 @@
     <?php
     }
     ?>
-    <style>
-      input.mdl-textfield__input {
-        color: rgb(0, 0, 0);
-      }
-    </style>
 </head>
 <body class="gradient-bg">
 <div class="mdl-layout mdl-layout--fixed-header fill-viewport">
@@ -87,7 +82,7 @@
                         <?php
                         $username = htmlentities($this->data['username'] ?? null);
                         ?>
-                        <input type="text" required name="username" class="mdl-textfield__input" value="<?= $username ?>"
+                        <input type="text" required name="username" class="mdl-textfield__input mdl-color-text--black" value="<?= $username ?>"
                                <?= empty($username) ? 'autofocus' : '' ?> id="username"/>
                     </div>
 
@@ -96,7 +91,7 @@
                             <?= $this->t('{material:login:label_password}') ?>
                         </label>
 
-                        <input type="password" required name="password" class="mdl-textfield__input" <?= ! empty($username) ? 'autofocus' : '' ?>
+                        <input type="password" required name="password" class="mdl-textfield__input mdl-color-text--black" <?= ! empty($username) ? 'autofocus' : '' ?>
                                id="password"/>
                     </div>
                 </div>
