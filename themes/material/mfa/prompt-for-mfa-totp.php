@@ -40,7 +40,7 @@
                         <label for="mfaSubmission" class="mdl-textfield__label">
                             <?= $this->t('{material:mfa:totp_input}') ?>
                         </label>
-                        <input name="mfaSubmission" class="mdl-textfield__input" autofocus
+                        <input name="mfaSubmission" class="mdl-textfield__input mdl-color-text--black" autofocus
                                id="mfaSubmission" />
                     </div>
                 </div>
