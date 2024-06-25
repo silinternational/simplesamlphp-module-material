@@ -1,3 +1,9 @@
+# Archived
+
+This repository is no longer maintained. It has been included directly in https://github.com/silinternational/ssp-base.
+
+-- 
+
 Material Design theme for use with SimpleSAMLphp
 
 ## Installation
